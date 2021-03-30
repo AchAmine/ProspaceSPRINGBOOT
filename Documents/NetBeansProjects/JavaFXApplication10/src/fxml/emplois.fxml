@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1022.0" style="-fx-background-color: white;" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReservationFXMLController">
+   <children>
+      <StackPane layoutX="1.0" layoutY="-3.0" prefHeight="589.0" prefWidth="1021.0" style="-fx-background-color: white;" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css">
+         <children>
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css">
+               <children>
+                  <Pane fx:id="pnlOverview" layoutX="-134.0" layoutY="-20.0" prefHeight="592.0" prefWidth="1021.0" style="-fx-background-color: white;" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css">
+                     <children>
+                        <TextField fx:id="rechercher" layoutX="694.0" layoutY="55.0" onKeyPressed="#rechercher" prefHeight="27.0" prefWidth="179.0" promptText="search" style="-fx-border-color: black; -fx-background-color: #FFFFFF;" />
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="849.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Documents/NetBeansProjects/tt/src/GUI/icons/icons8_search_24px.png" />
+                           </image>
+                        </ImageView>
+                        <VBox fx:id="pnItems" layoutX="363.0" layoutY="138.0" prefHeight="340.0" prefWidth="581.0" spacing="5.0" style="-fx-background-color: white;" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <ScrollPane prefHeight="339.0" prefWidth="599.0" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css">
+                                 <content>
+                                    <TableView fx:id="tableview" accessibleRole="IMAGE_VIEW" prefHeight="327.0" prefWidth="569.0" stylesheets="@../../Documents/NetBeansProjects/tt/src/GUI/style.css">
+                                       <columns>
+                                          <TableColumn fx:id="pointA" prefWidth="187.0" text="Point d'achat" />
+                                          <TableColumn fx:id="Destination" minWidth="0.0" prefWidth="138.00003051757812" text="Destination" />
+                                          <TableColumn fx:id="Date" prefWidth="127.0" text="Date" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -58,12 +58,12 @@ public class Offer implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private OfferState state;
 	
-	@ManyToOne
-	private User handledBy;
+	//@ManyToOne
+	//private User handledBy;
 	
 	@ManyToOne
-	private Partner partner;
+	private User partner;
 	
 	@OneToMany
-	private Set<Rating> ratings;
+	private Set<Rating> ratings; // sur les offres 
 }

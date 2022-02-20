@@ -8,4 +8,5 @@ import com.prospace.spring.entity.Article;
 @Repository
 public interface ArticleRepository extends JpaRepository<Article, Long>{
 
+	
 }

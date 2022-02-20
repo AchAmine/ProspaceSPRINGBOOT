@@ -41,7 +41,7 @@ public class Quizz implements Serializable{
 	@NonNull
 	private String description;
 	@ManyToOne
-	private Partner partner;
+	private User partner;
 	@OneToMany
 	private Set<Question> Questions;
 	

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -45,8 +46,7 @@ public class Article implements Serializable{
 	@NonNull
 	private String content;
 	
-	@NonNull
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Image image;
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
@@ -59,13 +59,15 @@ public class Article implements Serializable{
 	
 	private boolean enableComments;
 	
+	@ToString.Exclude
 	@ManyToOne
 	private User user;
 	
+	@ToString.Exclude
 	@OneToMany
 	private Set<Article_Comment> articleComments;
 
-	
+	@ToString.Exclude
 	@OneToMany
 	private Set<Reaction> reactions;
 	

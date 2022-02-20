@@ -1,32 +1,5 @@
-2022-02-20 16:34:20.386  INFO 10128 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 10128 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-02-20 16:34:20.390  INFO 10128 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-02-20 16:34:20.442  INFO 10128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-02-20 16:34:20.443  INFO 10128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-02-20 16:34:21.310  INFO 10128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-02-20 16:34:21.429  INFO 10128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 26 JPA repository interfaces.
-2022-02-20 16:34:22.197  INFO 10128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-02-20 16:34:22.212  INFO 10128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-02-20 16:34:22.213  INFO 10128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-02-20 16:34:22.334  INFO 10128 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-02-20 16:34:22.335  INFO 10128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1891 ms
-2022-02-20 16:34:22.554  INFO 10128 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-02-20 16:34:22.611  INFO 10128 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-02-20 16:34:22.776  INFO 10128 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-02-20 16:34:22.886  INFO 10128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-02-20 16:34:23.052  INFO 10128 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-02-20 16:34:23.069  INFO 10128 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-02-20 16:34:25.458  INFO 10128 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-02-20 16:34:25.468  INFO 10128 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-02-20 16:34:26.118  WARN 10128 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-02-20 16:34:26.340  INFO 10128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-02-20 16:34:26.796  INFO 10128 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 21b260dc-4b24-420d-9e22-a8f8b524bae7
-
-2022-02-20 16:34:26.911  INFO 10128 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59b9a2e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@601541c1, org.springframework.security.web.header.HeaderWriterFilter@17fbf3bc, org.springframework.security.web.csrf.CsrfFilter@7db9e57, org.springframework.security.web.authentication.logout.LogoutFilter@54d895a7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fee1525, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@366d8199, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@59ad81c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7cfc94d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@277413ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ce4964f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d58a64f, org.springframework.security.web.session.SessionManagementFilter@189aba63, org.springframework.security.web.access.ExceptionTranslationFilter@242f3ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3812508d]
-2022-02-20 16:34:27.026  INFO 10128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-02-20 16:34:27.216  INFO 10128 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 7.202 seconds (JVM running for 8.095)
-2022-02-20 16:59:22.059  INFO 10128 --- [RMI TCP Connection(33)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-02-20 16:59:22.340  INFO 10128 --- [RMI TCP Connection(33)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-02-20 16:59:22.343  INFO 10128 --- [RMI TCP Connection(33)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-02-20 16:59:22.351  INFO 10128 --- [RMI TCP Connection(33)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-20 19:24:18.915  WARN 17296 --- [HikariPool-20 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Thread starvation or clock leap detected (housekeeper delta=26m47s622ms230µs200ns).
+2022-02-20 19:25:27.003  INFO 17296 --- [RMI TCP Connection(96)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-02-20 19:25:27.283  INFO 17296 --- [RMI TCP Connection(96)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-20 19:25:27.284  INFO 17296 --- [RMI TCP Connection(96)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2022-02-20 19:25:27.464  INFO 17296 --- [RMI TCP Connection(96)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.

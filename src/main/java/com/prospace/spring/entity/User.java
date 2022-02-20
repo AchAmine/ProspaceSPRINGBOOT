@@ -104,13 +104,15 @@ public class User implements Serializable{
 	// --------------------------------------- End Partner -------------------------------------
 	
 	@OneToMany
-	private Set<Rating> ratings;
+	private Set<Rating> ratings; // Rating sur les offres 
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="addedBy")
-	private Set<Partner> addedPartners;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	private Set<Offer> Offers;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="deletedBy")
-	private Set<Partner> deletedPartners;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	private Set<Quizz> Quizz;
+	
 	
 	// --------------------------------------- End Partner -------------------------------------
 	

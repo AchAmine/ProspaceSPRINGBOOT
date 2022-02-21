@@ -8,6 +8,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,4 +39,9 @@ public class Reaction implements Serializable{
 	private ReactionType type;
 
 	  
+	@ManyToOne
+	private User user;
+	
+	@ManyToOne
+	private Article article;
 }

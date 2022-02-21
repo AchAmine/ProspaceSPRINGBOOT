@@ -89,22 +89,10 @@ public class User implements Serializable{
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Article> Articles;
-		
-	@ToString.Exclude
-	@OneToMany
-	private Set<Article_Comment> articleComments;
-	
-	@ToString.Exclude
-	@OneToMany
-	private Set<Reaction> reactions;
-	
 	
 	// --------------------------------------- End News -------------------------------------
 	
-	// --------------------------------------- End Partner -------------------------------------
-	
-	@OneToMany
-	private Set<Rating> ratings; // Rating sur les offres 
+	// --------------------------------------- Begin Partner -------------------------------------
 	
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
@@ -121,17 +109,11 @@ public class User implements Serializable{
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Post> Posts;
-		
-	
-	@ToString.Exclude
-	@OneToMany
-	private Set<Post_Comment> postComments;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Topic> Topics;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	private Set<Post_Reaction> postReactions;
+	
 	// --------------------------------------- End Forum -------------------------------------
 	
 	// --------------------------------------- Begin Events -------------------------------------
@@ -141,9 +123,6 @@ public class User implements Serializable{
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer")
 	private Set<Event> EventsOrganized;
-	@ToString.Exclude
-	@OneToMany
-	private Set<Event_Comment> eventComments;
 	
 	@ManyToMany
 	private Set<Tournament> Tournaments;

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -49,5 +50,10 @@ public class Post_Comment implements Serializable{
 
 	@OneToMany
 	private Set<Post_Comment> replies;
+	
+	@ManyToOne
+	private User user;
+	@ManyToOne
+	private Post post;
 
 }

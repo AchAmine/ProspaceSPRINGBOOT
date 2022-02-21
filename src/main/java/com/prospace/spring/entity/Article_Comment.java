@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -43,9 +44,15 @@ public class Article_Comment implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date postedAt;
 	
-	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
+	
+	
+	@ManyToOne
+	private User user;
+	
+	@ManyToOne
+	private Article article;
 	
 
 	

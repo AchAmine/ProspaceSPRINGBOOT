@@ -60,16 +60,10 @@ public class Article implements Serializable{
 	private boolean enableComments;
 	
 	@ToString.Exclude
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private User user;
 	
-	@ToString.Exclude
-	@OneToMany
-	private Set<Article_Comment> articleComments;
-
-	@ToString.Exclude
-	@OneToMany
-	private Set<Reaction> reactions;
+	
 	
 	
 }

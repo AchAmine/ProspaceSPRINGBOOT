@@ -64,6 +64,5 @@ public class Offer implements Serializable{
 	@ManyToOne
 	private User partner;
 	
-	@OneToMany
-	private Set<Rating> ratings; // sur les offres 
+	
 }

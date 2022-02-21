@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,6 +39,9 @@ public class Post_Reaction implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private postReactionType type;
 
-	
+	@ManyToOne
+	private User user;
+	@ManyToOne
+	private Post post;
 
 }

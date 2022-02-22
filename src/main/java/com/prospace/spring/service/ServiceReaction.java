@@ -70,7 +70,7 @@ public class ServiceReaction implements IServiceReaction{
 	@Override
 	public List<User> retrieveArticleReactorsByType(Long articleId, ReactionType reactionType) {
 		Article article = articleRepository.findById(articleId).orElse(null);
-		List<Reaction> reactions =  reactionRepository.findByArticleAndReactionType(article,reactionType);
+		List<Reaction> reactions =  reactionRepository.findByArticleAndType(article,reactionType);
 		
 		List<User> users = new ArrayList<>();
 		

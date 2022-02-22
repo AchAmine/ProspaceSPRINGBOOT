@@ -1,7 +1,10 @@
 package com.prospace.spring.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -42,5 +45,12 @@ public class Article_CommentRestController {
 	@PutMapping("/modify-comment")
 	public Article_Comment modifyComment(@RequestBody  Article_Comment comment) {
 		return article_commentService.updateComment(comment);
+	}
+	
+	@ApiOperation(value = "retrieve article's comments")
+	@GetMapping("/retrieve-articlecomments/{article-id}") 
+	public List<Article_Comment> retrieveArticleComments(@PathVariable("article-id") Long articleId) {
+		
+		return article_commentService.retrieveArticleComments(articleId);
 	}
 }

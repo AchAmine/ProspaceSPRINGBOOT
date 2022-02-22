@@ -1,6 +1,8 @@
 package com.prospace.spring.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,5 +45,15 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 	public Article_Comment updateComment(Article_Comment comment) {
 		return article_commentRepository.save(comment);
 	}
+
+	@Override
+	public List<Article_Comment> retrieveArticleComments(Long articleId) {
+		Article article = articleRepository.findById(articleId).orElse(null);
+		List<Article_Comment> comments =  article_commentRepository.findByArticle(article);
+		
+		return comments;
+	}
+	
+	
 
 }

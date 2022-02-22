@@ -10,4 +10,6 @@ public interface IServiceArticle_Comment {
 	Article_Comment addComment(Long userId , Long articleId , Article_Comment comment);
 	void deleteComment(Long id);
 	Article_Comment updateComment(Article_Comment comment);
+	
+	List<Article_Comment> retrieveArticleComments(Long articleId);
 }

@@ -1,7 +1,10 @@
 package com.prospace.spring.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -9,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.prospace.spring.entity.Reaction;
+import com.prospace.spring.entity.ReactionType;
+import com.prospace.spring.entity.User;
 import com.prospace.spring.service.IServiceReaction;
 
 import io.swagger.annotations.Api;
@@ -43,6 +47,28 @@ public class ReactionRestController {
 	@PutMapping("/modify-reaction")
 	public Reaction modifyReaction(@RequestBody  Reaction react) {
 		return reactionService.updateReaction(react);
+	}
+	
+	@ApiOperation(value = "retrieve article's reactions")
+	@GetMapping("/retrieve-articlereactions/{article-id}") 
+	public List<Reaction> retrieveArticleReactions(@PathVariable("article-id") Long articleId) {
+		
+		return reactionService.retrieveArticleReactions(articleId);
+	}
+	
+	@ApiOperation(value = "retrieve article's reactors")
+	@GetMapping("/retrieve-articlereactors/{article-id}") 
+	public List<User> retrieveArticleReactors(@PathVariable("article-id") Long articleId) {
+		
+		return reactionService.retrieveArticleReactors(articleId);
+	}
+	
+	@ApiOperation(value = "retrieve article's reactors")
+	@GetMapping("/retrieve-articlereactors/{article-id}/type/{reaction-type}") 
+	public List<User> retrieveArticleReactorsByType(@PathVariable("article-id") Long articleId , 
+			@PathVariable("reaction-type") ReactionType reactionType) {
+		
+		return reactionService.retrieveArticleReactorsByType(articleId,reactionType);
 	}
 	
 	

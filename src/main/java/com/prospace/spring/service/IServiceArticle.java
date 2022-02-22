@@ -13,4 +13,6 @@ public interface IServiceArticle {
 	List<Article> retrieveAllArticles();
 	Article retrieveArticle(Long id);
 	List<Article> getArticlesByUser(Long idUser);
+	
+	Article EnableComments(Long idArticle,Boolean action);
 }

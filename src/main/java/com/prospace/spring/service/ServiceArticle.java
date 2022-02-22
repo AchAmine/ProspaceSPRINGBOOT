@@ -1,8 +1,7 @@
 package com.prospace.spring.service;
 
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.Set;
 
 import javax.transaction.Transactional;
 
@@ -67,6 +66,15 @@ public class ServiceArticle implements IServiceArticle{
 		listArticles.addAll(user.getArticles());
 		*/		
 		return listArticles;
+	}
+
+	@Override
+	public Article EnableComments(Long idArticle, Boolean action) {
+		Article article = articleRepository.findById(idArticle).orElse(null);
+		article.setEnableComments(action);
+		
+		return articleRepository.save(article);
+		
 	}
 
 	

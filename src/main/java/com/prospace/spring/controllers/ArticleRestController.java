@@ -26,7 +26,7 @@ public class ArticleRestController {
 	@Autowired
 	IServiceArticle articleService;
 	
-	@ApiOperation(value = "Ajouter article")
+	@ApiOperation(value = "Add article")
 	@PostMapping("/add-article/{user-id}") 
 	public Article addArticle(@RequestBody Article a, @PathVariable("user-id") Long userId) {
 		
@@ -34,30 +34,32 @@ public class ArticleRestController {
 	}
 	
 	
-	@ApiOperation(value = "Supprimer un article")
+	@ApiOperation(value = "Delete article")
 	@DeleteMapping("/remove-article/{article-id}")
 	public void removeArticle(@PathVariable("article-id") Long articleId) {
 		articleService.deleteArticle(articleId);
 	}
 	
-	@ApiOperation(value = "Modifier un article")
+	@ApiOperation(value = "Update article")
 	@PutMapping("/modify-article")
 	public Article modifyArticle(@RequestBody Article article) {
 		return articleService.updateArticle(article);
 	}
 	
-	@ApiOperation(value = "afficher la liste des articles")
+	@ApiOperation(value = "retrieve all articles")
 	@GetMapping("/retrieve-all-articles")
 	public List<Article> getArticles(){
 		List<Article> listArticles = articleService.retrieveAllArticles();
 		return listArticles;
 	}
 	
+	@ApiOperation(value = "retrieve article by id")
 	@GetMapping("/retrieve-article/{article-id}")
 	public Article retrieveArticle(@PathVariable("article-id") Long articleId) {
 		return articleService.retrieveArticle(articleId);
 	}
 	
+	@ApiOperation(value = "retrieve user's articles")
 	@GetMapping("/retrieve-article/user/{user-id}")
 	public List<Article> retrieveUserArticles(@PathVariable("user-id") Long userId) {
 		return articleService.getArticlesByUser(userId);

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ public class Article_CommentRestController {
 	@Autowired
 	IServiceArticle_Comment article_commentService;
 	
-	@ApiOperation(value = "Ajouter commentaire")
+	@ApiOperation(value = "Add comment")
 	@PostMapping("/add-comment/{article-id}/{user-id}") 
 	public Article_Comment addComment(@RequestBody Article_Comment comment, @PathVariable("article-id") Long articleId,
 			@PathVariable("user-id") Long userId) {
@@ -32,10 +33,15 @@ public class Article_CommentRestController {
 	}
 	
 	
-	@ApiOperation(value = "Supprimer un commentaire")
+	@ApiOperation(value = "Delete comment")
 	@DeleteMapping("/remove-comment/{comment-id}")
 	public void removeComment(@PathVariable("comment-id") Long commentId) {
 		article_commentService.deleteComment(commentId);
 	}
 	
+	@ApiOperation(value = "Update comment")
+	@PutMapping("/modify-comment")
+	public Article_Comment modifyComment(@RequestBody  Article_Comment comment) {
+		return article_commentService.updateComment(comment);
+	}
 }

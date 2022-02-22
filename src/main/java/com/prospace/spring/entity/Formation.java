@@ -47,6 +47,17 @@ public class Formation implements Serializable{
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date endsAt;
+	@NonNull 
+	private boolean isDeleted;
+	@NonNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdAt;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modifiedAt;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date deletedAt;
 	
 	@ManyToMany
 	private Set<User> Participants;

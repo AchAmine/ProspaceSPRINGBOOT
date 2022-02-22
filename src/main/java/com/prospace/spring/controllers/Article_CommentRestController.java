@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prospace.spring.entity.Article;
 import com.prospace.spring.entity.Article_Comment;
 import com.prospace.spring.service.IServiceArticle_Comment;
 

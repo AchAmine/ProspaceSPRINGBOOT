@@ -69,14 +69,14 @@ public class User implements Serializable{
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
 	
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedAt;
 	
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
 	

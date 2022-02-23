@@ -44,12 +44,12 @@ public class Formation implements Serializable{
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date startsAt;
 
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date endsAt;
 	@NonNull 
 	private boolean isDeleted;

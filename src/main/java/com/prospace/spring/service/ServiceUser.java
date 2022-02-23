@@ -57,34 +57,60 @@ public class ServiceUser implements IServiceUser {
 
 	@Override
 	public List<User> getusers() {
-
-		return userRepository.findAll();
+		List<User> searchedUsers = null;
+		try {
+			log.info("in method getUsers");
+			searchedUsers = userRepository.findAll();
+			log.info("out of  method getUsers without errors");
+		} catch (Exception e) {
+			log.error("error in method getUsers" + e);
+		}
+		return searchedUsers;
 	}
 
 	@Override
 	public List<User> getUndeletedUsers() {
-
-		return userRepository.getUndeletedUsers();
+		List<User> undeletedUsers = null;
+		try {
+			log.info("in method getUndeletedUsers");
+			undeletedUsers = userRepository.getUndeletedUsers();
+			log.info("out of  method getUndeletedUsers without errors");
+		} catch (Exception e) {
+			log.error("error in method getUndeletedUsers" + e);
+		}
+		return undeletedUsers;
 	}
 
 	@Override
 	public void deleteUser(Long id) {
 		Date date = new Date(System.currentTimeMillis());
-		User deletedUser = userRepository.findById(id).orElse(null);
-		deletedUser.setDeleted(true);
-		deletedUser.setDeletedAt(date);
-		userRepository.save(deletedUser);
+		try {
+			log.info("in method deleteUser");
+			User deletedUser = userRepository.findById(id).orElse(null);
+			deletedUser.setDeleted(true);
+			deletedUser.setDeletedAt(date);
+			userRepository.save(deletedUser);
+			log.info("out of  method deleteUser without errors");
+		} catch (Exception e) {
+			log.error("error in method deleteUser" + e);
+		}
 
 	}
 
 	@Override
 	public void updateUser(User u) {
 		Date date = new Date(System.currentTimeMillis());
-		Period period = Period.between(u.getBirthDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
-				date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-		u.setAge(period.getYears());
-		u.setModifiedAt(date);
-		userRepository.save(u);
+		try {
+			log.info("in method updateUser");
+			Period period = Period.between(u.getBirthDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
+					date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+			u.setAge(period.getYears());
+			u.setModifiedAt(date);
+			userRepository.save(u);
+			log.info("out of  method updateUser without errors");
+		} catch (Exception e) {
+			log.error("error in method upadateUser" + e);
+		}
 
 	}
 

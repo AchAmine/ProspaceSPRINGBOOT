@@ -43,6 +43,9 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 
 	@Override
 	public Article_Comment updateComment(Article_Comment comment) {
+		Article_Comment artcom = article_commentRepository.findById(comment.getIdComment()).orElse(null);
+		comment.setArticle(artcom.getArticle());
+		comment.setUser(artcom.getUser());
 		return article_commentRepository.save(comment);
 	}
 

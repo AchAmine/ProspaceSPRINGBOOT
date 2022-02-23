@@ -19,6 +19,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -67,11 +69,14 @@ public class User implements Serializable{
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
 	private Date createdAt;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedAt;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
 	

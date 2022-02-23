@@ -1,5 +1,6 @@
 package com.prospace.spring.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.prospace.spring.entity.Reaction;
@@ -14,5 +15,6 @@ public interface IServiceReaction {
 	
 	List<Reaction> retrieveArticleReactions(Long articleId);
 	List<User> retrieveArticleReactors(Long articleId);
+	HashMap<User,ReactionType> retrieveUsersReactions(Long articleId);
 	List<User> retrieveArticleReactorsByType(Long articleId,ReactionType reactionType);
 }

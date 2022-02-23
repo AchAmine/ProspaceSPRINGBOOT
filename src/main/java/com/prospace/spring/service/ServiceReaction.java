@@ -1,6 +1,7 @@
 package com.prospace.spring.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,10 @@ public class ServiceReaction implements IServiceReaction{
 
 	@Override
 	public Reaction updateReaction(Reaction react) {
+		Reaction r = reactionRepository.findById(react.getIdReaction()).orElse(null);
+		react.setUser(r.getUser());
+		react.setArticle(r.getArticle());
+		
 		return reactionRepository.save(react);
 	}
 
@@ -55,6 +60,7 @@ public class ServiceReaction implements IServiceReaction{
 		return reactions;
 	}
 
+	// Avec List
 	@Override
 	public List<User> retrieveArticleReactors(Long articleId) {
 		Article article = articleRepository.findById(articleId).orElse(null);
@@ -63,8 +69,20 @@ public class ServiceReaction implements IServiceReaction{
 		
 		for(Reaction react : reactions ) {
 			users.add(react.getUser());
-		}
+		}	
 		return users;
+	}
+	
+	// avec HashMap -- 
+	@Override
+	public HashMap<User, ReactionType> retrieveUsersReactions(Long articleId) {
+		Article article = articleRepository.findById(articleId).orElse(null);
+		List<Reaction> reactions =  reactionRepository.findByArticle(article);
+		HashMap<User,ReactionType> user_reaction = new HashMap<User,ReactionType>();
+		for(Reaction react : reactions ) {
+			user_reaction.put(react.getUser(), react.getType());
+		}
+		return user_reaction;
 	}
 
 	@Override
@@ -79,5 +97,7 @@ public class ServiceReaction implements IServiceReaction{
 		}
 		return users;
 	}
+
+	
 
 }

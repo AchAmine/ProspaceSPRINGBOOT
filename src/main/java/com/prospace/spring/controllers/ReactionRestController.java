@@ -1,5 +1,6 @@
 package com.prospace.spring.controllers;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,15 @@ public class ReactionRestController {
 	public List<User> retrieveArticleReactors(@PathVariable("article-id") Long articleId) {
 		
 		return reactionService.retrieveArticleReactors(articleId);
+	}
+	
+	
+	// HashMap 
+	@ApiOperation(value = "retrieve users and their reaction")
+	@GetMapping("/retrieve-usersreaction/{article-id}") 
+	public HashMap<User,ReactionType> retrieveUsersReactions(@PathVariable("article-id") Long articleId) {
+		
+		return reactionService.retrieveUsersReactions(articleId);
 	}
 	
 	@ApiOperation(value = "retrieve article's reactors")

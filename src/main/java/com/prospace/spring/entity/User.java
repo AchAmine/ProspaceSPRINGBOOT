@@ -94,10 +94,10 @@ public class User implements Serializable{
 	// --------------------------------------- End News -------------------------------------
 	
 	// --------------------------------------- Begin Partner -------------------------------------
-	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Offer> Offers;
-	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Quizz> Quizz;
 	
@@ -105,7 +105,7 @@ public class User implements Serializable{
 	// --------------------------------------- End Partner -------------------------------------
 	
 	// --------------------------------------- Begin Forum -------------------------------------
-	
+	@JsonIgnore
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Post> Posts;

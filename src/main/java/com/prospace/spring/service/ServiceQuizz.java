@@ -2,6 +2,9 @@ package com.prospace.spring.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.hibernate.mapping.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,13 +28,22 @@ public class ServiceQuizz implements IServiceQuizz{
 	QuestionRepository questionRepository;
 
 	@Override
+	@Transactional
 	 public Quizz AddQuizz(Quizz quizz,Long Partnerid) {
 		User partner = userRepository.findById(Partnerid).orElse(null);
+		
 		quizz.setPartner(partner);
+		List<Question> questions = quizz.getQuestions();
+		for (Question question : questions) {
+			question.setQuiz(quizz);
+			questionRepository.save(question);
+		}
+		
 		return quizzRepository.save(quizz);
+
 	}
 	
-/*	@Override
+	/*@Override
 	public Quizz AjouterQuestionEtAffecterAuQuizz(Quizz quizz , Long idQuestion)
 		{
 		Question q = questionRepository.findById(idQuestion).orElse(null);
@@ -56,6 +68,11 @@ public class ServiceQuizz implements IServiceQuizz{
 
 	@Override
 	public Quizz updateQuizz(Quizz q) {
+		List<Question> questions = q.getQuestions();
+		for (Question question : questions) {
+			question.setQuiz(q);
+			questionRepository.save(question);
+		}
 		return quizzRepository.save(q);
 	}
 

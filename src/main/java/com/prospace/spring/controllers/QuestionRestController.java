@@ -46,9 +46,9 @@ public class QuestionRestController {
 
 		// http://localhost:8089/SpringMVC/Question/modify-Question
 		@ApiOperation(value = "Update Question")
-		@PutMapping("/modify-Question")
-		public Question modifyQuestion(@RequestBody Question question) {
-		return serviceQuestion.updateQuestion(question);
+		@PutMapping("/modify-Question/{Quizz-id}")
+		public Question modifyQuestion(@RequestBody Question question,@PathVariable("Quizz-id") Long QuizzId) {
+		return serviceQuestion.updateQuestion(question,QuizzId);
 		}
 		
 		

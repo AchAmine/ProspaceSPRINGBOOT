@@ -1,6 +1,7 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -44,11 +45,11 @@ public class Quizz implements Serializable{
 	
 	@NonNull
 	private String description;
-	@JsonIgnore
+	
 	@ManyToOne
 	private User partner;
 	@OneToMany(mappedBy = "quiz",cascade =CascadeType.ALL,fetch=FetchType.EAGER)
-	private Set<Question> Questions;
+	private List<Question> Questions;
 	
 	
 }

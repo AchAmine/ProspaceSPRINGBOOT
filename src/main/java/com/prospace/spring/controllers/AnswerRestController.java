@@ -22,12 +22,12 @@ public class AnswerRestController {
 	@Autowired
 	IServiceAnswer serviceAnswer;
 	
-	@ApiOperation(value = "Add answer")
-	@PostMapping("/add-answer/{Question-id}")
-	public Answer addAnswerAndAffecttoQuestion(@RequestBody Answer answer,@PathVariable("Question-id")Long idQuestion)
+	@ApiOperation(value = "Add answer to Question and quizz")
+	@PostMapping("/add-answer/{Question-id}/{Quizz-id}")
+	public Answer addAnswerAndAffecttoQuestionAndQuizz(@RequestBody Answer answer,@PathVariable("Question-id")Long idQuestion,@PathVariable("Quizz-id") Long idQuizz)
 	{
 
-	return serviceAnswer.addAnswerAndAffecttoQuestion(answer,idQuestion);
+	return serviceAnswer.addAnswerAndAffecttoQuestionAndQuizz(answer,idQuestion,idQuizz);
 	}
 	
 	// http://localhost:8089/SpringMVC/Answer/remove-Answer/{Answer-id}

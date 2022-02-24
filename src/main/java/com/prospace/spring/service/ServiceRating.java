@@ -1,5 +1,7 @@
 package com.prospace.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +39,15 @@ public class ServiceRating implements IServiceRating {
 	@Override
 	public Rating updateRating(Rating rating) {
 		return ratingRepository.save(rating);
+	}
+	
+	
+	@Override
+	public List<Rating> retrieveOfferRatings(Long OfferId) {
+		Offer offer = offerRepository.findById(OfferId).orElse(null);
+		List<Rating> reactions =  ratingRepository.findByOffer(offer);
+		
+		return reactions;
 	}
 
 }

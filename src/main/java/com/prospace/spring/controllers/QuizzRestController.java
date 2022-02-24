@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.prospace.spring.entity.Question;
 import com.prospace.spring.entity.Quizz;
+import com.prospace.spring.service.IServiceQuestion;
 import com.prospace.spring.service.IServiceQuizz;
 
 import io.swagger.annotations.Api;
@@ -24,11 +26,15 @@ import io.swagger.annotations.ApiOperation;
 public class QuizzRestController {
 	 @Autowired
 	 IServiceQuizz serviceQuizz;
+	 @Autowired
+	 IServiceQuestion serviceQuestion;
 	
 	 @ApiOperation(value = "Add Quizz")
 		@PostMapping("/add-quizz/{Partner-id}")
 		public Quizz addQuizz(@RequestBody Quizz q,@PathVariable("Partner-id")Long Partnerid) {
-		return serviceQuizz.AddQuizz(q,Partnerid);
+		
+
+		 return serviceQuizz.AddQuizz(q,Partnerid);
 		}
 	 
 	 @ApiOperation(value = "Quizz list")

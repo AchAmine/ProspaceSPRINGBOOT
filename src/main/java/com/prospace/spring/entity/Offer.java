@@ -62,7 +62,6 @@ public class Offer implements Serializable{
 	
 	//@ManyToOne
 	//private User handledBy;
-	@JsonIgnore
 	@ManyToOne
 	private User partner;
 	

@@ -1,5 +1,6 @@
 package com.prospace.spring.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import com.prospace.spring.repository.QuizzRepository;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 public class ServiceQuestion implements IServiceQuestion {
 	@Autowired
 	QuestionRepository questionRepository;
@@ -35,12 +37,22 @@ public class ServiceQuestion implements IServiceQuestion {
 	
 	@Override
 	public void deleteQuestion(Long id) {
-		questionRepository.deleteById(id);
+		Question Q = questionRepository.findById(id).orElse(null);
 		
+		// delete question from quizz
+		Quizz quizz = Q.getQuiz();
+		List<Question> quizQuestions = quizz.getQuestions();
+		quizQuestions.remove(Q);
+		// 
+		
+		//questionRepository.deleteById(id);
+		questionRepository.delete(Q); 
 	}
 
 	@Override
-	public Question updateQuestion(Question q) {
+	public Question updateQuestion(Question q, Long QuizzId) {
+		Quizz quizz= quizzRepository.findById(QuizzId).orElse(null);
+		q.setQuiz(quizz);
 		return questionRepository.save(q);
 	}
 	/*@Override

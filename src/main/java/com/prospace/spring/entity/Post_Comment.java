@@ -44,6 +44,9 @@ public class Post_Comment implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date postedAt;
 	
+
+	@ManyToOne
+	private Post post;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
@@ -53,7 +56,6 @@ public class Post_Comment implements Serializable{
 	
 	@ManyToOne
 	private User user;
-	@ManyToOne
-	private Post post;
+	
 
 }

@@ -13,8 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,20 +23,20 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@Setter 
-@NoArgsConstructor 
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor 
+@RequiredArgsConstructor
 @ToString
-public class Post implements Serializable{
+public class Post implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idPost;
-	
+
 	@NonNull
 	private String title;
 	@NonNull
@@ -46,18 +44,19 @@ public class Post implements Serializable{
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdAt;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
 
 	@OneToMany
 	private Set<Post_Reaction> postReactions;
-	
-	@OneToMany
-	private Set<Post_Comment> postComments;
+
+	// @OneToMany
+	// private Set<Post_Comment> postComments;
+
 	@ManyToOne
 	private User user;
-	
+
 	@OneToMany
 	private Set<Topic> Topics;
 }

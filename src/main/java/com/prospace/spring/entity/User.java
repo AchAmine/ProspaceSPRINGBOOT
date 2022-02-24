@@ -20,6 +20,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -107,10 +108,10 @@ public class User implements Serializable{
 	
 	// --------------------------------------- Begin Partner -------------------------------------
 	
-
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Offer> Offers;
-	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Quizz> Quizz;
 	
@@ -118,7 +119,7 @@ public class User implements Serializable{
 	// --------------------------------------- End Partner -------------------------------------
 	
 	// --------------------------------------- Begin Forum -------------------------------------
-	
+	@JsonIgnore
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Post> Posts;

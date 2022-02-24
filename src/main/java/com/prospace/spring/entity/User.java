@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -16,7 +17,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -43,7 +46,11 @@ public class User implements Serializable{
 	private Long idUser;
 	
 	@NonNull
-	private String name;
+	private String firstname;
+	@NonNull
+	private String lastName;
+	
+	@Column(unique=true)
 	@NonNull 
 	private String userName;
 	@NonNull 
@@ -57,16 +64,19 @@ public class User implements Serializable{
 	private boolean locked;
 	
 	private boolean enabled;
-	
+	@NonNull 
 	private boolean isDeleted;
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedAt;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
 	
@@ -74,7 +84,10 @@ public class User implements Serializable{
 	private Image image;
 	
 	@Temporal(TemporalType.DATE)
+	@Transient
 	private Date birthDate;
+	@NonNull
+	private Integer age;
 	
 	@ManyToMany
 	private Set<Skill> Skills;

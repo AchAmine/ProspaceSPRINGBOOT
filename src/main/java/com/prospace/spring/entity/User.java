@@ -107,7 +107,6 @@ public class User implements Serializable{
 	// --------------------------------------- End News -------------------------------------
 	
 	// --------------------------------------- Begin Partner -------------------------------------
-	
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Offer> Offers;

@@ -59,8 +59,7 @@ public class Article implements Serializable{
 	
 	private boolean enableComments;
 	
-	@ToString.Exclude
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private User user;
 	
 	

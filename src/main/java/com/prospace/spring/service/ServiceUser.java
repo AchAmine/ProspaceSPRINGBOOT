@@ -22,7 +22,7 @@ public class ServiceUser implements IServiceUser {
 	UserRepository userRepository;
 	/*@Autowired
     PasswordEncoder encoder;*/
-	
+	/*
 
 	@Override
 	public void addUser(User u) {
@@ -112,6 +112,36 @@ public class ServiceUser implements IServiceUser {
 			log.error("error in method upadateUser" + e);
 		}
 
+	}*/
+
+	@Override
+	public void addUser(User u) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<User> getusers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> getUndeletedUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateUser(User u) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

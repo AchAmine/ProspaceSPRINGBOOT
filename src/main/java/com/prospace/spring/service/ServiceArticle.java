@@ -1,6 +1,7 @@
 package com.prospace.spring.service;
 
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -42,6 +43,8 @@ public class ServiceArticle implements IServiceArticle{
 
 	@Override
 	public Article updateArticle(Article A) {
+		User user = userRepository.findById(A.getIdArticle()).orElse(null);
+		A.setUser(user);
 		return articleRepository.save(A);
 	}
 
@@ -75,6 +78,26 @@ public class ServiceArticle implements IServiceArticle{
 		
 		return articleRepository.save(article);
 		
+	}
+
+	@Override
+	public HashMap<Integer, Integer> SortByReaction(Long idUser ) {
+		HashMap<Integer, Integer> hMap = new HashMap<Integer, Integer>();
+		List<Object[]> listStaff = articleRepository.SortByReaction(idUser);
+		for (Object[] obj : listStaff) {
+			hMap.put( (Integer)obj[0], (Integer) obj[1]);
+		}
+		return hMap;
+	}
+
+	@Override
+	public HashMap<Integer, Integer> SortByComments(Long idUser) {
+		HashMap<Integer, Integer> hMap = new HashMap<Integer, Integer>();
+		List<Object[]> listStaff = articleRepository.SortByComments(idUser);
+		for (Object[] obj : listStaff) {
+			hMap.put( (Integer)obj[0], (Integer) obj[1]);
+		}
+		return hMap;
 	}
 
 	

@@ -12,4 +12,5 @@ public interface IServiceArticle_Comment {
 	Article_Comment updateComment(Article_Comment comment);
 	
 	List<Article_Comment> retrieveArticleComments(Long articleId);
+	Article_Comment CensoredWords(Article_Comment comment);
 }

@@ -1,19 +1,26 @@
 package com.prospace.spring.service;
 
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.prospace.spring.entity.Article;
 import com.prospace.spring.entity.Article_Comment;
+import com.prospace.spring.entity.Badwords;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.ArticleRepository;
 import com.prospace.spring.repository.Article_CommentRepository;
+import com.prospace.spring.repository.BadwordsRepository;
 import com.prospace.spring.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class ServiceArticle_Comment implements IServiceArticle_Comment{
 
 	@Autowired
@@ -24,6 +31,9 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 	
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+	BadwordsRepository badwordsRepository;
 	
 	@Override
 	public Article_Comment addComment(Long userId , Long articleId , Article_Comment comment) {
@@ -53,8 +63,35 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 	public List<Article_Comment> retrieveArticleComments(Long articleId) {
 		Article article = articleRepository.findById(articleId).orElse(null);
 		List<Article_Comment> comments =  article_commentRepository.findByArticle(article);
+		List<Article_Comment> censoredComments = new ArrayList<Article_Comment>();
+		for(int i = 0 ; i<comments.size();i++) {
+			censoredComments.add(CensoredWords(comments.get(i)));
+		}
+		return censoredComments;
+	}
+
+	@Override
+	public Article_Comment CensoredWords(Article_Comment comment) {
+		List<Badwords> wordsList = badwordsRepository.findAll();
+		List<String> words = new ArrayList<String>();
+		String new_comment ="";
 		
-		return comments;
+		log.info("wordsList size : "+wordsList.size());
+		for(int i=0 ; i< wordsList.size();i++) {
+			words.add(wordsList.get(i).getWord());
+		}
+		
+		log.info("words size : "+words.size());
+		
+		for (String word : words) {
+            Pattern rx = Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE);
+            new_comment = rx.matcher(comment.getContent()).replaceAll(new String(new char[word.length()]).replace('\0', '*'));
+           
+		}
+		log.info("New comment  "+new_comment);
+		comment.setContent(new_comment);
+		
+		return comment;
 	}
 	
 	

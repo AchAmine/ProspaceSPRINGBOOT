@@ -122,6 +122,8 @@ public class ServiceArticle implements IServiceArticle{
 		HashMap<Long, Long> commenthMap = SortByComments(idUser);
 		HashMap<Long, Long> reactionhMap = SortByReaction(idUser );
 	
+		log.info("--------- commentmap size"+commenthMap.size());
+		log.info("--------- reactionmap size"+reactionhMap.size());
 		if (commenthMap.size() > reactionhMap.size()) {
 			log.info("--------- MERGING INTO COMMENTHMAP");
 			reactionhMap.forEach(

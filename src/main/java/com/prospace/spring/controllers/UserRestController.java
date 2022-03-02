@@ -20,8 +20,12 @@ public class UserRestController {
 	@Autowired 
 	IServiceUser serviceUser;
 	@PostMapping("/adduser")
-	public void registration(@RequestBody User u) {
-		serviceUser.addUser(u);
+	public String registration(@RequestBody User u) {
+		return serviceUser.addUser(u);
+	}
+	@GetMapping("/confirm/{token}")
+	public String confirm(@PathVariable("token") String token) {
+		return serviceUser.confirmToken(token);
 	}
 	@GetMapping("/getusers")
 	public List<User> retrieveAllUsers(){

@@ -17,6 +17,7 @@ public interface IServiceArticle {
 	
 	Article EnableComments(Long idArticle,Boolean action);
 	
-	HashMap<Integer, Integer> SortByReaction(Long idUser);
-	HashMap<Integer, Integer> SortByComments(Long idUser);
+	HashMap<Long, Long> SortByReaction(Long idUser);
+	HashMap<Long, Long> SortByComments(Long idUser);
+	HashMap<Long, Long> userPreferences(Long idUser);
 }

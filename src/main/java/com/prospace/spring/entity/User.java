@@ -26,6 +26,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -154,11 +155,10 @@ public class User implements Serializable,UserDetails{
 	// --------------------------------------- End News -------------------------------------
 	
 	// --------------------------------------- Begin Partner -------------------------------------
-	
-
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Offer> Offers;
-	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Quizz> Quizz;
 	
@@ -166,7 +166,7 @@ public class User implements Serializable,UserDetails{
 	// --------------------------------------- End Partner -------------------------------------
 	
 	// --------------------------------------- Begin Forum -------------------------------------
-	
+	@JsonIgnore
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Post> Posts;

@@ -19,43 +19,38 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Entity
 @Getter
-@Setter 
-@NoArgsConstructor 
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor 
+@RequiredArgsConstructor
 @ToString
-public class Topic implements Serializable{
+public class Topic implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idTopic;
-	
+
 	@NonNull
 	private String title;
-	
+
 	@NonNull
 	private String description;
-	
-	private int views; 
-	
+
+	private int views;
+
 	private boolean closed;
-	
+
 	@NonNull
 	@Temporal(TemporalType.DATE)
 	private Date creationDate;
-
 	@ManyToOne
 	private Section section;
-	
 	@ManyToOne
 	private User user;
-	
-	
 
 }

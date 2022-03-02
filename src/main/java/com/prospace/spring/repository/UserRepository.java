@@ -9,7 +9,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.prospace.spring.entity.Offer;
 import com.prospace.spring.entity.User;
+import java.util.Set;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
@@ -22,5 +24,7 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	@Modifying
 	@Query("UPDATE User u " + "SET u.enabled = TRUE WHERE u.userName = ?1")
 	int enableAppUser(String userName);
+	
+	User findByEmail(String email);
 	
 }

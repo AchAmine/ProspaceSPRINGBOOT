@@ -1,6 +1,7 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -11,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -45,5 +47,9 @@ public class Question implements Serializable{
 	@JsonIgnore
 	@ManyToOne
 	private Quizz quiz;
+	@OneToOne
+	private Answer correctAnswer;
+	@OneToMany(mappedBy ="question")
+	private List<Response> response;
 
 }

@@ -10,5 +10,7 @@ public interface IServiceOffer {
 	Offer addOffer(Offer o,Long idUser);
 	void deleteOffer(Long id);
 	Offer updateOffer(Offer o);
-	public Offer retrieveOffer(Long id);
+	Offer retrieveOffer(Long id);
+	public List<Offer> TriOffers();
+	void addOffers(List<Offer> Offers);
 }

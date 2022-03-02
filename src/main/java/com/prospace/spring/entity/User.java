@@ -161,7 +161,13 @@ public class User implements Serializable,UserDetails{
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
 	private Set<Quizz> Quizz;
+	@JsonIgnore
+	@OneToMany(mappedBy="user")
+	private Set<ResultQuizz> resultQuizz;
 	
+	@JsonIgnore
+	@OneToMany(mappedBy="userresponse")
+	private Set<Response> Response;
 	
 	// --------------------------------------- End Partner -------------------------------------
 	

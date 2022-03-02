@@ -21,10 +21,10 @@ public class ServiceBadwords implements IServiceBadwords{
 	BadwordsRepository badwordsRepository;
 	
 	@Override
-	public void addBadwords() {
+	public void addBadwords(String filename) {
 		log.info("in add function");
 		try  { 
-		BufferedReader br = new BufferedReader(new FileReader("C:\\Work\\workspace-sts\\prospace-project\\src\\main\\resources\\badwords.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("C:\\Work\\workspace-sts\\prospace-project\\src\\\\main\\resources\\"+filename));
          String s;
          while ((s = br.readLine()) != null) {
              	log.info("in while loop");
@@ -35,8 +35,10 @@ public class ServiceBadwords implements IServiceBadwords{
             	 badwordsRepository.save(word);
              	}
          }
+         br.close();
          log.info("out of while loop");
-         File file = new File("C:\\Work\\workspace-sts\\prospace-project\\src\\main\\resources\\badwords.txt");
+         File file = new File("C:\\Work\\workspace-sts\\prospace-project\\src\\\\main\\resources\\"+filename);
+         log.info("File exist? "+file.exists());
          boolean isDeleted = file.delete();
          log.info("file is deleted ? : "+isDeleted);
 	  } catch (Exception ex) {

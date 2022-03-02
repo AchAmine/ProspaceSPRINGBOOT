@@ -22,10 +22,10 @@ public class BadwordsController {
 	private IServiceBadwords serviceBadwords;
 	
 	@ApiOperation(value = "Add badwords")
-	@PostMapping("/add-badwords/") 
-	public void addBadwords() {
+	@PostMapping("/add-badwords/{filename}") 
+	public void addBadwords(@PathVariable("filename")String filename) {
 		
-		serviceBadwords.addBadwords();
+		serviceBadwords.addBadwords(filename);
 	}
 	
 }

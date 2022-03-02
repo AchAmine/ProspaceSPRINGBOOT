@@ -1,236 +1,410 @@
-2022-03-02 17:35:37.830  INFO 18872 --- [Thread-79] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:35:37.832  INFO 18872 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
-2022-03-02 17:35:37.836  INFO 18872 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
-2022-03-02 17:35:38.066  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:35:38.076  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:35:38.336  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:35:38.396  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:35:38.502  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:35:38.503  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:35:38.503  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:35:38.514  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:35:38.514  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 434 ms
-2022-03-02 17:35:38.542  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:35:38.547  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
-2022-03-02 17:35:38.550  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
-2022-03-02 17:35:38.550  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:35:39.443  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:35:39.443  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:35:39.757  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:35:39.817  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:35:39.988  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:35:40.480  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.438 seconds (JVM running for 1530.379)
-2022-03-02 17:35:40.481  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:35:42.708  INFO 18872 --- [Thread-85] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:35:42.708  INFO 18872 --- [Thread-85] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
-2022-03-02 17:35:42.715  INFO 18872 --- [Thread-85] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
-2022-03-02 17:35:42.963  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:35:42.963  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:35:43.229  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:35:43.291  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:35:43.384  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:35:43.384  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:35:43.384  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:35:43.396  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:35:43.396  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 427 ms
-2022-03-02 17:35:43.428  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:35:43.433  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
-2022-03-02 17:35:43.436  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
-2022-03-02 17:35:43.437  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:35:44.382  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:35:44.382  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:35:44.740  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:35:44.794  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:35:44.945  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:35:45.239  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.312 seconds (JVM running for 1535.139)
-2022-03-02 17:35:45.240  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:35:49.605  INFO 18872 --- [http-nio-8089-exec-2] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-02 17:35:49.605  INFO 18872 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-02 17:35:49.607  INFO 18872 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-03-02 17:35:49.625  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:35:49.628  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:35:49.631  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:35:49.634  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:36:03.314  INFO 18872 --- [Thread-91] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:36:03.315  INFO 18872 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
-2022-03-02 17:36:03.320  INFO 18872 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
-2022-03-02 17:36:03.668  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:36:03.668  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:36:03.932  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:36:03.994  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:36:04.080  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:36:04.080  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:36:04.080  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:36:04.094  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:36:04.094  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
-2022-03-02 17:36:04.127  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:36:04.130  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
-2022-03-02 17:36:04.133  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
-2022-03-02 17:36:04.133  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:36:05.039  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:36:05.039  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:36:05.361  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:36:05.406  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:36:05.568  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:36:06.118  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.472 seconds (JVM running for 1556.018)
-2022-03-02 17:36:06.120  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:36:08.318  INFO 18872 --- [Thread-97] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:36:08.320  INFO 18872 --- [Thread-97] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
-2022-03-02 17:36:08.324  INFO 18872 --- [Thread-97] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
-2022-03-02 17:36:08.559  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:36:08.559  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:36:08.826  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:36:08.886  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:36:08.993  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:36:08.994  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:36:08.994  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:36:09.008  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:36:09.008  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 447 ms
-2022-03-02 17:36:09.037  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:36:09.042  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
-2022-03-02 17:36:09.045  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
-2022-03-02 17:36:09.045  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:36:09.925  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:36:09.926  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:36:10.267  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:36:10.329  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:36:10.501  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:36:10.818  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.282 seconds (JVM running for 1560.719)
-2022-03-02 17:36:10.819  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:36:37.147  INFO 18872 --- [Thread-103] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:36:37.149  INFO 18872 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
-2022-03-02 17:36:37.153  INFO 18872 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
-2022-03-02 17:36:37.416  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:36:37.416  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:36:37.664  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:36:37.724  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:36:37.802  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:36:37.804  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:36:37.804  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:36:37.814  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:36:37.814  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 396 ms
-2022-03-02 17:36:37.847  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:36:37.852  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
-2022-03-02 17:36:37.856  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
-2022-03-02 17:36:37.856  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:36:38.705  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:36:38.706  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:36:39.020  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:36:39.064  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:36:39.218  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:36:39.513  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.121 seconds (JVM running for 1589.414)
-2022-03-02 17:36:39.514  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:37:27.634  INFO 18872 --- [Thread-109] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:37:27.635  INFO 18872 --- [Thread-109] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
-2022-03-02 17:37:27.642  INFO 18872 --- [Thread-109] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
-2022-03-02 17:37:27.881  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:37:27.882  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:37:28.148  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:37:28.209  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:37:28.327  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:37:28.327  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:37:28.327  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:37:28.339  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:37:28.339  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 456 ms
-2022-03-02 17:37:28.369  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:37:28.373  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
-2022-03-02 17:37:28.376  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
-2022-03-02 17:37:28.376  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:37:29.340  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:37:29.340  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:37:29.685  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:37:29.739  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:37:29.901  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:37:30.213  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.355 seconds (JVM running for 1640.113)
-2022-03-02 17:37:30.214  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:37:32.805  INFO 18872 --- [http-nio-8089-exec-2] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-02 17:37:32.805  INFO 18872 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-02 17:37:32.808  INFO 18872 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-03-02 17:37:32.821  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:37:32.823  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New commentedited 1st comment
-2022-03-02 17:37:32.826  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:37:32.826  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New commentcom2
-2022-03-02 17:37:32.828  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:37:32.828  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New commentcom2c
-2022-03-02 17:37:32.831  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:37:32.831  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New commentasshole
-2022-03-02 17:37:41.992  INFO 18872 --- [Thread-115] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:37:41.993  INFO 18872 --- [Thread-115] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
-2022-03-02 17:37:41.999  INFO 18872 --- [Thread-115] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
-2022-03-02 17:37:42.219  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:37:42.219  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:37:42.465  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:37:42.525  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:37:42.600  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:37:42.600  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:37:42.600  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:37:42.611  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:37:42.611  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 390 ms
-2022-03-02 17:37:42.642  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:37:42.646  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
-2022-03-02 17:37:42.649  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
-2022-03-02 17:37:42.649  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:37:43.520  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:37:43.520  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:37:43.835  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:37:43.880  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:37:44.028  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:37:44.367  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.171 seconds (JVM running for 1654.268)
-2022-03-02 17:37:44.369  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:38:22.266  INFO 18872 --- [Thread-121] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:38:22.267  INFO 18872 --- [Thread-121] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
-2022-03-02 17:38:22.273  INFO 18872 --- [Thread-121] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
-2022-03-02 17:38:22.509  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:38:22.509  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:38:22.782  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:38:22.844  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:38:22.959  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:38:22.960  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:38:22.960  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:38:22.971  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:38:22.971  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 460 ms
-2022-03-02 17:38:23.004  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:38:23.009  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
-2022-03-02 17:38:23.012  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
-2022-03-02 17:38:23.013  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:38:23.899  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:38:23.899  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:38:24.236  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:38:24.282  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:38:24.437  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:38:24.752  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.266 seconds (JVM running for 1694.652)
-2022-03-02 17:38:24.753  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:38:35.474  INFO 18872 --- [Thread-127] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:38:35.476  INFO 18872 --- [Thread-127] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
-2022-03-02 17:38:35.481  INFO 18872 --- [Thread-127] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
-2022-03-02 17:38:35.785  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 18872 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-02 17:38:35.785  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-02 17:38:36.045  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-02 17:38:36.104  INFO 18872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 26 JPA repository interfaces.
-2022-03-02 17:38:36.185  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-02 17:38:36.186  INFO 18872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-02 17:38:36.186  INFO 18872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-02 17:38:36.224  INFO 18872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-02 17:38:36.224  INFO 18872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 437 ms
-2022-03-02 17:38:36.251  INFO 18872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-02 17:38:36.255  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
-2022-03-02 17:38:36.258  INFO 18872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
-2022-03-02 17:38:36.259  INFO 18872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-02 17:38:37.150  INFO 18872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-02 17:38:37.151  INFO 18872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-02 17:38:37.492  WARN 18872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-02 17:38:37.536  INFO 18872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-02 17:38:37.704  INFO 18872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-02 17:38:38.023  INFO 18872 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.262 seconds (JVM running for 1707.923)
-2022-03-02 17:38:38.026  INFO 18872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-02 17:38:46.887  INFO 18872 --- [http-nio-8089-exec-2] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-02 17:38:46.888  INFO 18872 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-02 17:38:46.890  INFO 18872 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-03-02 17:38:46.915  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:38:46.915  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
-2022-03-02 17:38:46.916  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  edited 1st comment
-2022-03-02 17:38:46.919  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:38:46.919  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
-2022-03-02 17:38:46.919  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  com2
-2022-03-02 17:38:46.921  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
-2022-03-02 17:38:46.921  INFO 18872 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-03-02 18:12:41.753  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.757  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.757  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordphukked
+2022-03-02 18:12:41.759  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.760  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.761  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordphukking
+2022-03-02 18:12:41.763  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.764  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.764  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordphuks
+2022-03-02 18:12:41.766  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.767  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.767  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordphuq
+2022-03-02 18:12:41.769  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.770  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.770  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpigfucker
+2022-03-02 18:12:41.771  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.772  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.772  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpimpis
+2022-03-02 18:12:41.774  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.774  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.774  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpiss
+2022-03-02 18:12:41.776  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.777  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.777  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpissed
+2022-03-02 18:12:41.779  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.781  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.781  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpisser
+2022-03-02 18:12:41.783  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.784  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.784  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpissers
+2022-03-02 18:12:41.786  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.787  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.787  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpisses 
+2022-03-02 18:12:41.789  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.790  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.790  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpissflaps
+2022-03-02 18:12:41.792  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.794  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.794  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpissin 
+2022-03-02 18:12:41.796  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.797  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.797  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpissing
+2022-03-02 18:12:41.800  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.801  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.801  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpissoff 
+2022-03-02 18:12:41.802  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.803  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.803  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpoop
+2022-03-02 18:12:41.804  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.805  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.805  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordporn
+2022-03-02 18:12:41.805  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.806  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.806  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordporno
+2022-03-02 18:12:41.808  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.808  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.808  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpornography
+2022-03-02 18:12:41.810  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.811  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.811  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpornos
+2022-03-02 18:12:41.814  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.815  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.815  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordprick
+2022-03-02 18:12:41.817  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.818  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.818  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpricks 
+2022-03-02 18:12:41.819  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.819  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.819  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpron
+2022-03-02 18:12:41.821  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.821  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.822  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpube
+2022-03-02 18:12:41.824  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.824  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.824  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpusse
+2022-03-02 18:12:41.825  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.826  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.826  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpussi
+2022-03-02 18:12:41.828  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.829  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.829  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpussies
+2022-03-02 18:12:41.832  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.833  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.833  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpussy
+2022-03-02 18:12:41.834  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.835  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.835  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordpussys 
+2022-03-02 18:12:41.837  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.837  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.837  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordrectum
+2022-03-02 18:12:41.838  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.839  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.839  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordretard
+2022-03-02 18:12:41.841  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.842  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.842  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordrimjaw
+2022-03-02 18:12:41.843  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.845  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.845  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordrimming
+2022-03-02 18:12:41.847  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.849  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.849  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New words hit
+2022-03-02 18:12:41.851  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.851  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.852  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New words.o.b.
+2022-03-02 18:12:41.853  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.854  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.854  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsadist
+2022-03-02 18:12:41.856  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.857  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.857  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordschlong
+2022-03-02 18:12:41.857  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.858  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.858  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordscrewing
+2022-03-02 18:12:41.859  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.861  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.861  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordscroat
+2022-03-02 18:12:41.863  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.875  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.875  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordscrote
+2022-03-02 18:12:41.877  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.878  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.878  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordscrotum
+2022-03-02 18:12:41.880  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.881  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.881  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsemen
+2022-03-02 18:12:41.882  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.883  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.883  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsex
+2022-03-02 18:12:41.884  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.885  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.885  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsh!+
+2022-03-02 18:12:41.887  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.887  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.887  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsh!t
+2022-03-02 18:12:41.889  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.889  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.889  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsh1t
+2022-03-02 18:12:41.890  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.891  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.891  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshag
+2022-03-02 18:12:41.892  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.894  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.894  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshagger
+2022-03-02 18:12:41.897  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.898  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.898  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshaggin
+2022-03-02 18:12:41.900  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.901  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.901  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshagging
+2022-03-02 18:12:41.902  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.903  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.903  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshemale
+2022-03-02 18:12:41.903  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.904  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.904  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshi+
+2022-03-02 18:12:41.906  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.907  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.907  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshit
+2022-03-02 18:12:41.908  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.909  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.909  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitdick
+2022-03-02 18:12:41.911  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.913  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.913  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshite
+2022-03-02 18:12:41.915  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.915  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.915  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshited
+2022-03-02 18:12:41.916  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.918  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.918  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitey
+2022-03-02 18:12:41.919  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.919  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.919  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitfuck
+2022-03-02 18:12:41.921  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.922  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.922  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitfull
+2022-03-02 18:12:41.923  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.924  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.924  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshithead
+2022-03-02 18:12:41.925  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.926  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.926  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshiting
+2022-03-02 18:12:41.927  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.928  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.928  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitings
+2022-03-02 18:12:41.930  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.931  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.931  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshits
+2022-03-02 18:12:41.932  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.932  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.932  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitted
+2022-03-02 18:12:41.935  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.935  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.935  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitter
+2022-03-02 18:12:41.937  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.937  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.937  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitters 
+2022-03-02 18:12:41.939  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.939  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.939  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitting
+2022-03-02 18:12:41.940  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.941  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.941  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshittings
+2022-03-02 18:12:41.942  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.943  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.943  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordshitty 
+2022-03-02 18:12:41.945  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.946  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.946  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordskank
+2022-03-02 18:12:41.948  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.950  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.950  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordslut
+2022-03-02 18:12:41.952  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.952  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.952  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsluts
+2022-03-02 18:12:41.953  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.954  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.954  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsmegma
+2022-03-02 18:12:41.954  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.955  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.955  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsmut
+2022-03-02 18:12:41.956  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.958  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.958  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordsnatch
+2022-03-02 18:12:41.958  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.959  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.959  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordson-of-a-bitch
+2022-03-02 18:12:41.961  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.962  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.962  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordspac
+2022-03-02 18:12:41.965  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.965  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.965  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordspunk
+2022-03-02 18:12:41.966  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.967  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.967  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New words_h_i_t
+2022-03-02 18:12:41.968  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.969  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.969  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordt1tt1e5
+2022-03-02 18:12:41.970  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.971  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.971  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordt1tties
+2022-03-02 18:12:41.972  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.974  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.974  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordteets
+2022-03-02 18:12:41.975  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.976  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.976  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordteez
+2022-03-02 18:12:41.977  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.978  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.978  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtestical
+2022-03-02 18:12:41.980  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.981  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.981  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtesticle
+2022-03-02 18:12:41.982  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.983  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.983  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtit
+2022-03-02 18:12:41.984  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.985  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.985  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtitfuck
+2022-03-02 18:12:41.986  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.986  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.986  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtits
+2022-03-02 18:12:41.988  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.989  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.989  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtitt
+2022-03-02 18:12:41.990  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.990  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.990  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtittie5
+2022-03-02 18:12:41.991  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.992  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.992  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtittiefucker
+2022-03-02 18:12:41.994  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.995  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.995  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtitties
+2022-03-02 18:12:41.997  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:41.998  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:41.998  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtittyfuck
+2022-03-02 18:12:42.000  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.001  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.001  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtittywank
+2022-03-02 18:12:42.003  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.003  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.003  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtitwank
+2022-03-02 18:12:42.005  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.005  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.005  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtosser
+2022-03-02 18:12:42.006  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.007  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.007  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordturd
+2022-03-02 18:12:42.009  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.009  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.009  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtw4t
+2022-03-02 18:12:42.013  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.013  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.013  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtwat
+2022-03-02 18:12:42.015  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.016  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.016  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtwathead
+2022-03-02 18:12:42.017  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.017  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.017  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtwatty
+2022-03-02 18:12:42.019  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.019  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.019  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtwunt
+2022-03-02 18:12:42.020  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.020  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.020  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordtwunter
+2022-03-02 18:12:42.023  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.023  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.023  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordv14gra
+2022-03-02 18:12:42.025  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.025  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.025  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordv1gra
+2022-03-02 18:12:42.027  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.028  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.028  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordvagina
+2022-03-02 18:12:42.030  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.030  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.030  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordviagra
+2022-03-02 18:12:42.032  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.032  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.032  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordvulva
+2022-03-02 18:12:42.034  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.034  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.034  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordw00se
+2022-03-02 18:12:42.035  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.035  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.035  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwang
+2022-03-02 18:12:42.038  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.038  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.038  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwank
+2022-03-02 18:12:42.039  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.039  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.039  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwanker
+2022-03-02 18:12:42.041  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.042  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.042  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwanky
+2022-03-02 18:12:42.043  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.044  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.044  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwhoar
+2022-03-02 18:12:42.046  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.047  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.047  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwhore
+2022-03-02 18:12:42.049  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.050  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.050  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwillies
+2022-03-02 18:12:42.052  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.053  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.053  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordwilly
+2022-03-02 18:12:42.055  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.055  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.055  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordxrated
+2022-03-02 18:12:42.057  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : in while loop
+2022-03-02 18:12:42.058  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : if condition
+2022-03-02 18:12:42.058  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : New wordxxx
+2022-03-02 18:12:42.059  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : out of while loop
+2022-03-02 18:12:42.060  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : File exist? true
+2022-03-02 18:12:42.060  INFO 9180 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceBadwords       : file is deleted ? : true
+2022-03-02 18:12:55.328  INFO 9180 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:12:55.332  INFO 9180 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-02 18:12:55.338  INFO 9180 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-02 18:12:55.550  INFO 9180 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 9180 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-03-02 18:12:55.550  INFO 9180 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-02 18:12:55.922  INFO 9180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-02 18:12:56.019  INFO 9180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 26 JPA repository interfaces.
+2022-03-02 18:12:56.148  INFO 9180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-02 18:12:56.148  INFO 9180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 18:12:56.148  INFO 9180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-02 18:12:56.164  INFO 9180 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-02 18:12:56.164  INFO 9180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 611 ms
+2022-03-02 18:12:56.197  INFO 9180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-02 18:12:56.202  INFO 9180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-03-02 18:12:56.206  INFO 9180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-03-02 18:12:56.206  INFO 9180 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-02 18:12:57.259  INFO 9180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-02 18:12:57.261  INFO 9180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:12:57.658  WARN 9180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-02 18:12:57.712  INFO 9180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-02 18:12:57.881  INFO 9180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-02 18:12:58.259  INFO 9180 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.743 seconds (JVM running for 35.512)
+2022-03-02 18:12:58.261  INFO 9180 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-02 18:13:55.740  INFO 9180 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:13:55.742  INFO 9180 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-03-02 18:13:55.747  INFO 9180 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-03-02 18:13:55.928  INFO 9180 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 9180 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-03-02 18:13:55.929  INFO 9180 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-02 18:13:56.267  INFO 9180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-02 18:13:56.365  INFO 9180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 26 JPA repository interfaces.
+2022-03-02 18:13:56.491  INFO 9180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-02 18:13:56.491  INFO 9180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 18:13:56.491  INFO 9180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-02 18:13:56.503  INFO 9180 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-02 18:13:56.504  INFO 9180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 572 ms
+2022-03-02 18:13:56.535  INFO 9180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-02 18:13:56.539  INFO 9180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-03-02 18:13:56.543  INFO 9180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-03-02 18:13:56.543  INFO 9180 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-02 18:13:57.553  INFO 9180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-02 18:13:57.554  INFO 9180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:13:57.949  WARN 9180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-02 18:13:58.008  INFO 9180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-02 18:13:58.201  INFO 9180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-02 18:13:58.576  INFO 9180 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 2.674 seconds (JVM running for 95.828)
+2022-03-02 18:13:58.576  INFO 9180 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-02 18:14:10.259  INFO 9180 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-02 18:14:10.534  INFO 9180 --- [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:14:10.535  INFO 9180 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-03-02 18:14:10.540  INFO 9180 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

@@ -6,5 +6,5 @@ import com.prospace.spring.entity.Badwords;
 
 public interface IServiceBadwords {
 
-	void addBadwords();
+	void addBadwords(String filename);
 }

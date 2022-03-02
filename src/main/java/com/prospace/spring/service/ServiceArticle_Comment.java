@@ -65,16 +65,15 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 		List<Article_Comment> comments =  article_commentRepository.findByArticle(article);
 		List<Article_Comment> censoredComments = new ArrayList<Article_Comment>();
 		for(int i = 0 ; i<comments.size();i++) {
-			censoredComments.add(CensoredWords(comments.get(i)));
+			comments.get(i).setContent(CensoredWords(comments.get(i).getContent()));
 		}
-		return censoredComments;
+		return comments;
 	}
 
 	@Override
-	public Article_Comment CensoredWords(Article_Comment comment) {
+	public String CensoredWords(String comment) {
 		List<Badwords> wordsList = badwordsRepository.findAll();
 		List<String> words = new ArrayList<String>();
-		String new_comment ="";
 		
 		log.info("wordsList size : "+wordsList.size());
 		for(int i=0 ; i< wordsList.size();i++) {
@@ -85,11 +84,11 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 		
 		for (String word : words) {
             Pattern rx = Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE);
-            new_comment = rx.matcher(comment.getContent()).replaceAll(new String(new char[word.length()]).replace('\0', '*'));
+            comment = rx.matcher(comment).replaceAll(new String(new char[word.length()]).replace('\0', '*'));
            
 		}
-		log.info("New comment  "+new_comment);
-		comment.setContent(new_comment);
+		log.info("New comment  "+comment);
+		
 		
 		return comment;
 	}

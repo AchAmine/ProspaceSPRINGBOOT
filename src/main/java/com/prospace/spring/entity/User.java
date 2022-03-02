@@ -1,6 +1,8 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Set;
 
@@ -19,6 +21,10 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
@@ -36,7 +42,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
-public class User implements Serializable{
+public class User implements Serializable,UserDetails{
 	/**
 	 * 
 	 */
@@ -46,7 +52,7 @@ public class User implements Serializable{
 	private Long idUser;
 	
 	@NonNull
-	private String firstname;
+	private String firstName;
 	@NonNull
 	private String lastName;
 	
@@ -88,6 +94,48 @@ public class User implements Serializable{
 	private Date birthDate;
 	@NonNull
 	private Integer age;
+	//-----------------userDetails--------------------------
+	
+		@Override
+		public Collection<? extends GrantedAuthority> getAuthorities() {
+			SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
+			return Collections.singletonList(authority);
+		}
+
+		@Override
+		public String getUsername() {
+			return userName;
+		}
+
+		@Override
+		public boolean isAccountNonExpired() {
+			return true;
+		}
+
+		@Override
+		public boolean isAccountNonLocked() {
+			return !locked;
+		}
+
+		@Override
+		public boolean isCredentialsNonExpired() {
+			return true;
+		}
+		public boolean isEnabled() {
+			return enabled;
+		}
+		
+		//-----------------userDetailsEnd-----------------------
+		public User( String firstName, String lastName, String email,String userName,String password,
+				 UserRole userRole) {
+			
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.email = email;
+			this.userName=userName;
+			this.password=password;
+			this.userRole = userRole;
+		}
 	
 	@ManyToMany
 	private Set<Skill> Skills;

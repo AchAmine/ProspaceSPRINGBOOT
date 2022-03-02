@@ -1,5 +1,9 @@
 package com.prospace.spring.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +13,11 @@ import com.prospace.spring.entity.Quizz;
 import com.prospace.spring.repository.AnswerRepository;
 import com.prospace.spring.repository.QuestionRepository;
 import com.prospace.spring.repository.QuizzRepository;
+
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class ServiceAnswer implements IServiceAnswer {
 	@Autowired
 	QuestionRepository questionRepository;
@@ -19,11 +27,9 @@ public class ServiceAnswer implements IServiceAnswer {
 	QuizzRepository quizzRepository;
 	
 	
-	public Answer addAnswerAndAffecttoQuestionAndQuizz(Answer a,Long idQuestion,Long idQuizz){
+	public Answer addAnswerAndAffecttoQuestionAndQuizz(Answer a,Long idQuestion){
 		Question q = questionRepository.findById(idQuestion).orElse(null);
-		Quizz quizz = quizzRepository.findById(idQuizz).orElse(null);
 		q.getAnswers().add(a);
-		quizz.getQuestions().add(q);
 		answerRepository.save(a);
 		return a;
 	}
@@ -39,4 +45,23 @@ public class ServiceAnswer implements IServiceAnswer {
 		return answerRepository.save(a);
 	}
 	
-}
+	@Override
+	
+	public List<Answer> findAnswersByQuestion(Long idQuestion) {
+		Question q= questionRepository.findById(idQuestion).orElse(null);
+		List<Answer> al= new ArrayList<Answer>();
+		for (Answer a : q.getAnswers()){
+			al.add(a);
+		}
+		return al;
+		
+	
+	}
+	
+	
+	}
+
+	
+		
+	
+

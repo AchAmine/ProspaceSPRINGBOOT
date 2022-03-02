@@ -1,24 +1,16 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -30,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Entity
 @Getter
 @Setter 
@@ -38,47 +29,31 @@ import lombok.ToString;
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
-public class Offer implements Serializable{
+public class Partner implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Long idOffer;
+	private Long idPartner;
+	@NonNull
+	@OneToOne
+	private User user;
 	
 	@NonNull
-	private String title; 
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date DateDebutPartenariat;
 	
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date DateFinPartenariat;
 	@NonNull
-	private String description;
+	private int Score;
 	
-	@NonNull
-	@Temporal(TemporalType.DATE)
-	private Date startsAt;
 	
-	@NonNull
-	@Temporal(TemporalType.DATE)
-	private Date endsAt;
-
-	@NonNull
-	@Enumerated(EnumType.STRING)
-	private OfferState state;
 	
-	//@ManyToOne
-	//private User handledBy;
-	@ManyToOne
-	private User partner;
 	
-	@Transient
-	private String PartnerEmail;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	private Image image;
-
-	@OneToMany(mappedBy="offer")
-	private List<Rating> Ratings;
 	
 
-	
 }

@@ -27,6 +27,7 @@ public class ServiceRating implements IServiceRating {
 		Offer offer = offerRepository.findById(offerId).orElse(null);
 		rating.setUser(user);
 		rating.setOffer(offer);
+		
 		return ratingRepository.save(rating);
 	}
 
@@ -45,9 +46,9 @@ public class ServiceRating implements IServiceRating {
 	@Override
 	public List<Rating> retrieveOfferRatings(Long OfferId) {
 		Offer offer = offerRepository.findById(OfferId).orElse(null);
-		List<Rating> reactions =  ratingRepository.findByOffer(offer);
+		List<Rating> ratings =  ratingRepository.findByOffer(offer);
 		
-		return reactions;
+		return ratings;
 	}
 
 }

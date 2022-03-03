@@ -24,7 +24,7 @@ import lombok.ToString;
 @Setter 
 @NoArgsConstructor 
 @AllArgsConstructor
-@RequiredArgsConstructor 
+
 @ToString
 public class Event_Comment implements Serializable{
 	/**
@@ -35,10 +35,10 @@ public class Event_Comment implements Serializable{
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long idComment;
 	
-	@NonNull
+	
 	private String content;
 	
-	@NonNull
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date postedAt;
 	
@@ -51,5 +51,7 @@ public class Event_Comment implements Serializable{
 	
 	@ManyToOne
 	private Event event;
+	
+	
 
 }

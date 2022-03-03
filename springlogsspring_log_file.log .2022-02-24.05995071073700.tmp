@@ -1,0 +1,51 @@
+2022-02-24 15:46:17.410  INFO 9120 --- [Thread-127] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-24 15:46:17.413  INFO 9120 --- [Thread-127] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2022-02-24 15:46:17.422  INFO 9120 --- [Thread-127] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+2022-02-24 15:46:17.713  INFO 9120 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 17.0.1 on DESKTOP-37SC4FH with PID 9120 (C:\Users\HP\Desktop\Pi\ProspaceSPRINGBOOT\target\classes started by HP in C:\Users\HP\Desktop\Pi\ProspaceSPRINGBOOT)
+2022-02-24 15:46:17.717  INFO 9120 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-02-24 15:46:18.141  INFO 9120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-24 15:46:18.258  INFO 9120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 25 JPA repository interfaces.
+2022-02-24 15:46:18.450  INFO 9120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-02-24 15:46:18.451  INFO 9120 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-24 15:46:18.451  INFO 9120 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-24 15:46:18.535  INFO 9120 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-02-24 15:46:18.536  INFO 9120 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2022-02-24 15:46:18.594  INFO 9120 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-24 15:46:18.606  INFO 9120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2022-02-24 15:46:18.612  INFO 9120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2022-02-24 15:46:18.613  INFO 9120 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-02-24 15:46:29.832  INFO 9120 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-24 15:46:29.833  INFO 9120 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-24 15:46:30.147  WARN 9120 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-24 15:46:30.243  INFO 9120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-24 15:46:30.662  INFO 9120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-02-24 15:46:30.907  INFO 9120 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 13.264 seconds (JVM running for 2823.607)
+2022-02-24 15:46:30.910  INFO 9120 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-24 15:47:56.831  INFO 9120 --- [Thread-131] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-24 15:47:56.832  INFO 9120 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2022-02-24 15:47:56.837  INFO 9120 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+2022-02-24 15:47:56.997  INFO 9120 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 17.0.1 on DESKTOP-37SC4FH with PID 9120 (C:\Users\HP\Desktop\Pi\ProspaceSPRINGBOOT\target\classes started by HP in C:\Users\HP\Desktop\Pi\ProspaceSPRINGBOOT)
+2022-02-24 15:47:56.998  INFO 9120 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-02-24 15:47:57.392  INFO 9120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-24 15:47:57.486  INFO 9120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 25 JPA repository interfaces.
+2022-02-24 15:47:57.677  INFO 9120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-02-24 15:47:57.678  INFO 9120 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-24 15:47:57.678  INFO 9120 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-24 15:47:57.734  INFO 9120 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-02-24 15:47:57.734  INFO 9120 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 733 ms
+2022-02-24 15:47:57.781  INFO 9120 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-24 15:47:57.788  INFO 9120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Starting...
+2022-02-24 15:47:57.793  INFO 9120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Start completed.
+2022-02-24 15:47:57.794  INFO 9120 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-02-24 15:48:09.177  INFO 9120 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-24 15:48:09.178  INFO 9120 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-24 15:48:09.457  WARN 9120 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-24 15:48:09.527  INFO 9120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-24 15:48:09.951  INFO 9120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-02-24 15:48:10.257  INFO 9120 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 13.307 seconds (JVM running for 2922.957)
+2022-02-24 15:48:10.259  INFO 9120 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-24 15:48:45.177  INFO 9120 --- [http-nio-8089-exec-2] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-24 15:48:45.177  INFO 9120 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-24 15:48:45.179  INFO 9120 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-24 18:52:27.410  WARN 9120 --- [HikariPool-34 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-34 - Thread starvation or clock leap detected (housekeeper delta=3h29s458ms199µs100ns).
+2022-02-24 23:06:22.463  WARN 9120 --- [HikariPool-34 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-34 - Thread starvation or clock leap detected (housekeeper delta=4h14m10s686ms643µs700ns).

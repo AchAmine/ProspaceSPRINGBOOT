@@ -21,8 +21,7 @@ import lombok.ToString;
 
 
 @Entity
-@Getter
-@Setter 
+
 @NoArgsConstructor 
 @AllArgsConstructor
 @RequiredArgsConstructor 
@@ -50,4 +49,62 @@ public class Tournament implements Serializable{
 	
 	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Tournaments")
 	private Set<User> Users;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Long getIdTournament() {
+		return idTournament;
+	}
+
+	public Integer getSlot() {
+		return slot;
+	}
+
+	public Float getPrize_pool() {
+		return prize_pool;
+	}
+
+	public Float getPrice() {
+		return price;
+	}
+
+	public Activity getActivity() {
+		return activity;
+	}
+
+	public Set<User> getUsers() {
+		return Users;
+	}
+
+	public void setIdTournament(Long idTournament) {
+		this.idTournament = idTournament;
+	}
+
+	public void setSlot(Integer slot) {
+		this.slot = slot;
+	}
+
+	public void setPrize_pool(Float prize_pool) {
+		this.prize_pool = prize_pool;
+	}
+
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+
+	public void setActivity(Activity activity) {
+		this.activity = activity;
+	}
+
+	public void setUsers(Set<User> users) {
+		Users = users;
+	}
+
+
+ 
+
+	
+	
 }

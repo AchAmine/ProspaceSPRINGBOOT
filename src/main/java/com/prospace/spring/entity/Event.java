@@ -12,6 +12,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -27,11 +28,12 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@Setter 
+@Setter
 @NoArgsConstructor 
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
+@Table(name ="Event")
 public class Event implements Serializable{
 	/**
 	 * 
@@ -59,11 +61,12 @@ public class Event implements Serializable{
 	
 	private float price;
 	
+	private int note ;
+	
+    private float depenses ;
+    private float profit ;
 	@OneToOne
 	private Image image;
-	
-	@OneToMany
-	private Set<Event_Comment> eventComments;
 	
 	@ManyToOne
 	private User user_organizer;
@@ -73,4 +76,20 @@ public class Event implements Serializable{
 
 	@OneToMany
 	private Set<Activity> activities;
+
+
 }
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+		
+	
+

@@ -19,4 +19,7 @@ public interface IServicePost_reaction {
 
 	List<User> retrievePostReactorsByType(Long postId, postReactionType reactionType);
 
+	/***********/
+	void nbrePostsParGenre();
+
 }

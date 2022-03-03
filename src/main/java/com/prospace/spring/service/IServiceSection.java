@@ -10,12 +10,14 @@ public interface IServiceSection {
 
 	Section retrieveSection(Long id);
 
-	List<Section> getSectionByName(String name);
 
 	Section addSection(Section s);
 
 	Section updateSection(Section s);
 
 	void deleteSection(Long id);
+	
+	
+	List<Section> findByName(String name);
 
 }

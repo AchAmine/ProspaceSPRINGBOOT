@@ -14,4 +14,5 @@ public interface Post_ReactionRepository extends JpaRepository<Post_Reaction, Lo
 	List<Post_Reaction> findByPost(Post post);
 
 	List<Post_Reaction> findByPostAndType(Post post, postReactionType reactionType);
+
 }

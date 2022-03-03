@@ -33,12 +33,7 @@ public class ServiceSection implements IServiceSection {
 		return section;
 	}
 
-	@Override
-	public List<Section> getSectionByName(String name) {
-		// TODO Auto-generated method stub
-		List<Section> listSection = sectionRepository.findByName(name);
-		return listSection;
-	}
+	
 
 	@Override
 	public Section addSection(Section s) {
@@ -57,4 +52,8 @@ public class ServiceSection implements IServiceSection {
 		sectionRepository.deleteById(id);
 	}
 
+	@Override
+	public List<Section> findByName(String name) {
+		return (List<Section>) sectionRepository.findByName(name);
+		}
 }

@@ -39,13 +39,14 @@ public class SectionRestController {
 		return serviceSection.retrieveSection(id);
 	}
 
-	/*@ApiOperation(value = "show one section by name ")
-	@GetMapping("/retrieve-section/{section-name}")
+
+	@ApiOperation(value = "show one section by name")
+	@GetMapping("/retrieve-one-section/{section-name}")
 	public List<Section> findByName(@PathVariable("section-name") String name) {
 
-		return serviceSection.getSectionByName(name);
-	}*/
-
+		List<Section> listSections = serviceSection.findByName(name);
+		return listSections;
+	}
 	@ApiOperation(value = "Add section")
 	@PostMapping("/add-section")
 	public Section save(@RequestBody Section s) {

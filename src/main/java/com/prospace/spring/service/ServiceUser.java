@@ -216,37 +216,9 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 			log.error("error in method upadateUser" + e);
 		}
 
-	}*/
-
-	@Override
-	public void addUser(User u) {
-		// TODO Auto-generated method stub
-		
 	}
 
-	@Override
-	public List<User> getusers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<User> getUndeletedUsers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void deleteUser(Long id) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void updateUser(User u) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	public int enableAppUser(String email) {
         return userRepository.enableAppUser(email);
     }

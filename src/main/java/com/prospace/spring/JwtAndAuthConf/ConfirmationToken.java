@@ -1,4 +1,4 @@
-package com.prospace.spring.entity;
+package com.prospace.spring.JwtAndAuthConf;
 
 import java.time.LocalDateTime;
 
@@ -10,8 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
-
+import com.prospace.spring.entity.User;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

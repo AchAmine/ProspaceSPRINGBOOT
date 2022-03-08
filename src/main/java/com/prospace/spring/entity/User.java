@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -11,9 +12,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -43,7 +47,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
-public class User implements Serializable,UserDetails{
+public class User implements Serializable{
 	/**
 	 * 
 	 */
@@ -64,15 +68,18 @@ public class User implements Serializable,UserDetails{
 	private String email;
 	@NonNull 
 	private String password;
-	@NonNull 
-	@Enumerated(EnumType.STRING)
-	UserRole userRole;
+	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> userRoles = new HashSet<>();
 	
 	private boolean locked;
 	
 	private boolean enabled;
 	@NonNull 
 	private boolean isDeleted;
+	/*@NonNull
+	@Column(name = "failed_attempt")
+    private int failedAttempt;*/
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
@@ -90,62 +97,27 @@ public class User implements Serializable,UserDetails{
 	@OneToOne
 	private Image image;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
-	@Transient
 	private Date birthDate;
 	@NonNull
 	private Integer age;
-	//-----------------userDetails--------------------------
+	@Column(name = "resettoken")
+	private String resettoken;
 	
-		@Override
-		public Collection<? extends GrantedAuthority> getAuthorities() {
-			SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
-			return Collections.singletonList(authority);
-		}
-
-		@Override
-		public String getUsername() {
-			return userName;
-		}
-
-		@Override
-		public boolean isAccountNonExpired() {
-			return true;
-		}
-
-		@Override
-		public boolean isAccountNonLocked() {
-			return !locked;
-		}
-
-		@Override
-		public boolean isCredentialsNonExpired() {
-			return true;
-		}
 		public boolean isEnabled() {
 			return enabled;
 		}
 		
-		//-----------------userDetailsEnd-----------------------
-		public User( String firstName, String lastName, String email,String userName,String password,
-				 UserRole userRole) {
-			
-			this.firstName = firstName;
-			this.lastName = lastName;
-			this.email = email;
-			this.userName=userName;
-			this.password=password;
-			this.userRole = userRole;
+		public boolean isLocked() {
+			return locked;
 		}
+		
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
 	
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
-	private Set<Formation> formations;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="organizer")
-	private Set<Formation> formations_organized;
 	
 	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
@@ -156,10 +128,10 @@ public class User implements Serializable,UserDetails{
 	
 	// --------------------------------------- Begin Partner -------------------------------------
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
 	
 	
@@ -171,7 +143,7 @@ public class User implements Serializable,UserDetails{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Post> Posts;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Topic> Topics;
 	
 	
@@ -185,7 +157,7 @@ public class User implements Serializable,UserDetails{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer")
 	private Set<Event> EventsOrganized;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Tournament> Tournaments;
 	
 	// --------------------------------------- End Events -------------------------------------

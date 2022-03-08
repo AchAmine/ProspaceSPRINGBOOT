@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -138,35 +139,35 @@ public class User implements Serializable,UserDetails{
 			this.userRole = userRole;
 		}
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
 	
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants",fetch = FetchType.EAGER)
 	private Set<Formation> formations;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="organizer")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="organizer",fetch = FetchType.EAGER)
 	private Set<Formation> formations_organized;
 	
 	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Article> Articles;
 	
 	// --------------------------------------- End News -------------------------------------
 	
 	// --------------------------------------- Begin Partner -------------------------------------
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
 	@JsonIgnore
-	@OneToMany(mappedBy="user")
+	@OneToMany(mappedBy="user",fetch = FetchType.EAGER)
 	private Set<ResultQuizz> resultQuizz;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="userresponse")
+	@OneToMany(mappedBy="userresponse",fetch = FetchType.EAGER)
 	private Set<Response> Response;
 	
 	// --------------------------------------- End Partner -------------------------------------
@@ -174,10 +175,10 @@ public class User implements Serializable,UserDetails{
 	// --------------------------------------- Begin Forum -------------------------------------
 	@JsonIgnore
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Post> Posts;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Topic> Topics;
 	
 	
@@ -185,13 +186,13 @@ public class User implements Serializable,UserDetails{
 	
 	// --------------------------------------- Begin Events -------------------------------------
 	@ToString.Exclude
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants",fetch = FetchType.EAGER)
 	private Set<Event> EventsParticipation;
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer",fetch = FetchType.EAGER)
 	private Set<Event> EventsOrganized;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Tournament> Tournaments;
 	
 	// --------------------------------------- End Events -------------------------------------
@@ -199,7 +200,7 @@ public class User implements Serializable,UserDetails{
 	
 	// --------------------------------------- Begin Complaint -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Complaint> Complaints;
 	
 	@OneToOne

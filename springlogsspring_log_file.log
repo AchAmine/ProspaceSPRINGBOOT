@@ -1,0 +1,467 @@
+2022-03-08 13:46:00.011  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:46:00.016  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:47:00.004  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:47:00.007  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:48:00.006  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:48:00.007  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:49:00.018  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:49:00.020  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:50:00.018  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:50:00.021  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:50:59.051  INFO 26188 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 8 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(8)-CONNECTED(8)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 90], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 246], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 4, completed tasks = 2672]
+2022-03-08 13:51:00.013  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:51:00.014  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:52:00.016  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:52:00.019  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:53:00.005  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:53:00.006  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:54:00.015  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:54:00.017  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:55:00.016  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:55:00.016  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:56:00.003  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:56:00.005  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:57:00.011  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:57:00.013  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 13:58:00.015  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 13:58:00.017  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:30:22.198  INFO 26188 --- [MessageBroker-7] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 8 total, 0 closed abnormally (0 connect failure, 0 send limit, 2 transport error)], stompSubProtocol[processed CONNECT(8)-CONNECTED(8)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 96], outboundChannel[pool size = 2, active threads = 0, queued tasks = 0, completed tasks = 248], sockJsScheduler[pool size = 8, active threads = 3, queued tasks = 0, completed tasks = 2807]
+2022-03-08 14:30:22.200  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:30:22.200  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:30:40.869  WARN 26188 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m43s791ms913µs700ns).
+2022-03-08 14:31:00.009  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:31:00.010  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:32:00.009  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:32:00.012  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:33:00.006  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:33:00.007  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:34:00.014  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:34:00.015  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:35:00.015  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:35:00.018  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:36:00.012  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:36:00.015  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:37:00.015  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:37:00.017  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:38:00.008  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:38:00.010  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:39:00.014  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:39:00.017  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:40:00.006  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:40:00.008  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:41:00.009  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:41:00.011  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:42:00.007  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:42:00.010  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:43:00.011  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:43:00.013  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:44:00.017  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:44:00.018  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:45:00.008  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:45:00.011  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:46:00.005  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:46:00.008  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:47:00.011  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:47:00.014  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:48:00.006  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:48:00.009  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:49:00.010  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:49:00.011  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:50:00.018  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:50:00.020  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:51:00.003  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:51:00.005  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:52:00.012  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:52:00.015  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:53:00.016  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:53:00.018  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:54:00.015  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:54:00.017  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:55:00.016  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:55:00.017  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:56:00.013  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:56:00.015  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:57:00.005  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:57:00.007  INFO 26188 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:58:00.011  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:58:00.014  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 14:59:00.011  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 14:59:00.013  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:00:00.007  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:00:00.009  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:00:22.200  INFO 26188 --- [MessageBroker-8] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 8 total, 0 closed abnormally (0 connect failure, 0 send limit, 2 transport error)], stompSubProtocol[processed CONNECT(8)-CONNECTED(8)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 96], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 248], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 3579]
+2022-03-08 15:01:00.008  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:01:00.010  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:02:00.010  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:02:00.013  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:03:00.012  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:03:00.015  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:04:00.008  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:04:00.010  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:05:00.017  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:05:00.020  INFO 26188 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:06:00.002  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:06:00.005  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:07:00.013  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:07:00.015  INFO 26188 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:08:00.013  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:08:00.014  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:09:00.008  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:09:00.010  INFO 26188 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:10:00.016  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:10:00.017  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:11:00.006  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:11:00.008  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 15:12:00.009  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 15:12:00.011  INFO 26188 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:08:22.830  INFO 26188 --- [MessageBroker-4] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 8 total, 0 closed abnormally (0 connect failure, 0 send limit, 2 transport error)], stompSubProtocol[processed CONNECT(8)-CONNECTED(8)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 96], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 248], sockJsScheduler[pool size = 8, active threads = 3, queued tasks = 0, completed tasks = 3757]
+2022-03-08 16:08:22.834  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:08:23.174  INFO 26188 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:08:45.971  WARN 26188 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m4s434ms26µs801ns).
+2022-03-08 16:09:00.015  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:09:00.016  INFO 26188 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:10:00.016  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:10:00.019  INFO 26188 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:10:04.161  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-08 16:10:04.171  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-03-08 16:10:04.172  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b4384b1]]
+2022-03-08 16:10:04.172  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-03-08 16:10:04.887  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 16:10:04.894  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-08 16:10:04.908  INFO 26188 --- [RMI TCP Connection(214)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-08 16:42:49.993  INFO 9196 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 9196 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-03-08 16:42:49.994  INFO 9196 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-08 16:42:50.069  INFO 9196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-08 16:42:50.070  INFO 9196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-08 16:42:52.160  INFO 9196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-08 16:42:52.442  INFO 9196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 270 ms. Found 32 JPA repository interfaces.
+2022-03-08 16:42:53.778  INFO 9196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-08 16:42:53.789  INFO 9196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-08 16:42:53.790  INFO 9196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-08 16:42:53.901  INFO 9196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-08 16:42:53.901  INFO 9196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3831 ms
+2022-03-08 16:42:54.148  INFO 9196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-08 16:42:54.363  INFO 9196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-08 16:42:54.579  INFO 9196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-08 16:42:54.687  INFO 9196 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-08 16:42:54.872  INFO 9196 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:42:55.009  INFO 9196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-08 16:42:58.881  INFO 9196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:42:58.901  INFO 9196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 16:43:00.098  WARN 9196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-08 16:43:02.034  INFO 9196 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2721d65a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4257631a, org.springframework.security.web.header.HeaderWriterFilter@1be33dd4, org.springframework.web.filter.CorsFilter@72ba41d3, org.springframework.security.web.authentication.logout.LogoutFilter@32ade84a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@769350b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@473b6e4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4905b274, org.springframework.security.web.session.SessionManagementFilter@71ab1948, org.springframework.security.web.access.ExceptionTranslationFilter@bd9e92d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@769ec93a]
+2022-03-08 16:43:02.377  INFO 9196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-08 16:43:02.552  WARN 9196 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-03-08 16:43:02.561  INFO 9196 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-03-08 16:43:02.587  INFO 9196 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-03-08 16:43:02.941  INFO 9196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-08 16:43:04.257  INFO 9196 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-03-08 16:43:04.257  INFO 9196 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3c6df8f4]]
+2022-03-08 16:43:04.258  INFO 9196 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-03-08 16:43:04.272  INFO 9196 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 14.928 seconds (JVM running for 16.679)
+2022-03-08 16:43:04.275  INFO 9196 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-03-08 16:43:04.667  INFO 9196 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-03-08 16:43:04.750  INFO 9196 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-03-08 16:43:04.767  INFO 9196 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 43ms
+2022-03-08 16:43:10.139  INFO 9196 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-08 16:43:10.140  INFO 9196 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-08 16:43:10.144  INFO 9196 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-08 16:44:00.190  INFO 9196 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:44:00.193  INFO 9196 --- [MessageBroker-6] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:44:02.132  INFO 9196 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 30], outboundChannel[pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 4], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 4, completed tasks = 13]
+2022-03-08 16:45:00.013  INFO 9196 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:45:00.017  INFO 9196 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:46:00.019  INFO 9196 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:46:00.022  INFO 9196 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:46:34.993  INFO 9196 --- [clientInboundChannel-33] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:46:35.162  INFO 9196 --- [clientInboundChannel-33] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:46:35.163  INFO 9196 --- [clientInboundChannel-33] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:46:35.164  INFO 9196 --- [clientInboundChannel-33] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:46:35.207  INFO 9196 --- [clientInboundChannel-33] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:46:35.216  INFO 9196 --- [clientInboundChannel-33] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:47:00.019  INFO 9196 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:47:00.023  INFO 9196 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:47:13.607  INFO 9196 --- [clientInboundChannel-36] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:47:13.662  INFO 9196 --- [clientInboundChannel-36] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:47:13.663  INFO 9196 --- [clientInboundChannel-36] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:47:13.663  INFO 9196 --- [clientInboundChannel-36] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:47:13.721  INFO 9196 --- [clientInboundChannel-36] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:47:13.724  INFO 9196 --- [clientInboundChannel-36] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:47:19.127  INFO 9196 --- [clientInboundChannel-39] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:47:19.169  INFO 9196 --- [clientInboundChannel-39] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:47:19.170  INFO 9196 --- [clientInboundChannel-39] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:47:19.170  INFO 9196 --- [clientInboundChannel-39] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:47:19.207  INFO 9196 --- [clientInboundChannel-39] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:47:19.210  INFO 9196 --- [clientInboundChannel-39] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:48:00.018  INFO 9196 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:48:00.022  INFO 9196 --- [MessageBroker-7] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:49:00.014  INFO 9196 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:49:00.018  INFO 9196 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:49:35.421  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in chat 
+2022-03-08 16:49:35.422  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : chat message : ChatMessage(id=null, chatId=null, senderId=useramine, recipientId=userjack, senderName=amine, recipientName=jack, content=null, timestamp=null, status=null)
+2022-03-08 16:49:35.422  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:49:35.446  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:35.446  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:49:35.446  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:49:35.472  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:35.475  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:49:35.499  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : CHAT ID IN CONTROLLERuserjack_useramine
+2022-03-08 16:49:35.500  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-03-08 16:49:35.500  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:49:35.521  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:35.521  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:49:35.522  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:49:35.542  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:35.545  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:49:35.556  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------userjack_useramine
+2022-03-08 16:49:35.563  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------21
+2022-03-08 16:49:35.563  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.570  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 0
+2022-03-08 16:49:35.571  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.571  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 1
+2022-03-08 16:49:35.572  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.573  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 2
+2022-03-08 16:49:35.573  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.575  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 3
+2022-03-08 16:49:35.575  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.578  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 4
+2022-03-08 16:49:35.579  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.581  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 5
+2022-03-08 16:49:35.581  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.583  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 6
+2022-03-08 16:49:35.583  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.584  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 7
+2022-03-08 16:49:35.584  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.585  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 8
+2022-03-08 16:49:35.585  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.586  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 9
+2022-03-08 16:49:35.586  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.587  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 10
+2022-03-08 16:49:35.587  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.588  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 11
+2022-03-08 16:49:35.588  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.589  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 12
+2022-03-08 16:49:35.589  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.590  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 13
+2022-03-08 16:49:35.590  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.590  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 14
+2022-03-08 16:49:35.591  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.591  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 15
+2022-03-08 16:49:35.591  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.592  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 16
+2022-03-08 16:49:35.631  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.631  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 17
+2022-03-08 16:49:35.631  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.632  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 18
+2022-03-08 16:49:35.632  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.633  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 19
+2022-03-08 16:49:35.633  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:35.634  INFO 9196 --- [clientInboundChannel-61] c.p.spring.controllers.ChatController    : in loop : 20
+2022-03-08 16:49:36.964  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in chat 
+2022-03-08 16:49:36.965  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : chat message : ChatMessage(id=null, chatId=null, senderId=userjack, recipientId=useramine, senderName=jack, recipientName=amine, content=null, timestamp=null, status=null)
+2022-03-08 16:49:36.965  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:49:37.004  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:37.004  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:49:37.004  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:49:37.028  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:37.031  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:49:37.044  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : CHAT ID IN CONTROLLERuserjack_useramine
+2022-03-08 16:49:37.044  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-03-08 16:49:37.044  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:49:37.068  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:37.068  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:49:37.068  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:49:37.092  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:37.095  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:49:37.110  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------userjack_useramine
+2022-03-08 16:49:37.115  INFO 9196 --- [clientInboundChannel-60] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------21
+2022-03-08 16:49:37.116  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.117  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 0
+2022-03-08 16:49:37.117  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.118  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 1
+2022-03-08 16:49:37.118  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.119  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 2
+2022-03-08 16:49:37.120  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.121  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 3
+2022-03-08 16:49:37.121  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.122  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 4
+2022-03-08 16:49:37.122  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.123  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 5
+2022-03-08 16:49:37.123  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.124  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 6
+2022-03-08 16:49:37.124  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.125  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 7
+2022-03-08 16:49:37.125  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.125  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 8
+2022-03-08 16:49:37.125  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.126  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 9
+2022-03-08 16:49:37.126  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.126  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 10
+2022-03-08 16:49:37.127  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.127  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 11
+2022-03-08 16:49:37.127  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.128  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 12
+2022-03-08 16:49:37.128  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.129  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 13
+2022-03-08 16:49:37.129  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.131  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 14
+2022-03-08 16:49:37.131  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.132  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 15
+2022-03-08 16:49:37.132  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.133  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 16
+2022-03-08 16:49:37.133  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.135  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 17
+2022-03-08 16:49:37.135  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.135  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 18
+2022-03-08 16:49:37.135  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.137  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 19
+2022-03-08 16:49:37.137  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : size : 21
+2022-03-08 16:49:37.137  INFO 9196 --- [clientInboundChannel-60] c.p.spring.controllers.ChatController    : in loop : 20
+2022-03-08 16:49:51.788  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:49:51.808  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:51.808  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:49:51.808  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:49:51.829  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:51.831  INFO 9196 --- [clientInboundChannel-61] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:49:57.456  INFO 9196 --- [clientInboundChannel-64] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:49:57.492  INFO 9196 --- [clientInboundChannel-64] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:57.493  INFO 9196 --- [clientInboundChannel-64] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:49:57.493  INFO 9196 --- [clientInboundChannel-64] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:49:57.529  INFO 9196 --- [clientInboundChannel-64] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:49:57.532  INFO 9196 --- [clientInboundChannel-64] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:50:00.004  INFO 9196 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:50:00.008  INFO 9196 --- [MessageBroker-4] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:51:00.013  INFO 9196 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-08 16:51:00.017  INFO 9196 --- [MessageBroker-8] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-08 16:51:14.113  INFO 9196 --- [clientInboundChannel-77] c.p.spring.controllers.ChatController    : in chat 
+2022-03-08 16:51:14.115  INFO 9196 --- [clientInboundChannel-77] c.p.spring.controllers.ChatController    : chat message : ChatMessage(id=null, chatId=null, senderId=userjack, recipientId=useramine, senderName=jack, recipientName=amine, content=null, timestamp=null, status=null)
+2022-03-08 16:51:14.116  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:51:14.150  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:14.151  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:14.151  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:51:14.186  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:14.188  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:14.217  INFO 9196 --- [clientInboundChannel-77] c.p.spring.controllers.ChatController    : CHAT ID IN CONTROLLERuserjack_useramine
+2022-03-08 16:51:14.217  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-03-08 16:51:14.217  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:51:14.250  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:14.250  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:14.250  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:51:14.274  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:14.276  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:14.292  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------userjack_useramine
+2022-03-08 16:51:14.294  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------0
+2022-03-08 16:51:15.340  INFO 9196 --- [clientInboundChannel-76] c.p.spring.controllers.ChatController    : in chat 
+2022-03-08 16:51:15.340  INFO 9196 --- [clientInboundChannel-76] c.p.spring.controllers.ChatController    : chat message : ChatMessage(id=null, chatId=null, senderId=useramine, recipientId=userjack, senderName=amine, recipientName=jack, content=null, timestamp=null, status=null)
+2022-03-08 16:51:15.340  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:51:15.360  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:15.360  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:15.360  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:51:15.376  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:15.377  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:15.389  INFO 9196 --- [clientInboundChannel-76] c.p.spring.controllers.ChatController    : CHAT ID IN CONTROLLERuserjack_useramine
+2022-03-08 16:51:15.389  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-03-08 16:51:15.486  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:51:15.525  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:15.525  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:15.525  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:51:15.558  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:15.562  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:15.586  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------userjack_useramine
+2022-03-08 16:51:15.589  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------0
+2022-03-08 16:51:17.466  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:51:17.501  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:17.501  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:17.501  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:51:17.529  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:17.532  INFO 9196 --- [clientInboundChannel-77] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:21.165  INFO 9196 --- [clientInboundChannel-65] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:51:21.199  INFO 9196 --- [clientInboundChannel-65] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:21.200  INFO 9196 --- [clientInboundChannel-65] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:21.200  INFO 9196 --- [clientInboundChannel-65] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:51:21.225  INFO 9196 --- [clientInboundChannel-65] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:21.228  INFO 9196 --- [clientInboundChannel-65] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:25.746  INFO 9196 --- [clientInboundChannel-70] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:51:25.775  INFO 9196 --- [clientInboundChannel-70] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:25.775  INFO 9196 --- [clientInboundChannel-70] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:25.776  INFO 9196 --- [clientInboundChannel-70] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:51:25.804  INFO 9196 --- [clientInboundChannel-70] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:25.807  INFO 9196 --- [clientInboundChannel-70] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:35.316  INFO 9196 --- [clientInboundChannel-71] c.p.spring.service.ChatRoomService       : sender username userjack
+2022-03-08 16:51:35.345  INFO 9196 --- [clientInboundChannel-71] c.p.spring.service.ChatRoomService       : sender : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:35.346  INFO 9196 --- [clientInboundChannel-71] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:35.346  INFO 9196 --- [clientInboundChannel-71] c.p.spring.service.ChatRoomService       : recipient username : useramine
+2022-03-08 16:51:35.369  INFO 9196 --- [clientInboundChannel-71] c.p.spring.service.ChatRoomService       : recipient : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:35.372  INFO 9196 --- [clientInboundChannel-71] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:42.141  INFO 9196 --- [clientInboundChannel-74] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:51:42.169  INFO 9196 --- [clientInboundChannel-74] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:42.170  INFO 9196 --- [clientInboundChannel-74] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:42.170  INFO 9196 --- [clientInboundChannel-74] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:51:42.202  INFO 9196 --- [clientInboundChannel-74] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:42.206  INFO 9196 --- [clientInboundChannel-74] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:44.418  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : sender username useramine
+2022-03-08 16:51:44.446  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : sender : User(idUser=1, firstName=null, lastName=null, userName=useramine, email=amine@gmail.com, password=123456789, userRole=Admin, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-22 01:01:09.0, modifiedAt=null, deletedAt=2022-02-22 01:01:09.0, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:44.447  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-03-08 16:51:44.447  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : recipient username : userjack
+2022-03-08 16:51:44.475  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       : recipient : User(idUser=2, firstName=null, lastName=null, userName=userjack, email=jack@gmail.com, password=123, userRole=User, locked=false, enabled=true, isDeleted=false, createdAt=2022-02-23 20:08:44.0, modifiedAt=null, deletedAt=null, image=null, birthDate=null, age=null, Skills=[], formations=[], formations_organized=[], Offers=[], Quizz=[], resultQuizz=[], Response=[], Topics=[], Tournaments=[], badge=null)
+2022-03-08 16:51:44.477  INFO 9196 --- [clientInboundChannel-76] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-03-08 16:51:54.233  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-08 16:51:54.245  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-03-08 16:51:54.246  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3c6df8f4]]
+2022-03-08 16:51:54.247  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-03-08 16:51:55.238  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 16:51:55.245  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-08 16:51:55.266  INFO 9196 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-08 17:39:08.433  INFO 24472 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 24472 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-03-08 17:39:08.434  INFO 24472 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-08 17:39:08.487  INFO 24472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-08 17:39:08.487  INFO 24472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-08 17:39:09.526  INFO 24472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-08 17:39:09.706  INFO 24472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 32 JPA repository interfaces.
+2022-03-08 17:39:10.662  INFO 24472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-08 17:39:10.675  INFO 24472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-08 17:39:10.675  INFO 24472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-08 17:39:10.772  INFO 24472 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-08 17:39:10.772  INFO 24472 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2284 ms
+2022-03-08 17:39:10.914  INFO 24472 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-08 17:39:11.079  INFO 24472 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-08 17:39:11.193  INFO 24472 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-08 17:39:11.258  INFO 24472 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-08 17:39:11.420  INFO 24472 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:39:11.536  INFO 24472 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-08 17:39:13.890  INFO 24472 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:39:13.900  INFO 24472 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 17:39:14.817  WARN 24472 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-08 17:39:16.086  INFO 24472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6888da04, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f12c97d, org.springframework.security.web.header.HeaderWriterFilter@f9e0cad, org.springframework.web.filter.CorsFilter@3f5846b, org.springframework.security.web.authentication.logout.LogoutFilter@505fbce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c323fa5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5abd5981, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c2a1887, org.springframework.security.web.session.SessionManagementFilter@39f58851, org.springframework.security.web.access.ExceptionTranslationFilter@f9a58f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f37ef39]
+2022-03-08 17:39:16.308  INFO 24472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-08 17:39:16.438  WARN 24472 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-03-08 17:39:16.458  INFO 24472 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-03-08 17:39:16.496  INFO 24472 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-03-08 17:39:16.926  INFO 24472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-08 17:39:17.835  INFO 24472 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-03-08 17:39:17.836  INFO 24472 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2f068e6d]]
+2022-03-08 17:39:17.836  INFO 24472 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-03-08 17:39:17.846  INFO 24472 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 9.8 seconds (JVM running for 10.831)
+2022-03-08 17:39:17.848  INFO 24472 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-03-08 17:39:17.956  INFO 24472 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-03-08 17:39:17.983  INFO 24472 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-03-08 17:39:17.989  INFO 24472 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 13ms

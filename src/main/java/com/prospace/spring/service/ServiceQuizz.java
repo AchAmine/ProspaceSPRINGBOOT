@@ -80,5 +80,10 @@ public class ServiceQuizz implements IServiceQuizz{
 	public Quizz retrieveQuizz(Long id) {
 		return quizzRepository.findById(id).orElse(null);
 	}
+	
+	@Override
+	public int NbUsersQuizz() {
+		return quizzRepository.NbUsersQuizz();
+	}
 
 }

@@ -8,16 +8,21 @@ import org.springframework.stereotype.Service;
 import com.prospace.spring.entity.Post;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.PostRepository;
+import com.prospace.spring.repository.TopicRepository;
 import com.prospace.spring.repository.UserRepository;
 
 @Service
 public class ServicePost implements IServicePost {
 
+
 	@Autowired
 	PostRepository postRepository;
 	@Autowired
 	UserRepository userRepository;
-
+	@Autowired
+	IServiceTopic topicService;
+@Autowired
+TopicRepository topicRepository;
 	@Override
 	public Post findOne(Long idPost) {
 		// TODO Auto-generated method stub
@@ -39,17 +44,19 @@ public class ServicePost implements IServicePost {
 	 * postRepository.findAllByOrderByCreationDateDesc(); }
 	 */
 
-	/*
-	 * @Override public Set<Post> findByUser(User user) { // TODO Auto-generated
-	 * method stub return postRepository.findByUser(user); }
-	 */
+	
+	  @Override
+	  public List<Post> findByUser(User user) { // TODO Auto-generated
+	   return postRepository.findByUser(user); 
+	   }
+	 
 
-	/*
-	 * @Override public Set<Post> findByTopic(int idTopic) { return
-	 * findByTopic(topicService.findOne(idTopic)); }
-	 * 
-	 * @Override public Set<Post> findByTopic(Topic topic) { return
-	 * postRepository.findByTopic(topic); }
+	
+	/*  @Override public Set<Post> findByTopic(Long idTopic) { return
+			  findByTopic(topicService.RetrieveTopic(idTopic)); }
+	  
+	  @Override public Set<Post> findByTopic(Topic Topics) { return
+	  postRepository.findByTopic(Topics); }
 	 */
 	@Override
 	public Post save(Post post, Long idUser) {
@@ -72,15 +79,15 @@ public class ServicePost implements IServicePost {
 		return postRepository.save(p);
 	}
 
-	/*
-	 * @Override public void delete(Post post) { // TODO Auto-generated method stub
-	 * postRepository.delete(post); }
-	 */
-	/*
-	 * @Override public void save(String content, String userName, Long idTopic) {
-	 * // TODO Auto-generated method stub Post post = new Post();
-	 * post.setTopic(topicService.findOne(idTopic));
-	 * post.setUser(userService.findByUsername(username)); post.setContent(content);
-	 * save(post); }
-	 */
+	@Override
+	public List<Post> findRecent() {
+		// TODO Auto-generated method stub
+		return postRepository.findTop5ByOrderByCreatedAtDesc();
+	}
+
+	@Override
+	public List<Post> retrieveByDateSql() {
+		// TODO Auto-generated method stub
+	return (List<Post>)postRepository.retrieveByDateSql();
+		} 
 }

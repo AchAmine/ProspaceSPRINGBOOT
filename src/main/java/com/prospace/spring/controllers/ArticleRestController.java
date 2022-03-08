@@ -1,5 +1,6 @@
 package com.prospace.spring.controllers;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,6 +64,26 @@ public class ArticleRestController {
 	@GetMapping("/retrieve-article/user/{user-id}")
 	public List<Article> retrieveUserArticles(@PathVariable("user-id") Long userId) {
 		return articleService.getArticlesByUser(userId);
+	}
+	
+	// ------------------------------------ fct avancée  
+	@ApiOperation(value = "sort admins by comments ")
+	@GetMapping("/sortbycomments/user/{user-id}")
+	public HashMap<Long, Long> SortByComments(@PathVariable("user-id") Long userId) {
+		return articleService.SortByComments(userId);
+	}
+	
+	// ------------------------------------
+	@ApiOperation(value = "sort admins by reaction ")
+	@GetMapping("/sortbyreactions/user/{user-id}")
+	public HashMap<Long, Long> SortByReaction(@PathVariable("user-id") Long userId) {
+		return articleService.SortByReaction(userId);
+	}
+	
+	@ApiOperation(value = "sort admins by preferences ")
+	@GetMapping("/userPreferences/user/{user-id}")
+	public HashMap<Long, Long> userPreferences(@PathVariable("user-id") Long userId) {
+		return articleService.userPreferences(userId);
 	}
 	
 }

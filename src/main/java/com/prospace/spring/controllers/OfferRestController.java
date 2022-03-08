@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.prospace.spring.entity.Offer;
+import com.prospace.spring.entity.Partner;
+import com.prospace.spring.entity.User;
 import com.prospace.spring.service.IServiceOffer;
+import com.prospace.spring.service.IServicePartner;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,6 +27,8 @@ import io.swagger.annotations.ApiOperation;
 public class OfferRestController {
 	@Autowired
 	IServiceOffer offerService;
+	@Autowired
+	IServicePartner partnerService;
 	
 	// http://localhost:8089/SpringMVC/Offer/retrieve-all-offers
 		@ApiOperation(value = "Offers list")
@@ -58,8 +63,22 @@ public class OfferRestController {
 		// http://localhost:8089/SpringMVC/Offer/Offer-quizz/8
 		@ApiOperation(value = "Get one offer")
 		@GetMapping("/retrieve-offer/{offer-id}")
-		public Offer retrieveFacture(@PathVariable("offer-id") Long offerId) {
+		public Offer retrieveOffer(@PathVariable("offer-id") Long offerId) {
 		return offerService.retrieveOffer(offerId);
 		}
-
+		
+		@ApiOperation(value = "Tri offers")
+		@GetMapping("/triOffers")
+		public List<Offer> TriOffers() {
+			
+			return offerService.TriOffers();
+		}
+		
+		
+		@ApiOperation(value = "Add Partner ")
+		@PostMapping("/add-partner")
+		public List<User> addPartner() {
+		return partnerService.AddAndRetrievePartners();
+		
+		}
 }

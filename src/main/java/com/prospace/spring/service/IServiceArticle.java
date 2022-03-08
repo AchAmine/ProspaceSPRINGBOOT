@@ -1,5 +1,6 @@
 package com.prospace.spring.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.prospace.spring.entity.Article;
@@ -15,4 +16,8 @@ public interface IServiceArticle {
 	List<Article> getArticlesByUser(Long idUser);
 	
 	Article EnableComments(Long idArticle,Boolean action);
+	
+	HashMap<Long, Long> SortByReaction(Long idUser);
+	HashMap<Long, Long> SortByComments(Long idUser);
+	HashMap<Long, Long> userPreferences(Long idUser);
 }

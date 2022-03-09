@@ -11,7 +11,8 @@ public interface IServiceQuizz {
 	void deleteQuizz(Long id);
 	Quizz updateQuizz(Quizz o);
 	public Quizz retrieveQuizz(Long id);
+//	public Result checkAnswers(Quizz quizz, List<Response> answers);
 //public Quizz AjouterQuestionEtAffecterAuQuizz(Quizz quizz , Long idQuestion);
-
+	int NbUsersQuizz();
 
 }

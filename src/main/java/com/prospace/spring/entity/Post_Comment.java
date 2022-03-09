@@ -53,7 +53,8 @@ public class Post_Comment implements Serializable{
 
 	@OneToMany
 	private Set<Post_Comment> replies;
-	
+	@ManyToOne
+	private Post_Comment pComment;
 	@ManyToOne
 	private User user;
 	

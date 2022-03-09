@@ -1,11 +1,13 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,7 +36,10 @@ public class Answer implements Serializable{
 	@NonNull
 	private String content;
 	
-	@NonNull
-	private Boolean state;
+	@OneToMany(mappedBy="selectedAnswer")
+	private List<Response> Responses;
+	
+	//@NonNull
+	//private Boolean state;
 
 }

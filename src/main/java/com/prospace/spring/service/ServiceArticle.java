@@ -1,7 +1,9 @@
 package com.prospace.spring.service;
 
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.transaction.Transactional;
 
@@ -13,7 +15,10 @@ import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.ArticleRepository;
 import com.prospace.spring.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class ServiceArticle implements IServiceArticle{
 	@Autowired
 	ArticleRepository articleRepository;
@@ -42,6 +47,8 @@ public class ServiceArticle implements IServiceArticle{
 
 	@Override
 	public Article updateArticle(Article A) {
+		User user = userRepository.findById(A.getIdArticle()).orElse(null);
+		A.setUser(user);
 		return articleRepository.save(A);
 	}
 
@@ -74,6 +81,63 @@ public class ServiceArticle implements IServiceArticle{
 		article.setEnableComments(action);
 		
 		return articleRepository.save(article);
+		
+	}
+
+	@Override
+	public HashMap<Long, Long> SortByReaction(Long idUser ) {
+		HashMap<Long, Long> hMap = new HashMap<Long, Long>();
+		List<Object[]> listStaff = articleRepository.SortByReaction(idUser);
+		for (Object[] obj : listStaff) {
+			log.info("------- ADMIN --------------"+(Long)obj[0]);
+			log.info("------- ARTICLE --------------"+(Long)obj[1]);
+			if (hMap.containsKey((Long)obj[0])) {
+				hMap.put( (Long)obj[0] , hMap.get((Long)obj[0])+1);
+			} else {
+			hMap.put( (Long)obj[0], 1L);
+			}
+		}
+		return hMap;
+	}
+
+	@Override
+	public HashMap<Long, Long> SortByComments(Long idUser) {
+		HashMap<Long, Long> hMap = new HashMap<Long, Long>();
+		List<Object[]> listStaff = articleRepository.SortByComments(idUser);
+		for (Object[] obj : listStaff) {
+			log.info("------- ADMIN --------------"+(Long)obj[0]);
+			log.info("------- ARTICLE --------------"+(Long)obj[1]);
+			if (hMap.containsKey((Long)obj[0])) {
+				hMap.put( (Long)obj[0] , hMap.get((Long)obj[0])+1);
+			} else {
+			hMap.put( (Long)obj[0], 1L);
+			}
+		}
+		return hMap;
+	}
+
+	@Override
+	public HashMap<Long, Long> userPreferences(Long idUser) {
+		
+		HashMap<Long, Long> commenthMap = SortByComments(idUser);
+		HashMap<Long, Long> reactionhMap = SortByReaction(idUser );
+	
+		log.info("--------- commentmap size"+commenthMap.size());
+		log.info("--------- reactionmap size"+reactionhMap.size());
+		if (commenthMap.size() > reactionhMap.size()) {
+			log.info("--------- MERGING INTO COMMENTHMAP");
+			reactionhMap.forEach(
+					  (key, value) -> commenthMap.merge(key, value, (v1, v2) -> v1 + v2));
+			log.info("MAP ------- 1"+commenthMap);
+			return commenthMap;
+		} else {
+			log.info("--------- MERGING INTO REACTIONHMAP");
+			commenthMap.forEach(
+					  (key, value) -> reactionhMap.merge(key, value, (v1, v2) -> v1 + v2));
+			log.info("MAP ------ 2"+reactionhMap);
+			return reactionhMap;
+		}
+		
 		
 	}
 

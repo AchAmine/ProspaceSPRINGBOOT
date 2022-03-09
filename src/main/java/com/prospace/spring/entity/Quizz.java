@@ -50,6 +50,7 @@ public class Quizz implements Serializable{
 	private User partner;
 	@OneToMany(mappedBy = "quiz",cascade =CascadeType.ALL,fetch=FetchType.EAGER)
 	private List<Question> Questions;
-	
+	@OneToMany(mappedBy ="quizz")
+	private List<ResultQuizz> Result;
 	
 }

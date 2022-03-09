@@ -9,7 +9,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.prospace.spring.entity.Offer;
 import com.prospace.spring.entity.User;
+import java.util.Set;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
@@ -27,5 +29,7 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	@Query("UPDATE User u SET u.failedAttempt = ?1 WHERE u.userName = ?2")
     @Modifying
     public void updateFailedAttempts(int failAttempts, String userName);*/
+	
+	User findByEmail(String email);
 	
 }

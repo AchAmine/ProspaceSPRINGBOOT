@@ -133,7 +133,13 @@ public class User implements Serializable{
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
+	@JsonIgnore
+	@OneToMany(mappedBy="user")
+	private Set<ResultQuizz> resultQuizz;
 	
+	@JsonIgnore
+	@OneToMany(mappedBy="userresponse")
+	private Set<Response> Response;
 	
 	// --------------------------------------- End Partner -------------------------------------
 	

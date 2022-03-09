@@ -59,5 +59,11 @@ public class QuestionRestController {
 		return serviceQuestion.updateQuestion(question,QuestionId,QuizzId);
 		}
 */
-
+		
+		 @ApiOperation(value = "questionptssum")
+			@GetMapping("/questionptssum/{Question-id}")
+			public float getQuestionpts(@PathVariable("Question-id")Long idquestion) {
+			return serviceQuestion.NbPtsQuestion(idquestion);
+			}
+		
 }

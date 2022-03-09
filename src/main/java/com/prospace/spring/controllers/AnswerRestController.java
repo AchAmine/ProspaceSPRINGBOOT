@@ -54,5 +54,8 @@ public class AnswerRestController {
 			public List<Answer> findAnswersByQuestion(@PathVariable("Question-id") Long idQuestion) {
 			return serviceAnswer.findAnswersByQuestion(idQuestion);
 			}
+		
+
+			
 
 }

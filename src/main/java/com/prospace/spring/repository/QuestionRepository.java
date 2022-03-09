@@ -13,9 +13,22 @@ import com.prospace.spring.entity.Response;
 
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long>{
-	List<Question> findByQuiz(Quizz quiz);
-	List<Question> findByResponse(Response r);
-	@Query("SELECT count(*) FROM Question q WHERE q.quiz= :quizz")
-	int NbQuestions(@Param("quizz") Quizz quizz );
+	
+	
+	
+	@Query(value = "SELECT count(*) FROM Question q JOIN quizz qu WHERE qu.id_quizz= :quizz" ,
+			nativeQuery = true)
+			
+	int NbQuestions(@Param("quizz") Quizz quizz);
+	//somme des reponses par question
+	//	@Query("SELECT sum(nbreptsanswer) FROM Question q left join q.Answers where q.idQuestion = :idquestion")
+	
+	
+	@Query(value = "SELECT SUM(a.nbreptsanswer) FROM question q JOIN answer a where q.id_question= :idquestion" ,
+			nativeQuery = true)
+			
+			float NbPtsQuestion(@Param("idquestion")Long idquestion);
+	
+	
 	
 }

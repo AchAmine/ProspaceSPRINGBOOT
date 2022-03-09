@@ -48,9 +48,11 @@ public class Quizz implements Serializable{
 	
 	@ManyToOne
 	private User partner;
-	@OneToMany(mappedBy = "quiz",cascade =CascadeType.ALL,fetch=FetchType.EAGER)
+	
+	//@JsonIgnore
+	@OneToMany(mappedBy="quiz",cascade =CascadeType.ALL)
 	private List<Question> Questions;
-	@OneToMany(mappedBy ="quizz")
-	private List<ResultQuizz> Result;
+	//@OneToMany(mappedBy ="quizz")
+	//private List<ResultQuizz> Result;
 	
 }

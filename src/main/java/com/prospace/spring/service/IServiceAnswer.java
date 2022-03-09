@@ -11,4 +11,5 @@ public interface IServiceAnswer {
 	//public Answer findAnswerById(Long id);
 	public List<Answer> findAnswersByQuestion(Long idQuestion);
 
+
 }

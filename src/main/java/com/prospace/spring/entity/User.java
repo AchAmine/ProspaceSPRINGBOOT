@@ -166,8 +166,8 @@ public class User implements Serializable,UserDetails{
 	private Set<ResultQuizz> resultQuizz;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="userresponse")
-	private Set<Response> Response;
+	@OneToOne(mappedBy="userresponse")
+	private Response Response;
 	
 	// --------------------------------------- End Partner -------------------------------------
 	

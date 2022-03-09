@@ -16,10 +16,10 @@ import com.prospace.spring.entity.User;
 public interface OfferRepository extends JpaRepository<Offer, Long>{
 	 
 	// @Query("Select o FROM Offer o join o.Ratings r GROUP BY o.idOffer order by sum(r.rate) DESC ")
- @Query("SELECT o FROM Offer o LEFT JOIN o.Ratings r "
- 		+ "WHERE o IN :offers "
- 		+ "GROUP BY o.idOffer "
- 		+ "ORDER BY avg(r.rate) DESC") 
+ @Query("SELECT o FROM Offer o LEFT JOIN o.Ratings r"
+ 		+ " WHERE o IN :offers AND o.state=\'Accepted\'"
+ 		+ " GROUP BY o.idOffer"
+ 		+ " ORDER BY avg(r.rate) DESC") 
 	List<Offer> RatingTri(@Param("offers") List<Offer> offers);
 	
 	 @Query("SELECT o FROM Offer o LEFT JOIN o.Ratings r "

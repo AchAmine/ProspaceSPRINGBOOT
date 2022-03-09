@@ -15,4 +15,8 @@ List<Response> findByUserresponse(User userresponse);
 
 		@Query("SELECT DISTINCT count(*) FROM Response r ")
 		int NbResponsesQuizz();
+		
+		@Query("SELECT r from Response r WHERE r.userresponse.idUser = :userId AND r.quizz.idQuizz = :quizzId")
+		List<Response> userResponses(@Param("quizzId") Long quizzId ,
+				@Param("userId") Long userId);
 }

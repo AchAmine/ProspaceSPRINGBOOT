@@ -56,7 +56,7 @@ public class PDFGeneratorService {
 	            table.addCell(String.valueOf(user.getDateDebutPartenariat()));
 	            table.addCell(String.valueOf(user.getDateFinPartenariat()));
 	            table.addCell(String.valueOf(user.getUser().getEmail()));
-	            table.addCell(String.valueOf(user.getUser().getFirstname()+""+user.getUser().getLastName()));
+	            table.addCell(String.valueOf(user.getUser().getFirstName()+""+user.getUser().getLastName()));
 	          
 	        }
 	    }

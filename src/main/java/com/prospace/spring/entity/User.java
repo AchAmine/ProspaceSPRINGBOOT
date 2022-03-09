@@ -1,29 +1,24 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -43,7 +38,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
-public class User implements Serializable,UserDetails{
+public class User implements Serializable{
 	/**
 	 * 
 	 */
@@ -64,15 +59,18 @@ public class User implements Serializable,UserDetails{
 	private String email;
 	@NonNull 
 	private String password;
-	@NonNull 
-	@Enumerated(EnumType.STRING)
-	UserRole userRole;
+	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> userRoles = new HashSet<>();
 	
 	private boolean locked;
 	
 	private boolean enabled;
 	@NonNull 
 	private boolean isDeleted;
+	/*@NonNull
+	@Column(name = "failed_attempt")
+    private int failedAttempt;*/
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
@@ -90,62 +88,27 @@ public class User implements Serializable,UserDetails{
 	@OneToOne
 	private Image image;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
-	@Transient
 	private Date birthDate;
 	@NonNull
 	private Integer age;
-	//-----------------userDetails--------------------------
+	@Column(name = "resettoken")
+	private String resettoken;
 	
-		@Override
-		public Collection<? extends GrantedAuthority> getAuthorities() {
-			SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
-			return Collections.singletonList(authority);
-		}
-
-		@Override
-		public String getUsername() {
-			return userName;
-		}
-
-		@Override
-		public boolean isAccountNonExpired() {
-			return true;
-		}
-
-		@Override
-		public boolean isAccountNonLocked() {
-			return !locked;
-		}
-
-		@Override
-		public boolean isCredentialsNonExpired() {
-			return true;
-		}
 		public boolean isEnabled() {
 			return enabled;
 		}
 		
-		//-----------------userDetailsEnd-----------------------
-		public User( String firstName, String lastName, String email,String userName,String password,
-				 UserRole userRole) {
-			
-			this.firstName = firstName;
-			this.lastName = lastName;
-			this.email = email;
-			this.userName=userName;
-			this.password=password;
-			this.userRole = userRole;
+		public boolean isLocked() {
+			return locked;
 		}
+		
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
 	
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
-	private Set<Formation> formations;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="organizer")
-	private Set<Formation> formations_organized;
 	
 	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
@@ -156,10 +119,10 @@ public class User implements Serializable,UserDetails{
 	
 	// --------------------------------------- Begin Partner -------------------------------------
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
 	@JsonIgnore
 	@OneToMany(mappedBy="user")
@@ -171,18 +134,32 @@ public class User implements Serializable,UserDetails{
 	
 	// --------------------------------------- End Partner -------------------------------------
 	
-	// --------------------------------------- Begin Forum -------------------------------------
-	@JsonIgnore
-	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
-	private Set<Post> Posts;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
-	private Set<Topic> Topics;
-	
-	
-	// --------------------------------------- End Forum -------------------------------------
-	
+	// --------------------------------------- Begin Forum
+		// -------------------------------------
+		
+		@JsonIgnore
+		@ToString.Exclude
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		private Set<Post_Reaction> post_Reaction;
+		
+		/*********************************************************/
+		@JsonIgnore
+		@ToString.Exclude
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		private Set<Post> Posts;
+
+		/***************************************** begin section */
+		@JsonIgnore
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		private Set<Section> Sections;
+		/**** end section */
+		/***************************************** begin topic */
+		@JsonIgnore
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		private Set<Topic> Topics;
+		/**** end topic */
+		// --------------------------------------- End Forum
+		// -------------------------------------
 	// --------------------------------------- Begin Events -------------------------------------
 	@ToString.Exclude
 	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
@@ -191,7 +168,7 @@ public class User implements Serializable,UserDetails{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer")
 	private Set<Event> EventsOrganized;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Tournament> Tournaments;
 	
 	// --------------------------------------- End Events -------------------------------------

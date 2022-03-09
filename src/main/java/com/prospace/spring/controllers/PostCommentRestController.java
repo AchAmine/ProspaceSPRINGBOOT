@@ -75,14 +75,10 @@ public class PostCommentRestController {
 
 		return post_commentService.retrievePostCommentReplies(postId);
 	}
-/********************************/
-/*	@ApiOperation(value = "retrieve by date")
-	@GetMapping("/retrieve-by-date/{Date}")
-	public List<Post> getPostsByDate(@PathVariable("Date")@DateTimeFormat(pattern="yyyy-MM-dd") Date Date)
-	{
-		return post_commentService.getPostsByDate(Date);
-	}
-*/
+	
+	
+
+
 
 
 	

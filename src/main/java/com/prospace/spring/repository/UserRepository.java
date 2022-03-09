@@ -15,6 +15,7 @@ import java.util.Set;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
+	User findUserByresettoken(String token);
 	@Query("Select u from User u where u.isDeleted= 0")
 	public List<User>  getUndeletedUsers();
 	public List<User> findByUserName(String userName);
@@ -24,6 +25,10 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	@Modifying
 	@Query("UPDATE User u " + "SET u.enabled = TRUE WHERE u.userName = ?1")
 	int enableAppUser(String userName);
+	/*@Transactional
+	@Query("UPDATE User u SET u.failedAttempt = ?1 WHERE u.userName = ?2")
+    @Modifying
+    public void updateFailedAttempts(int failAttempts, String userName);*/
 	
 	User findByEmail(String email);
 	

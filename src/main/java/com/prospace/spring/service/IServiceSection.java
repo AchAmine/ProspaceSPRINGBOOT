@@ -10,14 +10,16 @@ public interface IServiceSection {
 
 	Section retrieveSection(Long id);
 
-
-	Section addSection(Section s);
+	Section addSection(Section s, Long userId);
 
 	Section updateSection(Section s);
 
 	void deleteSection(Long id);
-	
-	
+
 	List<Section> findByName(String name);
+
+	List<Section> findLikedSections();
+
+	List<Section> findDislikedSections();
 
 }

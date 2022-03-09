@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.prospace.spring.entity.ConfirmationToken;
+import com.prospace.spring.JwtAndAuthConf.ConfirmationToken;
 import com.prospace.spring.repository.ConfirmationTokenRepository;
 
 

@@ -1,0 +1,7 @@
+2022-03-09 16:23:20.199  INFO 3972 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.035 seconds (JVM running for 959.286)
+2022-03-09 16:23:20.203  INFO 3972 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-09 16:23:49.815  INFO 3972 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-09 16:23:49.816  INFO 3972 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-09 16:23:49.818  INFO 3972 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-09 16:23:49.825  INFO 3972 --- [http-nio-8089-exec-1] com.prospace.spring.service.ServiceUser  : in method deleteUser
+2022-03-09 16:23:49.845  INFO 3972 --- [http-nio-8089-exec-1] com.prospace.spring.service.ServiceUser  : out of  method deleteUser without errors

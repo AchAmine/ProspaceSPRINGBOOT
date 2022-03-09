@@ -3,6 +3,8 @@ package com.prospace.spring.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,7 @@ public class ServiceQuestion implements IServiceQuestion {
 	QuizzRepository quizzRepository;
 	
 	@Override
+	@Transactional
 	public Question AddQuestionAndAffectToQuizz(Question question,Long idQuizz) {
 		Quizz q = quizzRepository.findById(idQuizz).orElse(null);
 		q.getQuestions().add(question);
@@ -54,10 +57,11 @@ public class ServiceQuestion implements IServiceQuestion {
 	}
 
 	@Override
+	//@Transactional
 	public Question updateQuestion(Question q, Long QuizzId) {
 		Quizz quizz= quizzRepository.findById(QuizzId).orElse(null);
-		quizz.getQuestions().add(q);
-		//q.setQuiz(quizz);
+		//quizz.getQuestions().add(q);
+		q.setQuiz(quizz);
 		return questionRepository.save(q);
 	}
 	/*@Override
@@ -67,11 +71,7 @@ public class ServiceQuestion implements IServiceQuestion {
 		return questionRepository.save(question);
 	}*/
 
-	@Override
-	public float NbPtsQuestion(Long idquestion) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 	
 
 	

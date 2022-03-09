@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(tags = "Score ")
-@RequestMapping("/Score")
+@RequestMapping("/Quizz/Score")
 public class ResultQuizzRestController {
 	@Autowired
 	IServiceResultQuizz serviceResultQuizz;

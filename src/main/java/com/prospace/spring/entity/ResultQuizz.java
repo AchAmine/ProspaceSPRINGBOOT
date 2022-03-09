@@ -38,10 +38,12 @@ public class ResultQuizz implements Serializable{
 	private Long idResultQuizz;
 	@NonNull
 	private float score;
-	//@NonNull
-	private int correctQuestions;
-	//@NonNull
-	private int falseQuestions;
+	@NonNull
+	private int correctAnswers;
+	@NonNull
+	private int falseAnswers;
+	@NonNull
+	private int nbreQuestions;
 	@NonNull
 	@ManyToOne 
 	private User user; 

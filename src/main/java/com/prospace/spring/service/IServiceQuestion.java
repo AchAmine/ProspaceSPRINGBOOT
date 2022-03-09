@@ -14,6 +14,5 @@ public interface IServiceQuestion {
 	void deleteQuestion(Long id);
 	public Question updateQuestion(Question q, Long QuizzId);
 //	public Question updateQuestion(Question q,Long QuestionId,Long QuizzId);
-	public float NbPtsQuestion(Long idquestion);
 
 }

@@ -44,7 +44,7 @@ public class Question implements Serializable{
 
 	@NonNull
 	private String content;
-	@OneToMany(cascade =CascadeType.ALL,fetch=FetchType.EAGER)
+	@OneToMany(cascade =CascadeType.ALL)
 	private List<Answer> Answers;
 	@JsonIgnore
 	@ManyToOne

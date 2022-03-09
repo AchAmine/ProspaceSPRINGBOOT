@@ -70,6 +70,7 @@ public class ServiceQuizz implements IServiceQuizz{
 	}
 
 	@Override
+	@Transactional
 	public Quizz updateQuizz(Quizz q) {
 		List<Question> questions = q.getQuestions();
 		for (Question question : questions) {

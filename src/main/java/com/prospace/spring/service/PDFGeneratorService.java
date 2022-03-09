@@ -84,11 +84,11 @@ public class PDFGeneratorService implements IServicePDFGenerator{
         		" "+resultQuizzRepository.getResultbyquizzanduser(q, u).getUser().getLastName()));
         
         table.addCell("SCORE:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()));
-       // table.addCell("TOTAL QUESTIONS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getTotalQuestions()));
+        table.addCell("TOTAL QUESTIONS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getNbreQuestions()));
 
-        table.addCell("FALSE QUESTIONS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getFalseQuestions()));
-        table.addCell("TRUE QUESTIONS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getCorrectQuestions()));
-        if(resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<80){
+        table.addCell("FALSE ANSWERS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getFalseAnswers()));
+        table.addCell("TRUE ANSWERS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getCorrectAnswers()));
+        if(resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<12){
             table.addCell("TEST NON VALIDE, BONNE CONTINUATION");
 
         }else {

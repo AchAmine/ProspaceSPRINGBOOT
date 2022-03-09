@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(tags = "Question management")
-@RequestMapping("/Question")
+@RequestMapping("/Quizz/Question")
 public class QuestionRestController {
 	@Autowired
 	IServiceQuestion serviceQuestion;
@@ -60,10 +60,6 @@ public class QuestionRestController {
 		}
 */
 		
-		 @ApiOperation(value = "questionptssum")
-			@GetMapping("/questionptssum/{Question-id}")
-			public float getQuestionpts(@PathVariable("Question-id")Long idquestion) {
-			return serviceQuestion.NbPtsQuestion(idquestion);
-			}
+		
 		
 }

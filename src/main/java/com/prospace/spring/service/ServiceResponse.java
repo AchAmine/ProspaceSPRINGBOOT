@@ -3,6 +3,8 @@ package com.prospace.spring.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,7 @@ public class ServiceResponse implements IServiceResponse {
 	QuizzRepository quizzRepository;
 
 	@Override
+	@Transactional
 	// public Response addResponse(Long idQuestion,Long idAnswer,Long idUser)
 	public Response addResponse(Response response ,Long idUser,Long idQuizz) {
 	//	Question question = questionRepository.findById(idQuestion).orElse(null);
@@ -41,14 +44,15 @@ public class ServiceResponse implements IServiceResponse {
 		//Response r = new Response();
 	//	r.setQuestion(question);
 		
-		//	List<Answer> la= new ArrayList<Answer>();
-			//la.add(answer);
+			//List<Answer> la= new ArrayList<Answer>();
+		//	la.add(answer);
 			
 	//	answer.getResponse().add(r);
 		//r.getSelectedAnswers().add(answer);
 	//	r.setSelectedAnswers(la);
 		response.setUserresponse(user);
 		response.setQuizz(quizz);
+		//answerRepository.saveAll(response.getSelectedAnswers());
 		return responseRepository.save(response);
 	}
 

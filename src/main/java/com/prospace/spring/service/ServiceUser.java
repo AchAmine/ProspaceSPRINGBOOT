@@ -18,6 +18,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -201,11 +202,16 @@ public class ServiceUser implements IServiceUser {
 	@Override
 	public void deleteUser(Long id) {
 		Date date = new Date(System.currentTimeMillis());
+	
 		try {
 			log.info("in method deleteUser");
 			User deletedUser = userRepository.findById(id).orElse(null);
 			deletedUser.setDeleted(true);
 			deletedUser.setDeletedAt(date);
+			File srcFile=new File("C:\\Users\\Marwen\\Desktop\\pi\\prospace_users\\" + deletedUser.getFirstName()+" "+deletedUser.getLastName()/*+"/"+ deletedUser.getFirstName() +" "+deletedUser.getLastName() +".pdf"*/);
+			File destFile=new File("C:\\Users\\Marwen\\Desktop\\pi\\deleted_prospace_users\\"+ deletedUser.getFirstName()+" "+deletedUser.getLastName());
+			FileUtils.copyDirectory(srcFile, destFile);
+			FileUtils.deleteDirectory(srcFile);
 			userRepository.save(deletedUser);
 			log.info("out of  method deleteUser without errors");
 		} catch (Exception e) {
@@ -641,11 +647,11 @@ public class ServiceUser implements IServiceUser {
 		}
 
 		
-		@Scheduled(cron="*/5 * * * * *")
+	/*	@Scheduled(cron="*//*5 * * * * *")
 		public void birthdayUsers() {
 			log.info(getTodaysUsersBirthday().toString());
 			finalBDMethod();
 			updateBirthday();
-		}
+		}*/
 
 }

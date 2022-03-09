@@ -8,6 +8,10 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -134,6 +138,7 @@ public class User implements Serializable{
 	
 	// --------------------------------------- End Partner -------------------------------------
 	
+
 	// --------------------------------------- Begin Forum
 		// -------------------------------------
 		
@@ -160,6 +165,8 @@ public class User implements Serializable{
 		/**** end topic */
 		// --------------------------------------- End Forum
 		// -------------------------------------
+
+	
 	// --------------------------------------- Begin Events -------------------------------------
 	@ToString.Exclude
 	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")

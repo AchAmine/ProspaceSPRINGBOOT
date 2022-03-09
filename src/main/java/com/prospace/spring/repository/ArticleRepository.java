@@ -16,12 +16,20 @@ public interface ArticleRepository extends JpaRepository<Article, Long>{
 
 	List<Article> findByUser(User user);
 	
-	@Query(value = "SELECT A.user.idUser , A.idArticle "
+	/*@Query(value = "SELECT A.user.idUser , A.idArticle "
 			+ "FROM Article A "
 			+ "INNER JOIN Reaction R "
 			+ "ON R.article.idArticle = A.idArticle "
 			+ "WHERE (R.type = com.prospace.spring.entity.ReactionType.Love "
 			+ "OR R.type =  com.prospace.spring.entity.ReactionType.Funny) And   R.user.idUser = :userId ")
+			List<Object[]> SortByReaction(@Param("userId") Long userId );*/
+	
+	@Query(value = "SELECT A.user.idUser , A.idArticle "
+			+ "FROM Article A "
+			+ "INNER JOIN Reaction R "
+			+ "ON R.article.idArticle = A.idArticle " 
+			+ "WHERE (R.type = \'Love\' "
+			+ "OR R.type =  \'Funny\') And R.user.idUser = :userId ")
 			List<Object[]> SortByReaction(@Param("userId") Long userId );
 	
 			

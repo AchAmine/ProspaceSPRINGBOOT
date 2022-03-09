@@ -80,7 +80,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 			u.setAge(period.getYears());
 			u.setPassword(encoder.encode(u.getPassword()));
 			//-------------------------user_pdf_begin---------------------------
-			String path = "C:/Users/Marwen/Desktop/pi/prospace_users/" +u.getFirstName()+" "+u.getLastName();
+		/*	String path = "C:/Users/Marwen/Desktop/pi/prospace_users/" +u.getFirstName()+" "+u.getLastName();
 	        File pathAsFile = new File(path);
 
 	        if (!Files.exists(Paths.get(path)))
@@ -132,7 +132,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 	            pageContentByte.showText("Role: " + u.getUserRole() + "\n");
 	            pageContentByte.endText();
 	        }
-	        pdfStamper.close();
+	        pdfStamper.close(); */
 			//-------------------------end_user_pdf-----------------------------------
 			userRepository.save(u);
 			//----------------tokken_generation---------------------------

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -152,6 +153,13 @@ public class User implements Serializable,UserDetails{
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Article> Articles;
+	
+	
+	@OneToMany
+	private List<User> followers;
+	
+	@OneToMany
+	private List<User> friendsList;
 	
 	// --------------------------------------- End News -------------------------------------
 	

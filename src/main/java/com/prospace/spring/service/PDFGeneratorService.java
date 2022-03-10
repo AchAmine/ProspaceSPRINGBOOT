@@ -1,12 +1,16 @@
 package com.prospace.spring.service;
 import com.lowagie.text.*;
 import com.lowagie.text.pdf.PdfWriter;
+import com.prospace.spring.entity.Answer;
 import com.prospace.spring.entity.Partner;
+import com.prospace.spring.entity.Question;
 import com.prospace.spring.entity.Quizz;
+import com.prospace.spring.entity.Response;
 import com.prospace.spring.entity.ResultQuizz;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.PartnerRepository;
 import com.prospace.spring.repository.QuizzRepository;
+import com.prospace.spring.repository.ResponseRepository;
 import com.prospace.spring.repository.ResultQuizzRepository;
 import com.prospace.spring.repository.UserRepository;
 
@@ -25,7 +29,7 @@ import com.lowagie.text.pdf.*;
 
 @Service
 public class PDFGeneratorService implements IServicePDFGenerator{
-	private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/QRCode.png";
+	private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/";
 
 	@Autowired
 	PartnerRepository partnerRepository;
@@ -37,6 +41,8 @@ public class PDFGeneratorService implements IServicePDFGenerator{
 	IServiceResultQuizz serviceResultQuizz;
 	@Autowired
 	ResultQuizzRepository resultQuizzRepository;
+	@Autowired
+	ResponseRepository responseRepository;
 	
 	 
 	    private void writeTableHeader(PdfPTable table) {
@@ -55,8 +61,8 @@ public class PDFGeneratorService implements IServicePDFGenerator{
     public void export(HttpServletResponse response,Long quizzId,Long userId) {
     Quizz q= quizzRepository.findById(quizzId).orElse(null);
     User u = userRepository.findById(userId).orElse(null);
-
-    	Document document = new Document(PageSize.A4);
+    PdfPTable table = new PdfPTable(1);
+    	Document document = new Document(PageSize.A3);
         try {
 			PdfWriter.getInstance(document, response.getOutputStream());
 
@@ -67,32 +73,31 @@ public class PDFGeneratorService implements IServicePDFGenerator{
 		}
          
         document.open();
+      
         try {
-			Image img = Image.getInstance(QR_CODE_IMAGE_PATH);
-			img.scalePercent(3);
-			img.setWidthPercentage(10);
-			img.scaleAbsolute(200f, 200f);
-			img.setAlignment(Image.ALIGN_CENTER);
+			
+			 Image Logo = Image.getInstance("./src/main/resources/prospacelogo.PNG");
+	    	  Logo.scalePercent(3);
+	    	  Logo.setWidthPercentage(20);
+	    	  Logo.scaleAbsolute(80f, 80f);
+	    	  Logo.setAlignment(Image.ALIGN_CENTER);
+			
 		      
 		  //    PdfPTable table1 = new PdfPTable(3);
 		 //     PdfPCell cell = new PdfPCell();
 
-        Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
-        font.setSize(18);
+        Font font = new Font();
         font.setColor(Color.BLUE);
+        font.setSize(30);
+        font.setStyle(Font.SYMBOL);
+        
+       
       if(  resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<12){
+    	  
         Paragraph p = new Paragraph("QUIZZ RESULT", font);
         p.setAlignment(Paragraph.ALIGN_CENTER);
         document.add(p);
-      }else {
-    	  Paragraph p = new Paragraph("CERTIFICATE", font);
-          p.setAlignment(Paragraph.ALIGN_CENTER);
-          document.add(p);
-      }
         
-       // Quizz q = quizzRepository.findById(quizzId).orElse(null);
-      //  User u= userRepository.findById(userId).orElse(null);
-        PdfPTable table = new PdfPTable(1);
         table.setWidthPercentage(100f);
         table.setWidths(new float[] {3.5f});
         table.setSpacingBefore(10);
@@ -108,21 +113,60 @@ public class PDFGeneratorService implements IServicePDFGenerator{
 
         table.addCell("FALSE ANSWERS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getFalseAnswers()));
         table.addCell("TRUE ANSWERS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getCorrectAnswers()));
-        
 
-        if(resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<12){
+     
             table.addCell("you did not pass");
 
-        }else {
-        	table.addCell(" congratulations, you passed ");
-        	
-        }
+        
+      }else {
+    	  
+    	  Image img = Image.getInstance(QR_CODE_IMAGE_PATH+u.getUsername().toString()+".png");
+			img.scalePercent(3);
+			img.setWidthPercentage(10);
+			img.scaleAbsolute(120f, 120f);
+			img.setAlignment(Image.ALIGN_CENTER);
+          Font font1 = new Font();
+          font1.setColor(Color.BLACK);
+          font1.setStyle(Font.SYMBOL);
+          font1.setSize(20);
+    	  Paragraph p = new Paragraph("CERTIFICATE",font);
+    	  Paragraph p1 = new Paragraph("THIS IS TO CERTIFY THAT MR./MRS. ",font1);
+    	  Paragraph p2 = new Paragraph(String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getUser().getFirstName())+" "+
+    			  String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getUser().getLastName()),font1 );
+    	  Paragraph p3 = new Paragraph("HAD PARTICIPATED THE QUIZ COMPETITION ",font1);
+    	  /*Paragraph p4 = new Paragraph("by "+String.valueOf(q.getPartner()),font1);
+    	  Paragraph p4 = new Paragraph("BY "+q.getPartner().getFirstName().toString()+" "+
+    			  q.getPartner().getLastName().toString(),font1);*/
+    	  Paragraph p4 = new Paragraph("WE APPRECIATE YOUR EFFORT ,KEEP PARTICIPATING !",font1)  ;
+    	  p.setAlignment(Paragraph.ALIGN_CENTER);
+    	  p1.setAlignment(Paragraph.ALIGN_CENTER);
+    	  p2.setAlignment(Paragraph.ALIGN_CENTER);
+    	  p3.setAlignment(Paragraph.ALIGN_CENTER);
+    	  p4.setAlignment(Paragraph.ALIGN_CENTER);
+    	  document.add(Logo);
+    	
+            	
+    	 
+          document.add(p);
+          document.add(p1);
+          document.add(p2);
+          document.add(p3);
+          document.add(p4);
+          document.add(img);
+
+      }
+        
+       // Quizz q = quizzRepository.findById(quizzId).orElse(null);
+      //  User u= userRepository.findById(userId).orElse(null);
+      
+      
        	
        // writeTableHeader(table);
        // writeTableData(table);
-         
+       
+
         document.add(table);
-        document.add(img);
+        
          
         document.close();
         } catch (BadElementException e) {
@@ -132,5 +176,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-  
-}}
+}
+
+
+}

@@ -10,4 +10,5 @@ import com.prospace.spring.entity.Quizz;
 public interface QuizzRepository extends JpaRepository<Quizz, Long>{
 	@Query("SELECT count(*) FROM Quizz  ")
 	int NbUsersQuizz();
+
 }

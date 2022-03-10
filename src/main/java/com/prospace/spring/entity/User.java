@@ -155,11 +155,11 @@ public class User implements Serializable,UserDetails{
 	private Set<Article> Articles;
 	
 	
-	@OneToMany
-	private List<User> followers;
+	@ToString.Exclude
+	@OneToMany(fetch = FetchType.EAGER)
+	private Set<User> followers;
 	
-	@OneToMany
-	private List<User> friendsList;
+	
 	
 	// --------------------------------------- End News -------------------------------------
 	

@@ -17,6 +17,9 @@ public interface ArticleRepository extends JpaRepository<Article, Long>{
 
 	List<Article> findByUser(User user);
 	
+	@Query(value = "SELECT A FROM Article A ORDER BY A.createdAt DESC")
+	List<Article> retrieveOrderedByDate();
+	
 	/*@Query(value = "SELECT A.user.idUser , A.idArticle "
 			+ "FROM Article A "
 			+ "INNER JOIN Reaction R "

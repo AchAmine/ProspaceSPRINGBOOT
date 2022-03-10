@@ -12,6 +12,7 @@ public interface IServiceArticle {
 	void deleteArticle(Long id);
 	Article updateArticle(Article A);
 	List<Article> retrieveAllArticles();
+	List<Article> retrieveOrderedByDate();
 	Article retrieveArticle(Long id);
 	List<Article> getArticlesByUser(Long idUser);
 	

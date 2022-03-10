@@ -61,6 +61,11 @@ public class ServiceArticle implements IServiceArticle{
 	public Article retrieveArticle(Long id) {
 		return articleRepository.findById(id).orElse(null);
 	}
+	
+	@Override
+	public List<Article> retrieveOrderedByDate() {
+		return articleRepository.retrieveOrderedByDate();
+	}
 
 	@Override
 	public List<Article> getArticlesByUser(Long idUser) {
@@ -147,6 +152,8 @@ public class ServiceArticle implements IServiceArticle{
 		List<User> followers = u.getFollowers();
 		return articleRepository.FollowingArticles(followers);
 	}
+
+	
 
 	
 }

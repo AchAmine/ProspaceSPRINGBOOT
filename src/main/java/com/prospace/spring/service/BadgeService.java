@@ -52,13 +52,12 @@ public class BadgeService implements IBadgeService {
 	public void AffectBadgeToUser(long idBadge, long idUser) {
 		Badge b = FindBadgeById(idBadge);
 		User u = userRepository.findById(idUser).get();
-		List<Badge> listBadges = u.getBadges();
-		listBadges.add(b);
-		u.setBadges(listBadges);
+		//List<Badge> listBadges = u.getBadges();
+	//	listBadges.add(b);
+	//	u.setBadges(listBadges);
 		UpdateBadge(b);
 
 	}
-
 	public void CalculScoreEventParticipationBadge(long idUser) {
 
 		User user = userRepository.findById(idUser).get();
@@ -97,7 +96,7 @@ public class BadgeService implements IBadgeService {
 						: eventsParticipationGlobalScore < 700 && eventsParticipationGlobalScore >= 500 ? Grade.Senior
 								: eventsParticipationGlobalScore < 500 && eventsParticipationGlobalScore >= 250
 										? Grade.Junior : Grade.Newbie);
-				List<Badge> listBadge = user.getBadges();
+			List<Badge> listBadge = user.getBadges();
 				listBadge.add(badge);
 				user.setBadges(listBadge);
 				userRepository.save(user);
@@ -105,13 +104,13 @@ public class BadgeService implements IBadgeService {
 			} else {
 
 				Badge badge = listBadgeEvent.get(0); 
-				badge.setTitle(eventsParticipationGlobalScore >= 700 ? Grade.Master
+			badge.setTitle(eventsParticipationGlobalScore >= 700 ? Grade.Master
 						: eventsParticipationGlobalScore < 700 && eventsParticipationGlobalScore >= 500 ? Grade.Senior
 								: eventsParticipationGlobalScore < 500 && eventsParticipationGlobalScore >= 250
 										? Grade.Junior : Grade.Newbie);
 			
 				List<Badge> listBadge = user.getBadges();
-				listBadge.add(badge);
+			 listBadge.add(badge);
 				user.setBadges(listBadge);
 				userRepository.save(user);
 			}

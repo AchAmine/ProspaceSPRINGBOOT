@@ -2,20 +2,13 @@ package com.prospace.spring.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-
-import java.util.List;
-
 import java.util.HashSet;
-
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -203,8 +196,7 @@ public class User implements Serializable{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Complaint> Complaints;
 	
-	@OneToOne
-	private Badge badge;
-	
+	@OneToMany
+	private List<Badge> Badges;
 	// --------------------------------------- End Complaint -------------------------------------
 }

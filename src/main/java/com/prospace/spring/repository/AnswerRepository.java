@@ -12,6 +12,13 @@ import java.util.List;
 
 @Repository
 public interface AnswerRepository extends JpaRepository<Answer, Long>{
+	@Query(value = "SELECT SUM(a.nbreptsanswer) FROM quizz q JOIN answer a WHERE q.id_quizz= :quizid" ,
+			nativeQuery = true)
+			
+			float NbPtsQuizz(@Param("quizid")Long quizid);
+	
+	
 
+	
 	
 }

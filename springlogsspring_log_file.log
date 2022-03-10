@@ -1,540 +1,149 @@
-2022-03-10 03:12:21.172  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:12:22.170  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 11.634 seconds (JVM running for 9679.222)
-2022-03-10 03:12:22.172  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:12:22.232  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:12:22.254  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:12:22.260  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 21ms
-2022-03-10 03:12:22.262  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:12:47.480  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:12:47.483  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:12:47.486  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-03-10 03:13:00.072  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:13:00.074  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:13:13.609  INFO 142352 --- [Thread-309] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:13:13.610  INFO 142352 --- [Thread-309] com.zaxxer.hikari.HikariDataSource       : HikariPool-77 - Shutdown initiated...
-2022-03-10 03:13:13.620  INFO 142352 --- [Thread-309] com.zaxxer.hikari.HikariDataSource       : HikariPool-77 - Shutdown completed.
-2022-03-10 03:13:16.643  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:13:16.645  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:13:18.255  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:13:18.819  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 563 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:13:19.827  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:13:19.829  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:13:19.830  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:13:20.118  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:13:20.119  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3468 ms
-2022-03-10 03:13:20.508  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-78 - Starting...
-2022-03-10 03:13:20.543  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-78 - Start completed.
-2022-03-10 03:13:20.687  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:13:20.736  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:13:24.306  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:13:24.307  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:13:25.104  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:13:26.826  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13cba486, org.springframework.security.web.context.SecurityContextPersistenceFilter@92f0022, org.springframework.security.web.header.HeaderWriterFilter@5461111, org.springframework.web.filter.CorsFilter@778fee14, org.springframework.security.web.authentication.logout.LogoutFilter@51ed050d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26f5237e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@130e7028, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@563c92ea, org.springframework.security.web.session.SessionManagementFilter@651ad2a2, org.springframework.security.web.access.ExceptionTranslationFilter@6ac8a7ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56f04725]
-2022-03-10 03:13:26.866  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:13:26.960  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:13:26.962  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:13:26.964  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:13:27.828  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:13:28.592  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 12.027 seconds (JVM running for 9745.643)
-2022-03-10 03:13:28.593  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:13:28.679  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:13:28.688  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:13:28.694  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 10ms
-2022-03-10 03:13:28.695  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:13:30.013  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:13:30.015  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:13:30.018  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-03-10 03:14:00.096  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:14:00.099  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:14:46.859  INFO 142352 --- [Thread-313] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:14:46.885  INFO 142352 --- [Thread-313] com.zaxxer.hikari.HikariDataSource       : HikariPool-78 - Shutdown initiated...
-2022-03-10 03:14:46.905  INFO 142352 --- [Thread-313] com.zaxxer.hikari.HikariDataSource       : HikariPool-78 - Shutdown completed.
-2022-03-10 03:14:52.328  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:14:52.330  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:14:55.538  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:14:55.835  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 294 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:14:56.652  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:14:56.655  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:14:56.656  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:14:56.728  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:14:56.729  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4378 ms
-2022-03-10 03:14:56.835  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-79 - Starting...
-2022-03-10 03:14:56.857  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-79 - Start completed.
-2022-03-10 03:14:56.964  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:14:57.001  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:14:59.790  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:14:59.790  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:15:00.926  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:15:02.545  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@492fc2bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@c6a8f24, org.springframework.security.web.header.HeaderWriterFilter@45b1d366, org.springframework.web.filter.CorsFilter@14b491af, org.springframework.security.web.authentication.logout.LogoutFilter@38c64392, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5655f91b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1db42a54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58408b61, org.springframework.security.web.session.SessionManagementFilter@44b73e74, org.springframework.security.web.access.ExceptionTranslationFilter@7e749220, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31251f0e]
-2022-03-10 03:15:02.627  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:15:02.722  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:15:02.723  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:15:02.725  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:15:03.779  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:15:03.857  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:15:03.866  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:15:03.871  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-03-10 03:15:05.339  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 13.133 seconds (JVM running for 9842.39)
-2022-03-10 03:15:05.341  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:15:05.398  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:15:05.408  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:15:05.413  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 9ms
-2022-03-10 03:15:05.415  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:15:45.977  INFO 142352 --- [Thread-317] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:15:45.982  INFO 142352 --- [Thread-317] com.zaxxer.hikari.HikariDataSource       : HikariPool-79 - Shutdown initiated...
-2022-03-10 03:15:45.992  INFO 142352 --- [Thread-317] com.zaxxer.hikari.HikariDataSource       : HikariPool-79 - Shutdown completed.
-2022-03-10 03:15:51.534  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:15:51.535  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:15:52.995  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:15:53.355  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 357 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:15:54.001  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:15:54.002  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:15:54.002  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:15:54.040  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:15:54.040  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2498 ms
-2022-03-10 03:15:54.080  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-80 - Starting...
-2022-03-10 03:15:54.092  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-80 - Start completed.
-2022-03-10 03:15:54.147  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:15:54.162  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:15:57.015  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:15:57.016  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:15:57.917  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:15:59.987  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48b837d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@11998b61, org.springframework.security.web.header.HeaderWriterFilter@39ff85da, org.springframework.web.filter.CorsFilter@6c7071cb, org.springframework.security.web.authentication.logout.LogoutFilter@6cdc82ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48b19fd7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d25024e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2873db2f, org.springframework.security.web.session.SessionManagementFilter@6c7a0411, org.springframework.security.web.access.ExceptionTranslationFilter@e4af762, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fb180f]
-2022-03-10 03:16:00.083  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:16:00.254  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:16:00.256  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:16:00.258  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:16:00.998  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:16:02.539  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 11.094 seconds (JVM running for 9899.59)
-2022-03-10 03:16:02.543  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:16:02.636  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:16:02.651  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:16:02.656  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 15ms
-2022-03-10 03:16:02.658  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:16:15.437  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:16:15.440  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:16:15.442  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-03-10 03:16:54.975  INFO 142352 --- [Thread-321] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:16:54.991  INFO 142352 --- [Thread-321] com.zaxxer.hikari.HikariDataSource       : HikariPool-80 - Shutdown initiated...
-2022-03-10 03:16:55.006  INFO 142352 --- [Thread-321] com.zaxxer.hikari.HikariDataSource       : HikariPool-80 - Shutdown completed.
-2022-03-10 03:17:00.600  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:17:00.601  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:17:03.277  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:17:03.697  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 418 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:17:04.546  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:17:04.547  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:17:04.548  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:17:04.590  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:17:04.590  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3978 ms
-2022-03-10 03:17:04.914  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-81 - Starting...
-2022-03-10 03:17:04.945  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-81 - Start completed.
-2022-03-10 03:17:05.026  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:17:05.051  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:17:07.422  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:17:07.422  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:17:08.094  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:17:09.947  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@414535d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@496e3d80, org.springframework.security.web.header.HeaderWriterFilter@33089e69, org.springframework.web.filter.CorsFilter@2f2ba015, org.springframework.security.web.authentication.logout.LogoutFilter@7641e233, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6814fd72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f98ddcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f62b60, org.springframework.security.web.session.SessionManagementFilter@713400d5, org.springframework.security.web.access.ExceptionTranslationFilter@4e8deadd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a210003]
-2022-03-10 03:17:09.992  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:17:10.077  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:17:10.079  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:17:10.081  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:17:10.771  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:17:11.694  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 11.187 seconds (JVM running for 9968.746)
-2022-03-10 03:17:11.699  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:17:11.789  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:17:11.807  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:17:11.815  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 18ms
-2022-03-10 03:17:11.817  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:17:13.247  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:17:13.250  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:17:13.251  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-03-10 03:18:00.095  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:18:00.097  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:19:00.016  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:19:00.018  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:19:47.768  INFO 142352 --- [Thread-325] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:19:47.778  INFO 142352 --- [Thread-325] com.zaxxer.hikari.HikariDataSource       : HikariPool-81 - Shutdown initiated...
-2022-03-10 03:19:47.790  INFO 142352 --- [Thread-325] com.zaxxer.hikari.HikariDataSource       : HikariPool-81 - Shutdown completed.
-2022-03-10 03:19:54.085  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:19:54.087  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:19:55.549  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:19:55.961  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 410 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:19:56.937  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:19:56.942  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:19:56.943  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:19:57.026  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:19:57.027  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2916 ms
-2022-03-10 03:19:57.145  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-82 - Starting...
-2022-03-10 03:19:57.192  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-82 - Start completed.
-2022-03-10 03:19:57.308  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:19:57.363  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:20:00.372  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:20:00.376  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:20:01.732  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:20:06.222  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6aec677, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f72e537, org.springframework.security.web.header.HeaderWriterFilter@5d927848, org.springframework.web.filter.CorsFilter@2c4095ff, org.springframework.security.web.authentication.logout.LogoutFilter@58862513, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cae1f55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b06eb0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14957cd9, org.springframework.security.web.session.SessionManagementFilter@420c2f5, org.springframework.security.web.access.ExceptionTranslationFilter@763eac20, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cda504b]
-2022-03-10 03:20:06.360  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:20:06.453  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:20:06.459  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:20:06.466  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:20:06.989  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:20:08.864  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 15.165 seconds (JVM running for 10145.916)
-2022-03-10 03:20:08.867  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:20:08.995  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:20:09.016  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:20:09.023  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 17ms
-2022-03-10 03:20:09.027  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:20:09.197  INFO 142352 --- [Thread-329] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:20:09.205  INFO 142352 --- [Thread-329] com.zaxxer.hikari.HikariDataSource       : HikariPool-82 - Shutdown initiated...
-2022-03-10 03:20:09.214  INFO 142352 --- [Thread-329] com.zaxxer.hikari.HikariDataSource       : HikariPool-82 - Shutdown completed.
-2022-03-10 03:20:13.289  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:20:13.289  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:20:14.495  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:20:14.806  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 310 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:20:15.205  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:20:15.206  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:20:15.206  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:20:15.241  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:20:15.241  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1942 ms
-2022-03-10 03:20:15.280  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-83 - Starting...
-2022-03-10 03:20:15.288  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-83 - Start completed.
-2022-03-10 03:20:15.343  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:20:15.359  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:20:17.316  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:20:17.317  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:20:17.646  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:20:18.527  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45967c6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fb355d9, org.springframework.security.web.header.HeaderWriterFilter@19ac7b01, org.springframework.web.filter.CorsFilter@74f3e42e, org.springframework.security.web.authentication.logout.LogoutFilter@42ffaffe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@526a78a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f28a05c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1390477d, org.springframework.security.web.session.SessionManagementFilter@135f6510, org.springframework.security.web.access.ExceptionTranslationFilter@33bf3c11, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f527d30]
-2022-03-10 03:20:18.598  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:20:18.746  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:20:18.746  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:20:18.747  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:20:19.067  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:20:19.526  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 6.323 seconds (JVM running for 10156.578)
-2022-03-10 03:20:19.527  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:20:19.564  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:20:19.579  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:20:19.584  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 15ms
-2022-03-10 03:20:19.585  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:21:00.088  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:21:00.090  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:21:02.297  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:21:02.297  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:21:02.299  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-03-10 03:21:02.314 ERROR 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/SpringMVC] threw exception [Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
-	img cannot be resolved to a variable
-] with root cause
+2022-03-10 11:42:41.107  INFO 141456 --- [Thread-137] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 11:42:41.113  INFO 141456 --- [Thread-137] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown initiated...
+2022-03-10 11:42:41.124  INFO 141456 --- [Thread-137] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown completed.
+2022-03-10 11:42:41.814  INFO 141456 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 141456 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
+2022-03-10 11:42:41.815  INFO 141456 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-10 11:42:43.382  INFO 141456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-10 11:42:43.661  INFO 141456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 278 ms. Found 30 JPA repository interfaces.
+2022-03-10 11:42:44.905  INFO 141456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-10 11:42:44.906  INFO 141456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 11:42:44.906  INFO 141456 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 11:42:44.933  INFO 141456 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-10 11:42:44.933  INFO 141456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3115 ms
+2022-03-10 11:42:44.994  INFO 141456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Starting...
+2022-03-10 11:42:45.004  INFO 141456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Start completed.
+2022-03-10 11:42:45.058  INFO 141456 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-10 11:42:45.075  INFO 141456 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-10 11:42:46.887  INFO 141456 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-10 11:42:46.888  INFO 141456 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 11:42:47.245  WARN 141456 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-10 11:42:48.272  INFO 141456 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@168147df, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b30a113, org.springframework.security.web.header.HeaderWriterFilter@22bb8ba0, org.springframework.web.filter.CorsFilter@252b7df1, org.springframework.security.web.authentication.logout.LogoutFilter@698e0a1d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495a6646, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37c20246, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59e65ae5, org.springframework.security.web.session.SessionManagementFilter@548485c7, org.springframework.security.web.access.ExceptionTranslationFilter@3a1b1269, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1563c09a]
+2022-03-10 11:42:48.293  INFO 141456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 11:42:48.323  WARN 141456 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-03-10 11:42:48.323  INFO 141456 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-03-10 11:42:48.324  INFO 141456 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-03-10 11:42:48.561  INFO 141456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-10 11:42:49.542 ERROR 141456 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Unable to scan documentation context default
 
-java.lang.Error: Unresolved compilation problem: 
-	img cannot be resolved to a variable
-
-	at com.prospace.spring.service.PDFGeneratorService.export(PDFGeneratorService.java:161) ~[classes/:na]
-	at com.prospace.spring.controllers.PDFExportController.generatePDF(PDFExportController.java:41) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_271]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_271]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_271]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_271]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_271]
-
-2022-03-10 03:22:00.115  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:22:00.124  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:22:31.689  INFO 142352 --- [Thread-333] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:22:31.717  INFO 142352 --- [Thread-333] com.zaxxer.hikari.HikariDataSource       : HikariPool-83 - Shutdown initiated...
-2022-03-10 03:22:31.750  INFO 142352 --- [Thread-333] com.zaxxer.hikari.HikariDataSource       : HikariPool-83 - Shutdown completed.
-2022-03-10 03:22:39.306  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:22:39.308  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:22:41.342  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:22:41.698  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 354 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:22:42.660  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:22:42.672  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:22:42.673  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:22:42.750  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:22:42.751  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3431 ms
-2022-03-10 03:22:42.892  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-84 - Starting...
-2022-03-10 03:22:42.953  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-84 - Start completed.
-2022-03-10 03:22:43.293  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:22:43.393  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:22:45.873  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:22:45.875  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:22:47.233  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:22:47.834  WARN 142352 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'PDFExportController' defined in file [C:\Work\workspace-sts\prospace-project\target\classes\com\prospace\spring\controllers\PDFExportController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'PDFGeneratorService' defined in file [C:\Work\workspace-sts\prospace-project\target\classes\com\prospace\spring\service\PDFGeneratorService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.prospace.spring.service.PDFGeneratorService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	img cannot be resolved to a variable
-	Syntax error, insert "Finally" to complete TryStatement
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "}", delete this token
-
-2022-03-10 03:22:47.838  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:22:47.844  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-84 - Shutdown initiated...
-2022-03-10 03:22:47.891  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-84 - Shutdown completed.
-2022-03-10 03:22:47.899  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-10 03:22:47.983  INFO 142352 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-10 03:22:48.110 ERROR 142352 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'PDFExportController' defined in file [C:\Work\workspace-sts\prospace-project\target\classes\com\prospace\spring\controllers\PDFExportController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'PDFGeneratorService' defined in file [C:\Work\workspace-sts\prospace-project\target\classes\com\prospace\spring\service\PDFGeneratorService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.prospace.spring.service.PDFGeneratorService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	img cannot be resolved to a variable
-	Syntax error, insert "Finally" to complete TryStatement
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "}", delete this token
-
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+java.lang.IllegalStateException: Method [modifyRating] was discovered in the .class file but cannot be resolved in the class object
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer$LocalVariableTableVisitor.resolveExecutable(LocalVariableTableParameterNameDiscoverer.java:244) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer$LocalVariableTableVisitor.visitEnd(LocalVariableTableParameterNameDiscoverer.java:227) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.asm.ClassReader.readMethod(ClassReader.java:1520) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:746) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:426) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer.inspectClass(LocalVariableTableParameterNameDiscoverer.java:109) ~[spring-core-5.3.15.jar:5.3.15]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_271]
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer.doGetParameterNames(LocalVariableTableParameterNameDiscoverer.java:84) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer.getParameterNames(LocalVariableTableParameterNameDiscoverer.java:72) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.core.PrioritizedParameterNameDiscoverer.getParameterNames(PrioritizedParameterNameDiscoverer.java:55) ~[spring-core-5.3.15.jar:5.3.15]
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.discoveredName(HandlerMethodResolver.java:240) ~[springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.lambda$toParameters$1(HandlerMethodResolver.java:166) ~[springfox-spring-web-3.0.0.jar:3.0.0]
+	at java.util.Optional.map(Optional.java:215) ~[na:1.8.0_271]
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.methodParameters(HandlerMethodResolver.java:82) ~[springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.WebMvcRequestHandler.getParameters(WebMvcRequestHandler.java:142) ~[springfox-spring-webmvc-3.0.0.jar:3.0.0]
+	at springfox.documentation.spi.service.contexts.RequestMappingContext.getParameters(RequestMappingContext.java:195) ~[springfox-spi-3.0.0.jar:3.0.0]
+	at springfox.documentation.spi.service.contexts.Orderings.methodParametersSignature(Orderings.java:82) ~[springfox-spi-3.0.0.jar:3.0.0]
+	at springfox.documentation.spi.service.contexts.Orderings.qualifiedMethodName(Orderings.java:77) ~[springfox-spi-3.0.0.jar:3.0.0]
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469) ~[na:1.8.0_271]
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355) ~[na:1.8.0_271]
+	at java.util.TimSort.sort(TimSort.java:220) ~[na:1.8.0_271]
+	at java.util.Arrays.sort(Arrays.java:1512) ~[na:1.8.0_271]
+	at java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:348) ~[na:1.8.0_271]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483) ~[na:1.8.0_271]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_271]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[na:1.8.0_271]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:1.8.0_271]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[na:1.8.0_271]
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.sortedByMethods(ApiListingScanner.java:229) ~[springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:152) ~[springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:67) ~[springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.scanDocumentation(AbstractDocumentationPluginsBootstrapper.java:96) [springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82) [springfox-spring-web-3.0.0.jar:3.0.0]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100) [springfox-spring-web-3.0.0.jar:3.0.0]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) [spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) [spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) [spring-context-5.3.15.jar:5.3.15]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_271]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) [spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) [spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.15.jar:5.3.15]
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) [spring-boot-2.6.3.jar:2.6.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) [spring-boot-2.6.3.jar:2.6.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) [spring-boot-2.6.3.jar:2.6.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) [spring-boot-2.6.3.jar:2.6.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) [spring-boot-2.6.3.jar:2.6.3]
-	at com.prospace.spring.ProspaceProjectApplication.main(ProspaceProjectApplication.java:16) [classes/:na]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.prospace.spring.ProspaceProjectApplication.main(ProspaceProjectApplication.java:16) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_271]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_271]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_271]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_271]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.6.3.jar:2.6.3]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'PDFGeneratorService' defined in file [C:\Work\workspace-sts\prospace-project\target\classes\com\prospace\spring\service\PDFGeneratorService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.prospace.spring.service.PDFGeneratorService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	img cannot be resolved to a variable
-	Syntax error, insert "Finally" to complete TryStatement
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "}", delete this token
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.3.jar:2.6.3]
+Caused by: java.lang.NoSuchMethodException: com.prospace.spring.controllers.RatingRestController.modifyRating(com.prospace.spring.entity.Rating)
+	at java.lang.Class.getDeclaredMethod(Class.java:2130) ~[na:1.8.0_271]
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer$LocalVariableTableVisitor.resolveExecutable(LocalVariableTableParameterNameDiscoverer.java:241) ~[spring-core-5.3.15.jar:5.3.15]
+	... 53 common frames omitted
 
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.15.jar:5.3.15]
-	... 24 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.prospace.spring.service.PDFGeneratorService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
-	img cannot be resolved to a variable
-	Syntax error, insert "Finally" to complete TryStatement
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "}", delete this token
-
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.15.jar:5.3.15]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.15.jar:5.3.15]
-	... 36 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problems: 
-	img cannot be resolved to a variable
-	Syntax error, insert "Finally" to complete TryStatement
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "catch", Identifier expected
-	Duplicate field PDFGeneratorService.e
-	Syntax error on token "}", delete this token
-
-	at com.prospace.spring.service.PDFGeneratorService.<init>(PDFGeneratorService.java:162) ~[classes/:na]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_271]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_271]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_271]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_271]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.15.jar:5.3.15]
-	... 38 common frames omitted
-
-2022-03-10 03:23:12.193  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:23:12.194  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:23:14.997  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:23:15.360  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 361 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:23:16.774  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:23:16.939  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:23:16.940  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:23:17.644  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:23:17.645  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5437 ms
-2022-03-10 03:23:18.512  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-85 - Starting...
-2022-03-10 03:23:18.575  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-85 - Start completed.
-2022-03-10 03:23:18.726  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:23:18.797  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:23:26.715  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:23:26.718  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:23:28.263  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:23:35.888  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@225ddc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b03872, org.springframework.security.web.header.HeaderWriterFilter@4a7ea74a, org.springframework.web.filter.CorsFilter@14dc5ad5, org.springframework.security.web.authentication.logout.LogoutFilter@1b9734a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57c33320, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68b88a65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bb69344, org.springframework.security.web.session.SessionManagementFilter@3811a33d, org.springframework.security.web.access.ExceptionTranslationFilter@4dd36eda, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79467144]
-2022-03-10 03:23:35.949  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:23:36.035  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:23:36.040  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:23:36.046  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:23:36.487  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:23:39.766  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 27.791 seconds (JVM running for 10356.817)
-2022-03-10 03:23:39.770  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:23:39.929  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:23:39.954  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:23:39.961  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 22ms
-2022-03-10 03:23:39.965  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:24:00.169  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:24:00.174  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:24:11.908  INFO 142352 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 03:24:11.908  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 03:24:11.911  INFO 142352 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-03-10 03:25:00.013  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:25:00.052  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:26:00.007  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:26:00.010  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:27:00.012  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:27:00.015  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:28:00.007  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:28:00.011  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:29:00.014  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:29:00.019  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:30:00.003  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:30:00.006  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:31:00.018  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:31:00.138  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:32:00.017  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:32:00.021  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:33:00.011  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:33:00.014  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:34:00.014  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:34:00.018  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:35:00.015  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:35:00.017  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:36:00.042  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 03:36:00.045  INFO 142352 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 03:36:43.913  INFO 142352 --- [Thread-337] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:36:43.943  INFO 142352 --- [Thread-337] com.zaxxer.hikari.HikariDataSource       : HikariPool-85 - Shutdown initiated...
-2022-03-10 03:36:43.984  INFO 142352 --- [Thread-337] com.zaxxer.hikari.HikariDataSource       : HikariPool-85 - Shutdown completed.
-2022-03-10 03:36:51.842  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 142352 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
-2022-03-10 03:36:51.843  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 03:36:54.032  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 03:36:54.494  INFO 142352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 461 ms. Found 30 JPA repository interfaces.
-2022-03-10 03:36:55.433  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 03:36:55.435  INFO 142352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 03:36:55.435  INFO 142352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 03:36:55.508  INFO 142352 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 03:36:55.509  INFO 142352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3656 ms
-2022-03-10 03:36:55.608  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-86 - Starting...
-2022-03-10 03:36:55.689  INFO 142352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-86 - Start completed.
-2022-03-10 03:36:55.813  INFO 142352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 03:36:55.848  INFO 142352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 03:36:59.671  INFO 142352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 03:36:59.671  INFO 142352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:37:00.456  WARN 142352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 03:37:02.350  INFO 142352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f520f53, org.springframework.security.web.context.SecurityContextPersistenceFilter@41ebc598, org.springframework.security.web.header.HeaderWriterFilter@4a103b08, org.springframework.web.filter.CorsFilter@5b4c31ad, org.springframework.security.web.authentication.logout.LogoutFilter@4268e132, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52ab555c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1928ec7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c8a3fe2, org.springframework.security.web.session.SessionManagementFilter@7346f35d, org.springframework.security.web.access.ExceptionTranslationFilter@418a5b32, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42018115]
-2022-03-10 03:37:02.642  INFO 142352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 03:37:02.717  WARN 142352 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 03:37:02.718  INFO 142352 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 03:37:02.720  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 03:37:03.284  INFO 142352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 03:37:03.980  INFO 142352 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 12.304 seconds (JVM running for 11161.032)
-2022-03-10 03:37:03.981  INFO 142352 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 03:37:04.061  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 03:37:04.076  INFO 142352 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
-2022-03-10 03:37:04.081  INFO 142352 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 15ms
-2022-03-10 03:37:04.082  INFO 142352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(23)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(25)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(21)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:48.875  INFO 142352 --- [RMI TCP Connection(26)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 03:37:49.602  INFO 142352 --- [RMI TCP Connection(22)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 03:37:49.636  INFO 142352 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-86 - Shutdown initiated...
-2022-03-10 03:37:49.698  INFO 142352 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-86 - Shutdown completed.
+2022-03-10 11:42:49.552  INFO 141456 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 7.787 seconds (JVM running for 5179.102)
+2022-03-10 11:42:49.553  INFO 141456 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-03-10 11:42:49.585  INFO 141456 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-03-10 11:42:49.594  INFO 141456 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-03-10 11:42:49.598  INFO 141456 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 8ms
+2022-03-10 11:42:49.601  INFO 141456 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 11:42:50.545  INFO 141456 --- [Thread-141] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 11:42:50.547  INFO 141456 --- [Thread-141] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown initiated...
+2022-03-10 11:42:50.555  INFO 141456 --- [Thread-141] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown completed.
+2022-03-10 11:42:51.301  INFO 141456 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 141456 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
+2022-03-10 11:42:51.302  INFO 141456 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-10 11:42:51.952  INFO 141456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-10 11:42:52.119  INFO 141456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 30 JPA repository interfaces.
+2022-03-10 11:42:52.289  INFO 141456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-10 11:42:52.290  INFO 141456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 11:42:52.290  INFO 141456 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 11:42:52.316  INFO 141456 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-10 11:42:52.316  INFO 141456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1009 ms
+2022-03-10 11:42:52.339  INFO 141456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Starting...
+2022-03-10 11:42:52.343  INFO 141456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Start completed.
+2022-03-10 11:42:52.380  INFO 141456 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-10 11:42:52.391  INFO 141456 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-10 11:42:53.741  INFO 141456 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-10 11:42:53.742  INFO 141456 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 11:42:53.920  WARN 141456 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-10 11:42:54.383  INFO 141456 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77d04eaa, org.springframework.security.web.context.SecurityContextPersistenceFilter@2abccb96, org.springframework.security.web.header.HeaderWriterFilter@7e9cece8, org.springframework.web.filter.CorsFilter@49165344, org.springframework.security.web.authentication.logout.LogoutFilter@374b7d57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e33586a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@675100e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b7e3c21, org.springframework.security.web.session.SessionManagementFilter@c12071b, org.springframework.security.web.access.ExceptionTranslationFilter@57306d76, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72f77aa3]
+2022-03-10 11:42:54.422  INFO 141456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 11:42:54.452  WARN 141456 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-03-10 11:42:54.453  INFO 141456 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-03-10 11:42:54.454  INFO 141456 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-03-10 11:42:54.672  INFO 141456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-10 11:42:55.080  INFO 141456 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 3.822 seconds (JVM running for 5184.631)
+2022-03-10 11:42:55.082  INFO 141456 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-03-10 11:42:55.104  INFO 141456 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-03-10 11:42:55.111  INFO 141456 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-03-10 11:42:55.115  INFO 141456 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 6ms
+2022-03-10 11:42:55.116  INFO 141456 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 11:43:00.053  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:43:00.056  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:43:33.656  INFO 141456 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-10 11:43:33.656  INFO 141456 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-10 11:43:33.657  INFO 141456 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-10 11:44:00.011  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:44:00.015  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:45:00.016  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:45:00.018  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:46:00.019  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:46:00.022  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:47:00.009  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:47:00.012  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:48:00.017  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:48:00.020  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:49:00.011  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:49:00.013  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:50:00.018  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:50:00.025  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:51:00.004  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 11:51:00.008  INFO 141456 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 11:51:19.938  INFO 141456 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-10 11:51:20.334  INFO 141456 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 11:51:20.345  INFO 141456 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown initiated...
+2022-03-10 11:51:20.356  INFO 141456 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown completed.

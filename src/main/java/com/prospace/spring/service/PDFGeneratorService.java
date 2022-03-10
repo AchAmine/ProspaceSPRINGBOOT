@@ -92,7 +92,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
         font.setStyle(Font.SYMBOL);
         
        
-      if(  resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<12){
+      if(  resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<80){
     	  
         Paragraph p = new Paragraph("QUIZZ RESULT", font);
         p.setAlignment(Paragraph.ALIGN_CENTER);
@@ -107,7 +107,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
         		" "+resultQuizzRepository.getResultbyquizzanduser(q, u).getUser().getLastName()));
         
         table.addCell("SCORE:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()));
-        table.addCell("PASSING SCORE: 12");
+        table.addCell("PASSING SCORE: 80");
 
         table.addCell("TOTAL QUESTIONS:"+String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getNbreQuestions()));
 

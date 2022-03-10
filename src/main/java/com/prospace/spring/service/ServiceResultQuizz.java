@@ -47,10 +47,12 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 		Quizz quizz = quizzRepository.findById(quizzId).orElse(null);
 		User user= userRepository.findById(userId).orElse(null);
 
+			
 			for(Response r : responseRepository.userResponses(quizzId,userId))
-		{	
-			//	for(Question q :quizz.getQuestions()){
+						{	
 					for(Answer a : r.getSelectedAnswers()){
+
+					
 				if(a.getIsCorrect()==true){
 					
 				
@@ -60,16 +62,19 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 					score-=(a.getNbreptsanswer());
 					nbFalseAnswers++;
 				}
-					
-			}}
-			//}
-		// score = (nbTrueQuestions/(questionRepository.NbQuestions(quizz)))*100;
+					}	
+			
+			//
+		
 			// score=(noteIndiv/responseRepository.NbResponsesQuizz())*100;
-		ResultQuizz result= new ResultQuizz(score,nbTrueAnswers,nbFalseAnswers,
-				questionRepository.NbQuestions(quizz),user,quizz);
+		
 
-		return resultQuizzRepository.save(result);
+		
 	}
+			float scoreFinal = (score/(answerRepository.NbPtsQuizz(quizzId)))*100;
+			ResultQuizz result= new ResultQuizz(scoreFinal,nbTrueAnswers,nbFalseAnswers,
+			questionRepository.NbQuestions(quizz),user,quizz);
+			return resultQuizzRepository.save(result);}
 	
 	@Override
 	public List<ResultQuizz> retrieveAllResults() {

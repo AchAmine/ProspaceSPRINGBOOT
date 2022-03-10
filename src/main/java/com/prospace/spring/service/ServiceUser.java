@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -15,15 +16,14 @@ import java.util.UUID;
 import javax.imageio.ImageIO;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.password.PasswordEncoder;
-//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,8 +36,10 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
-import com.prospace.spring.entity.ConfirmationToken;
+import com.prospace.spring.JwtAndAuthConf.ConfirmationToken;
+import com.prospace.spring.entity.Formation;
 import com.prospace.spring.entity.User;
+import com.prospace.spring.repository.FormationRepository;
 import com.prospace.spring.repository.UserRepository;
 
 import lombok.AllArgsConstructor;
@@ -46,7 +48,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 @AllArgsConstructor
-public class ServiceUser implements IServiceUser,UserDetailsService  {
+public class ServiceUser implements IServiceUser {
 	@Autowired
 	UserRepository userRepository;
 	@Autowired
@@ -54,9 +56,21 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 	@Autowired
 	ConfirmationTokenService confirmationTokenService;
 	private final JavaMailSender mailSender;
-	
-
-
+	@Autowired
+	FormationRepository formationRepository;
+	//------------fail------------------------
+  /*  public void increaseFailedAttempts(User user) {
+	        int newFailAttempts = user.getFailedAttempt() + 1;
+	        userRepository.updateFailedAttempts(newFailAttempts, user.getUserName());
+	    }
+	 public void resetFailedAttempts(String userName) {
+	        userRepository.updateFailedAttempts(0, userName);
+	    }
+	 public void lock(User user) {
+	        user.setLocked(true);
+	        userRepository.save(user);
+	    }*/
+//--------------------fail----------------------------
 	@Override
 	public String addUser(User u) {
 		Date date = new Date(System.currentTimeMillis());
@@ -64,7 +78,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 		String token=null;
 		try {
 			log.info("in method addUser");
-			searchedUser = userRepository.findOneByUserName(u.getUsername());
+			searchedUser = userRepository.findOneByUserName(u.getUserName());
 			if(searchedUser==null) 
 			                     {
 			log.info("userName dont exist");
@@ -125,11 +139,11 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 	            pageContentByte.moveText(0, 15);
 	            pageContentByte.showText("lastName:"+u.getLastName()+"\n");
 	            pageContentByte.moveText(0, 15);
-	            pageContentByte.showText("userName:"+u.getUsername()+"\n");
+	            pageContentByte.showText("userName:"+u.getUserName()+"\n");
 	            pageContentByte.moveText(0, 15);
 	            pageContentByte.showText("Email: " + u.getEmail() + "\n");
 	            pageContentByte.moveText(0, 15);
-	            pageContentByte.showText("Role: " + u.getUserRole() + "\n");
+	         //   pageContentByte.showText("Role: " + u.getgetUserRole() + "\n");
 	            pageContentByte.endText();
 	        }
 	        pdfStamper.close(); */
@@ -137,7 +151,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 			userRepository.save(u);
 			//----------------tokken_generation---------------------------
 			 token =UUID.randomUUID().toString();
-				ConfirmationToken confirmationToken = new ConfirmationToken(
+			 ConfirmationToken	 confirmationToken = new ConfirmationToken(
 						token,
 						LocalDateTime.now(),
 						LocalDateTime.now().plusMinutes(15),
@@ -148,7 +162,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 			//------------------end_tokken_generation---------------------
 			//--------------sending_the_link------------------------------
 				String link="http://127.0.0.1:8089/SpringMVC/User/confirm/"+token;
-				send(u.getEmail(),buildEmail(u.getUsername(), link));
+				send(u.getEmail(),buildEmail(u.getUserName(), link));
 			}
 			else {log.info("userName already exist!!");}
 			log.info("out of method addUser without errors");
@@ -188,11 +202,16 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 	@Override
 	public void deleteUser(Long id) {
 		Date date = new Date(System.currentTimeMillis());
+	
 		try {
 			log.info("in method deleteUser");
 			User deletedUser = userRepository.findById(id).orElse(null);
 			deletedUser.setDeleted(true);
 			deletedUser.setDeletedAt(date);
+			File srcFile=new File("C:\\Users\\Marwen\\Desktop\\pi\\prospace_users\\" + deletedUser.getFirstName()+" "+deletedUser.getLastName()/*+"/"+ deletedUser.getFirstName() +" "+deletedUser.getLastName() +".pdf"*/);
+			File destFile=new File("C:\\Users\\Marwen\\Desktop\\pi\\deleted_prospace_users\\"+ deletedUser.getFirstName()+" "+deletedUser.getLastName());
+			FileUtils.copyDirectory(srcFile, destFile);
+			FileUtils.deleteDirectory(srcFile);
 			userRepository.save(deletedUser);
 			log.info("out of  method deleteUser without errors");
 		} catch (Exception e) {
@@ -222,13 +241,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 	public int enableAppUser(String email) {
         return userRepository.enableAppUser(email);
     }
-	//---------------userDetailsService--------------------------
-		@Override
-		public UserDetails loadUserByUsername(String username) 
-				throws UsernameNotFoundException {
-			return userRepository.findOneByUserName(username);
-		}
-	//---------------userDetailsServiceEnd--------------------------
+
 		@Override
 		public void send(String to, String email) {
 			 try {
@@ -266,7 +279,7 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 
 		    confirmationTokenService.setConfirmedAt(token);
 		    enableAppUser(
-		            confirmationToken.getUser().getUsername());
+		            confirmationToken.getUser().getUserName());
 		    return "confirmed";
 		}
 
@@ -338,5 +351,307 @@ public class ServiceUser implements IServiceUser,UserDetailsService  {
 		            "\n" +
 		            "</div></div>";
 		}
+		@Override
+		public String forgotPassword(String userName,HttpServletRequest request) {
+			User user=null;
+			try {log.info("in method fogotPassword");
+			user=userRepository.findOneByUserName(userName);
+			if (user == null) {
+				return "user not found";
+			} else {
+				
+				user.setResettoken(UUID.randomUUID().toString());
+				userRepository.save(user);
+				String appUrl = request.getServerName()+":"+request.getServerPort()+request.getContextPath();
+				
+				String link="http://"+appUrl+"/User/reset/"+user.getResettoken();
+				log.info(link);
+				sendForgotPassworMail(user.getEmail(),buildResetPasswordEmail(user.getUserName(), link));
+				
+			}
+			log.info("out of method fogotPassword without errors");
+			} catch (Exception e) {
+				log.error("error in method forgotPassword"+e);
+			}
+			
+			
+			return "";
+		}
+		public void sendForgotPassworMail(String to, String email) {
+			 try {
+		        MimeMessage mimeMessage = mailSender.createMimeMessage();
+		        MimeMessageHelper helper =
+		                new MimeMessageHelper(mimeMessage, "utf-8");
+		        helper.setText(email, true);
+		        helper.setTo(to);
+		        helper.setSubject("Reset your password");
+		        helper.setFrom("spacepro711@gmail.com");
+		        mailSender.send(mimeMessage);
+		    } catch (MessagingException e) {
+		        log.error("failed to send email", e);
+		        throw new IllegalStateException("failed to send email");
+		    }
+			
+		}
+		private String buildResetPasswordEmail(String name, String link) {
+		    return "<div style=\"font-family:Helvetica,Arial,sans-serif;font-size:16px;margin:0;color:#0b0c0c\">\n" +
+		            "\n" +
+		            "<span style=\"display:none;font-size:1px;color:#fff;max-height:0\"></span>\n" +
+		            "\n" +
+		            "  <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;min-width:100%;width:100%!important\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n" +
+		            "    <tbody><tr>\n" +
+		            "      <td width=\"100%\" height=\"53\" bgcolor=\"#0b0c0c\">\n" +
+		            "        \n" +
+		            "        <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;max-width:580px\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">\n" +
+		            "          <tbody><tr>\n" +
+		            "            <td width=\"70\" bgcolor=\"#0b0c0c\" valign=\"middle\">\n" +
+		            "                <table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
+		            "                  <tbody><tr>\n" +
+		            "                    <td style=\"padding-left:10px\">\n" +
+		            "                  \n" +
+		            "                    </td>\n" +
+		            "                    <td style=\"font-size:28px;line-height:1.315789474;Margin-top:4px;padding-left:10px\">\n" +
+		            "                      <span style=\"font-family:Helvetica,Arial,sans-serif;font-weight:700;color:#ffffff;text-decoration:none;vertical-align:top;display:inline-block\">Reset your Password</span>\n" +
+		            "                    </td>\n" +
+		            "                  </tr>\n" +
+		            "                </tbody></table>\n" +
+		            "              </a>\n" +
+		            "            </td>\n" +
+		            "          </tr>\n" +
+		            "        </tbody></table>\n" +
+		            "        \n" +
+		            "      </td>\n" +
+		            "    </tr>\n" +
+		            "  </tbody></table>\n" +
+		            "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
+		            "    <tbody><tr>\n" +
+		            "      <td width=\"10\" height=\"10\" valign=\"middle\"></td>\n" +
+		            "      <td>\n" +
+		            "        \n" +
+		            "                <table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
+		            "                  <tbody><tr>\n" +
+		            "                    <td bgcolor=\"#1D70B8\" width=\"100%\" height=\"10\"></td>\n" +
+		            "                  </tr>\n" +
+		            "                </tbody></table>\n" +
+		            "        \n" +
+		            "      </td>\n" +
+		            "      <td width=\"10\" valign=\"middle\" height=\"10\"></td>\n" +
+		            "    </tr>\n" +
+		            "  </tbody></table>\n" +
+		            "\n" +
+		            "\n" +
+		            "\n" +
+		            "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
+		            "    <tbody><tr>\n" +
+		            "      <td height=\"30\"><br></td>\n" +
+		            "    </tr>\n" +
+		            "    <tr>\n" +
+		            "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
+		            "      <td style=\"font-family:Helvetica,Arial,sans-serif;font-size:19px;line-height:1.315789474;max-width:560px\">\n" +
+		            "        \n" +
+		            "            <p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">Hi " + name + ",</p><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">Please click on the below link to reset your password: </p><blockquote style=\"Margin:0 0 20px 0;border-left:10px solid #b1b4b6;padding:15px 0 0.1px 15px;font-size:19px;line-height:25px\"><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\"> <a href=\"" + link + "\">Reset Now</a>  <p>See you soon</p>" +
+		            "        \n" +
+		            "      </td>\n" +
+		            "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
+		            "    </tr>\n" +
+		            "    <tr>\n" +
+		            "      <td height=\"30\"><br></td>\n" +
+		            "    </tr>\n" +
+		            "  </tbody></table><div class=\"yj6qo\"></div><div class=\"adL\">\n" +
+		            "\n" +
+		            "</div></div>";
+		}
+
+		@Override
+		public String fogetPasswordSetting(String token, String newPass) {
+			User user = userRepository.findUserByresettoken(token);
+			if (user != null) {
+				user.setPassword(encoder.encode(newPass));
+				user.setResettoken(null);
+				userRepository.save(user);
+				return "passwored reseted";
+
+			} else {
+				return "operation regected";
+			}
+			
+		}
+		@SuppressWarnings("deprecation")
+		public List<User> getTodaysUsersBirthday(){
+			List<User> todaysBU= new ArrayList<User>(); ;
+			List<User> allUsers=null;
+			Date date = new Date(System.currentTimeMillis());
+			try {log.info("in method getTodaysUsersBirthday");
+			allUsers=userRepository.getUndeletedUsers();
+			
+			for(User u:allUsers) {
+				if((date.getMonth()==u.getBirthDate().getMonth())&&(date.getDay()==u.getBirthDate().getDay())) {
+					todaysBU.add(u);
+				}
+			}
+			log.info("*------------------->"+todaysBU.toString());
+			log.info("out of method getTodaysUsersBirthday without errors");
+			} catch (Exception e) {
+				log.error(" error in method getTodaysUsersBirthday"+e);
+				
+			}
+			return todaysBU;
+		}
+
+		private String buildBirthDayEmail(String name,List<String> links) {
+			String part1="<div style=\"font-family:Helvetica,Arial,sans-serif;font-size:16px;margin:0;color:#0b0c0c\">\n" +
+		            "\n" +
+		            "<span style=\"display:none;font-size:1px;color:#fff;max-height:0\"></span>\n" +
+		            "\n" +
+		            "  <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;min-width:100%;width:100%!important\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n" +
+		            "    <tbody><tr>\n" +
+		            "      <td width=\"100%\" height=\"53\" bgcolor=\"#0b0c0c\">\n" +
+		            "        \n" +
+		            "        <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;max-width:580px\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">\n" +
+		            "          <tbody><tr>\n" +
+		            "            <td width=\"70\" bgcolor=\"#0b0c0c\" valign=\"middle\">\n" +
+		            "                <table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
+		            "                  <tbody><tr>\n" +
+		            "                    <td style=\"padding-left:10px\">\n" +
+		            "                  \n" +
+		            "                    </td>\n" +
+		            "                    <td style=\"font-size:28px;line-height:1.315789474;Margin-top:4px;padding-left:10px\">\n" +
+		            "                      <span style=\"font-family:Helvetica,Arial,sans-serif;font-weight:700;color:#ffffff;text-decoration:none;vertical-align:top;display:inline-block\">happy birthday!!!</span>\n" +
+		            "                    </td>\n" +
+		            "                  </tr>\n" +
+		            "                </tbody></table>\n" +
+		            "              </a>\n" +
+		            "            </td>\n" +
+		            "          </tr>\n" +
+		            "        </tbody></table>\n" +
+		            "        \n" +
+		            "      </td>\n" +
+		            "    </tr>\n" +
+		            "  </tbody></table>\n" +
+		            "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
+		            "    <tbody><tr>\n" +
+		            "      <td width=\"10\" height=\"10\" valign=\"middle\"></td>\n" +
+		            "      <td>\n" +
+		            "        \n" +
+		            "                <table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
+		            "                  <tbody><tr>\n" +
+		            "                    <td bgcolor=\"#1D70B8\" width=\"100%\" height=\"10\"></td>\n" +
+		            "                  </tr>\n" +
+		            "                </tbody></table>\n" +
+		            "        \n" +
+		            "      </td>\n" +
+		            "      <td width=\"10\" valign=\"middle\" height=\"10\"></td>\n" +
+		            "    </tr>\n" +
+		            "  </tbody></table>\n" +
+		            "\n" +
+		            "\n" +
+		            "\n" +
+		            "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
+		            "    <tbody><tr>\n" +
+		            "      <td height=\"30\"><br></td>\n" +
+		            "    </tr>\n" +
+		            "    <tr>\n" +
+		            "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
+		            "      <td style=\"font-family:Helvetica,Arial,sans-serif;font-size:19px;line-height:1.315789474;max-width:560px\">\n" +
+		            "        \n" +
+		            "            <p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">Hi " + name + ",</p><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">Prospace team wishes you a happy birthday!!.And  offers you these trainings for free </p><blockquote style=\"Margin:0 0 20px 0;border-left:10px solid #b1b4b6;padding:15px 0 0.1px 15px;font-size:19px;line-height:25px\"><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">";
+			List<String> ll = new ArrayList<String>();
+			List<Formation>fs=new ArrayList<Formation>();
+		    List<String> sub= new ArrayList<String>();
+			//log.info("links in buld-------111------>"+links.toString());
+			fs=getFormations();
+			for(Formation f:fs) {
+			sub.add(f.getSubject());	
+			}
+			
+			for(int i=0;i<links.size();i++) {
+				
+				ll.add(" <a href=\"" + links.get(i).toString() + "\">"+sub.get(i).toString()+"</a>");
+				
+			}
+			//log.info("ll in buld-------2222------>"+ll.toString());
+		     String part3="<p>See you soon</p>"+
+		            "        \n" +
+		            "      </td>\n" +
+		            "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
+		            "    </tr>\n" +
+		            "    <tr>\n" +
+		            "      <td height=\"30\"><br></td>\n" +
+		            "    </tr>\n" +
+		            "  </tbody></table><div class=\"yj6qo\"></div><div class=\"adL\">\n" +
+		            "\n" +
+		            "</div></div>";
+		     return part1+ll.toString()+part3;
+		}
+
+		public void sendBdMail(String to, String email) {
+			 try {
+		       MimeMessage mimeMessage = mailSender.createMimeMessage();
+		       MimeMessageHelper helper =
+		               new MimeMessageHelper(mimeMessage, "utf-8");
+		       helper.setText(email, true);
+		       helper.setTo(to);
+		       helper.setSubject("HAPPY BIRTHDAY");
+		       helper.setFrom("spacepro711@gmail.com");
+		       mailSender.send(mimeMessage);
+		   } catch (MessagingException e) {
+		       log.error("failed to send email", e);
+		       throw new IllegalStateException("failed to send email");
+		   }	
+		}
+		public List<Formation> getFormations() {
+			
+			return formationRepository.findAll();
+		}
+		public void finalBDMethod() {
+			List<User> users= new ArrayList<User>();
+			List<Formation> formations=new ArrayList<Formation>();
+			List<String> links=new ArrayList<>();
+			List<String> links2=new ArrayList<>();
+			//String appUrl = request.getServerName()+":"+request.getServerPort()+request.getContextPath();
+			try {log.info("in method finalBDMethod");
+				users=getTodaysUsersBirthday();
+				formations=getFormations();
+				for(Formation f:formations) {
+					links.add("http://127.0.0.1:8089/SpringMVC/formation/participerformation/"+f.getIdFormation());
+				}
+				for(User u:users) {
+					for(String l:links) {
+					l=l.concat("/"+u.getIdUser());
+						//log.info(l);
+						links2.add(l);
+					}
+					sendBdMail(u.getEmail(),buildBirthDayEmail(u.getUserName(),links2));
+					log.info("before clean---->"+links2);
+					links2.clear();
+					log.info("after clean---->"+links2);
+				}
+			log.info("out of method finalBDMethod without errors");
+			} catch (Exception e) {
+				log.error("error in method finalBDMethod"+e);
+			}
+		}
+		public void updateBirthday() {
+			List<User> users=new ArrayList<User>();
+			try {log.info("in updateBirthday ");
+			users=getTodaysUsersBirthday();
+			for(User u:users) {
+				u.setAge(u.getAge()+1);
+				userRepository.save(u);
+			}
+			
+			log.info("out of method without errors updateBirthday ");
+			} catch (Exception e) {
+				log.error("error in method  updateBirthday "+e);
+			}
+		}
+
+		
+	/*	@Scheduled(cron="*//*5 * * * * *")
+		public void birthdayUsers() {
+			log.info(getTodaysUsersBirthday().toString());
+			finalBDMethod();
+			updateBirthday();
+		}*/
 
 }

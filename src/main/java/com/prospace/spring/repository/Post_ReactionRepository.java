@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.prospace.spring.entity.Post;
@@ -34,10 +35,10 @@ public interface Post_ReactionRepository extends JpaRepository<Post_Reaction, Lo
 
 	/**************************************************/
 
-	@Query(value = "SELECT R,S,T FROM Post_Reaction R " + "JOIN User U ON R.user.idUser=U.idUser"
+@Query(value = "SELECT R,S,T FROM Post_Reaction R " + "JOIN User U ON R.user.idUser=U.idUser"
 			+ " JOIN Section S ON R.user.idUser=U.idUser " + "LEFT JOIN Topic T ON R.user.idUser=U.idUser "
-			+ "WHERE R.type='Like'")
-	List<Object[]> SortbyLikes();
+			+ "WHERE R.type='Like' and R.user.idUser = :userId")
+	List<Object[]> SortbyLikes(@Param("userId") Long userId);
 
 	/********************************* GET ACTIVE USERS ************/
 	@Query("select R.idReaction.user from Post_Reaction R")

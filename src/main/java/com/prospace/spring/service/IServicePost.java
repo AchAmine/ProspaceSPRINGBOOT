@@ -14,12 +14,14 @@ public interface IServicePost {
 
 	List<Post> findByUser(User user);
 
-	public Post save(Post post, Long idUser);
+	public Post save(Post post, Long idUser,Long topicId);
 
 	void delete(Long idPost);
 
 	Post updatePost(Post p);
 
 	/***********************/
-	List<Post> retrieveByDateSql();
+	List<Post> findByPostReactions();
+	/*****************/
+
 }

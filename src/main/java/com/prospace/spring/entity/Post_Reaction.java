@@ -40,8 +40,20 @@ public class Post_Reaction implements Serializable {
 
 	@ManyToOne
 	private Post post;
+	
+	@ManyToOne
+	private Post_Comment postComment;
 
 	@ManyToOne
+	private Section section;
+	
+	@ManyToOne
+	private Topic topic;
+	
+	@ManyToOne
 	private User user;
+	
+	@ManyToOne
+	private Post_Reaction post_Reaction;
 
 }

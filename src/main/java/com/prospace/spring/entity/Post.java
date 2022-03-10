@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,11 +40,13 @@ public class Post implements Serializable {
 	private Long idPost;
 
 	@NonNull
+	@Size(min = 1, max = 50)
 	private String title;
 	@NonNull
+	@Size(min = 1, max = 50, message = "{post's content cannot be empty}")
 	private String content;
 	@NonNull
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date createdAt;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -54,9 +58,10 @@ public class Post implements Serializable {
 	// @OneToMany
 	// private Set<Post_Comment> postComments;
 
-	@ManyToOne
+	@ToString.Exclude
+	@ManyToOne(cascade = CascadeType.ALL)
 	private User user;
 
-	@OneToMany
-	private Set<Topic> Topics;
+	@ManyToOne
+	private Topic topic;
 }

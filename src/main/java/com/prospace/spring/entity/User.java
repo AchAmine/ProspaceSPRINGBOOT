@@ -1,8 +1,6 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
 
 import java.util.List;
@@ -14,8 +12,10 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,11 +27,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -159,17 +154,35 @@ public class User implements Serializable{
 	
 	// --------------------------------------- End Partner -------------------------------------
 	
-	// --------------------------------------- Begin Forum -------------------------------------
-	@JsonIgnore
-	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
-	private Set<Post> Posts;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
-	private Set<Topic> Topics;
-	
-	
-	// --------------------------------------- End Forum -------------------------------------
+
+	// --------------------------------------- Begin Forum
+		// -------------------------------------
+		
+		@JsonIgnore
+		@ToString.Exclude
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		private Set<Post_Reaction> post_Reaction;
+		
+		/*********************************************************/
+		@JsonIgnore
+		@ToString.Exclude
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
+		private Set<Post> Posts;
+
+		/***************************************** begin section */
+		@JsonIgnore
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		private Set<Section> Sections;
+		/**** end section */
+		/***************************************** begin topic */
+		@JsonIgnore
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
+		private Set<Topic> Topics;
+		/**** end topic */
+		// --------------------------------------- End Forum
+		// -------------------------------------
+
+
 	
 	// --------------------------------------- Begin Events -------------------------------------
 	@ToString.Exclude

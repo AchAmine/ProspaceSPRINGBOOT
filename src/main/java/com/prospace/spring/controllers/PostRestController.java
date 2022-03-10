@@ -31,29 +31,28 @@ public class PostRestController {
 	IServicePost postService;
 	@Autowired
 	PostRepository postRepository;
-	
+
 	@ApiOperation(value = "Show all posts")
 	@GetMapping("/find-all-posts")
-	public List<Post> findAll(){
+	public List<Post> findAll() {
 		List<Post> listPosts = postService.findAll();
 		return listPosts;
 	}
-	
-	
+
 	@ApiOperation(value = "Show one post")
 	@GetMapping("/find-post/{post-id}")
 	public Post findPost(@PathVariable("post-id") Long idPost) {
-		
+
 		return postService.findOne(idPost);
 	}
-	
+
 	@ApiOperation(value = "add post")
-	@PostMapping("/add-post/{user-id}") 
-	public Post addPost(@RequestBody Post post,@PathVariable("user-id")Long idUser) {
-		
-		return postService.save(post,idUser);
+	@PostMapping("/add-post/{user-id}/{topic-id}")
+	public Post addPost(@RequestBody Post post, @PathVariable("user-id") Long idUser,@PathVariable("topic-id") Long topicId) {
+
+		return postService.save(post, idUser,topicId);
 	}
-	
+
 	@ApiOperation(value = "Delete post")
 	@DeleteMapping("/remove-post/{post-id}")
 	public void delete(@PathVariable("post-id") Long idPost) {
@@ -64,9 +63,8 @@ public class PostRestController {
 	public Post update(@RequestBody Post post) {
 		return postService.updatePost(post);
 	}
-	
-	
-	@ApiOperation(value = "Show Recent posts Desc ")
+
+	@ApiOperation(value = "Show Recent posts created at Desc ")
 	@GetMapping("/find-recent-posts")
 	public List<Post> findRecent() {
 		List<Post> listPosts = postService.findRecent();
@@ -80,26 +78,19 @@ public class PostRestController {
 		return listPosts;
 	}
 
-	/***** PAGINATION and SORTING*****/
+	/***** PAGINATION and SORTING *****/
 	// http://localhost:8089/SpringMVC/Post/listPageable?page=0&size=2&sort=title
 	@ApiOperation(value = "Show posts sorted in pages  ")
 	@RequestMapping(value = "/listPageable", method = RequestMethod.GET)
 	Page<Post> Pageable(Pageable pageable) {
 		return postRepository.findAll(pageable);
 	}
-	
-	/***************get by date**************/
-	@ApiOperation(value = "Show posts by date 6 months earlier")
-	@GetMapping("/retrieve-by-date")
-	public  List<Post>  retrieveByDate(){
-		List<Post> list = postService.retrieveByDateSql();
-	return list;
+
+	@ApiOperation(value = "Show Liked Posts ")
+	@GetMapping("/find-bypostReaction")
+	public List<Post> findbyReaction() {
+		return postService.findByPostReactions();
 	}
-	
-	
-	/*@ApiOperation(value = " add a post to a topic")
-	@PutMapping("/add-to-topic/{post-id}/post/{post-id}") 
-	public void assignPostToTopic(@PathVariable("post-id") Long idPost,@PathVariable("stock-id") Long idStock) {
-		 stockService.assignProduitToStock(idProduit, idStock);
-	}*/
+	/******************************************/
+
 }

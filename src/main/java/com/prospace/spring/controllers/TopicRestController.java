@@ -31,27 +31,28 @@ public class TopicRestController {
 		List<Topic> listTopics = topicService.retrieveAllTopics();
 		return listTopics;
 	}
-	
+
 	@ApiOperation(value = "show one topic")
 	@GetMapping("/retrieve-topic/{topic-id}")
 	public Topic retrieveSection(@PathVariable("topic-id") Long id) {
 
 		return topicService.RetrieveTopic(id);
 	}
-	
-	
+
 	@ApiOperation(value = "Add topic")
 	@PostMapping("/add-topic/{user-id}/{section-id}")
-	public Topic save(@RequestBody Topic t,@PathVariable("user-id")Long userId,@PathVariable("section-id")Long sectionId) {
+	public Topic save(@RequestBody Topic t, @PathVariable("user-id") Long userId,
+			@PathVariable("section-id") Long sectionId) {
 
-		return topicService.addTopic(t,userId,sectionId);
+		return topicService.addTopic(t, userId, sectionId);
 	}
+
 	@ApiOperation(value = "delete topic")
 	@DeleteMapping("/remove-topic/{topic-id}")
 	public void delete(@PathVariable("topic-id") Long topicId) {
 		topicService.deleteTopic(topicId);
 	}
-	
+
 	@ApiOperation(value = "Update topic")
 
 	@PutMapping("/modify-topic")
@@ -59,4 +60,15 @@ public class TopicRestController {
 		return topicService.updateTopic(topic);
 	}
 
+	@ApiOperation(value = "Show Liked Topics  ")
+	@GetMapping("/find-byLike")
+	public List<Topic> findTopicsByReactions() {
+		return topicService.findTopicLike();
+	}
+
+	@ApiOperation(value = "Show disliked Topics  ")
+	@GetMapping("/find-byDislike")
+	public List<Topic> findDislikedTopics() {
+		return topicService.findTopicDislike();
+	}
 }

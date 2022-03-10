@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +21,7 @@ import com.prospace.spring.repository.UserRepository;
 
 @Service
 public class ServicePost_Comment implements IServicePost_Comment {
+
 
 	@Autowired
 	Post_CommentRepository post_commentRepository;
@@ -171,6 +171,7 @@ public class ServicePost_Comment implements IServicePost_Comment {
 		 * String str= comment.getContent(); str=GetCensoredText(str);
 		 */
 		comment.setContent(str);
+
 		return post_commentRepository.save(comment);
 	}
 
@@ -194,10 +195,4 @@ public class ServicePost_Comment implements IServicePost_Comment {
 
 	/****************************************/
 
-	@Override
-	public List<Post> getPostsByDate(Date Date) {
-		// TODO Auto-generated method stub
-
-		return post_commentRepository.getPostsByDate(Date);
-	}
 }

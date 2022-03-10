@@ -12,6 +12,7 @@ public interface IServiceArticle {
 	void deleteArticle(Long id);
 	Article updateArticle(Article A);
 	List<Article> retrieveAllArticles();
+	List<Article> retrieveOrderedByDate();
 	Article retrieveArticle(Long id);
 	List<Article> getArticlesByUser(Long idUser);
 	
@@ -20,4 +21,6 @@ public interface IServiceArticle {
 	HashMap<Long, Long> SortByReaction(Long idUser);
 	HashMap<Long, Long> SortByComments(Long idUser);
 	HashMap<Long, Long> userPreferences(Long idUser);
+	
+	List<Article> FollowingArticles(Long idUser); 
 }

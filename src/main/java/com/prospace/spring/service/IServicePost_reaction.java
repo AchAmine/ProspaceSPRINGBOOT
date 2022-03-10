@@ -41,6 +41,6 @@ public interface IServicePost_reaction {
 	/******************************************************************/
 
 	/******************************************************************/
-	List<Object[]> SortbyLikes();
+	List<Object[]> SortbyLikes(Long userId);
 
 }

@@ -162,9 +162,10 @@ public class ServicePost_Reaction implements IServicePost_reaction {
 	}
 
 	/************************/
-	@Override
-	public List<Object[]> SortbyLikes() {
-		return postReactionRepository.SortbyLikes();
+
+@Override
+	public List<Object[]> SortbyLikes(Long userId) {
+		return postReactionRepository.SortbyLikes(userId);
 
 	}
 }

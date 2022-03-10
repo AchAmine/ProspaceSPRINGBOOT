@@ -121,10 +121,12 @@ public class PostReactionRestController {
 
 	/******************************************************************/
 
-	@ApiOperation(value = "retrieve by reaction type")
-	@GetMapping("/retrieve-byReactions")
-	public List<Object[]> sortbyReaction() {
-		return postReactionService.SortbyLikes();
+
+@ApiOperation(value = "retrieve by reaction type")
+	@GetMapping("/retrieve-byReactions/{user-id}")
+	public List<Object[]> sortbyReaction(@PathVariable("user-id") Long userId) {
+		return postReactionService.SortbyLikes(userId);
 	}
+
 
 }

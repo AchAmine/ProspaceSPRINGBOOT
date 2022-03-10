@@ -1,24 +1,36 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,232 +41,13 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-
+@Getter
+@Setter 
 @NoArgsConstructor 
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
 public class User implements Serializable{
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Long getIdUser() {
-		return idUser;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public UserRole getUserRole() {
-		return userRole;
-	}
-
-	public boolean isLocked() {
-		return locked;
-	}
-
-	public boolean isEnabled() {
-		return enabled;
-	}
-
-	public boolean isDeleted() {
-		return isDeleted;
-	}
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public Date getModifiedAt() {
-		return modifiedAt;
-	}
-
-	public Date getDeletedAt() {
-		return deletedAt;
-	}
-
-	public Image getImage() {
-		return image;
-	}
-
-	public Date getBirthDate() {
-		return birthDate;
-	}
-
-	public Set<Skill> getSkills() {
-		return Skills;
-	}
-
-	public Set<Formation> getFormations() {
-		return formations;
-	}
-
-	public Set<Formation> getFormations_organized() {
-		return formations_organized;
-	}
-
-	public Set<Article> getArticles() {
-		return Articles;
-	}
-
-	public Set<Offer> getOffers() {
-		return Offers;
-	}
-
-	public Set<Quizz> getQuizz() {
-		return Quizz;
-	}
-
-	public Set<Post> getPosts() {
-		return Posts;
-	}
-
-	public Set<Topic> getTopics() {
-		return Topics;
-	}
-
-	public Set<Event> getEventsParticipation() {
-		return EventsParticipation;
-	}
-
-	public Set<Event> getEventsOrganized() {
-		return EventsOrganized;
-	}
-
-	public Set<Tournament> getTournaments() {
-		return Tournaments;
-	}
-
-	public Set<Complaint> getComplaints() {
-		return Complaints;
-	}
-
-	public Badge getBadge() {
-		return badge;
-	}
-
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public void setUserRole(UserRole userRole) {
-		this.userRole = userRole;
-	}
-
-	public void setLocked(boolean locked) {
-		this.locked = locked;
-	}
-
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-	}
-
-	public void setDeleted(boolean isDeleted) {
-		this.isDeleted = isDeleted;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public void setModifiedAt(Date modifiedAt) {
-		this.modifiedAt = modifiedAt;
-	}
-
-	public void setDeletedAt(Date deletedAt) {
-		this.deletedAt = deletedAt;
-	}
-
-	public void setImage(Image image) {
-		this.image = image;
-	}
-
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
-	}
-
-	public void setSkills(Set<Skill> skills) {
-		Skills = skills;
-	}
-
-	public void setFormations(Set<Formation> formations) {
-		this.formations = formations;
-	}
-
-	public void setFormations_organized(Set<Formation> formations_organized) {
-		this.formations_organized = formations_organized;
-	}
-
-	public void setArticles(Set<Article> articles) {
-		Articles = articles;
-	}
-
-	public void setOffers(Set<Offer> offers) {
-		Offers = offers;
-	}
-
-	public void setQuizz(Set<Quizz> quizz) {
-		Quizz = quizz;
-	}
-
-	public void setPosts(Set<Post> posts) {
-		Posts = posts;
-	}
-
-	public void setTopics(Set<Topic> topics) {
-		Topics = topics;
-	}
-
-	public void setEventsParticipation(Set<Event> eventsParticipation) {
-		EventsParticipation = eventsParticipation;
-	}
-
-	public void setEventsOrganized(Set<Event> eventsOrganized) {
-		EventsOrganized = eventsOrganized;
-	}
-
-	public void setTournaments(Set<Tournament> tournaments) {
-		Tournaments = tournaments;
-	}
-
-	public void setComplaints(Set<Complaint> complaints) {
-		Complaints = complaints;
-	}
-
-	public void setBadge(Badge badge) {
-		this.badge = badge;
-	}
-
 	/**
 	 * 
 	 */
@@ -264,47 +57,67 @@ public class User implements Serializable{
 	private Long idUser;
 	
 	@NonNull
-	private String name;
+	private String firstName;
+	@NonNull
+	private String lastName;
+	
+	@Column(unique=true)
 	@NonNull 
 	private String userName;
 	@NonNull 
 	private String email;
 	@NonNull 
 	private String password;
-	@NonNull 
-	@Enumerated(EnumType.STRING)
-	UserRole userRole;
+	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> userRoles = new HashSet<>();
 	
 	private boolean locked;
 	
 	private boolean enabled;
-	
+	@NonNull 
 	private boolean isDeleted;
+	/*@NonNull
+	@Column(name = "failed_attempt")
+    private int failedAttempt;*/
 	
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedAt;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
 	
 	@OneToOne
 	private Image image;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date birthDate;
+	@NonNull
+	private Integer age;
+	@Column(name = "resettoken")
+	private String resettoken;
 	
-	@ManyToMany
+		public boolean isEnabled() {
+			return enabled;
+		}
+		
+		public boolean isLocked() {
+			return locked;
+		}
+		
+	
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
 	
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
-	private Set<Formation> formations;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="organizer")
-	private Set<Formation> formations_organized;
 	
 	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
@@ -314,24 +127,29 @@ public class User implements Serializable{
 	// --------------------------------------- End News -------------------------------------
 	
 	// --------------------------------------- Begin Partner -------------------------------------
-	
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner")
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
+	@JsonIgnore
+	@OneToMany(mappedBy="user")
+	private Set<ResultQuizz> resultQuizz;
 	
+	@JsonIgnore
+	@OneToMany(mappedBy="userresponse")
+	private Set<Response> Response;
 	
 	// --------------------------------------- End Partner -------------------------------------
 	
 	// --------------------------------------- Begin Forum -------------------------------------
-	
+	@JsonIgnore
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
 	private Set<Post> Posts;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Topic> Topics;
 	
 	
@@ -343,10 +161,14 @@ public class User implements Serializable{
 	private Set<Event> EventsParticipation;
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer")
-	private Set<Event> EventsOrganized=new HashSet();
+	private Set<Event> EventsOrganized;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Tournament> Tournaments;
+	
+	 @JsonIgnore
+	 @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+		private Set<Vote> votes;
 	
 	// --------------------------------------- End Events -------------------------------------
 	
@@ -358,11 +180,6 @@ public class User implements Serializable{
 	
 	@OneToOne
 	private Badge badge;
-
-	
-	
-
-	}
 	
 	// --------------------------------------- End Complaint -------------------------------------
-
+}

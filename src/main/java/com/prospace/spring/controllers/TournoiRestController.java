@@ -29,10 +29,6 @@ public class TournoiRestController {
 		serviceTournoi.addTournoi(t, idActivity);
 	}
 	
-	@GetMapping("/Get/TopActivityPerTournament")
-	public List<TopActiviteInTournament> topacttourn (){
-		return serviceTournoi.topacttourn();
-	}
 		
 	@GetMapping("/retrieve-all-tournoi")
 	public List<Tournament> getTournoi (){
@@ -49,5 +45,10 @@ public class TournoiRestController {
 	public Tournament updateTournoi(@RequestBody Tournament t) {
 		return serviceTournoi.updateTournoi(t);
 		
+	}
+	
+	@GetMapping("/Get/TopActivityPerTournament")
+	public List<TopActiviteInTournament> topacttourn (){
+		return serviceTournoi.topacttourn();
 	}
 }

@@ -10,9 +10,9 @@ import com.prospace.spring.entity.Activity;
 import com.prospace.spring.entity.TopActiviteInTournament;
 import com.prospace.spring.entity.Tournament;
 
-
 @Repository
 public interface TournamentRepository extends JpaRepository<Tournament, Long>{
+
 
 	List<Tournament> findByActivity(Activity activity);
 
@@ -22,6 +22,4 @@ public interface TournamentRepository extends JpaRepository<Tournament, Long>{
 			+ "ORDER by (nbr) DESC "
 			+ "limit 1",nativeQuery = true)
 	List<TopActiviteInTournament>topacttourn();
-
-
 }

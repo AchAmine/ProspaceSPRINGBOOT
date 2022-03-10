@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(tags = "Rating management")
-@RequestMapping("/Rating")
+@RequestMapping("/Offer/Rating")
 public class RatingRestController {
 	@Autowired
 	IServiceRating serviceRating;

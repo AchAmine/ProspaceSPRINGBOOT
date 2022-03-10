@@ -11,24 +11,21 @@ import com.prospace.spring.entity.QRCodeGenerator;
 @RestController
 public class QRCodeController {
 	
-	private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/QRCode.png";
+	private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/";
 
 	
-    @GetMapping(value = "/genrateAndDownloadQRCode/{codeText}/{width}/{height}")
+    @GetMapping(value = "/genrateAndDownloadQRCode/{username}/{codeText}")
 		public void download(
-				@PathVariable("codeText") String codeText,
-				@PathVariable("width") Integer width,
-				@PathVariable("height") Integer height)
+				@PathVariable("codeText") String codeText,@PathVariable("username") String username
+				)
 			    throws Exception {
-			        QRCodeGenerator.generateQRCodeImage(codeText, width, height, QR_CODE_IMAGE_PATH);
+			        QRCodeGenerator.generateQRCodeImage(codeText, QR_CODE_IMAGE_PATH+username+".png");
 			    }
 
-    @GetMapping(value = "/genrateQRCode/{codeText}/{width}/{height}")
+    @GetMapping(value = "/genrateQRCode/{codeText}")
    	public ResponseEntity<byte[]> generateQRCode(
-   			@PathVariable("codeText") String codeText,
-   			@PathVariable("width") Integer width,
-   			@PathVariable("height") Integer height)
+   			@PathVariable("codeText") String codeText)
    		    throws Exception {
-   		        return ResponseEntity.status(HttpStatus.OK).body(QRCodeGenerator.getQRCodeImage(codeText, width, height));
+   		        return ResponseEntity.status(HttpStatus.OK).body(QRCodeGenerator.getQRCodeImage(codeText));
    		    }
 }

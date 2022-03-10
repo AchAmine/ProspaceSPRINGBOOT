@@ -149,8 +149,9 @@ public class User implements Serializable{
 	private Set<ResultQuizz> resultQuizz;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="userresponse",fetch = FetchType.EAGER)
-	private Set<Response> Response;
+	@OneToOne(mappedBy="userresponse",fetch = FetchType.EAGER)
+	private Response Response;
+
 	
 	// --------------------------------------- End Partner -------------------------------------
 	

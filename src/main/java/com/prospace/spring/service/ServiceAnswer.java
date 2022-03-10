@@ -25,11 +25,13 @@ public class ServiceAnswer implements IServiceAnswer {
 	AnswerRepository answerRepository;
 	@Autowired
 	QuizzRepository quizzRepository;
+
 	
 	
 	public Answer addAnswerAndAffecttoQuestionAndQuizz(Answer a,Long idQuestion){
 		Question q = questionRepository.findById(idQuestion).orElse(null);
 		q.getAnswers().add(a);
+	//	q.setQuestionpts(questionRepository.NbPtsQuestion(idQuestion));
 		answerRepository.save(a);
 		return a;
 	}
@@ -57,6 +59,9 @@ public class ServiceAnswer implements IServiceAnswer {
 		
 	
 	}
+
+	
+	
 	
 	
 	}

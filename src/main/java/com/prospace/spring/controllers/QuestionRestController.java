@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(tags = "Question management")
-@RequestMapping("/Question")
+@RequestMapping("/Quizz/Question")
 public class QuestionRestController {
 	@Autowired
 	IServiceQuestion serviceQuestion;
@@ -59,5 +59,7 @@ public class QuestionRestController {
 		return serviceQuestion.updateQuestion(question,QuestionId,QuizzId);
 		}
 */
-
+		
+		
+		
 }

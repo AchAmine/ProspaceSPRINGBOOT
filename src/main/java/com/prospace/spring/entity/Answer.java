@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -36,10 +38,12 @@ public class Answer implements Serializable{
 	@NonNull
 	private String content;
 	
-	@OneToMany(mappedBy="selectedAnswer")
-	private List<Response> Responses;
+	/*@ManyToMany
+	private List<Response> Response;*/
 	
-	//@NonNull
-	//private Boolean state;
+	@NonNull
+	
+	private Boolean isCorrect;
+	private float nbreptsanswer;
 
 }

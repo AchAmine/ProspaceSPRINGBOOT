@@ -54,6 +54,13 @@ public class ArticleRestController {
 		return listArticles;
 	}
 	
+	@ApiOperation(value = "retrieve all articles ordered by date")
+	@GetMapping("/retrieve-all-articles-ordered")
+	public List<Article> retrieveOrderedByDate(){
+		List<Article> listArticles = articleService.retrieveOrderedByDate();
+		return listArticles;
+	}
+	
 	@ApiOperation(value = "retrieve article by id")
 	@GetMapping("/retrieve-article/{article-id}")
 	public Article retrieveArticle(@PathVariable("article-id") Long articleId) {
@@ -86,4 +93,10 @@ public class ArticleRestController {
 		return articleService.userPreferences(userId);
 	}
 	
+	
+	@ApiOperation(value = "retrieve user's following articles")
+	@GetMapping("/followingarticles/user/{user-id}")
+	public List<Article> FollowingArticles(@PathVariable("user-id") Long userId) {
+		return articleService.FollowingArticles(userId);
+	}
 }

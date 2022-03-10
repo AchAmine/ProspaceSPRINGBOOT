@@ -1,68 +1,85 @@
-2022-03-10 00:00:00.007  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:00:00.018  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:01:00.007  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:01:00.010  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:02:00.012  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:02:00.014  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:03:00.018  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:03:00.021  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:04:00.015  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:04:00.017  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:05:00.013  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:05:00.015  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:06:00.007  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:06:00.009  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:07:00.015  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:07:00.016  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:08:00.014  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:08:00.016  INFO 22988 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:08:37.360  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 00:08:37.364  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-03-10 00:08:37.364  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b0693cd]]
-2022-03-10 00:08:37.364  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-03-10 00:08:37.653  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 00:08:37.655  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-62 - Shutdown initiated...
-2022-03-10 00:08:37.655  INFO 22988 --- [RMI TCP Connection(463)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-62 - Shutdown completed.
-2022-03-10 00:47:17.514  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 4240 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-03-10 00:47:17.515  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-03-10 00:47:17.568  INFO 4240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-10 00:47:17.568  INFO 4240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-10 00:47:18.606  INFO 4240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-10 00:47:18.760  INFO 4240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 32 JPA repository interfaces.
-2022-03-10 00:47:19.557  INFO 4240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-03-10 00:47:19.567  INFO 4240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-10 00:47:19.567  INFO 4240 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-10 00:47:19.649  INFO 4240 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-03-10 00:47:19.649  INFO 4240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2081 ms
-2022-03-10 00:47:19.785  INFO 4240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-03-10 00:47:19.943  INFO 4240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-03-10 00:47:20.059  INFO 4240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-10 00:47:20.119  INFO 4240 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-03-10 00:47:20.270  INFO 4240 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-03-10 00:47:20.391  INFO 4240 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-03-10 00:47:22.681  INFO 4240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-10 00:47:22.690  INFO 4240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 00:47:23.484  WARN 4240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-10 00:47:24.615  INFO 4240 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@82212ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@22b1d70b, org.springframework.security.web.header.HeaderWriterFilter@c5eed8f, org.springframework.web.filter.CorsFilter@cf569cd, org.springframework.security.web.authentication.logout.LogoutFilter@7a82be98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24d6441b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39b95375, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c5e0363, org.springframework.security.web.session.SessionManagementFilter@3003ca73, org.springframework.security.web.access.ExceptionTranslationFilter@30013ae2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f50a5d5]
-2022-03-10 00:47:24.813  INFO 4240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-10 00:47:24.905  WARN 4240 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-03-10 00:47:24.911  INFO 4240 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-03-10 00:47:24.931  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-03-10 00:47:25.205  INFO 4240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-03-10 00:47:26.019  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-03-10 00:47:26.019  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c537a28]]
-2022-03-10 00:47:26.019  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-03-10 00:47:26.029  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 8.873 seconds (JVM running for 9.814)
-2022-03-10 00:47:26.032  INFO 4240 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-03-10 00:47:26.127  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-03-10 00:47:26.158  INFO 4240 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-03-10 00:47:26.164  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 17ms
-2022-03-10 00:48:00.054  INFO 4240 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 00:48:00.055  INFO 4240 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 00:48:24.273  INFO 4240 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-10 00:48:24.274  INFO 4240 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-10 00:48:24.278  INFO 4240 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-03-10 00:48:24.375  INFO 4240 --- [http-nio-8089-exec-1] c.p.spring.service.FollowersService      : ------User  : 2
-2022-03-10 00:48:24.375  INFO 4240 --- [http-nio-8089-exec-1] c.p.spring.service.FollowersService      : ------Follower : 1
-2022-03-10 00:48:24.377  INFO 4240 --- [http-nio-8089-exec-1] c.p.spring.service.FollowersService      : ---------List size 1
-2022-03-10 00:48:24.693  INFO 4240 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2022-03-10 01:09:21.272  WARN 4240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-10 01:09:22.014  INFO 4240 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dfecc56, org.springframework.security.web.context.SecurityContextPersistenceFilter@5264b189, org.springframework.security.web.header.HeaderWriterFilter@3e8058e9, org.springframework.web.filter.CorsFilter@1448ffb7, org.springframework.security.web.authentication.logout.LogoutFilter@544cc3b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47ec072e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b17482a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e2ea2a6, org.springframework.security.web.session.SessionManagementFilter@45b3a5f7, org.springframework.security.web.access.ExceptionTranslationFilter@a93e1da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46ff33f8]
+2022-03-10 01:09:22.126  INFO 4240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 01:09:22.169  WARN 4240 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-03-10 01:09:22.169  INFO 4240 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-03-10 01:09:22.169  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-03-10 01:09:22.376  INFO 4240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-10 01:09:22.881  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-03-10 01:09:22.881  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@74499916]]
+2022-03-10 01:09:22.881  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-03-10 01:09:22.885  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 3.847 seconds (JVM running for 1326.669)
+2022-03-10 01:09:22.886  INFO 4240 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-03-10 01:09:22.900  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-03-10 01:09:22.906  INFO 4240 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-03-10 01:09:22.908  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 6ms
+2022-03-10 01:09:22.910  INFO 4240 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 01:09:23.843  INFO 4240 --- [Thread-109] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-03-10 01:09:23.843  INFO 4240 --- [Thread-109] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@74499916]]
+2022-03-10 01:09:23.843  INFO 4240 --- [Thread-109] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-03-10 01:09:24.119  INFO 4240 --- [Thread-109] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 01:09:24.120  INFO 4240 --- [Thread-109] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2022-03-10 01:09:24.122  INFO 4240 --- [Thread-109] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2022-03-10 01:09:24.424  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 4240 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-03-10 01:09:24.424  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-03-10 01:09:24.763  INFO 4240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-10 01:09:24.852  INFO 4240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 32 JPA repository interfaces.
+2022-03-10 01:09:25.018  INFO 4240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-03-10 01:09:25.019  INFO 4240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 01:09:25.019  INFO 4240 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 01:09:25.032  INFO 4240 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-03-10 01:09:25.032  INFO 4240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 606 ms
+2022-03-10 01:09:25.069  INFO 4240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2022-03-10 01:09:25.072  INFO 4240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2022-03-10 01:09:25.097  INFO 4240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-10 01:09:25.102  INFO 4240 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-10 01:09:26.312  INFO 4240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-10 01:09:26.312  INFO 4240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-10 01:09:26.501  WARN 4240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-10 01:09:27.125  INFO 4240 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21841e11, org.springframework.security.web.context.SecurityContextPersistenceFilter@55fe4447, org.springframework.security.web.header.HeaderWriterFilter@6b42570f, org.springframework.web.filter.CorsFilter@3b6d54c1, org.springframework.security.web.authentication.logout.LogoutFilter@1426322a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2209d267, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b0a1306, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c734a55, org.springframework.security.web.session.SessionManagementFilter@5ea6c33e, org.springframework.security.web.access.ExceptionTranslationFilter@53249493, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fd4aba2]
+2022-03-10 01:09:27.202  INFO 4240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 01:09:27.237  WARN 4240 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-03-10 01:09:27.237  INFO 4240 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-03-10 01:09:27.237  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-03-10 01:09:27.408  INFO 4240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-03-10 01:09:27.847  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-03-10 01:09:27.847  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@55624d9]]
+2022-03-10 01:09:27.847  INFO 4240 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-03-10 01:09:27.850  INFO 4240 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 3.448 seconds (JVM running for 1331.636)
+2022-03-10 01:09:27.851  INFO 4240 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-03-10 01:09:27.875  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-03-10 01:09:27.880  INFO 4240 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-03-10 01:09:27.883  INFO 4240 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 5ms
+2022-03-10 01:09:27.884  INFO 4240 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 01:10:00.026  INFO 4240 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:10:00.027  INFO 4240 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:10:27.151  INFO 4240 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2022-03-10 01:11:00.007  INFO 4240 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:11:00.009  INFO 4240 --- [MessageBroker-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:12:00.016  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:12:00.019  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:13:00.009  INFO 4240 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:13:00.011  INFO 4240 --- [MessageBroker-3] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:14:00.008  INFO 4240 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:14:00.011  INFO 4240 --- [MessageBroker-5] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:15:00.006  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:15:00.008  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:16:00.004  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:16:00.007  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:17:00.015  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:17:00.017  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:18:00.008  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:18:00.010  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:19:00.012  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:19:00.014  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:20:00.012  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:20:00.013  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:21:00.013  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:21:00.014  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:22:00.010  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:22:00.013  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:23:00.006  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:23:00.008  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:24:00.006  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
+2022-03-10 01:24:00.008  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
+2022-03-10 01:25:00.004  INFO 4240 --- [MessageBroker-2] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0

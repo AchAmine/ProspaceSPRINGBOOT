@@ -20,4 +20,6 @@ public interface IServiceArticle {
 	HashMap<Long, Long> SortByReaction(Long idUser);
 	HashMap<Long, Long> SortByComments(Long idUser);
 	HashMap<Long, Long> userPreferences(Long idUser);
+	
+	List<Article> FollowingArticles(Long idUser); 
 }

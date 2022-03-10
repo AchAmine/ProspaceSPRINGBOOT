@@ -141,5 +141,12 @@ public class ServiceArticle implements IServiceArticle{
 		
 	}
 
+	@Override
+	public List<Article> FollowingArticles(Long idUser) {
+		User u = userRepository.findById(idUser).orElse(null);
+		List<User> followers = u.getFollowers();
+		return articleRepository.FollowingArticles(followers);
+	}
+
 	
 }

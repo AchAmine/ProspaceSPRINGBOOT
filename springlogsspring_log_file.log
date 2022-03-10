@@ -1,8 +1,0 @@
-2022-03-10 13:05:00.006  INFO 12744 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 13:05:00.019  INFO 12744 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 13:06:00.016  INFO 12744 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de types like :0
-2022-03-10 13:06:00.025  INFO 12744 --- [scheduling-1] c.p.spring.service.ServicePost_Reaction  : --- Nombre des reactions de type dislike : 0
-2022-03-10 13:06:09.314  INFO 12744 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-03-10 13:06:09.817  INFO 12744 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-10 13:06:09.828  INFO 12744 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-03-10 13:06:09.847  INFO 12744 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

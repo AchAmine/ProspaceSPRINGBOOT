@@ -120,7 +120,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
         
       }else {
     	  
-    	  Image img = Image.getInstance(QR_CODE_IMAGE_PATH+u.getUsername().toString()+".png");
+    	  Image img = Image.getInstance(QR_CODE_IMAGE_PATH+u.getUserName().toString()+".png");
 			img.scalePercent(3);
 			img.setWidthPercentage(10);
 			img.scaleAbsolute(120f, 120f);

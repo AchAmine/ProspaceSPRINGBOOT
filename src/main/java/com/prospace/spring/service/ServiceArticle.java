@@ -1,6 +1,7 @@
 package com.prospace.spring.service;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -149,7 +150,11 @@ public class ServiceArticle implements IServiceArticle{
 	@Override
 	public List<Article> FollowingArticles(Long idUser) {
 		User u = userRepository.findById(idUser).orElse(null);
-		List<User> followers = (List<User>) u.getFollowers();
+		List<User> followers = new ArrayList<User>();
+		
+		for (User user : u.getFollowers()) {
+			followers.add(user);
+		}
 		return articleRepository.FollowingArticles(followers);
 	}
 

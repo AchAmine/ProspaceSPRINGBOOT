@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -29,11 +30,13 @@ public class ChatController {
     @Autowired private com.prospace.spring.service.ChatMessageService chatMessageService;
     @Autowired private com.prospace.spring.service.ChatRoomService chatRoomService;
 
-    @MessageMapping("/msgs")
-    public void processMessages(@Payload com.prospace.spring.entity.ChatMessage chatMessage) {
+    @MessageMapping("/{username}/msgs")
+    public void processMessages(@Payload com.prospace.spring.entity.ChatMessage chatMessage,@DestinationVariable String username)
+    {
     	
-    	log.info("in chat ");
-    	log.info("chat message : "+chatMessage);
+    	log.info("----------------in chat ");
+    	log.info("-------------------chat message : "+chatMessage);
+    	log.info("-------------USERNAME------------------"+username);
         var chatId = chatRoomService
                 .getChatId(chatMessage.getSenderId(), chatMessage.getRecipientId(), true);
         chatMessage.setChatId(chatId);
@@ -45,10 +48,7 @@ public class ChatController {
         	log.info("size : "+chatmsgs.size());
         	ChatMessage ch = chatmsgs.get(i);
         	messagingTemplate.convertAndSendToUser(
-                    chatMessage.getRecipientId(),"/queue/messages",
-                    ch);
-        	messagingTemplate.convertAndSendToUser(
-                    chatMessage.getSenderId(),"/queue/messages",
+                    username,"/queue/messages",
                     ch);
         	log.info("in loop : "+i);
         }

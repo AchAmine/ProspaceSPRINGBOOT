@@ -1,5 +1,6 @@
 package com.prospace.spring.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,9 +47,13 @@ public class FollowersService implements IServiceFollowers{
 	@Override
 	public List<User> showFollowers(Long idUser) {
 		User user = userRepository.findById(idUser).orElse(null);
+		List<User> listFollowers = new ArrayList<User>();
 		
+		for (User u : user.getFollowers()) {
+			listFollowers.add(u);
+		}
 		
-		return (List<User>) user.getFollowers();
+		return listFollowers;
 	}
 
 

@@ -130,6 +130,7 @@ public class User implements Serializable{
 	
 	
 	@ToString.Exclude
+	@JsonIgnore
 	@OneToMany(fetch = FetchType.EAGER)
 	private Set<User> followers;
 	
@@ -161,7 +162,7 @@ public class User implements Serializable{
 		
 		@JsonIgnore
 		@ToString.Exclude
-		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
 		private Set<Post_Reaction> post_Reaction;
 		
 		/*********************************************************/
@@ -172,7 +173,7 @@ public class User implements Serializable{
 
 		/***************************************** begin section */
 		@JsonIgnore
-		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
 		private Set<Section> Sections;
 		/**** end section */
 		/***************************************** begin topic */

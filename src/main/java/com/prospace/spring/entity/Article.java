@@ -53,11 +53,11 @@ public class Article implements Serializable{
 	private Image image;
 	@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
+	//@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
+	//@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date updatedAt;
 	
 	private int views ; 

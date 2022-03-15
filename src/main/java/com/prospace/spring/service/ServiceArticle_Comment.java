@@ -2,6 +2,7 @@ package com.prospace.spring.service;
 
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -39,6 +40,8 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 	public Article_Comment addComment(Long userId , Long articleId , Article_Comment comment) {
 		Article article = articleRepository.findById(articleId).orElse(null);
 		User user = userRepository.findById(userId).orElse(null);
+		Date date = new Date(System.currentTimeMillis());
+		comment.setPostedAt(date);
 		comment.setUser(user);
 		comment.setArticle(article);
 		
@@ -54,6 +57,9 @@ public class ServiceArticle_Comment implements IServiceArticle_Comment{
 	@Override
 	public Article_Comment updateComment(Article_Comment comment) {
 		Article_Comment artcom = article_commentRepository.findById(comment.getIdComment()).orElse(null);
+		Date date = new Date(System.currentTimeMillis());
+		comment.setUpdatedAt(date);
+		comment.setPostedAt(artcom.getPostedAt());
 		comment.setArticle(artcom.getArticle());
 		comment.setUser(artcom.getUser());
 		return article_commentRepository.save(comment);

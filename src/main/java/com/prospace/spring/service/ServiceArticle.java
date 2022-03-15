@@ -2,6 +2,7 @@ package com.prospace.spring.service;
 
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,6 +33,8 @@ public class ServiceArticle implements IServiceArticle{
 	public Article addArticle(Article A,Long idUser) {
 		User user = userRepository.findById(idUser).orElse(null);
 		A.setUser(user);
+		Date date = new Date(System.currentTimeMillis());
+		A.setCreatedAt(date);
 		user.getArticles().add(A);
 	/*	Set<Article> listArticles = user.getArticles();
 		listArticles.add(A);
@@ -49,7 +52,14 @@ public class ServiceArticle implements IServiceArticle{
 	@Override
 	public Article updateArticle(Article A) {
 		User user = userRepository.findById(A.getIdArticle()).orElse(null);
+		Article article = articleRepository.findById(A.getIdArticle()).orElse(null);
 		A.setUser(user);
+		A.setCreatedAt(article.getCreatedAt());
+		if (A.getImage() == null ) {
+			A.setImage(article.getImage());
+		}
+		Date date = new Date(System.currentTimeMillis());
+		A.setUpdatedAt(date);
 		return articleRepository.save(A);
 	}
 

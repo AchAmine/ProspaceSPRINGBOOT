@@ -11,8 +11,10 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.prospace.spring.entity.Article;
+import com.prospace.spring.entity.Image;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.ArticleRepository;
 import com.prospace.spring.repository.UserRepository;
@@ -28,9 +30,12 @@ public class ServiceArticle implements IServiceArticle{
 	@Autowired
 	UserRepository userRepository;
 
+	@Autowired
+	IServiceImage imageService;
+	
 	@Override
 	@Transactional
-	public Article addArticle(Article A,Long idUser) {
+	public Article addArticle(Article A,Long idUser,MultipartFile file) {
 		User user = userRepository.findById(idUser).orElse(null);
 		A.setUser(user);
 		Date date = new Date(System.currentTimeMillis());
@@ -39,6 +44,14 @@ public class ServiceArticle implements IServiceArticle{
 	/*	Set<Article> listArticles = user.getArticles();
 		listArticles.add(A);
 		user.setArticles(listArticles); */
+		
+		//Image
+		Image image = new Image(file.getOriginalFilename());
+		A.setImage(image);
+		imageService.save(file);
+				//EndImage
+				
+				
 		return articleRepository.save(A);
 	}
 
@@ -49,8 +62,18 @@ public class ServiceArticle implements IServiceArticle{
 		
 	}
 
+	/*
+	 * @Override public Article updateArticle(Article A) { User user =
+	 * userRepository.findById(A.getIdArticle()).orElse(null); Article article =
+	 * articleRepository.findById(A.getIdArticle()).orElse(null); A.setUser(user);
+	 * A.setCreatedAt(article.getCreatedAt()); if (A.getImage() == null ) {
+	 * A.setImage(article.getImage()); } Date date = new
+	 * Date(System.currentTimeMillis()); A.setUpdatedAt(date); return
+	 * articleRepository.save(A); }
+	 */
+	
 	@Override
-	public Article updateArticle(Article A) {
+	public Article updateArticle(Article A,MultipartFile file) {
 		User user = userRepository.findById(A.getIdArticle()).orElse(null);
 		Article article = articleRepository.findById(A.getIdArticle()).orElse(null);
 		A.setUser(user);
@@ -60,8 +83,21 @@ public class ServiceArticle implements IServiceArticle{
 		}
 		Date date = new Date(System.currentTimeMillis());
 		A.setUpdatedAt(date);
+		
+		//Image
+				if (file.getOriginalFilename().length()> 0) {
+				Image image = new Image(file.getOriginalFilename());
+				A.setImage(image);
+				imageService.save(file);
+				} else {
+					A.setImage(article.getImage());
+				}
+						//EndImage
+				
+				
 		return articleRepository.save(A);
 	}
+	
 
 	@Override
 	public List<Article> retrieveAllArticles() {

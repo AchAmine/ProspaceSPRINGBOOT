@@ -3,14 +3,16 @@ package com.prospace.spring.service;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.prospace.spring.entity.Article;
 import com.prospace.spring.entity.User;
 
 public interface IServiceArticle {
 
-	Article addArticle(Article A,Long idUser);
+	Article addArticle(Article A,Long idUser,MultipartFile file);
 	void deleteArticle(Long id);
-	Article updateArticle(Article A);
+	Article updateArticle(Article A,MultipartFile file);
 	List<Article> retrieveAllArticles();
 	List<Article> retrieveOrderedByDate();
 	Article retrieveArticle(Long id);

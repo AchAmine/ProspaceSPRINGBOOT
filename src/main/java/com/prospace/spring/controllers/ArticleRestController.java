@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,17 +12,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.prospace.spring.entity.Article;
 import com.prospace.spring.service.IServiceArticle;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @Api(tags="Article management")
 @RequestMapping("/Article")
+
 public class ArticleRestController {
 
 	@Autowired
@@ -29,9 +36,10 @@ public class ArticleRestController {
 	
 	@ApiOperation(value = "Add article")
 	@PostMapping("/add-article/{user-id}") 
-	public Article addArticle(@RequestBody Article a, @PathVariable("user-id") Long userId) {
-		
-		return articleService.addArticle(a,userId);
+	public Article addArticle(@RequestParam("article") String article, @PathVariable("user-id") Long userId,
+			@RequestParam("file") MultipartFile file) throws JsonMappingException, JsonProcessingException {
+		Article a = new ObjectMapper().readValue(article, Article.class);
+		return articleService.addArticle(a,userId,file);
 	}
 	
 	
@@ -41,11 +49,21 @@ public class ArticleRestController {
 		articleService.deleteArticle(articleId);
 	}
 	
+	/*
+	 * @ApiOperation(value = "Update article")
+	 * 
+	 * @PutMapping("/modify-article") public Article modifyArticle(@RequestBody
+	 * Article article) { return articleService.updateArticle(article); }
+	 */
+	
 	@ApiOperation(value = "Update article")
 	@PutMapping("/modify-article")
-	public Article modifyArticle(@RequestBody Article article) {
-		return articleService.updateArticle(article);
+	public Article modifyArticle(@RequestParam("article") String article,
+			@RequestParam("file") MultipartFile file) throws JsonMappingException, JsonProcessingException {
+		Article a = new ObjectMapper().readValue(article, Article.class);
+		return articleService.updateArticle(a,file);
 	}
+	
 	
 	@ApiOperation(value = "retrieve all articles")
 	@GetMapping("/retrieve-all-articles")

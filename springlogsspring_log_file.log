@@ -1,24 +1,335 @@
-2022-04-22 03:29:05.615  INFO 10908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-22 03:29:05.724  WARN 10908 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-04-22 03:29:05.731  INFO 10908 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-04-22 03:29:05.752  INFO 10908 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-04-22 03:29:06.035  INFO 10908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-04-22 03:29:07.311  INFO 10908 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-04-22 03:29:07.312  INFO 10908 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6f2a6aba]]
-2022-04-22 03:29:07.312  INFO 10908 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-04-22 03:29:07.323  INFO 10908 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 12.247 seconds (JVM running for 13.561)
-2022-04-22 03:29:07.325  INFO 10908 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-04-22 03:29:07.423  INFO 10908 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-04-22 03:29:07.458  INFO 10908 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-04-22 03:29:07.466  INFO 10908 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 16ms
-2022-04-22 03:30:05.500  INFO 10908 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2022-04-22 03:30:52.818  INFO 10908 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-22 03:30:52.818  INFO 10908 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-22 03:30:52.820  INFO 10908 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-04-22 03:40:55.098  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-04-22 03:40:55.102  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-04-22 03:40:55.102  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6f2a6aba]]
-2022-04-22 03:40:55.102  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-04-22 03:40:55.383  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-22 03:40:55.386  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-04-22 03:40:55.398  INFO 10908 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-24 00:27:25.581  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 7]
+2022-04-24 00:57:25.626  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 8]
+2022-04-24 01:27:25.630  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 9]
+2022-04-24 01:57:25.641  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 10]
+2022-04-24 02:27:25.647  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 11]
+2022-04-24 02:57:27.135  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 12]
+2022-04-24 03:05:05.567  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:05.568  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:05.569  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:05:05.572  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:05.572  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:05.573  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:05:05.576  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:05.577  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:05.579  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:05:05.582  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:05.582  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:05.583  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:05:05.587  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:05.587  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:05.588  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:05:05.590  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:05.591  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:05.591  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:05:45.929  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:45.929  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:45.930  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:05:45.933  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:45.933  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:45.934  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:05:45.936  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:45.936  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:45.937  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:05:45.939  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:45.939  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:45.939  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:05:45.941  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:45.942  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:45.942  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:05:45.945  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:05:45.945  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:05:45.945  INFO 16204 --- [http-nio-8089-exec-9] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:06:48.887  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:06:48.887  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:06:48.888  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:06:48.890  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:06:48.890  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:06:48.891  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:06:48.893  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:06:48.894  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:06:48.895  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:06:48.897  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:06:48.897  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:06:48.898  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:06:48.902  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:06:48.902  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:06:48.903  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:06:48.905  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:06:48.905  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:06:48.905  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:11:46.619  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:11:46.619  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:11:46.620  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:11:46.623  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:11:46.623  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:11:46.624  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:11:46.627  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:11:46.628  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:11:46.629  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:11:46.632  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:11:46.632  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:11:46.633  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:11:46.637  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:11:46.637  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:11:46.639  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:11:46.641  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:11:46.641  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:11:46.641  INFO 16204 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:18:53.608  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:18:53.609  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:18:53.610  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:18:53.613  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:18:53.613  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:18:53.614  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:18:53.616  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:18:53.616  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:18:53.616  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:18:53.619  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:18:53.619  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:18:53.620  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:18:53.623  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:18:53.623  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:18:53.624  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:18:53.626  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:18:53.626  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:18:53.628  INFO 16204 --- [http-nio-8089-exec-3] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:19:11.967  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:19:11.967  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:19:11.968  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:19:11.971  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:19:11.971  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:19:11.972  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:19:11.974  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:19:11.974  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:19:11.975  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:19:11.976  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:19:11.977  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:19:11.977  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:19:11.979  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:19:11.979  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:19:11.980  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:19:11.981  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:19:11.981  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:19:11.982  INFO 16204 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:20:38.239  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:20:38.240  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:20:38.240  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:20:38.243  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:20:38.243  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:20:38.244  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:20:38.245  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:20:38.245  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:20:38.246  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:20:38.248  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:20:38.248  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:20:38.249  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:20:38.251  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:20:38.251  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:20:38.251  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:20:38.254  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:20:38.254  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:20:38.255  INFO 16204 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:21:08.235  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:21:08.235  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:21:08.235  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:21:08.237  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:21:08.237  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:21:08.238  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 03:21:08.239  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:21:08.239  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:21:08.240  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 03:21:08.242  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:21:08.242  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:21:08.243  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 03:21:08.244  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:21:08.245  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:21:08.245  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 03:21:08.248  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 03:21:08.248  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 03:21:08.249  INFO 16204 --- [http-nio-8089-exec-5] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 03:27:27.143  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 13]
+2022-04-24 03:57:27.149  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 14]
+2022-04-24 04:27:27.151  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 15]
+2022-04-24 04:57:27.161  INFO 16204 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 16]
+2022-04-24 05:11:29.711  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-04-24 05:11:29.773  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-04-24 05:11:29.773  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@56253fda]]
+2022-04-24 05:11:29.774  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-04-24 05:11:30.138  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-24 05:11:30.153  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-49 - Shutdown initiated...
+2022-04-24 05:11:30.155  INFO 16204 --- [RMI TCP Connection(1557)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-49 - Shutdown completed.
+2022-04-24 05:40:26.514  INFO 3736 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 3736 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-04-24 05:40:26.515  INFO 3736 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-04-24 05:40:26.583  INFO 3736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-24 05:40:26.584  INFO 3736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-24 05:40:27.885  INFO 3736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-24 05:40:28.114  INFO 3736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 219 ms. Found 33 JPA repository interfaces.
+2022-04-24 05:40:29.131  INFO 3736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-04-24 05:40:29.143  INFO 3736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 05:40:29.143  INFO 3736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-24 05:40:29.251  INFO 3736 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-04-24 05:40:29.251  INFO 3736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2667 ms
+2022-04-24 05:40:29.338  WARN 3736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-24 05:40:29.418  INFO 3736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-24 05:40:29.583  INFO 3736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-24 05:40:29.716  INFO 3736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-24 05:40:29.806  INFO 3736 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-04-24 05:40:30.053  INFO 3736 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-24 05:40:30.217  INFO 3736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-24 05:40:33.251  INFO 3736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-24 05:40:33.412  INFO 3736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-24 05:40:35.564  INFO 3736 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@448fa5e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b0c3850, org.springframework.security.web.header.HeaderWriterFilter@2382a44c, org.springframework.web.filter.CorsFilter@5f8e2ad9, org.springframework.security.web.authentication.logout.LogoutFilter@174b1dcf, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@bb11fcd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36c40f8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5742aadf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b360f58, org.springframework.security.web.session.SessionManagementFilter@4d34a605, org.springframework.security.web.access.ExceptionTranslationFilter@5cf75fde, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a2dfb51]
+2022-04-24 05:40:35.814  INFO 3736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-24 05:40:35.913  WARN 3736 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-04-24 05:40:35.919  INFO 3736 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-04-24 05:40:35.941  INFO 3736 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-04-24 05:40:36.239  INFO 3736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-04-24 05:40:37.425  INFO 3736 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-04-24 05:40:37.425  INFO 3736 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@bf38216]]
+2022-04-24 05:40:37.426  INFO 3736 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-04-24 05:40:37.436  INFO 3736 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 11.355 seconds (JVM running for 12.57)
+2022-04-24 05:40:37.439  INFO 3736 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-04-24 05:40:37.544  INFO 3736 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-04-24 05:40:37.576  INFO 3736 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-04-24 05:40:37.583  INFO 3736 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 16ms
+2022-04-24 05:40:49.227  INFO 3736 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 05:40:49.227  INFO 3736 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 05:40:49.232  INFO 3736 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-04-24 05:41:35.663  INFO 3736 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2022-04-24 05:48:05.541  WARN 3736 --- [http-nio-8089-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2022-04-24 05:58:07.784  WARN 3736 --- [http-nio-8089-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2022-04-24 05:58:19.374  WARN 3736 --- [http-nio-8089-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2022-04-24 06:11:35.665  INFO 3736 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2022-04-24 06:41:35.681  INFO 3736 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2022-04-24 07:11:35.683  INFO 3736 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2022-04-24 07:32:50.825  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:32:50.827  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:32:50.833  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 07:32:50.841  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:32:50.843  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:32:50.845  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 07:32:50.852  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:32:50.852  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:32:50.855  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 07:32:50.861  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:32:50.861  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:32:50.865  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 07:32:50.872  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:32:50.872  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:32:50.874  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 07:32:50.882  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:32:50.882  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:32:50.884  INFO 3736 --- [http-nio-8089-exec-2] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 07:36:20.740  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:36:20.742  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:36:20.744  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 07:36:20.750  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:36:20.750  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:36:20.752  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  a
+2022-04-24 07:36:20.756  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:36:20.757  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:36:20.759  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ****
+2022-04-24 07:36:20.762  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:36:20.762  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:36:20.763  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ss **** 
+2022-04-24 07:36:20.767  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:36:20.767  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:36:20.768  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  ha
+2022-04-24 07:36:20.772  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:36:20.772  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:36:20.773  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  we
+2022-04-24 07:37:14.054  INFO 3736 --- [http-nio-8089-exec-6] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:37:14.055  INFO 3736 --- [http-nio-8089-exec-6] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:37:14.057  INFO 3736 --- [http-nio-8089-exec-6] c.p.s.service.ServiceArticle_Comment     : New comment  agree!
+2022-04-24 07:38:08.419  INFO 3736 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:38:08.419  INFO 3736 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:38:08.422  INFO 3736 --- [http-nio-8089-exec-4] c.p.s.service.ServiceArticle_Comment     : New comment  yes!
+2022-04-24 07:39:21.084  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-04-24 07:39:21.085  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-04-24 07:39:21.086  INFO 3736 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  yes!
+2022-04-24 07:41:35.697  INFO 3736 --- [MessageBroker-3] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+2022-04-24 07:42:39.279  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-04-24 07:42:39.290  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-04-24 07:42:39.291  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@bf38216]]
+2022-04-24 07:42:39.292  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-04-24 07:42:39.994  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-24 07:42:40.001  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-24 07:42:40.012  INFO 3736 --- [RMI TCP Connection(130)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-24 15:48:43.271  INFO 9364 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 9364 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-04-24 15:48:43.400  INFO 9364 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-04-24 15:48:43.582  INFO 9364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-24 15:48:43.583  INFO 9364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-24 15:48:47.448  INFO 9364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-24 15:48:47.752  INFO 9364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 292 ms. Found 33 JPA repository interfaces.
+2022-04-24 15:48:49.559  INFO 9364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-04-24 15:48:49.573  INFO 9364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 15:48:49.574  INFO 9364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-24 15:48:49.713  INFO 9364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-04-24 15:48:49.714  INFO 9364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6129 ms
+2022-04-24 15:48:49.853  WARN 9364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-24 15:48:49.982  INFO 9364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-24 15:48:50.231  INFO 9364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-24 15:48:50.416  INFO 9364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-24 15:48:50.498  INFO 9364 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-04-24 15:48:50.772  INFO 9364 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-24 15:48:51.076  INFO 9364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-24 15:48:57.298  INFO 9364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-24 15:48:57.311  INFO 9364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-24 15:49:00.254  INFO 9364 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b087297, org.springframework.security.web.context.SecurityContextPersistenceFilter@504c4685, org.springframework.security.web.header.HeaderWriterFilter@50751620, org.springframework.web.filter.CorsFilter@77197939, org.springframework.security.web.authentication.logout.LogoutFilter@693ba4be, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@28a2dd81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28340056, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d1e96fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22d14b30, org.springframework.security.web.session.SessionManagementFilter@7ae8935e, org.springframework.security.web.access.ExceptionTranslationFilter@594380db, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57f2d809]
+2022-04-24 15:49:00.544  INFO 9364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-24 15:49:00.740  WARN 9364 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-04-24 15:49:00.755  INFO 9364 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-04-24 15:49:00.802  INFO 9364 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-04-24 15:49:01.230  INFO 9364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-04-24 15:49:02.954  INFO 9364 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-04-24 15:49:02.955  INFO 9364 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6613f6db]]
+2022-04-24 15:49:02.955  INFO 9364 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-04-24 15:49:02.971  INFO 9364 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 21.065 seconds (JVM running for 23.187)
+2022-04-24 15:49:02.975  INFO 9364 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-04-24 15:49:03.393  INFO 9364 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-04-24 15:49:03.478  INFO 9364 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-04-24 15:49:03.495  INFO 9364 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 44ms
+2022-04-24 15:50:00.388  INFO 9364 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2022-04-24 15:56:14.886  INFO 9364 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 15:56:14.887  INFO 9364 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 15:56:14.892  INFO 9364 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-04-24 16:20:00.402  INFO 9364 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2022-04-24 16:50:00.415  INFO 9364 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2022-04-24 17:19:38.952  INFO 9364 --- [Thread-6] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-04-24 17:19:38.953  INFO 9364 --- [Thread-6] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6613f6db]]
+2022-04-24 17:19:38.953  INFO 9364 --- [Thread-6] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-04-24 17:19:39.247  INFO 9364 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-24 17:19:39.262  INFO 9364 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-24 17:19:39.267  INFO 9364 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-24 17:19:39.567  INFO 9364 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 9364 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-04-24 17:19:39.567  INFO 9364 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-04-24 17:19:40.043  INFO 9364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-24 17:19:40.159  INFO 9364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 33 JPA repository interfaces.
+2022-04-24 17:19:40.435  INFO 9364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-04-24 17:19:40.435  INFO 9364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 17:19:40.436  INFO 9364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-24 17:19:40.450  INFO 9364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-04-24 17:19:40.450  INFO 9364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 880 ms
+2022-04-24 17:19:40.482  WARN 9364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-24 17:19:40.503  INFO 9364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-04-24 17:19:40.506  INFO 9364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-04-24 17:19:40.536  INFO 9364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-24 17:19:40.542  INFO 9364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-24 17:19:42.348  INFO 9364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-24 17:19:42.349  INFO 9364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-24 17:19:43.259  INFO 9364 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2288daaa, org.springframework.security.web.context.SecurityContextPersistenceFilter@288b742b, org.springframework.security.web.header.HeaderWriterFilter@38c789c5, org.springframework.web.filter.CorsFilter@101023fd, org.springframework.security.web.authentication.logout.LogoutFilter@7fd77d4f, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@2af0916d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f87d47d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4513ca92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cbee780, org.springframework.security.web.session.SessionManagementFilter@6b744415, org.springframework.security.web.access.ExceptionTranslationFilter@7bc2e0e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11576f8f]
+2022-04-24 17:19:43.340  INFO 9364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-24 17:19:43.377  WARN 9364 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-04-24 17:19:43.378  INFO 9364 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-04-24 17:19:43.378  INFO 9364 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-04-24 17:19:43.553  INFO 9364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-04-24 17:19:44.332  INFO 9364 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-04-24 17:19:44.332  INFO 9364 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2907001]]
+2022-04-24 17:19:44.333  INFO 9364 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-04-24 17:19:44.338  INFO 9364 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.809 seconds (JVM running for 5464.554)
+2022-04-24 17:19:44.339  INFO 9364 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-04-24 17:19:44.369  INFO 9364 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-04-24 17:19:44.376  INFO 9364 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-04-24 17:19:44.380  INFO 9364 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 7ms
+2022-04-24 17:19:44.381  INFO 9364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

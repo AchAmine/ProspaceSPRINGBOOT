@@ -10,6 +10,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -46,12 +47,14 @@ public class Article implements Serializable{
 	
 	@NonNull
 	private String title;
+	
+	@Lob 
 	@NonNull
 	private String content;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Image image;
-	@NonNull
+	//@NonNull
 	@Temporal(TemporalType.TIMESTAMP)
 	//@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
@@ -64,8 +67,8 @@ public class Article implements Serializable{
 	
 	private boolean enableComments;
 	
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY)
+	
+	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;
 	
 	

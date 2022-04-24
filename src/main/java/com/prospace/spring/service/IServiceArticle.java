@@ -25,4 +25,6 @@ public interface IServiceArticle {
 	HashMap<Long, Long> userPreferences(Long idUser);
 	
 	List<Article> FollowingArticles(Long idUser); 
+	
+	Article viewIncrement(Article article);
 }

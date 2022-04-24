@@ -36,6 +36,16 @@ public class ServiceArticle implements IServiceArticle{
 	@Override
 	@Transactional
 	public Article addArticle(Article A,Long idUser,MultipartFile file) {
+		/*
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+		if (principal instanceof UserDetails) {
+		String username = ((UserDetails)principal).getUsername();
+		} else {
+		String username = principal.toString();
+		}
+		*/
+		
 		User user = userRepository.findById(idUser).orElse(null);
 		A.setUser(user);
 		Date date = new Date(System.currentTimeMillis());
@@ -202,6 +212,16 @@ public class ServiceArticle implements IServiceArticle{
 			followers.add(user);
 		}
 		return articleRepository.FollowingArticles(followers);
+	}
+
+	@Override
+	public Article viewIncrement(Article article) {
+		Article article1 = articleRepository.findById(article.getIdArticle()).orElse(null);
+		log.info("------------------Article Before inc",article1);
+		log.info("-----------------Views Before inc",article1.getViews());
+		article.setViews(article1.getViews() + 1); 
+		log.info("-----------------Views After inc",article1.getViews());
+		return articleRepository.save(article1);
 	}
 
 	

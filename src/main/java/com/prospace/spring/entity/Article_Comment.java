@@ -48,8 +48,8 @@ public class Article_Comment implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
 	
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY)
+	
+	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;
 	
 	@JsonIgnore

@@ -125,6 +125,7 @@ public class User implements Serializable{
 	
 	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Article> Articles;
 	

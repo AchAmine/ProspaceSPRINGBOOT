@@ -20,6 +20,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.prospace.spring.entity.Article;
+import com.prospace.spring.entity.Article_Comment;
 import com.prospace.spring.service.IServiceArticle;
 
 import io.swagger.annotations.Api;
@@ -116,5 +117,10 @@ public class ArticleRestController {
 	@GetMapping("/followingarticles/user/{user-id}")
 	public List<Article> FollowingArticles(@PathVariable("user-id") Long userId) {
 		return articleService.FollowingArticles(userId);
+	}
+	
+	@PutMapping("/viewinc")
+	public Article viewIncrement(@RequestBody Article article) {
+		return articleService.viewIncrement(article);
 	}
 }

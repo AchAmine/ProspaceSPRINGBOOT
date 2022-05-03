@@ -2,6 +2,8 @@ package com.prospace.spring.service;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -14,9 +16,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.prospace.spring.entity.Article;
+import com.prospace.spring.entity.ArticleType;
+import com.prospace.spring.entity.Article_Comment;
 import com.prospace.spring.entity.Image;
+import com.prospace.spring.entity.Reaction;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.ArticleRepository;
+import com.prospace.spring.repository.Article_CommentRepository;
+import com.prospace.spring.repository.ReactionRepository;
 import com.prospace.spring.repository.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +39,11 @@ public class ServiceArticle implements IServiceArticle{
 
 	@Autowired
 	IServiceImage imageService;
+	
+	@Autowired
+	Article_CommentRepository articleCommentRepository;
+	@Autowired
+	ReactionRepository reactionRepository;
 	
 	@Override
 	@Transactional
@@ -66,9 +78,24 @@ public class ServiceArticle implements IServiceArticle{
 	}
 
 	@Override
+	@Transactional
 	public void deleteArticle(Long id) {
 		Article article = articleRepository.findById(id).orElse(null);
-		articleRepository.delete(article);
+		log.info(" -------------- delete article ID : "+id);
+		log.info(" -------------- delete article : "+article);
+		//articleRepository.delete(article);
+		//
+		int del = articleRepository.deleteArticle(id);
+		List<Article_Comment> comments = articleCommentRepository.findByArticle(article);
+		articleCommentRepository.deleteAll(comments);
+		
+		List<Reaction> reactions = reactionRepository.findByArticle(article);
+		reactionRepository.deleteAll(reactions);
+		
+		//
+		log.info("after delete");
+		log.info("del : "+del);
+		//articleRepository.deleteById(id);
 		
 	}
 
@@ -88,14 +115,15 @@ public class ServiceArticle implements IServiceArticle{
 		Article article = articleRepository.findById(A.getIdArticle()).orElse(null);
 		A.setUser(user);
 		A.setCreatedAt(article.getCreatedAt());
-		if (A.getImage() == null ) {
-			A.setImage(article.getImage());
-		}
+
 		Date date = new Date(System.currentTimeMillis());
 		A.setUpdatedAt(date);
 		
+		if (A.getImage() == null ) {
+			A.setImage(article.getImage());
+		}
 		//Image
-				if (file.getOriginalFilename().length()> 0) {
+				if (file!=null) {
 				Image image = new Image(file.getOriginalFilename());
 				A.setImage(image);
 				imageService.save(file);
@@ -103,7 +131,7 @@ public class ServiceArticle implements IServiceArticle{
 					A.setImage(article.getImage());
 				}
 						//EndImage
-				
+				A.setType(ArticleType.News);
 				
 		return articleRepository.save(A);
 	}
@@ -198,9 +226,20 @@ public class ServiceArticle implements IServiceArticle{
 					  (key, value) -> reactionhMap.merge(key, value, (v1, v2) -> v1 + v2));
 			log.info("MAP ------ 2"+reactionhMap);
 			return reactionhMap;
+		}	
+	}
+	
+	@Override
+	public List<Article> userPreferencesArticles(Long idUser) {
+		List<Article> articles = new ArrayList<Article>();
+		HashMap<Long,Long> userPref = this.userPreferences(idUser);
+		for(Map.Entry user : userPref.entrySet()) {
+			Long userId = (Long) user.getKey();
+			articles.addAll(this.getArticlesByUser(userId));
 		}
 		
-		
+		articles.sort(Comparator.comparing(Article::getViews).reversed());
+		return articles;
 	}
 
 	@Override
@@ -217,10 +256,10 @@ public class ServiceArticle implements IServiceArticle{
 	@Override
 	public Article viewIncrement(Article article) {
 		Article article1 = articleRepository.findById(article.getIdArticle()).orElse(null);
-		log.info("------------------Article Before inc",article1);
-		log.info("-----------------Views Before inc",article1.getViews());
-		article.setViews(article1.getViews() + 1); 
-		log.info("-----------------Views After inc",article1.getViews());
+		log.info("------------------Article Before inc"+article1);
+		log.info("-----------------Views Before inc"+article1.getViews());
+		article1.setViews(article1.getViews() + 1); 
+		log.info("-----------------Views After inc"+article1.getViews());
 		return articleRepository.save(article1);
 	}
 

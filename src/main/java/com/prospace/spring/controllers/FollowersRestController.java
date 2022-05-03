@@ -41,7 +41,7 @@ public class FollowersRestController {
 	
 	@ApiOperation(value = "retrieve all followers")
 	@GetMapping("/listfollowers/{user-id}")
-	public List<User> removeFollow(@PathVariable("user-id") Long userId) {
+	public List<User> retriveFollowers(@PathVariable("user-id") Long userId) {
 		
 		return  followersService.showFollowers(userId);
 	}

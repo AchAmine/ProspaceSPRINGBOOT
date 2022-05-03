@@ -3,6 +3,7 @@ package com.prospace.spring.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -19,6 +20,10 @@ public interface ArticleRepository extends JpaRepository<Article, Long>{
 	
 	@Query(value = "SELECT A FROM Article A ORDER BY A.createdAt DESC")
 	List<Article> retrieveOrderedByDate();
+	
+	@Modifying
+	@Query("DELETE FROM Article A WHERE A.idArticle= :id")
+	int deleteArticle(@Param("id") Long id);
 	
 	/*@Query(value = "SELECT A.user.idUser , A.idArticle "
 			+ "FROM Article A "

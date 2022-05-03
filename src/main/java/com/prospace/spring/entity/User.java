@@ -45,7 +45,6 @@ import lombok.ToString;
 @NoArgsConstructor 
 @AllArgsConstructor
 @RequiredArgsConstructor 
-@ToString
 public class User implements Serializable{
 	/**
 	 * 
@@ -132,7 +131,8 @@ public class User implements Serializable{
 	
 	@ToString.Exclude
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.EAGER)
+	//@OneToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<User> followers;
 	
 	

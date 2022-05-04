@@ -62,12 +62,13 @@ public class ChatMessageService {
     }
  
     public void updateStatuses(String senderId, String recipientId, MessageStatus status) {
-    	/*   Query query = new Query(
-                Criteria
-                        .where("senderId").is(senderId)
-                        .and("recipientId").is(recipientId));
-        Update update = Update.update("status", status);
-        mongoOperations.updateMulti(query, update, ChatMessage.class);*/
+    	
     	repository.updateStatuses(senderId, recipientId, status);
+    }
+    
+    public void updateStatus(Long id) {
+    	ChatMessage message = repository.findById(id).orElse(null);
+    	message.setStatus(MessageStatus.DELIVERED);
+    	repository.save(message);
     }
 }

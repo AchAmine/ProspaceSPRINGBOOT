@@ -62,7 +62,7 @@ public class ServiceSection implements IServiceSection {
 		s.setDescription(str);
 		s.setName(str1);
 		s.setUser(user);
-		send();
+		//send();
 		return sectionRepository.save(s);
 	}
 

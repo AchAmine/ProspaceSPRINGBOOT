@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.prospace.spring.entity.Post;
+import com.prospace.spring.entity.Section;
 import com.prospace.spring.entity.Topic;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.PostRepository;
@@ -36,9 +37,13 @@ public class ServicePost implements IServicePost {
 	}
 
 	@Override
-	public List<Post> findAll() {
+	public List<Post> findAll(Long topicId) {
 		// TODO Auto-generated method stub
-		return postRepository.findAll();
+		//return postRepository.findAll();
+		Topic topic = topicRepository.findById(topicId).orElse(null);
+
+		List<Post> posts =  postRepository.findByTopic(topic);
+return posts;
 	}
 
 	@Override

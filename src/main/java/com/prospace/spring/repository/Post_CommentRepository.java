@@ -11,5 +11,7 @@ import com.prospace.spring.entity.Post_Comment;
 @Repository
 public interface Post_CommentRepository extends JpaRepository<Post_Comment, Long> {
 	List<Post_Comment> findByPost(Post post);
+	
+	List<Post_Comment> findBypComment(Post_Comment pComment);
 
 }

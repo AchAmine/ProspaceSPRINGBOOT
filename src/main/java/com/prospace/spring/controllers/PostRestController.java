@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import com.prospace.spring.service.IServicePost;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+@CrossOrigin(origins = "http://localhost:4200")
 
 @RestController
 @Api(tags = "Post management")
@@ -33,9 +35,9 @@ public class PostRestController {
 	PostRepository postRepository;
 
 	@ApiOperation(value = "Show all posts")
-	@GetMapping("/find-all-posts")
-	public List<Post> findAll() {
-		List<Post> listPosts = postService.findAll();
+	@GetMapping("/find-all-posts/{topic-id}")
+	public List<Post> findAll(@PathVariable("topic-id") Long topicId) {
+		List<Post> listPosts = postService.findAll(topicId);
 		return listPosts;
 	}
 

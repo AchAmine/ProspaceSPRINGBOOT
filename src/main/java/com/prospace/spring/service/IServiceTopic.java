@@ -5,7 +5,7 @@ import java.util.List;
 import com.prospace.spring.entity.Topic;
 
 public interface IServiceTopic {
-	List<Topic> retrieveAllTopics();
+	List<Topic> retrieveAllTopics(Long sectionId);
 
 	Topic RetrieveTopic(Long id);
 

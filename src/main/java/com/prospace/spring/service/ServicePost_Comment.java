@@ -172,7 +172,7 @@ public class ServicePost_Comment implements IServicePost_Comment {
 		 */
 		comment.setContent(str);
 
-		return post_commentRepository.save(comment);
+		return post_commentRepository.save(comment); 
 	}
 
 	/****** comment reply ****/
@@ -187,8 +187,9 @@ public class ServicePost_Comment implements IServicePost_Comment {
 	}
 
 	@Override
-	public List<Post_Comment> retrievePostCommentReplies(Long postId) {
-		List<Post_Comment> comments = post_commentRepository.findAll();
+	public List<Post_Comment> retrievePostCommentReplies(Long commentId) {
+		Post_Comment postComment = post_commentRepository.findById(commentId).orElse(null);
+		List<Post_Comment> comments = post_commentRepository.findBypComment(postComment);
 
 		return comments;
 	}

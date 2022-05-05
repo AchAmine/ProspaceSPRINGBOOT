@@ -7,10 +7,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.prospace.spring.entity.Post;
+import com.prospace.spring.entity.Section;
+import com.prospace.spring.entity.Topic;
 import com.prospace.spring.entity.User;
 
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
+
+	List<Post> findByTopic(Topic topic);
+
+	
 	List<Post> findByUser(User user);
 
 	List<Post> findTop5ByOrderByCreatedAtDesc();

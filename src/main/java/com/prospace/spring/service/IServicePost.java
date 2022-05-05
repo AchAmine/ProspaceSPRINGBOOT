@@ -8,7 +8,7 @@ import com.prospace.spring.entity.User;
 public interface IServicePost {
 	Post findOne(Long idPost);
 
-	List<Post> findAll();
+	List<Post> findAll(Long topicId);
 
 	List<Post> findRecent();
 

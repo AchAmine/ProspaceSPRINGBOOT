@@ -25,9 +25,13 @@ public class ServiceTopic implements IServiceTopic {
 	IServicePost_Comment post_commentService;
 
 	@Override
-	public List<Topic> retrieveAllTopics() {
+	public List<Topic> retrieveAllTopics(Long sectionId) {
 		// TODO Auto-generated method stub
-		return (List<Topic>) topicRepository.findAll();
+		//return (List<Topic>) topicRepository.findById(sectionId);
+		Section section = sectionRepository.findById(sectionId).orElse(null);
+
+		List<Topic> topics =  topicRepository.findBySection(section);
+return topics;
 	}
 
 	@Override

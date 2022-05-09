@@ -1,273 +1,208 @@
-2022-05-03 22:33:29.278  INFO 14716 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-05-03 22:33:29.280  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-05-03 22:33:29.443  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-05-03 22:33:30.102  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-05-03 22:33:30.103  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@32dbf63e]]
-2022-05-03 22:33:30.103  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-05-03 22:33:30.107  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.034 seconds (JVM running for 115433.601)
-2022-05-03 22:33:30.107  INFO 14716 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-05-03 22:33:30.129  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-05-03 22:33:30.135  INFO 14716 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-05-03 22:33:30.137  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 6ms
-2022-05-03 22:33:30.138  INFO 14716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-05-03 22:34:15.824  INFO 14716 --- [Thread-132] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-05-03 22:34:15.825  INFO 14716 --- [Thread-132] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@32dbf63e]]
-2022-05-03 22:34:15.825  INFO 14716 --- [Thread-132] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-05-03 22:34:16.066  INFO 14716 --- [Thread-132] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:34:16.066  INFO 14716 --- [Thread-132] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
-2022-05-03 22:34:16.071  INFO 14716 --- [Thread-132] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
-2022-05-03 22:34:16.381  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 14716 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-05-03 22:34:16.381  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-05-03 22:34:16.792  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-03 22:34:16.935  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141 ms. Found 33 JPA repository interfaces.
-2022-05-03 22:34:17.120  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-05-03 22:34:17.121  INFO 14716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-03 22:34:17.121  INFO 14716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-05-03 22:34:17.134  INFO 14716 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-05-03 22:34:17.134  INFO 14716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 751 ms
-2022-05-03 22:34:17.161  WARN 14716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-03 22:34:17.179  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
-2022-05-03 22:34:17.183  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
-2022-05-03 22:34:17.217  INFO 14716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-03 22:34:17.223  INFO 14716 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-05-03 22:34:18.913  INFO 14716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-03 22:34:18.913  INFO 14716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:34:19.924  INFO 14716 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35de767c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d0d61e3, org.springframework.security.web.header.HeaderWriterFilter@10516b94, org.springframework.web.filter.CorsFilter@2c47011, org.springframework.security.web.authentication.logout.LogoutFilter@4a7933b6, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@566cbb12, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bc627e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1050f0c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1348f6b8, org.springframework.security.web.session.SessionManagementFilter@59a0aa3d, org.springframework.security.web.access.ExceptionTranslationFilter@1c5f5e55, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@437737dc]
-2022-05-03 22:34:20.023  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-03 22:34:20.056  WARN 14716 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-05-03 22:34:20.056  INFO 14716 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-05-03 22:34:20.057  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-05-03 22:34:20.231  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-05-03 22:34:20.860  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-05-03 22:34:20.860  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6a53ff4e]]
-2022-05-03 22:34:20.860  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-05-03 22:34:20.864  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.504 seconds (JVM running for 115484.357)
-2022-05-03 22:34:20.864  INFO 14716 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-05-03 22:34:20.893  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-05-03 22:34:20.897  INFO 14716 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-05-03 22:34:20.899  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 4ms
-2022-05-03 22:34:20.900  INFO 14716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-05-03 22:34:26.973  INFO 14716 --- [Thread-138] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-05-03 22:34:26.975  INFO 14716 --- [Thread-138] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6a53ff4e]]
-2022-05-03 22:34:26.975  INFO 14716 --- [Thread-138] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-05-03 22:34:27.241  INFO 14716 --- [Thread-138] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:34:27.242  INFO 14716 --- [Thread-138] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
-2022-05-03 22:34:27.247  INFO 14716 --- [Thread-138] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
-2022-05-03 22:34:27.546  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 14716 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-05-03 22:34:27.546  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-05-03 22:34:27.929  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-03 22:34:28.045  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 33 JPA repository interfaces.
-2022-05-03 22:34:28.193  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-05-03 22:34:28.194  INFO 14716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-03 22:34:28.194  INFO 14716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-05-03 22:34:28.207  INFO 14716 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-05-03 22:34:28.207  INFO 14716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 659 ms
-2022-05-03 22:34:28.235  WARN 14716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-03 22:34:28.253  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
-2022-05-03 22:34:28.256  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
-2022-05-03 22:34:28.283  INFO 14716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-03 22:34:28.288  INFO 14716 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-05-03 22:34:29.775  INFO 14716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-03 22:34:29.775  INFO 14716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:34:30.593  INFO 14716 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9875a4d, org.springframework.security.web.context.SecurityContextPersistenceFilter@39a228ef, org.springframework.security.web.header.HeaderWriterFilter@39c600c, org.springframework.web.filter.CorsFilter@44c81a38, org.springframework.security.web.authentication.logout.LogoutFilter@39cbec8b, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@3b4a3c5b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62e9fa49, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7efaf18e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c542546, org.springframework.security.web.session.SessionManagementFilter@4a64aee3, org.springframework.security.web.access.ExceptionTranslationFilter@2d2dcd34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c79bf9f]
-2022-05-03 22:34:30.663  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-03 22:34:30.694  WARN 14716 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-05-03 22:34:30.694  INFO 14716 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-05-03 22:34:30.695  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-05-03 22:34:30.856  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-05-03 22:34:31.523  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-05-03 22:34:31.524  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2f3340b4]]
-2022-05-03 22:34:31.524  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-05-03 22:34:31.527  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.004 seconds (JVM running for 115495.022)
-2022-05-03 22:34:31.529  INFO 14716 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-05-03 22:34:31.559  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-05-03 22:34:31.564  INFO 14716 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-05-03 22:34:31.566  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 5ms
-2022-05-03 22:34:31.567  INFO 14716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-05-03 22:35:30.625  INFO 14716 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2022-05-03 22:37:16.695  INFO 14716 --- [Thread-144] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-05-03 22:37:16.695  INFO 14716 --- [Thread-144] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2f3340b4]]
-2022-05-03 22:37:16.695  INFO 14716 --- [Thread-144] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-05-03 22:37:16.967  INFO 14716 --- [Thread-144] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:37:16.968  INFO 14716 --- [Thread-144] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
-2022-05-03 22:37:16.970  INFO 14716 --- [Thread-144] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
-2022-05-03 22:37:17.298  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 14716 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-05-03 22:37:17.298  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-05-03 22:37:17.713  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-03 22:37:17.825  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 33 JPA repository interfaces.
-2022-05-03 22:37:18.000  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-05-03 22:37:18.001  INFO 14716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-03 22:37:18.001  INFO 14716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-05-03 22:37:18.018  INFO 14716 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-05-03 22:37:18.018  INFO 14716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 718 ms
-2022-05-03 22:37:18.065  WARN 14716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-03 22:37:18.089  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
-2022-05-03 22:37:18.092  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
-2022-05-03 22:37:18.126  INFO 14716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-03 22:37:18.133  INFO 14716 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-05-03 22:37:19.775  INFO 14716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-03 22:37:19.775  INFO 14716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:37:20.890  INFO 14716 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bc349c1, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d78deb2, org.springframework.security.web.header.HeaderWriterFilter@5036eb40, org.springframework.web.filter.CorsFilter@6bd62239, org.springframework.security.web.authentication.logout.LogoutFilter@2d4a069a, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@7aa69d27, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e405e2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9cbc448, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b9824db, org.springframework.security.web.session.SessionManagementFilter@564f2ce2, org.springframework.security.web.access.ExceptionTranslationFilter@720a3224, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a80d86f]
-2022-05-03 22:37:21.083  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-03 22:37:21.176  WARN 14716 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-05-03 22:37:21.176  INFO 14716 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-05-03 22:37:21.176  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-05-03 22:37:21.552  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-05-03 22:37:22.264  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-05-03 22:37:22.265  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1ee351ab]]
-2022-05-03 22:37:22.265  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-05-03 22:37:22.269  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 5.004 seconds (JVM running for 115665.763)
-2022-05-03 22:37:22.270  INFO 14716 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-05-03 22:37:22.288  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-05-03 22:37:22.293  INFO 14716 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-05-03 22:37:22.295  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 5ms
-2022-05-03 22:37:22.297  INFO 14716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-05-03 22:37:47.093  INFO 14716 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-03 22:37:47.095  INFO 14716 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-03 22:37:47.097  INFO 14716 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-05-03 22:37:47.121  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:37:47.122  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- commentmap size1
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
-2022-05-03 22:37:47.124  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
-2022-05-03 22:37:47.125  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
-2022-05-03 22:37:52.272  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:37:52.273  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:37:52.274  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
-2022-05-03 22:37:52.274  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
-2022-05-03 22:37:52.274  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:37:52.274  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:37:52.274  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : --------- commentmap size1
-2022-05-03 22:37:52.274  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
-2022-05-03 22:37:52.275  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
-2022-05-03 22:37:52.275  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
-2022-05-03 22:38:20.985  INFO 14716 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2022-05-03 22:39:06.778  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:39:06.779  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:39:06.780  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
-2022-05-03 22:39:06.780  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
-2022-05-03 22:39:06.780  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:39:06.780  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:39:06.781  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- commentmap size1
-2022-05-03 22:39:06.781  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
-2022-05-03 22:39:06.781  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
-2022-05-03 22:39:06.781  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
-2022-05-03 22:40:00.064  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:40:00.065  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:40:00.065  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : --------- commentmap size1
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
-2022-05-03 22:40:00.066  INFO 14716 --- [http-nio-8089-exec-6] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
-2022-05-03 22:42:03.735  INFO 14716 --- [Thread-150] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-05-03 22:42:03.735  INFO 14716 --- [Thread-150] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1ee351ab]]
-2022-05-03 22:42:03.735  INFO 14716 --- [Thread-150] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-05-03 22:42:03.981  INFO 14716 --- [Thread-150] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:42:03.981  INFO 14716 --- [Thread-150] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
-2022-05-03 22:42:03.986  INFO 14716 --- [Thread-150] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
-2022-05-03 22:42:04.494  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 14716 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-05-03 22:42:04.494  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-05-03 22:42:05.023  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-03 22:42:05.197  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 33 JPA repository interfaces.
-2022-05-03 22:42:05.392  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-05-03 22:42:05.393  INFO 14716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-03 22:42:05.393  INFO 14716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-05-03 22:42:05.408  INFO 14716 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-05-03 22:42:05.408  INFO 14716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 912 ms
-2022-05-03 22:42:05.442  WARN 14716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-03 22:42:05.476  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
-2022-05-03 22:42:05.481  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
-2022-05-03 22:42:05.532  INFO 14716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-03 22:42:05.543  INFO 14716 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-05-03 22:42:07.053  INFO 14716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-03 22:42:07.053  INFO 14716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:42:07.970  INFO 14716 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15038662, org.springframework.security.web.context.SecurityContextPersistenceFilter@70a8bab3, org.springframework.security.web.header.HeaderWriterFilter@240a6e5c, org.springframework.web.filter.CorsFilter@6c466813, org.springframework.security.web.authentication.logout.LogoutFilter@5cea1b01, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@5248ee04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2db1017c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5abee218, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37f84dae, org.springframework.security.web.session.SessionManagementFilter@1654af64, org.springframework.security.web.access.ExceptionTranslationFilter@148929ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@146f3235]
-2022-05-03 22:42:08.066  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-03 22:42:08.095  WARN 14716 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-05-03 22:42:08.096  INFO 14716 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-05-03 22:42:08.096  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-05-03 22:42:08.261  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-05-03 22:42:08.305  INFO 14716 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-03 22:42:08.307  INFO 14716 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-03 22:42:08.308  INFO 14716 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-03 22:42:08.319  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:42:08.319  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- commentmap size1
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
-2022-05-03 22:42:08.320  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
-2022-05-03 22:42:08.321  INFO 14716 --- [http-nio-8089-exec-2] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
-2022-05-03 22:42:09.025  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-05-03 22:42:09.025  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@afb8ecd]]
-2022-05-03 22:42:09.025  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-05-03 22:42:09.029  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.559 seconds (JVM running for 115952.523)
-2022-05-03 22:42:09.030  INFO 14716 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-05-03 22:42:09.049  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-05-03 22:42:09.054  INFO 14716 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-05-03 22:42:09.057  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 6ms
-2022-05-03 22:42:09.058  INFO 14716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-05-03 22:42:31.870  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:42:31.870  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:42:31.871  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
-2022-05-03 22:42:31.871  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
-2022-05-03 22:42:31.872  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
-2022-05-03 22:42:31.872  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
-2022-05-03 22:42:31.872  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : --------- commentmap size1
-2022-05-03 22:42:31.872  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
-2022-05-03 22:42:31.872  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
-2022-05-03 22:42:31.873  INFO 14716 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
-2022-05-03 22:42:46.268  INFO 14716 --- [Thread-156] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-05-03 22:42:46.269  INFO 14716 --- [Thread-156] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@afb8ecd]]
-2022-05-03 22:42:46.269  INFO 14716 --- [Thread-156] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-05-03 22:42:46.541  INFO 14716 --- [Thread-156] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:42:46.543  INFO 14716 --- [Thread-156] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
-2022-05-03 22:42:46.548  INFO 14716 --- [Thread-156] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
-2022-05-03 22:42:46.922  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 14716 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
-2022-05-03 22:42:46.922  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
-2022-05-03 22:42:47.323  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-03 22:42:47.435  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 33 JPA repository interfaces.
-2022-05-03 22:42:47.605  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
-2022-05-03 22:42:47.606  INFO 14716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-03 22:42:47.606  INFO 14716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-05-03 22:42:47.621  INFO 14716 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2022-05-03 22:42:47.621  INFO 14716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 697 ms
-2022-05-03 22:42:47.650  WARN 14716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-03 22:42:47.670  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
-2022-05-03 22:42:47.674  INFO 14716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
-2022-05-03 22:42:47.705  INFO 14716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-03 22:42:47.712  INFO 14716 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-05-03 22:42:49.295  INFO 14716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-03 22:42:49.296  INFO 14716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:42:50.091  INFO 14716 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29ae2fea, org.springframework.security.web.context.SecurityContextPersistenceFilter@467ce3f3, org.springframework.security.web.header.HeaderWriterFilter@508c67cb, org.springframework.web.filter.CorsFilter@2a23a4c1, org.springframework.security.web.authentication.logout.LogoutFilter@1c61e911, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@1aff515d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51ecb9e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@626d2e28, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41a2851d, org.springframework.security.web.session.SessionManagementFilter@16f92d0d, org.springframework.security.web.access.ExceptionTranslationFilter@4fab1588, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a6d49c2]
-2022-05-03 22:42:50.155  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-03 22:42:50.183  WARN 14716 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
-2022-05-03 22:42:50.184  INFO 14716 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
-2022-05-03 22:42:50.184  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
-2022-05-03 22:42:50.353  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
-2022-05-03 22:42:50.945  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2022-05-03 22:42:50.945  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@b1127c4]]
-2022-05-03 22:42:50.946  INFO 14716 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2022-05-03 22:42:50.949  INFO 14716 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.051 seconds (JVM running for 115994.444)
-2022-05-03 22:42:50.950  INFO 14716 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
-2022-05-03 22:42:50.978  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
-2022-05-03 22:42:50.983  INFO 14716 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
-2022-05-03 22:42:50.985  INFO 14716 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 5ms
-2022-05-03 22:42:50.986  INFO 14716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-05-03 22:43:50.124  INFO 14716 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2022-05-03 22:45:26.454  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-05-03 22:45:26.456  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2022-05-03 22:45:26.456  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@b1127c4]]
-2022-05-03 22:45:26.456  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2022-05-03 22:45:26.714  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-03 22:45:26.715  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
-2022-05-03 22:45:26.720  INFO 14716 --- [RMI TCP Connection(596)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2022-05-09 18:53:08.911  INFO 13144 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 13144 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-05-09 18:53:08.916  INFO 13144 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-05-09 18:53:09.006  INFO 13144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-09 18:53:09.007  INFO 13144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-09 18:53:11.179  INFO 13144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 18:53:11.592  INFO 13144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 395 ms. Found 33 JPA repository interfaces.
+2022-05-09 18:53:13.750  INFO 13144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-05-09 18:53:13.773  INFO 13144 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-09 18:53:13.774  INFO 13144 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 18:53:13.982  INFO 13144 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-05-09 18:53:13.982  INFO 13144 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4974 ms
+2022-05-09 18:53:14.121  WARN 13144 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 18:53:14.205  INFO 13144 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-09 18:53:14.510  INFO 13144 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-09 18:53:14.842  INFO 13144 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 18:53:14.997  INFO 13144 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 18:53:15.409  INFO 13144 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 18:53:15.750  INFO 13144 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-05-09 18:53:22.552  INFO 13144 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 18:53:23.259  INFO 13144 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 18:53:28.897  INFO 13144 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c3a9e0a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fb34eaa, org.springframework.security.web.header.HeaderWriterFilter@1bd2998b, org.springframework.web.filter.CorsFilter@19da906e, org.springframework.security.web.authentication.logout.LogoutFilter@ec62a5, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@2dd29ee3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38574a1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44d8b1d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ac955bc, org.springframework.security.web.session.SessionManagementFilter@66dcd176, org.springframework.security.web.access.ExceptionTranslationFilter@58e22391, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66b1bcfb]
+2022-05-09 18:53:29.567  INFO 13144 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-09 18:53:29.851  WARN 13144 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-05-09 18:53:29.870  INFO 13144 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-05-09 18:53:29.920  INFO 13144 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-05-09 18:53:30.867  INFO 13144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-05-09 18:53:34.004  INFO 13144 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-05-09 18:53:34.005  INFO 13144 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5553a59a]]
+2022-05-09 18:53:34.006  INFO 13144 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-05-09 18:53:34.031  INFO 13144 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 25.95 seconds (JVM running for 28.135)
+2022-05-09 18:53:34.037  INFO 13144 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-05-09 18:53:34.493  INFO 13144 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-05-09 18:53:34.582  INFO 13144 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-05-09 18:53:34.600  INFO 13144 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 46ms
+2022-05-09 18:54:29.128  INFO 13144 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2022-05-09 19:24:29.141  INFO 13144 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2022-05-09 19:49:05.998  INFO 13144 --- [http-nio-8089-exec-3] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 19:49:05.999  INFO 13144 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-09 19:49:06.002  INFO 13144 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-09 19:49:06.130  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
+2022-05-09 19:49:06.130  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
+2022-05-09 19:49:06.133  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
+2022-05-09 19:49:06.133  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
+2022-05-09 19:49:06.133  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
+2022-05-09 19:49:06.134  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
+2022-05-09 19:49:06.134  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : --------- commentmap size1
+2022-05-09 19:49:06.134  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
+2022-05-09 19:49:06.134  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
+2022-05-09 19:49:06.135  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
+2022-05-09 19:49:39.946  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-05-09 19:49:39.946  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-05-09 19:49:39.948  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  bbbbb
+2022-05-09 19:49:39.953  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-05-09 19:49:39.953  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-05-09 19:49:39.956  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  😂😍😋
+2022-05-09 19:49:39.959  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-05-09 19:49:39.960  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-05-09 19:49:39.961  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  🙄🤐
+2022-05-09 19:49:39.964  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-05-09 19:49:39.964  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-05-09 19:49:39.965  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  😂
+2022-05-09 19:49:39.968  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-05-09 19:49:39.968  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-05-09 19:49:39.969  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  😜
+2022-05-09 19:49:39.972  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : wordsList size : 451
+2022-05-09 19:49:39.972  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : words size : 451
+2022-05-09 19:49:39.973  INFO 13144 --- [http-nio-8089-exec-7] c.p.s.service.ServiceArticle_Comment     : New comment  bq
+2022-05-09 19:49:39.979  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : ------------------Article Before incArticle(idArticle=3, title=Importance of sports, content=The urge to become successful is overwhelming in this fast-paced world. Dealing with long working hours has increased employee stress. Employers are constantly working out ways to ensure their employees are not burnt out and are fit to perform in the best possible way. Among the various ways of pushing for employee wellness, focusing on sports and wellness alongside work is one of the ways to ensure good health and employee productivity.
+
+In an ideal scenario, one often looks for a perfect workplace. A place that provides a supportive setting and encourages a healthy work-life balance. Incorporating sports as an essential part of the office program can help in the quest of achieving that goal.
+
+Organizations must remember that the employees are their assets. The wellness of the organization depends on the well-being of its employees. They must offer such ambience which always brings the best out of the workforce.
+
+Providing hygienic infrastructure, wellness privileges, and uniform growth prospects should be their responsibility. To achieve the perfect work-life balance, organizations must always promote a fit lifestyle. And one of the ways to achieve a healthy lifestyle is by encouraging participation in sports activities., image=Image(idImage=33, path=app2.jpg), createdAt=2022-04-23 05:48:25.0, updatedAt=null, views=20, enableComments=true, type=News, user=com.prospace.spring.entity.User@234d96b6)
+2022-05-09 19:49:39.979  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : -----------------Views Before inc20
+2022-05-09 19:49:39.979  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ServiceArticle        : -----------------Views After inc21
+2022-05-09 19:49:47.689  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-09 19:49:47.690  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:49:47.730  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@2ca509f0
+2022-05-09 19:49:47.730  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:49:47.731  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : recipient username : undefined
+2022-05-09 19:49:47.732  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : recipient : null
+2022-05-09 19:49:47.734  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM null
+2022-05-09 19:49:47.734  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------
+2022-05-09 19:49:47.735  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------0
+2022-05-09 19:49:47.735  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : --------- msg is empty 
+[]
+2022-05-09 19:49:49.849  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-09 19:49:49.850  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:49:49.897  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@61b1450c
+2022-05-09 19:49:49.897  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:49:49.897  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatRoomService       : recipient username : undefined
+2022-05-09 19:49:49.898  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatRoomService       : recipient : null
+2022-05-09 19:49:49.899  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM null
+2022-05-09 19:49:49.899  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------
+2022-05-09 19:49:49.899  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------0
+2022-05-09 19:49:49.899  INFO 13144 --- [http-nio-8089-exec-7] c.p.spring.service.ChatMessageService    : --------- msg is empty 
+[]
+2022-05-09 19:49:50.053  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-09 19:49:50.053  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:49:50.085  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@b564398
+2022-05-09 19:49:50.086  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:49:50.086  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatRoomService       : recipient username : aminee
+2022-05-09 19:49:50.087  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@28258264
+2022-05-09 19:49:50.100  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 4
+2022-05-09 19:49:50.105  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------essia_aminee
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------6
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : MESSAGE ID: 8
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : MESSAGE ID: 9
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : MESSAGE ID: 10
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : MESSAGE ID: 12
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : MESSAGE ID: 20
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:50.106  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : MESSAGE ID: 24
+2022-05-09 19:49:50.107  INFO 13144 --- [http-nio-8089-exec-5] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:52.921  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-09 19:49:52.922  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:49:52.971  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@2eaf01f7
+2022-05-09 19:49:52.971  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:49:52.972  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatRoomService       : recipient username : aminee
+2022-05-09 19:49:52.972  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@16c4e38f
+2022-05-09 19:49:52.974  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 4
+2022-05-09 19:49:52.979  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------essia_aminee
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------6
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : MESSAGE ID: 8
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : MESSAGE ID: 9
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : MESSAGE ID: 10
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : MESSAGE ID: 12
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:52.980  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : MESSAGE ID: 20
+2022-05-09 19:49:52.981  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:52.981  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : MESSAGE ID: 24
+2022-05-09 19:49:52.981  INFO 13144 --- [http-nio-8089-exec-10] c.p.spring.service.ChatMessageService    : message chatId essia_aminee
+2022-05-09 19:49:53.130  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-09 19:49:53.130  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:49:53.164  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@3d416b08
+2022-05-09 19:49:53.164  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:49:53.164  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : recipient username : amine
+2022-05-09 19:49:53.165  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@53d00a81
+2022-05-09 19:49:53.166  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-05-09 19:49:53.170  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------amine_essia
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------14
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 1
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 3
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 5
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 6
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 7
+2022-05-09 19:49:53.171  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 11
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 13
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 15
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 17
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 18
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 19
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 21
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 22
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 23
+2022-05-09 19:49:53.172  INFO 13144 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId amine_essia
+2022-05-09 19:50:00.446  INFO 13144 --- [clientInboundChannel-15] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:50:00.498  INFO 13144 --- [clientInboundChannel-15] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@14c0fb53
+2022-05-09 19:50:00.498  INFO 13144 --- [clientInboundChannel-15] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:50:00.498  INFO 13144 --- [clientInboundChannel-15] c.p.spring.service.ChatRoomService       : recipient username : amine
+2022-05-09 19:50:00.522  INFO 13144 --- [clientInboundChannel-15] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@3eef5cc8
+2022-05-09 19:50:00.523  INFO 13144 --- [clientInboundChannel-15] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-05-09 19:50:15.714  INFO 13144 --- [clientInboundChannel-16] c.p.spring.service.ChatRoomService       : sender username essia
+2022-05-09 19:50:15.741  INFO 13144 --- [clientInboundChannel-16] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@55f8409a
+2022-05-09 19:50:15.742  INFO 13144 --- [clientInboundChannel-16] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-09 19:50:15.742  INFO 13144 --- [clientInboundChannel-16] c.p.spring.service.ChatRoomService       : recipient username : amine
+2022-05-09 19:50:15.767  INFO 13144 --- [clientInboundChannel-16] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@7fdc02d3
+2022-05-09 19:50:15.768  INFO 13144 --- [clientInboundChannel-16] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 1
+2022-05-09 19:50:54.866  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
+2022-05-09 19:50:54.867  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
+2022-05-09 19:50:54.868  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------1
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------3
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ADMIN --------------2
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : ------- ARTICLE --------------2
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : --------- commentmap size1
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : --------- reactionmap size2
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : --------- MERGING INTO REACTIONHMAP
+2022-05-09 19:50:54.869  INFO 13144 --- [http-nio-8089-exec-1] c.p.spring.service.ServiceArticle        : MAP ------ 2{1=1, 2=2}
+2022-05-09 19:54:29.148  INFO 13144 --- [MessageBroker-8] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 36], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 69]
+2022-05-09 20:24:29.156  INFO 13144 --- [MessageBroker-3] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 36], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 502]

@@ -52,6 +52,7 @@ public class TopicRestController {
 	@ApiOperation(value = "delete topic")
 	@DeleteMapping("/remove-topic/{topic-id}")
 	public void delete(@PathVariable("topic-id") Long topicId) {
+		
 		topicService.deleteTopic(topicId);
 	}
 

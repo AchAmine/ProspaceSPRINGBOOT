@@ -1,6 +1,9 @@
 package com.prospace.spring.service;
 
+import java.util.Date;
 import java.util.List;
+
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,13 +54,18 @@ return topics;
 		String str1 = post_commentService.GetCensoredText(t.getDescription());
 		t.setTitle(str);
 		t.setDescription(str1);
+		Date date = new Date(System.currentTimeMillis());
+		t.setCreationDate(date);
 		return topicRepository.save(t);
 	}
 
 	@Override
-	public void deleteTopic(Long id) {
+	@Transactional
+	public void deleteTopic(Long idTopic) {
 		// TODO Auto-generated method stub
-		topicRepository.deleteById(id);
+		//Topic topic = topicRepository.findById(id).orElse(null);
+
+		topicRepository.deleteTopic(idTopic);
 
 	}
 

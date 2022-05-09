@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -57,10 +58,10 @@ public class Topic implements Serializable {
 	private Section section;
 	@ManyToOne
 	private User user;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private Set<Post_Reaction> postReactions;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private Set<Post> posts;
 
 

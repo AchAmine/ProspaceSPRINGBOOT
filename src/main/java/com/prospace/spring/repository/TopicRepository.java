@@ -3,7 +3,9 @@ package com.prospace.spring.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.prospace.spring.entity.Section;
@@ -21,4 +23,8 @@ public interface TopicRepository extends JpaRepository<Topic, Long> {
 
 	@Query(value = "SELECT T FROM Topic T INNER JOIN Post_Reaction R ON R.topic.idTopic=T.idTopic WHERE R.type='Dislike' ")
 	List<Topic> findTopicDislikes();
+	
+	@Modifying
+	@Query("DELETE FROM Topic T WHERE T.idTopic= :id")
+	int deleteTopic(@Param("id") Long id);
 }

@@ -37,9 +37,13 @@ import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.prospace.spring.JwtAndAuthConf.ConfirmationToken;
+import com.prospace.spring.entity.Experience;
 import com.prospace.spring.entity.Formation;
+import com.prospace.spring.entity.Skill;
 import com.prospace.spring.entity.User;
+import com.prospace.spring.repository.ExperienceRepository;
 import com.prospace.spring.repository.FormationRepository;
+import com.prospace.spring.repository.SkillRepository;
 import com.prospace.spring.repository.UserRepository;
 
 import lombok.AllArgsConstructor;
@@ -53,6 +57,10 @@ public class ServiceUser implements IServiceUser {
 	UserRepository userRepository;
 	@Autowired
     PasswordEncoder encoder;
+	@Autowired
+	SkillRepository skillRepository;
+	@Autowired
+	ExperienceRepository experienceRepository;
 	@Autowired
 	ConfirmationTokenService confirmationTokenService;
 	private final JavaMailSender mailSender;
@@ -644,6 +652,129 @@ public class ServiceUser implements IServiceUser {
 			} catch (Exception e) {
 				log.error("error in method  updateBirthday "+e);
 			}
+		}
+
+		@Override
+		public String getTitreIng() {
+			String returned="";
+			String s1="junior=> ";
+			String s2="confirmed=> ";
+			String s3="senior=> ";
+			int dure=0;
+			List<User> allUsers;
+			try {log.info("int method getTitreIng");
+			allUsers = (List<User>)userRepository.findAll();
+			for(User u:allUsers) {
+				for(Skill s:u.getSkills()) {
+					for(Experience e :s.getExperiences()) {
+						dure=dure+e.getDuration();
+						
+					}
+					
+				}
+				if((dure>=1)&&(dure<=4)) {s1=s1+u.getFirstName()+" "+u.getLastName()+"--";}	
+				if((dure>4)&&(dure<=9)) {s2=s2+u.getFirstName()+" "+u.getLastName()+"--";}	
+				if(dure>9) {s3=s3+u.getFirstName()+" "+u.getLastName()+"\n";}
+				
+				dure=0;
+			}
+			returned=s1+" \n"+s2+"\n"+s3;
+			log.info("out of method getTitreIng without errors");
+			} catch (Exception e) {
+				log.error("error in method getTitreIng"+e);
+			}
+			return returned;
+		}
+
+		@Override
+		public User getOne(String username) {
+			return userRepository.findOneByUserName(username);
+		}
+
+		@Override
+		public User getProfile(Long id) {
+			User user=null;
+			user=	userRepository.getById(id);
+				return user;
+		}
+
+		@Override
+		public Long getIdUSer(String username) {
+			User user=null;
+			user=userRepository.findOneByUserName(username);
+			return user.getIdUser();
+		}
+
+		@Override
+		public void affecterSkillToUser(Long ids, Long idu) {
+			User u = null;
+			Skill s = null;
+			try {
+				u = userRepository.findById(idu).orElse(null);
+				s = skillRepository.findById(ids).orElse(null);
+				u.getSkills().add(s);
+				userRepository.save(u);
+
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+		}
+
+		@Override
+		public void affecterExpToSkill(Long ids, Long ide) {
+			Experience ex = null;
+			Skill s = null;
+			try {
+				ex = experienceRepository.findById(ide).orElse(null);
+				s = skillRepository.findById(ids).orElse(null);
+				s.getExperiences().add(ex);
+				skillRepository.save(s);
+
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+		}
+
+		@Override
+		public Long saveExpe(Experience e) {
+			experienceRepository.save(e);
+			return e.getIdExperience();
+		}
+
+		@Override
+		public Long saveSkill(Skill s) {
+			skillRepository.save(s);
+			return s.getIdSkill();
+		}
+
+		@Override
+		public void updateUser2(Skill s, Long idu, Long ide) {
+			Date date = new Date(System.currentTimeMillis());
+			User u = null;
+			Experience e = null;
+			try {
+				log.info("in method updateUser" + s);
+				/*
+				 * Period period =
+				 * Period.between(u.getBirthDate().toInstant().atZone(ZoneId.systemDefault()).
+				 * toLocalDate(),
+				 * date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+				 */
+				// u.setAge(period.getYears());
+				// e=s.getExperiences().getClass();
+				skillRepository.save(s);
+				// experienceRepository.save(s.getExperiences());
+				userRepository.findById(idu).orElse(null);
+				u.setModifiedAt(date);
+				u.getSkills().add(s);
+				userRepository.save(u);
+				log.info("out of  method updateUser without errors");
+			} catch (Exception e5) {
+				log.error("error in method upadateUser" + e5);
+			}
+			
 		}
 
 		

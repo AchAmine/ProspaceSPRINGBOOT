@@ -42,140 +42,147 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@Setter 
-@NoArgsConstructor 
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor 
+
 @ToString
-public class User implements Serializable{
+public class User implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUser;
+
 	
-	@NonNull
 	private String firstName;
-	@NonNull
-	private String lastName;
 	
-	@Column(unique=true)
-	@NonNull 
+	private String lastName;
+
+	@Column(unique = true)
+	
 	private String userName;
-	@NonNull 
+	
 	private String email;
-	@NonNull 
+	
 	private String password;
 	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> userRoles = new HashSet<>();
-	
+
 	private boolean locked;
-	
+
 	private boolean enabled;
-	@NonNull 
-	private boolean isDeleted;
-	/*@NonNull
-	@Column(name = "failed_attempt")
-    private int failedAttempt;*/
 	
-	@NonNull
+	private boolean isDeleted;
+	/*
+	 * 
+	 * 
+	 * @Column(name = "failed_attempt") private int failedAttempt;
+	 */
+
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedAt;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
-	
+
 	@OneToOne
 	private Image image;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date birthDate;
-	@NonNull
+	
 	private Integer age;
 	@Column(name = "resettoken")
 	private String resettoken;
-	
-		public boolean isEnabled() {
-			return enabled;
-		}
-		
-		public boolean isLocked() {
-			return locked;
-		}
-		
-	
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public boolean isLocked() {
+		return locked;
+	}
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
-	
-	
-	
-	// --------------------------------------- Begin News -------------------------------------
+
+	// --------------------------------------- Begin News
+	// -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Article> Articles;
-	
-	// --------------------------------------- End News -------------------------------------
-	
-	// --------------------------------------- Begin Partner -------------------------------------
+
+	// --------------------------------------- End News
+	// -------------------------------------
+
+	// --------------------------------------- Begin Partner
+	// -------------------------------------
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
 	@JsonIgnore
-	@OneToMany(mappedBy="user")
+	@OneToMany(mappedBy = "user")
 	private Set<ResultQuizz> resultQuizz;
-	
+
 	@JsonIgnore
-	@OneToMany(mappedBy="userresponse")
+	@OneToMany(mappedBy = "userresponse")
 	private Set<Response> Response;
-	
-	// --------------------------------------- End Partner -------------------------------------
-	
-	// --------------------------------------- Begin Forum -------------------------------------
+
+	// --------------------------------------- End Partner
+	// -------------------------------------
+
+	// --------------------------------------- Begin Forum
+	// -------------------------------------
 	@JsonIgnore
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Post> Posts;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
 	private Set<Topic> Topics;
-	
-	
-	// --------------------------------------- End Forum -------------------------------------
-	
-	// --------------------------------------- Begin Events -------------------------------------
+
+	// --------------------------------------- End Forum
+	// -------------------------------------
+
+	// --------------------------------------- Begin Events
+	// -------------------------------------
 	@ToString.Exclude
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants")
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "Participants")
 	private Set<Event> EventsParticipation;
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user_organizer")
 	private Set<Event> EventsOrganized;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Tournament> Tournaments;
-	
-	// --------------------------------------- End Events -------------------------------------
-	
-	
-	// --------------------------------------- Begin Complaint -------------------------------------
+
+	// --------------------------------------- End Events
+	// -------------------------------------
+
+	// --------------------------------------- Begin Complaint
+	// -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Complaint> Complaints;
-	
+
 	@OneToOne
 	private Badge badge;
-	
-	// --------------------------------------- End Complaint -------------------------------------
+
+	// --------------------------------------- End Complaint
+	// -------------------------------------
 }

@@ -18,8 +18,9 @@ public class ServiceImage implements IServiceImage{
 	@Autowired
 	ImageRepository imageRepository;
 	
-	 private final Path root = Paths.get("C:\\wamp64\\www\\FileUploads");
-	
+	// private final Path root = Paths.get("C:\\wamp64\\www\\FileUploads");
+	 private final Path root = Paths.get("C:\\xampp\\htdocs\\FileUploads");
+
 	@Override
 	public Image addImage(Image I) {
 		

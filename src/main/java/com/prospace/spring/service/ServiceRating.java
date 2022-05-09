@@ -39,6 +39,16 @@ public class ServiceRating implements IServiceRating {
 
 	@Override
 	public Rating updateRating(Rating rating) {
+		Rating oldRating = ratingRepository.findById(rating.getIdRating()).orElse(null);
+		rating.setOffer(oldRating.getOffer());
+		rating.setUser(oldRating.getUser());
+		return ratingRepository.save(rating);
+	}
+	
+	@Override
+	public Rating updateRating(Rating rating,Long idOffer) {
+		Offer offer= offerRepository.findById(idOffer).orElse(null);
+		rating.setOffer(offer);
 		return ratingRepository.save(rating);
 	}
 	
@@ -49,6 +59,24 @@ public class ServiceRating implements IServiceRating {
 		List<Rating> ratings =  ratingRepository.findByOffer(offer);
 		
 		return ratings;
+	}
+	
+	@Override
+	public Rating retrieveUserOfferRating(Long OfferId, Long UserId){
+		
+		User user = userRepository.findById(UserId).orElse(null);
+		Offer offer = offerRepository.findById(OfferId).orElse(null);
+		Rating rating = ratingRepository.findByUserAndOffer(user, offer);
+		return  rating ;
+	}
+	@Override 
+	public int AVGOffer( Long offerid){
+		if (ratingRepository.AVGOffer(offerid) !=  0.0f){
+			return (int)ratingRepository.AVGOffer(offerid);
+			
+		}
+		
+		return 0;
 	}
 
 }

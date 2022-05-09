@@ -60,6 +60,11 @@ public class ServiceAnswer implements IServiceAnswer {
 	
 	}
 
+	@Override
+	public Answer retrieveAnswer(Long id) {
+		return answerRepository.findById(id).orElse(null);
+	}
+
 	
 	
 	

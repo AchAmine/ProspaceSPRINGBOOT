@@ -92,7 +92,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
         font.setStyle(Font.SYMBOL);
         
        
-      if(  resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<80){
+     /* if(  resultQuizzRepository.getResultbyquizzanduser(q, u).getScore()<80){
     	  
         Paragraph p = new Paragraph("QUIZZ RESULT", font);
         p.setAlignment(Paragraph.ALIGN_CENTER);
@@ -118,7 +118,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
             table.addCell("you did not pass");
 
         
-      }else {
+      }else {*/
     	  
     	  Image img = Image.getInstance(QR_CODE_IMAGE_PATH+u.getUserName().toString()+".png");
 			img.scalePercent(3);
@@ -131,8 +131,8 @@ public class PDFGeneratorService implements IServicePDFGenerator{
           font1.setSize(20);
     	  Paragraph p = new Paragraph("CERTIFICATE",font);
     	  Paragraph p1 = new Paragraph("THIS IS TO CERTIFY THAT MR./MRS. ",font1);
-    	  Paragraph p2 = new Paragraph(String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getUser().getFirstName())+" "+
-    			  String.valueOf(resultQuizzRepository.getResultbyquizzanduser(q, u).getUser().getLastName()),font1 );
+    	  Paragraph p2 = new Paragraph(String.valueOf(resultQuizzRepository.getResultbyquizzanduser(u.getIdUser(), q.getIdQuizz()).getUser().getFirstName())+" "+
+    			  String.valueOf(resultQuizzRepository.getResultbyquizzanduser(u.getIdUser(), q.getIdQuizz()).getUser().getLastName()),font1 );
     	  Paragraph p3 = new Paragraph("HAD PARTICIPATED THE QUIZ COMPETITION ",font1);
     	  /*Paragraph p4 = new Paragraph("by "+String.valueOf(q.getPartner()),font1);
     	  Paragraph p4 = new Paragraph("BY "+q.getPartner().getFirstName().toString()+" "+
@@ -154,7 +154,7 @@ public class PDFGeneratorService implements IServicePDFGenerator{
           document.add(p4);
           document.add(img);
 
-      }
+      //}
         
        // Quizz q = quizzRepository.findById(quizzId).orElse(null);
       //  User u= userRepository.findById(userId).orElse(null);

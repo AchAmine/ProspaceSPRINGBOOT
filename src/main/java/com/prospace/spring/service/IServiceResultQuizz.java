@@ -13,5 +13,6 @@ public interface IServiceResultQuizz {
 	public ResultQuizz calculScore(Long quizzId,Long userId);
 	public List<ResultQuizz> retrieveAllResults();
 	HashMap<String, Float> TOP3(Long idquizz);
+	boolean userResult(Long idquizz , Long idUser);
 
 }

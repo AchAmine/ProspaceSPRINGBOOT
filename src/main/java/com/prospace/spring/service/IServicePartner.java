@@ -8,4 +8,5 @@ import com.prospace.spring.entity.User;
 
 public interface IServicePartner {
   public List<User> AddAndRetrievePartners();
+  public Partner AddPartner(Partner p, Long idUser);
 }

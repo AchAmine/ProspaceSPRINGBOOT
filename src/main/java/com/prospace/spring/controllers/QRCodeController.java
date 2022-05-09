@@ -16,7 +16,7 @@ public class QRCodeController {
 	
     @GetMapping(value = "/genrateAndDownloadQRCode/{username}/{codeText}")
 		public void download(
-				@PathVariable("codeText") String codeText,@PathVariable("username") String username
+				 String codeText,@PathVariable("username") String username
 				)
 			    throws Exception {
 			        QRCodeGenerator.generateQRCodeImage(codeText, QR_CODE_IMAGE_PATH+username+".png");

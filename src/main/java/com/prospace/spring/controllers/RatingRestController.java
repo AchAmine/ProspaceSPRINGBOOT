@@ -42,7 +42,13 @@ public class RatingRestController {
 	
 			// http://localhost:8089/SpringMVC/Rating/modify-Rating
 			@ApiOperation(value = "Update Rating")
-			@PutMapping("/modify-rating")
+			@PutMapping("/modify-rating/{Offer-id}")
+			public Rating modifyRating(@RequestBody Rating rating,@PathVariable("Offer-id")Long idOffer) {
+			return serviceRating.updateRating(rating,idOffer);
+			}
+			
+			@ApiOperation(value = "Update Rating")
+			@PutMapping("/edit-rating/")
 			public Rating modifyRating(@RequestBody Rating rating) {
 			return serviceRating.updateRating(rating);
 			}
@@ -52,9 +58,20 @@ public class RatingRestController {
 			@GetMapping("/retrieve-offer-ratings/{offer-id}")
 			public List<Rating> retrieveOfferRatings(@PathVariable("offer-id") Long OfferId) {
 			return serviceRating.retrieveOfferRatings(OfferId);
+			}
 			
-		 
-
-	}
+			@ApiOperation(value = "Retrieve user offer ratings")
+			@GetMapping("/user/{user-id}/offer-rating/{offer-id}")
+			public Rating retrieveUserOfferRating(@PathVariable("offer-id") Long OfferId,
+					@PathVariable("user-id") Long userId) {
+			return serviceRating.retrieveUserOfferRating(OfferId,userId);
+		
+			}
+			
+			@ApiOperation(value = "Retrieve avg offer")
+			@GetMapping("/AVGOffer/{offer-id}")
+			public float AVGOffer(@PathVariable("offer-id") Long OfferId){
+				return serviceRating.AVGOffer(OfferId);
+			}
 
 }

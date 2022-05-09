@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -44,6 +45,13 @@ public class Quizz implements Serializable{
 	private String title;
 	
 	@NonNull
+	private String categorie;
+	
+	@NonNull
+	private Integer nbQuestions;
+	
+	@NonNull
+	@Column(length=5000)
 	private String description;
 	
 	@ManyToOne

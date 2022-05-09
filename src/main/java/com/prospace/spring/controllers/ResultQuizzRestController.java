@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,7 @@ import com.prospace.spring.service.IServiceResultQuizz;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @Api(tags = "Score ")
 @RequestMapping("/Quizz/Score")
@@ -27,8 +28,8 @@ public class ResultQuizzRestController {
 	IServiceResultQuizz serviceResultQuizz;
 	
 	@ApiOperation(value = "Score Quizz")
-	@PostMapping("/{Quizz-id}/{User-id}")
-	public ResultQuizz ScoreQuizz(@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId){
+	@GetMapping("/{Quizz-id}/{User-id}")
+	public ResultQuizz calculScore(@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId){
 		return serviceResultQuizz.calculScore(quizzId,userId);
 	}
 	@ApiOperation(value = "TOP3 Score Quizz")
@@ -37,5 +38,19 @@ public class ResultQuizzRestController {
 		
 		return serviceResultQuizz.TOP3(quizzId);
 	}
+	
+	@ApiOperation(value = "user Score Quizz")
+	@GetMapping("/user-result/{Quizz-id}/{User-id}")
+	public boolean userResult(@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId){
+		return serviceResultQuizz.userResult(userId,quizzId);
+
+}
+	
+	@ApiOperation(value = "find all results")
+@GetMapping("/getAll-results")
+	public List<ResultQuizz> retrieveAllResults() {
+		return serviceResultQuizz.retrieveAllResults();
+	}
+
 
 }

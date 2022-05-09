@@ -21,7 +21,6 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
 @Entity
 @Getter
 @Setter 
@@ -29,14 +28,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
-public class Article_Comment implements Serializable{
+public class OfferComment implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Long idComment;
+	private Long idOfferComment;
 	
 	@NonNull
 	private String content;
@@ -54,8 +53,7 @@ public class Article_Comment implements Serializable{
 	
 	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Article article;
+	private Offer offer;
 	
 
-	
 }

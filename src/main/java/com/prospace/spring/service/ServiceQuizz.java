@@ -36,11 +36,11 @@ public class ServiceQuizz implements IServiceQuizz{
 		User partner = userRepository.findById(Partnerid).orElse(null);
 		
 		quizz.setPartner(partner);
-		List<Question> questions = quizz.getQuestions();
+	/*	List<Question> questions = quizz.getQuestions();
 		for (Question question : questions) {
 			question.setQuiz(quizz);
 			questionRepository.save(question);
-		}
+		}*/
 		
 		return quizzRepository.save(quizz);
 
@@ -72,11 +72,15 @@ public class ServiceQuizz implements IServiceQuizz{
 	@Override
 	@Transactional
 	public Quizz updateQuizz(Quizz q) {
+		Quizz quiz =quizzRepository.findById(q.getIdQuizz()).get();
 		List<Question> questions = q.getQuestions();
 		for (Question question : questions) {
 			question.setQuiz(q);
 			questionRepository.save(question);
 		}
+		quiz.setDescription(q.getDescription());
+		quiz.setTitle(q.getTitle());
+		
 		return quizzRepository.save(q);
 	}
 

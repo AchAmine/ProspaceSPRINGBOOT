@@ -10,6 +10,7 @@ public interface IServiceAnswer {
 	Answer updateAnswer(Answer a);
 	//public Answer findAnswerById(Long id);
 	public List<Answer> findAnswersByQuestion(Long idQuestion);
+	public Answer retrieveAnswer(Long id);
 
 
 }

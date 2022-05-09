@@ -38,7 +38,12 @@ public class ChatMessageService {
         log.info("----------------CHAT ID ? ---------"+chatId);
         var messages = repository.sortByDate(chatId);
         log.info("----------------------- MESSAGES -------------------------"+messages.size());
+        for(ChatMessage msg : messages) {
+        	log.info("MESSAGE ID: "+msg.getId());
+        	log.info("message chatId "+msg.getChatId());
+        }
         if (messages.isEmpty()) {
+        	log.info("--------- msg is empty \n"+messages);
         	messages = new ArrayList<>();
         }
                 //chatId.map(cId -> repository.findByChatId(cId)).orElse(new ArrayList<>());

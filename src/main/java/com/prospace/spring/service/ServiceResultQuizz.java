@@ -1,5 +1,8 @@
 package com.prospace.spring.service;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,29 +43,61 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 	@Override
 	public ResultQuizz calculScore(Long quizzId,Long userId) {
 		float score=0;
-		int nbFalseQuestions=0,nbTrueQuestions =0;
+		int nbFalseAnswers=0,nbTrueAnswers =0;
 		Quizz quizz = quizzRepository.findById(quizzId).orElse(null);
 		User user= userRepository.findById(userId).orElse(null);
-		
-		
-			for(Response r : responseRepository.findByUserresponse(user))
-		{
-				for(Question q : questionRepository.findByQuiz(quizz)){
-				if(r.getSelectedAnswer()==q.getCorrectAnswer()){
-					score++;
-					nbTrueQuestions++;
-				}else {
-					nbFalseQuestions++;
-				}
-					
-			}}
-		 score = (nbTrueQuestions/ questionRepository.NbQuestions(quizz))*100;
-			// score=(noteIndiv/responseRepository.NbResponsesQuizz())*100;
-		log.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+responseRepository.NbResponsesQuizz());
-		ResultQuizz result= new ResultQuizz(score,questionRepository.NbQuestions(quizz),
-				nbTrueQuestions,nbFalseQuestions,user,quizz);
 
-		return resultQuizzRepository.save(result);
+			
+			for(Response r : responseRepository.userResponses(quizzId,userId))
+						{	
+					for(Answer a : r.getSelectedAnswers()){
+
+					
+				if(a.getIsCorrect()==true){
+					
+				
+				score+=(a.getNbreptsanswer());	
+					nbTrueAnswers++;
+				}else if(a.getIsCorrect()==false){
+					score-=(a.getNbreptsanswer());
+					nbFalseAnswers++;
+				}
+					}	
+			
+			//
+		
+			// score=(noteIndiv/responseRepository.NbResponsesQuizz())*100;
+		
+
+		
 	}
+			float scoreFinal = (score/(answerRepository.NbPtsQuizz(quizzId)))*100;
+			ResultQuizz result= new ResultQuizz(scoreFinal,nbTrueAnswers,nbFalseAnswers,
+			questionRepository.NbQuestions(quizz),user,quizz);
+			return resultQuizzRepository.save(result);}
+	
+	@Override
+	public List<ResultQuizz> retrieveAllResults() {
+		return resultQuizzRepository.findAll();
+	}
+	
+	public HashMap<String, Float> SortByResult(Long idQuizz) {
+	Quizz quizz=quizzRepository.findById(idQuizz).orElse(null);
+		HashMap<String, Float> hMap = new HashMap<String, Float>();
+		List<Object[]> listResult = resultQuizzRepository.TOP3Result(idQuizz);
+		for (Object[] obj : listResult) {
+		hMap.put( (String)obj[0] , (Float)obj[1]);	
+		}  
+		return hMap;
+	}
+	
+	@Override
+	public HashMap<String, Float> TOP3(Long idquizz) {
+		HashMap<String, Float> resulthMap = SortByResult(idquizz);
+		//return resultQuizzRepository.TOP3Result();
+		return resulthMap;
+	}
+	
+	
 
 }

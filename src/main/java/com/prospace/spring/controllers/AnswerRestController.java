@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(tags = "Answer management")
-@RequestMapping("/Answer")
+@RequestMapping("/Quizz/Question/Answers")
 public class AnswerRestController {
 	@Autowired
 	IServiceAnswer serviceAnswer;
@@ -54,5 +54,8 @@ public class AnswerRestController {
 			public List<Answer> findAnswersByQuestion(@PathVariable("Question-id") Long idQuestion) {
 			return serviceAnswer.findAnswersByQuestion(idQuestion);
 			}
+		
+
+			
 
 }

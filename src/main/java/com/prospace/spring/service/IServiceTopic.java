@@ -14,4 +14,9 @@ public interface IServiceTopic {
 	void deleteTopic(Long id);
 
 	Topic updateTopic(Topic to);
+
+	List<Topic> findTopicLike();
+
+	List<Topic> findTopicDislike();
+
 }

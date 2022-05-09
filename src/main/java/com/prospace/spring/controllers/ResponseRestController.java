@@ -22,12 +22,21 @@ public class ResponseRestController {
 	@Autowired
 	IServiceResponse serviceResponse;
 	
-	@ApiOperation(value = "Add response to Question and quizz")
+	/*@ApiOperation(value = "Add response to Question and quizz")
 	@PostMapping("/add-response/{Answer-id}/{Question-id}/{User-id}")
 	public Response addResponse(@PathVariable("Question-id")Long idQuestion,@PathVariable("Answer-id")Long idAnswer,@PathVariable("User-id")Long idUser)
 	{
 
 	return serviceResponse.addResponse(idQuestion,idAnswer,idUser);
+	} */
+	
+
+	@ApiOperation(value = "Add response to Question and quizz")
+	@PostMapping("/add-response/{Quizz-id}/{User-id}")
+	public Response addResponse(@RequestBody Response response ,@PathVariable("User-id")Long idUser,@PathVariable("Quizz-id")Long idQuizz)
+	{
+
+	return serviceResponse.addResponse(response,idUser,idQuizz);
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +24,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(tags="Article reactions management")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/Article_reactions")
 public class ReactionRestController {
 	
@@ -31,7 +33,7 @@ public class ReactionRestController {
 	IServiceReaction reactionService;
 	
 	@ApiOperation(value = "Add reaction")
-	@PostMapping("/add-reaction/{article-id}/{user-id}") 
+	@PostMapping("/add-reaction/{user-id}/{article-id}") 
 	public Reaction addReaction(@RequestBody Reaction react, @PathVariable("article-id") Long articleId,
 			@PathVariable("user-id") Long userId) {
 		
@@ -59,7 +61,7 @@ public class ReactionRestController {
 	
 	@ApiOperation(value = "retrieve article's reactors")
 	@GetMapping("/retrieve-articlereactors/{article-id}") 
-	public List<User> retrieveArticleReactors(@PathVariable("article-id") Long articleId) {
+	public List<Long> retrieveArticleReactors(@PathVariable("article-id") Long articleId) {
 		
 		return reactionService.retrieveArticleReactors(articleId);
 	}
@@ -68,7 +70,7 @@ public class ReactionRestController {
 	// HashMap 
 	@ApiOperation(value = "retrieve users and their reaction")
 	@GetMapping("/retrieve-usersreaction/{article-id}") 
-	public HashMap<User,ReactionType> retrieveUsersReactions(@PathVariable("article-id") Long articleId) {
+	public HashMap<Long,ReactionType> retrieveUsersReactions(@PathVariable("article-id") Long articleId) {
 		
 		return reactionService.retrieveUsersReactions(articleId);
 	}
@@ -79,6 +81,14 @@ public class ReactionRestController {
 			@PathVariable("reaction-type") ReactionType reactionType) {
 		
 		return reactionService.retrieveArticleReactorsByType(articleId,reactionType);
+	}
+	
+	@ApiOperation(value = "retrieve user's reaction")
+	@GetMapping("/retrieve-user-reaction/{article-id}/{user-id}") 
+	public Reaction retrieveUserReaction(@PathVariable("article-id") Long articleId , 
+			@PathVariable("user-id") Long userId) {
+		
+		return reactionService.retrieveUserReaction(articleId,userId);
 	}
 	
 	

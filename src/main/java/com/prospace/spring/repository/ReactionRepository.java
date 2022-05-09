@@ -10,12 +10,14 @@ import org.springframework.stereotype.Repository;
 import com.prospace.spring.entity.Article;
 import com.prospace.spring.entity.Reaction;
 import com.prospace.spring.entity.ReactionType;
+import com.prospace.spring.entity.User;
 
 @Repository
 public interface ReactionRepository extends JpaRepository<Reaction, Long>{
 
 	List<Reaction> findByArticle(Article article);
 	List<Reaction> findByArticleAndType(Article article,ReactionType reactionType); 
+	Reaction findByArticleAndUser(Article article , User user);
 	
 	/*@Query(value = "SELECT r FROM Reaction r WHERE r.type = :reactionType and r.Article = :article")
 	List<Reaction> retrieveReactionsByArticleAndType(@Param("article") Article article,

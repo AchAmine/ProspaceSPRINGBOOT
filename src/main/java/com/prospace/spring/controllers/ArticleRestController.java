@@ -1,9 +1,14 @@
 package com.prospace.spring.controllers;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.ServletContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,17 +16,25 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.prospace.spring.entity.Article;
+import com.prospace.spring.entity.Article_Comment;
 import com.prospace.spring.service.IServiceArticle;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-
+import lombok.extern.slf4j.Slf4j;
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @Api(tags="Article management")
 @RequestMapping("/Article")
+@Slf4j
 public class ArticleRestController {
 
 	@Autowired
@@ -29,28 +42,58 @@ public class ArticleRestController {
 	
 	@ApiOperation(value = "Add article")
 	@PostMapping("/add-article/{user-id}") 
-	public Article addArticle(@RequestBody Article a, @PathVariable("user-id") Long userId) {
-		
-		return articleService.addArticle(a,userId);
+	public Article addArticle(@RequestParam("article") String article, @PathVariable("user-id") Long userId,
+			@RequestParam("file") MultipartFile file) throws JsonMappingException, JsonProcessingException {
+		Article a = new ObjectMapper().readValue(article, Article.class);
+		return articleService.addArticle(a,userId,file);
 	}
 	
+	
+	
+	
+	/*
+	 * @ApiOperation(value = "Delete article")
+	 * 
+	 * @DeleteMapping("/remove-article/{article-id}") public void
+	 * removeArticle(@PathVariable("article-id") Long articleId) {
+	 * log.info("controller : ",articleId); articleService.deleteArticle(articleId);
+	 * }
+	 */
 	
 	@ApiOperation(value = "Delete article")
 	@DeleteMapping("/remove-article/{article-id}")
 	public void removeArticle(@PathVariable("article-id") Long articleId) {
-		articleService.deleteArticle(articleId);
+		log.info("controller : "+articleId);
+		 articleService.deleteArticle(articleId);
 	}
+	
+	/*
+	 * @ApiOperation(value = "Update article")
+	 * 
+	 * @PutMapping("/modify-article") public Article modifyArticle(@RequestBody
+	 * Article article) { return articleService.updateArticle(article); }
+	 */
 	
 	@ApiOperation(value = "Update article")
 	@PutMapping("/modify-article")
-	public Article modifyArticle(@RequestBody Article article) {
-		return articleService.updateArticle(article);
+	public Article modifyArticle(@RequestParam("article") String article,
+			@RequestParam(name="file", required=false) MultipartFile file) throws JsonMappingException, JsonProcessingException {
+		Article a = new ObjectMapper().readValue(article, Article.class);
+		return articleService.updateArticle(a,file);
 	}
+	
 	
 	@ApiOperation(value = "retrieve all articles")
 	@GetMapping("/retrieve-all-articles")
 	public List<Article> getArticles(){
 		List<Article> listArticles = articleService.retrieveAllArticles();
+		return listArticles;
+	}
+	
+	@ApiOperation(value = "retrieve all articles ordered by date")
+	@GetMapping("/retrieve-all-articles-ordered")
+	public List<Article> retrieveOrderedByDate(){
+		List<Article> listArticles = articleService.retrieveOrderedByDate();
 		return listArticles;
 	}
 	
@@ -73,7 +116,7 @@ public class ArticleRestController {
 		return articleService.SortByComments(userId);
 	}
 	
-	// ------------------------------------
+	
 	@ApiOperation(value = "sort admins by reaction ")
 	@GetMapping("/sortbyreactions/user/{user-id}")
 	public HashMap<Long, Long> SortByReaction(@PathVariable("user-id") Long userId) {
@@ -86,4 +129,22 @@ public class ArticleRestController {
 		return articleService.userPreferences(userId);
 	}
 	
+	@ApiOperation(value = "user preferences list ")
+	@GetMapping("/preferences/user/{user-id}")
+	public List<Article> userPreferencesArticles(@PathVariable("user-id") Long userId) {
+		return articleService.userPreferencesArticles(userId);
+	}
+	
+	// ------------------------------------
+	
+	@ApiOperation(value = "retrieve user's following articles")
+	@GetMapping("/followingarticles/user/{user-id}")
+	public List<Article> FollowingArticles(@PathVariable("user-id") Long userId) {
+		return articleService.FollowingArticles(userId);
+	}
+	
+	@PutMapping("/viewinc")
+	public Article viewIncrement(@RequestBody Article article) {
+		return articleService.viewIncrement(article);
+	}
 }

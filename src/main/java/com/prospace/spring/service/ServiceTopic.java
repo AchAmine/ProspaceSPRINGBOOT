@@ -21,6 +21,9 @@ public class ServiceTopic implements IServiceTopic {
 	@Autowired
 	SectionRepository sectionRepository;
 
+	@Autowired
+	IServicePost_Comment post_commentService;
+
 	@Override
 	public List<Topic> retrieveAllTopics() {
 		// TODO Auto-generated method stub
@@ -40,6 +43,10 @@ public class ServiceTopic implements IServiceTopic {
 		Section section = sectionRepository.findById(sectionId).orElse(null);
 		t.setSection(section);
 		t.setUser(user);
+		String str = post_commentService.GetCensoredText(t.getTitle());
+		String str1 = post_commentService.GetCensoredText(t.getDescription());
+		t.setTitle(str);
+		t.setDescription(str1);
 		return topicRepository.save(t);
 	}
 
@@ -53,7 +60,25 @@ public class ServiceTopic implements IServiceTopic {
 	@Override
 	public Topic updateTopic(Topic to) {
 		// TODO Auto-generated method stub
+		String str = post_commentService.GetCensoredText(to.getTitle());
+		String str1 = post_commentService.GetCensoredText(to.getDescription());
+		to.setTitle(str);
+		to.setDescription(str1);
 		return topicRepository.save(to);
+	}
+
+	@Override
+	public List<Topic> findTopicLike() {
+		// TODO Auto-generated method stub
+		List<Topic> topic = topicRepository.findTopicLike();
+		return topic;
+	}
+
+	@Override
+	public List<Topic> findTopicDislike() {
+		// TODO Auto-generated method stub
+		List<Topic> topic = topicRepository.findTopicDislikes();
+		return topic;
 	}
 
 }

@@ -3,6 +3,8 @@ package com.prospace.spring.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,17 +24,22 @@ public class ServiceQuestion implements IServiceQuestion {
 	QuizzRepository quizzRepository;
 	
 	@Override
+	@Transactional
 	public Question AddQuestionAndAffectToQuizz(Question question,Long idQuizz) {
 		Quizz q = quizzRepository.findById(idQuizz).orElse(null);
-		question.setQuiz(q);;
+		q.getQuestions().add(question);
+		question.setQuiz(q);
+		//int count = questionRepository.NbQuestions(question.getQuiz());
+		//question.setOrder(count + 1);
 		return questionRepository.save(question);
 	}
 
 	@Override
 	public List<Question> retrieveQuizzQuestions(Long QuizzId) {
 		Quizz quizz = quizzRepository.findById(QuizzId).orElse(null);
-	List<Question> questions = questionRepository.findByQuiz(quizz);
-		return questions;
+		return quizz.getQuestions();
+	//List<Question> questions = questionRepository.findByQuiz(quizz);
+		
 	}
 	
 	@Override
@@ -40,9 +47,9 @@ public class ServiceQuestion implements IServiceQuestion {
 		Question Q = questionRepository.findById(id).orElse(null);
 		
 		// delete question from quizz
-		Quizz quizz = Q.getQuiz();
-		List<Question> quizQuestions = quizz.getQuestions();
-		quizQuestions.remove(Q);
+		//Quizz quizz = Q.getQuiz();
+	//	List<Question> quizQuestions = quizz.getQuestions();
+	//	quizQuestions.remove(Q);
 		// 
 		
 		//questionRepository.deleteById(id);
@@ -50,8 +57,10 @@ public class ServiceQuestion implements IServiceQuestion {
 	}
 
 	@Override
+	//@Transactional
 	public Question updateQuestion(Question q, Long QuizzId) {
 		Quizz quizz= quizzRepository.findById(QuizzId).orElse(null);
+		//quizz.getQuestions().add(q);
 		q.setQuiz(quizz);
 		return questionRepository.save(q);
 	}
@@ -61,7 +70,10 @@ public class ServiceQuestion implements IServiceQuestion {
 		q.getQuestions().add(question);
 		return questionRepository.save(question);
 	}*/
+
 	
+	
+
 	
 
 }

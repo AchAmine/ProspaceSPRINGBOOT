@@ -1,17 +1,21 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
+
+import java.util.List;
+
 import java.util.HashSet;
+
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,11 +27,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -45,9 +44,7 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-@ToString
-public class User implements Serializable {
+public class User implements Serializable{
 	/**
 	 * 
 	 */
@@ -118,17 +115,26 @@ public class User implements Serializable {
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
 
-	// --------------------------------------- Begin News
-	// -------------------------------------
+
+		
+	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Article> Articles;
-
-	// --------------------------------------- End News
-	// -------------------------------------
-
-	// --------------------------------------- Begin Partner
-	// -------------------------------------
+	
+	
+	@ToString.Exclude
+	@JsonIgnore
+	//@OneToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER)
+	private Set<User> followers;
+	
+	
+	
+	// --------------------------------------- End News -------------------------------------
+	
+	// --------------------------------------- Begin Partner -------------------------------------
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
@@ -136,36 +142,52 @@ public class User implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
 	@JsonIgnore
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy="user",fetch = FetchType.EAGER)
 	private Set<ResultQuizz> resultQuizz;
 
 	@JsonIgnore
-	@OneToMany(mappedBy = "userresponse")
-	private Set<Response> Response;
+	@OneToOne(mappedBy="userresponse",fetch = FetchType.EAGER)
+	private Response Response;
 
-	// --------------------------------------- End Partner
-	// -------------------------------------
+	
+	// --------------------------------------- End Partner -------------------------------------
+	
 
 	// --------------------------------------- Begin Forum
-	// -------------------------------------
-	@JsonIgnore
+		// -------------------------------------
+		
+		@JsonIgnore
+		@ToString.Exclude
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
+		private Set<Post_Reaction> post_Reaction;
+		
+		/*********************************************************/
+		@JsonIgnore
+		@ToString.Exclude
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
+		private Set<Post> Posts;
+
+		/***************************************** begin section */
+		@JsonIgnore
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
+		private Set<Section> Sections;
+		/**** end section */
+		/***************************************** begin topic */
+		@JsonIgnore
+		@OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.EAGER)
+		private Set<Topic> Topics;
+		/**** end topic */
+		// --------------------------------------- End Forum
+		// -------------------------------------
+
+
+	
+	// --------------------------------------- Begin Events -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-	private Set<Post> Posts;
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
-	private Set<Topic> Topics;
-
-	// --------------------------------------- End Forum
-	// -------------------------------------
-
-	// --------------------------------------- Begin Events
-	// -------------------------------------
-	@ToString.Exclude
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "Participants")
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants",fetch = FetchType.EAGER)
 	private Set<Event> EventsParticipation;
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user_organizer")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer",fetch = FetchType.EAGER)
 	private Set<Event> EventsOrganized;
 
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -177,7 +199,7 @@ public class User implements Serializable {
 	// --------------------------------------- Begin Complaint
 	// -------------------------------------
 	@ToString.Exclude
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Complaint> Complaints;
 
 	@OneToOne

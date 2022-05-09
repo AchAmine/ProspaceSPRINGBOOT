@@ -20,7 +20,7 @@ import lombok.ToString;
 @Setter 
 @NoArgsConstructor 
 @AllArgsConstructor
-@RequiredArgsConstructor 
+
 @ToString
 public class Experience implements Serializable{
 	/**
@@ -31,10 +31,10 @@ public class Experience implements Serializable{
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long idExperience;
 	
-	@NonNull
+	
 	private String title;
 	
-	@NonNull
+	
 	private Integer duration;
 
 }

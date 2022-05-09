@@ -41,87 +41,82 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@Setter 
-@NoArgsConstructor 
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor 
 public class User implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUser;
+
 	
-	@NonNull
 	private String firstName;
-	@NonNull
-	private String lastName;
 	
-	@Column(unique=true)
-	@NonNull 
+	private String lastName;
+
+	@Column(unique = true)
+	
 	private String userName;
-	@NonNull 
+	
 	private String email;
-	@NonNull 
+	
 	private String password;
 	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> userRoles = new HashSet<>();
-	
+
 	private boolean locked;
-	
+
 	private boolean enabled;
-	@NonNull 
-	private boolean isDeleted;
-	/*@NonNull
-	@Column(name = "failed_attempt")
-    private int failedAttempt;*/
 	
-	@NonNull
+	private boolean isDeleted;
+	/*
+	 * 
+	 * 
+	 * @Column(name = "failed_attempt") private int failedAttempt;
+	 */
+
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	private Date createdAt;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedAt;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
-	
+
 	@OneToOne
 	private Image image;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date birthDate;
-	@NonNull
+	
 	private Integer age;
 	@Column(name = "resettoken")
 	private String resettoken;
-	
-		public boolean isEnabled() {
-			return enabled;
-		}
-		
-		public boolean isLocked() {
-			return locked;
-		}
-		
-	
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public boolean isLocked() {
+		return locked;
+	}
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Skill> Skills;
 
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy="Participants",fetch = FetchType.EAGER)
-	private Set<Formation> formations;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="organizer",fetch = FetchType.EAGER)
-	private Set<Formation> formations_organized;
 
-	
+		
 	// --------------------------------------- Begin News -------------------------------------
 	@ToString.Exclude
 	@JsonIgnore
@@ -141,15 +136,15 @@ public class User implements Serializable{
 	
 	// --------------------------------------- Begin Partner -------------------------------------
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Quizz> Quizz;
 	@JsonIgnore
 	@OneToMany(mappedBy="user",fetch = FetchType.EAGER)
 	private Set<ResultQuizz> resultQuizz;
-	
+
 	@JsonIgnore
 	@OneToOne(mappedBy="userresponse",fetch = FetchType.EAGER)
 	private Response Response;
@@ -194,20 +189,22 @@ public class User implements Serializable{
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user_organizer",fetch = FetchType.EAGER)
 	private Set<Event> EventsOrganized;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Tournament> Tournaments;
-	
-	// --------------------------------------- End Events -------------------------------------
-	
-	
-	// --------------------------------------- Begin Complaint -------------------------------------
+
+	// --------------------------------------- End Events
+	// -------------------------------------
+
+	// --------------------------------------- Begin Complaint
+	// -------------------------------------
 	@ToString.Exclude
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="user",fetch = FetchType.EAGER)
 	private Set<Complaint> Complaints;
-	
+
 	@OneToOne
 	private Badge badge;
-	
-	// --------------------------------------- End Complaint -------------------------------------
+
+	// --------------------------------------- End Complaint
+	// -------------------------------------
 }

@@ -11,4 +11,5 @@ public interface IServiceFormation {
 	void deleteFormation(Long id);
 	void updateFormation(Formation f);
 	void participerFormation(Long idf,Long idu);
+	List<Formation> getUndeletedAndCurrentFormation();
 }

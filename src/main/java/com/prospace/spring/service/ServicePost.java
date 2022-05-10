@@ -3,6 +3,8 @@ package com.prospace.spring.service;
 import java.util.Date;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -70,6 +72,7 @@ return posts;
 	}
 
 	@Override
+	@Transactional
 	public void delete(Long idPost) {
 		// TODO Auto-generated method stub
 		postRepository.deletePost(idPost);

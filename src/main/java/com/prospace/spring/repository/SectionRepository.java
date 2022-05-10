@@ -13,8 +13,8 @@ public interface SectionRepository extends JpaRepository<Section, Long> {
 
 	List<Section> findByName(String name);
 
-	@Query(value = "SELECT S FROM Section S INNER JOIN Post_Reaction R ON R.section.idSection=S.idSection WHERE R.type='Like' ")
-	List<Section> findLikedSections();
-	@Query(value = "SELECT S FROM Section S INNER JOIN Post_Reaction R ON R.section.idSection=S.idSection WHERE R.type='Like' ")
-	List<Section> findDislikedSections();
+//	@Query(value = "SELECT S FROM Section S INNER JOIN Post_Reaction R ON R.section.idSection=S.idSection WHERE R.type='Like' ")
+//	List<Section> findLikedSections();
+//	@Query(value = "SELECT S FROM Section S INNER JOIN Post_Reaction R ON R.section.idSection=S.idSection WHERE R.type='Like' ")
+//	List<Section> findDislikedSections();
 }

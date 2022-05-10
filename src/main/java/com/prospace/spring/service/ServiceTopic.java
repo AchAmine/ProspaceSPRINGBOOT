@@ -1,5 +1,6 @@
 package com.prospace.spring.service;
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +16,10 @@ import com.prospace.spring.repository.SectionRepository;
 import com.prospace.spring.repository.TopicRepository;
 import com.prospace.spring.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class ServiceTopic implements IServiceTopic {
 	@Autowired
 	TopicRepository topicRepository;
@@ -71,26 +75,45 @@ return topics;
 
 	@Override
 	public Topic updateTopic(Topic to) {
+		Topic topic = topicRepository.findById(to.getIdTopic()).orElse(null);
+
 		// TODO Auto-generated method stub
 		String str = post_commentService.GetCensoredText(to.getTitle());
 		String str1 = post_commentService.GetCensoredText(to.getDescription());
 		to.setTitle(str);
 		to.setDescription(str1);
+		Date date = new Date(System.currentTimeMillis());
+		to.setCreationDate(date);
+		to.setSection(topic.getSection());
+		to.setUser(topic.getUser());
 		return topicRepository.save(to);
-	}
+	} 
 
+//	@Override
+//	public List<Topic> findTopicLike() {
+//		// TODO Auto-generated method stub
+//		List<Topic> topic = topicRepository.findTopicLike();
+//		return topic;
+//	}
+//
+//	@Override
+//	public List<Topic> findTopicDislike() {
+//		// TODO Auto-generated method stub
+//		List<Topic> topic = topicRepository.findTopicDislikes();
+//		return topic;
+//	}
+//	
+	
+	
+	
+	
 	@Override
-	public List<Topic> findTopicLike() {
-		// TODO Auto-generated method stub
-		List<Topic> topic = topicRepository.findTopicLike();
-		return topic;
+	public Topic viewIncrement(Topic topic) {
+		Topic topic1 = topicRepository.findById(topic.getIdTopic()).orElse(null);
+		log.info("------------------topic Before inc"+topic1);
+		log.info("-----------------Views Before inc"+topic1.getViews());
+		topic1.setViews(topic1.getViews() + 1); 
+		log.info("-----------------Views After inc"+topic1.getViews());
+		return topicRepository.save(topic1);
 	}
-
-	@Override
-	public List<Topic> findTopicDislike() {
-		// TODO Auto-generated method stub
-		List<Topic> topic = topicRepository.findTopicDislikes();
-		return topic;
-	}
-
 }

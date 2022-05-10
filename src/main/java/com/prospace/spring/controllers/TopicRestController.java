@@ -63,15 +63,24 @@ public class TopicRestController {
 		return topicService.updateTopic(topic);
 	}
 
-	@ApiOperation(value = "Show Liked Topics  ")
-	@GetMapping("/find-byLike")
-	public List<Topic> findTopicsByReactions() {
-		return topicService.findTopicLike();
+//	@ApiOperation(value = "Show Liked Topics  ")
+//	@GetMapping("/find-byLike")
+//	public List<Topic> findTopicsByReactions() {
+//		return topicService.findTopicLike();
+//	}
+//
+//	@ApiOperation(value = "Show disliked Topics  ")
+//	@GetMapping("/find-byDislike")
+//	public List<Topic> findDislikedTopics() {
+//		return topicService.findTopicDislike();
+//	} 
+//	
+	
+	
+	@PutMapping("/viewinc")
+	public Topic viewIncrement(@RequestBody Topic topic) {
+		return topicService.viewIncrement(topic);
 	}
-
-	@ApiOperation(value = "Show disliked Topics  ")
-	@GetMapping("/find-byDislike")
-	public List<Topic> findDislikedTopics() {
-		return topicService.findTopicDislike();
-	}
+	
+	
 }

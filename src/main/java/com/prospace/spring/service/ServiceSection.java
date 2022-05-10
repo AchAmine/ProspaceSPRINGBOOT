@@ -86,17 +86,17 @@ public class ServiceSection implements IServiceSection {
 		return (List<Section>) sectionRepository.findByName(name);
 	}
 
-	@Override
-	public List<Section> findLikedSections() {
-		// TODO Auto-generated method stub
-		List<Section> section = sectionRepository.findLikedSections();
-		return section;
-	}
-
-	@Override
-	public List<Section> findDislikedSections() {
-		// TODO Auto-generated method stub
-		List<Section> section = sectionRepository.findDislikedSections();
-		return section;
-	}
+//	@Override
+//	public List<Section> findLikedSections() {
+//		// TODO Auto-generated method stub
+//		List<Section> section = sectionRepository.findLikedSections();
+//		return section;
+//	}
+//
+//	@Override
+//	public List<Section> findDislikedSections() {
+//		// TODO Auto-generated method stub
+//		List<Section> section = sectionRepository.findDislikedSections();
+//		return section;
+//	}
 }

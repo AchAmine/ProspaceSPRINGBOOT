@@ -44,8 +44,8 @@ public class Section implements Serializable {
 	private String description;
 	@ManyToOne
 	private User user;
-	@OneToMany
-	private Set<Topic> topics;
+//	@OneToMany
+//	private Set<Topic> topics;
 	@OneToMany
 	private Set<Post_Reaction> postReactions;
 

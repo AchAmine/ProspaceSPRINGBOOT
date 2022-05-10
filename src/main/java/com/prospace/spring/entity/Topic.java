@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,6 +15,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -52,17 +55,18 @@ public class Topic implements Serializable {
 	private boolean closed;
 
 	@NonNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date creationDate;
+	@JsonIgnore
 	@ManyToOne
 	private Section section;
 	@ManyToOne
 	private User user;
-	@OneToMany(cascade = CascadeType.ALL)
-	private Set<Post_Reaction> postReactions;
+	//@OneToMany
+	//private Set<Post_Reaction> postReactions;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	private Set<Post> posts;
+//	@OneToMany(cascade = CascadeType.ALL)
+//	private Set<Post> posts;
 
 
 }

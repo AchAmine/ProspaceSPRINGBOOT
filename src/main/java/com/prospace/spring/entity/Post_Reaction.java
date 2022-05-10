@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,22 +40,24 @@ public class Post_Reaction implements Serializable {
 	@Enumerated(EnumType.STRING)
 	private postReactionType type;
 
+
+	@JsonIgnore
 	@ManyToOne
 	private Post post;
-	
+	@JsonIgnore
 	@ManyToOne
 	private Post_Comment postComment;
-
+//	@JsonIgnore
+//	@ManyToOne
+//	private Section section;
+//	@JsonIgnore
+//	@ManyToOne
+//	private Topic topic;
+	@JsonIgnore
 	@ManyToOne
-	private Section section;
-	
-	@ManyToOne
-	private Topic topic;
-	
-	@ManyToOne
-	private User user;
-	
-	@ManyToOne
-	private Post_Reaction post_Reaction;
+	private User user; 
+//	@JsonIgnore
+//	@ManyToOne
+//	private Post_Reaction post_Reaction;
 
 }

@@ -21,10 +21,10 @@ public interface Post_ReactionRepository extends JpaRepository<Post_Reaction, Lo
 	List<Post_Reaction> findByPost(Post post);
 
 	List<Post_Reaction> findByPostComment(Post_Comment postComment);
-
-	List<Post_Reaction> findByTopic(Topic topic);
-
-	List<Post_Reaction> findBySection(Section section);
+//
+//	List<Post_Reaction> findByTopic(Topic topic);
+//
+//	List<Post_Reaction> findBySection(Section section);
 
 	List<Post_Reaction> findByPostAndType(Post post, postReactionType reactionType);
 
@@ -34,11 +34,13 @@ public interface Post_ReactionRepository extends JpaRepository<Post_Reaction, Lo
 	Set<Post> getReactedpost();
 
 	/**************************************************/
-
-@Query(value = "SELECT R,S,T FROM Post_Reaction R " + "JOIN User U ON R.user.idUser=U.idUser"
-			+ " JOIN Section S ON R.user.idUser=U.idUser " + "LEFT JOIN Topic T ON R.user.idUser=U.idUser "
-			+ "WHERE R.type='Like' and R.user.idUser = :userId")
-	List<Object[]> SortbyLikes(@Param("userId") Long userId);
+//
+//@Query(value = "SELECT R,P FROM Post_Reaction R " + "JOIN User U ON R.user.idUser=U.idUser"
+//		+ "JOIN Post P ON R.user.idUser=U.idUser"
+//
+////			+ " JOIN Section S ON R.user.idUser=U.idUser " + "LEFT JOIN Topic T ON R.user.idUser=U.idUser "
+//			+ "WHERE R.type='Like' and R.user.idUser = :userId")
+//	List<Object[]> SortbyLikes(@Param("userId") Long userId);
 
 	/********************************* GET ACTIVE USERS ************/
 	@Query("select R.idReaction.user from Post_Reaction R")

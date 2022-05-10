@@ -79,16 +79,16 @@ public class SectionRestController {
 		return serviceSection.updateSection(section);
 	}
 
-	@ApiOperation(value = "Show Liked Section ")
-	@GetMapping("/find-liked")
-	public List<Section> findLikedSections() {
-		return serviceSection.findLikedSections();
-	}
-
-	@ApiOperation(value = "Show Disliked Section ")
-	@GetMapping("/find-disliked")
-	public List<Section> findDislikedSections() {
-		return serviceSection.findDislikedSections();
-	}
+//	@ApiOperation(value = "Show Liked Section ")
+//	@GetMapping("/find-liked")
+//	public List<Section> findLikedSections() {
+//		return serviceSection.findLikedSections();
+//	}
+//
+//	@ApiOperation(value = "Show Disliked Section ")
+//	@GetMapping("/find-disliked")
+//	public List<Section> findDislikedSections() {
+//		return serviceSection.findDislikedSections();
+//	}
 
 }

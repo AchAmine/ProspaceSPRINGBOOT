@@ -22,15 +22,15 @@ public interface IServicePost_reaction {
 	List<Post_Reaction> retrievePostCommentReactions(Long commentId);
 
 	/******************************************************************/
-
-	Post_Reaction addSectionReaction(Long userId, Long sectionId, Post_Reaction reaction);
-
-	List<Post_Reaction> retrieveSectionReactions(Long sectionId);
-
-	/*******************************************************************/
-	Post_Reaction addTopicReaction(Long userId, Long topicId, Post_Reaction reaction);
-
-	List<Post_Reaction> retrieveTopicReactions(Long topicId);
+//
+//	Post_Reaction addSectionReaction(Long userId, Long sectionId, Post_Reaction reaction);
+//
+//	List<Post_Reaction> retrieveSectionReactions(Long sectionId);
+//
+//	/*******************************************************************/
+//	Post_Reaction addTopicReaction(Long userId, Long topicId, Post_Reaction reaction);
+//
+//	List<Post_Reaction> retrieveTopicReactions(Long topicId);
 
 	List<User> retrievePostReactors(Long postId);
 
@@ -41,6 +41,6 @@ public interface IServicePost_reaction {
 	/******************************************************************/
 
 	/******************************************************************/
-	List<Object[]> SortbyLikes(Long userId);
+//	List<Object[]> SortbyLikes(Long userId);
 
 }

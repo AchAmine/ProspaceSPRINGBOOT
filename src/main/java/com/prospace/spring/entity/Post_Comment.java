@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -57,8 +58,8 @@ public class Post_Comment implements Serializable{
 	private Post_Comment pComment;
 	@ManyToOne
 	private User user;
-	@OneToMany
-	private Set<Post_Reaction> postReactions;
+	//@OneToMany
+	//private Set<Post_Reaction> postReactions;
 
 
 }

@@ -1,11 +1,13 @@
 package com.prospace.spring.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.prospace.spring.entity.Post;
+import com.prospace.spring.entity.Post_Comment;
 import com.prospace.spring.entity.Section;
 import com.prospace.spring.entity.Topic;
 import com.prospace.spring.entity.User;
@@ -61,22 +63,33 @@ return posts;
 		String str1 = post_commentService.GetCensoredText(post.getTitle());
 		post.setContent(str);
 		post.setTitle(str1);
+		Date date = new Date(System.currentTimeMillis());
+		post.setCreatedAt(date);
+		
 		return postRepository.save(post);
 	}
 
 	@Override
 	public void delete(Long idPost) {
 		// TODO Auto-generated method stub
-		postRepository.deleteById(idPost);
+		postRepository.deletePost(idPost);
 	}
 
 	@Override
 	public Post updatePost(Post p) {
+		Post post = postRepository.findById(p.getIdPost()).orElse(null);
+
 		// TODO Auto-generated method stub
 		String str = post_commentService.GetCensoredText(p.getContent());
 		String str1 = post_commentService.GetCensoredText(p.getTitle());
 		p.setContent(str);
 		p.setTitle(str1);
+		Date date = new Date(System.currentTimeMillis());
+		p.setUpdatedAt(date);
+
+		// TODO Auto-generated method stub
+	p.setTopic(post.getTopic());
+		p.setUser(post.getUser());
 		return postRepository.save(p);
 	}
 

@@ -66,21 +66,21 @@ public class PostReactionRestController {
 		return postReactionService.addPostComment_Reaction(userId, commentId, reaction);
 	}
 
-	@ApiOperation(value = "Add topic reaction")
-	@PostMapping("/add-topic-reaction/{topic-id}/{user-id}")
-	public Post_Reaction addTopicReaction(@RequestBody Post_Reaction reaction, @PathVariable("topic-id") Long topicId,
-			@PathVariable("user-id") Long userId) {
-
-		return postReactionService.addTopicReaction(userId, topicId, reaction);
-	}
-
-	@ApiOperation(value = "Add section reaction")
-	@PostMapping("/add-section-reaction/{section-id}/{user-id}")
-	public Post_Reaction addSectionReaction(@RequestBody Post_Reaction reaction,
-			@PathVariable("section-id") Long sectionId, @PathVariable("user-id") Long userId) {
-
-		return postReactionService.addSectionReaction(userId, sectionId, reaction);
-	}
+//	@ApiOperation(value = "Add topic reaction")
+//	@PostMapping("/add-topic-reaction/{topic-id}/{user-id}")
+//	public Post_Reaction addTopicReaction(@RequestBody Post_Reaction reaction, @PathVariable("topic-id") Long topicId,
+//			@PathVariable("user-id") Long userId) {
+//
+//		return postReactionService.addTopicReaction(userId, topicId, reaction);
+//	}
+//
+//	@ApiOperation(value = "Add section reaction")
+//	@PostMapping("/add-section-reaction/{section-id}/{user-id}")
+//	public Post_Reaction addSectionReaction(@RequestBody Post_Reaction reaction,
+//			@PathVariable("section-id") Long sectionId, @PathVariable("user-id") Long userId) {
+//
+//		return postReactionService.addSectionReaction(userId, sectionId, reaction);
+//	}
 
 	/********************************************************/
 
@@ -91,19 +91,19 @@ public class PostReactionRestController {
 		return postReactionService.retrievePostCommentReactions(commentId);
 	}
 
-	@ApiOperation(value = "retrieve section's reactions")
-	@GetMapping("/retrieve-sectionReactions/{section-id}")
-	public List<Post_Reaction> retrieveSectionReactions(@PathVariable("section-id") Long sectionId) {
-
-		return postReactionService.retrieveSectionReactions(sectionId);
-	}
-
-	@ApiOperation(value = "retrieve topic's reactions")
-	@GetMapping("/retrieve-topicReactions/{topic-id}")
-	public List<Post_Reaction> retrieveTopicReactions(@PathVariable("topic-id") Long topicId) {
-
-		return postReactionService.retrieveTopicReactions(topicId);
-	}
+//	@ApiOperation(value = "retrieve section's reactions")
+//	@GetMapping("/retrieve-sectionReactions/{section-id}")
+//	public List<Post_Reaction> retrieveSectionReactions(@PathVariable("section-id") Long sectionId) {
+//
+//		return postReactionService.retrieveSectionReactions(sectionId);
+//	}
+//
+//	@ApiOperation(value = "retrieve topic's reactions")
+//	@GetMapping("/retrieve-topicReactions/{topic-id}")
+//	public List<Post_Reaction> retrieveTopicReactions(@PathVariable("topic-id") Long topicId) {
+//
+//		return postReactionService.retrieveTopicReactions(topicId);
+//	}
 
 	/*********************************************************************/
 	@ApiOperation(value = "retrieve post's reactors")
@@ -123,12 +123,12 @@ public class PostReactionRestController {
 
 	/******************************************************************/
 
-
-@ApiOperation(value = "retrieve by reaction type")
-	@GetMapping("/retrieve-byReactions/{user-id}")
-	public List<Object[]> sortbyReaction(@PathVariable("user-id") Long userId) {
-		return postReactionService.SortbyLikes(userId);
-	}
+//
+//@ApiOperation(value = "retrieve by reaction type")
+//	@GetMapping("/retrieve-byReactions/{user-id}")
+//	public List<Object[]> sortbyReaction(@PathVariable("user-id") Long userId) {
+//		return postReactionService.SortbyLikes(userId);
+//	}
 
 
 }

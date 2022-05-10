@@ -18,8 +18,8 @@ public interface IServiceSection {
 
 	List<Section> findByName(String name);
 
-	List<Section> findLikedSections();
-
-	List<Section> findDislikedSections();
+//	List<Section> findLikedSections();
+//
+//	List<Section> findDislikedSections();
 
 }

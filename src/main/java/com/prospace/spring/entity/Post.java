@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -46,20 +47,20 @@ public class Post implements Serializable {
 	@Size(min = 1, max = 50, message = "{post's content cannot be empty}")
 	private String content;
 	@NonNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdAt;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
 
-	@OneToMany
-	private Set<Post_Reaction> postReactions;
+	//@OneToMany(cascade = CascadeType.ALL)
+	//private Set<Post_Reaction> postReactions;
 
-	// @OneToMany
-	// private Set<Post_Comment> postComments;
-
+	// @OneToMany(cascade = CascadeType.ALL)
+	 //private Set<Post_Comment> postComments;
+ 
 	@ToString.Exclude
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private User user;
 
 	@ManyToOne

@@ -93,46 +93,46 @@ public class ServicePost_Reaction implements IServicePost_reaction {
 	/************** End Reactions ************/
 
 	/********************* SECTION Reactions ********************/
-	@Override
-	public Post_Reaction addSectionReaction(Long userId, Long sectionId, Post_Reaction reaction) {
-		Section section = sectionRepository.findById(sectionId).orElse(null);
-		User user = userRepository.findById(userId).orElse(null);
-
-		reaction.setSection(section);
-		reaction.setUser(user);
-		return postReactionRepository.save(reaction);
-	}
-
-	@Override
-	public List<Post_Reaction> retrieveSectionReactions(Long sectionId) {
-		// TODO Auto-generated method stub
-		Section section = sectionRepository.findById(sectionId).orElse(null);
-		List<Post_Reaction> reactions = postReactionRepository.findBySection(section);
-
-		return reactions;
-	}
+//	@Override
+//	public Post_Reaction addSectionReaction(Long userId, Long sectionId, Post_Reaction reaction) {
+//		Section section = sectionRepository.findById(sectionId).orElse(null);
+//		User user = userRepository.findById(userId).orElse(null);
+//
+//		reaction.setSection(section);
+//		reaction.setUser(user);
+//		return postReactionRepository.save(reaction);
+//	}
+//
+//	@Override
+//	public List<Post_Reaction> retrieveSectionReactions(Long sectionId) {
+//		// TODO Auto-generated method stub
+//		Section section = sectionRepository.findById(sectionId).orElse(null);
+//		List<Post_Reaction> reactions = postReactionRepository.findBySection(section);
+//
+//		return reactions;
+//	}
 
 	/************** End Reactions ************/
 
 	/********************* TOPIC Reactions ********************/
-	@Override
-	public Post_Reaction addTopicReaction(Long userId, Long topicId, Post_Reaction reaction) {
-		Topic topic = topicRepository.findById(topicId).orElse(null);
-		User user = userRepository.findById(userId).orElse(null);
-
-		reaction.setTopic(topic);
-		reaction.setUser(user);
-		return postReactionRepository.save(reaction);
-	}
-
-	@Override
-	public List<Post_Reaction> retrieveTopicReactions(Long topicId) {
-		// TODO Auto-generated method stub
-		Topic topic = topicRepository.findById(topicId).orElse(null);
-		List<Post_Reaction> reactions = postReactionRepository.findByTopic(topic);
-
-		return reactions;
-	}
+//	@Override
+//	public Post_Reaction addTopicReaction(Long userId, Long topicId, Post_Reaction reaction) {
+//		Topic topic = topicRepository.findById(topicId).orElse(null);
+//		User user = userRepository.findById(userId).orElse(null);
+//
+//		reaction.setTopic(topic);
+//		reaction.setUser(user);
+//		return postReactionRepository.save(reaction);
+//	}
+//
+//	@Override
+//	public List<Post_Reaction> retrieveTopicReactions(Long topicId) {
+//		// TODO Auto-generated method stub
+//		Topic topic = topicRepository.findById(topicId).orElse(null);
+//		List<Post_Reaction> reactions = postReactionRepository.findByTopic(topic);
+//
+//		return reactions;
+//	}
 
 	/************** End Reactions ************/
 
@@ -162,10 +162,10 @@ public class ServicePost_Reaction implements IServicePost_reaction {
 	}
 
 	/************************/
-
-@Override
-	public List<Object[]> SortbyLikes(Long userId) {
-		return postReactionRepository.SortbyLikes(userId);
-
-	}
+//
+//@Override
+//	public List<Object[]> SortbyLikes(Long userId) {
+//		return postReactionRepository.SortbyLikes(userId);
+//
+//	}
 }

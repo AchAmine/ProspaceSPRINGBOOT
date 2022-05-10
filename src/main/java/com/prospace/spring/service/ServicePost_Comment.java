@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,8 +40,14 @@ public class ServicePost_Comment implements IServicePost_Comment {
 
 	@Override
 	public Post_Comment updateComment(Post_Comment comment) {
+		Post_Comment post_comment = post_commentRepository.findById(comment.getIdComment()).orElse(null);
 		// TODO Auto-generated method stub
+		comment.setPost(post_comment.getPost());
+		comment.setUser(post_comment.getUser());
+		Date date = new Date(System.currentTimeMillis());
+		comment.setUpdatedAt(date);
 		return post_commentRepository.save(comment);
+
 	}
 
 	@Override
@@ -171,6 +178,8 @@ public class ServicePost_Comment implements IServicePost_Comment {
 		 * String str= comment.getContent(); str=GetCensoredText(str);
 		 */
 		comment.setContent(str);
+		Date date = new Date(System.currentTimeMillis());
+		comment.setPostedAt(date);
 
 		return post_commentRepository.save(comment); 
 	}

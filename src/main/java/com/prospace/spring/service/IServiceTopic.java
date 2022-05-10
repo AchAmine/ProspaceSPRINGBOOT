@@ -15,8 +15,13 @@ public interface IServiceTopic {
 
 	Topic updateTopic(Topic to);
 
-	List<Topic> findTopicLike();
-
-	List<Topic> findTopicDislike();
-
+//	List<Topic> findTopicLike();
+//
+//	List<Topic> findTopicDislike();
+	
+	
+	
+	
+///////////////////////////////
+	Topic viewIncrement(Topic topic);
 }

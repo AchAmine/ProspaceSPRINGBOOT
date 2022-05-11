@@ -38,7 +38,12 @@ public class ChatMessageService {
         log.info("----------------CHAT ID ? ---------"+chatId);
         var messages = repository.sortByDate(chatId);
         log.info("----------------------- MESSAGES -------------------------"+messages.size());
+        for(ChatMessage msg : messages) {
+        	log.info("MESSAGE ID: "+msg.getId());
+        	log.info("message chatId "+msg.getChatId());
+        }
         if (messages.isEmpty()) {
+        	log.info("--------- msg is empty \n"+messages);
         	messages = new ArrayList<>();
         }
                 //chatId.map(cId -> repository.findByChatId(cId)).orElse(new ArrayList<>());
@@ -62,12 +67,13 @@ public class ChatMessageService {
     }
  
     public void updateStatuses(String senderId, String recipientId, MessageStatus status) {
-    	/*   Query query = new Query(
-                Criteria
-                        .where("senderId").is(senderId)
-                        .and("recipientId").is(recipientId));
-        Update update = Update.update("status", status);
-        mongoOperations.updateMulti(query, update, ChatMessage.class);*/
+    	
     	repository.updateStatuses(senderId, recipientId, status);
+    }
+    
+    public void updateStatus(Long id) {
+    	ChatMessage message = repository.findById(id).orElse(null);
+    	message.setStatus(MessageStatus.DELIVERED);
+    	repository.save(message);
     }
 }

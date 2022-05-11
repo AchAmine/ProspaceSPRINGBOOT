@@ -1,7 +1,11 @@
 package com.prospace.spring.controllers;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
+
+import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,15 +24,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.prospace.spring.entity.Article;
+import com.prospace.spring.entity.Article_Comment;
 import com.prospace.spring.service.IServiceArticle;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @Api(tags="Article management")
 @RequestMapping("/Article")
-
+@Slf4j
 public class ArticleRestController {
 
 	@Autowired
@@ -43,10 +49,22 @@ public class ArticleRestController {
 	}
 	
 	
+	
+	
+	/*
+	 * @ApiOperation(value = "Delete article")
+	 * 
+	 * @DeleteMapping("/remove-article/{article-id}") public void
+	 * removeArticle(@PathVariable("article-id") Long articleId) {
+	 * log.info("controller : ",articleId); articleService.deleteArticle(articleId);
+	 * }
+	 */
+	
 	@ApiOperation(value = "Delete article")
 	@DeleteMapping("/remove-article/{article-id}")
 	public void removeArticle(@PathVariable("article-id") Long articleId) {
-		articleService.deleteArticle(articleId);
+		log.info("controller : "+articleId);
+		 articleService.deleteArticle(articleId);
 	}
 	
 	/*
@@ -59,7 +77,7 @@ public class ArticleRestController {
 	@ApiOperation(value = "Update article")
 	@PutMapping("/modify-article")
 	public Article modifyArticle(@RequestParam("article") String article,
-			@RequestParam("file") MultipartFile file) throws JsonMappingException, JsonProcessingException {
+			@RequestParam(name="file", required=false) MultipartFile file) throws JsonMappingException, JsonProcessingException {
 		Article a = new ObjectMapper().readValue(article, Article.class);
 		return articleService.updateArticle(a,file);
 	}
@@ -98,7 +116,7 @@ public class ArticleRestController {
 		return articleService.SortByComments(userId);
 	}
 	
-	// ------------------------------------
+	
 	@ApiOperation(value = "sort admins by reaction ")
 	@GetMapping("/sortbyreactions/user/{user-id}")
 	public HashMap<Long, Long> SortByReaction(@PathVariable("user-id") Long userId) {
@@ -111,10 +129,22 @@ public class ArticleRestController {
 		return articleService.userPreferences(userId);
 	}
 	
+	@ApiOperation(value = "user preferences list ")
+	@GetMapping("/preferences/user/{user-id}")
+	public List<Article> userPreferencesArticles(@PathVariable("user-id") Long userId) {
+		return articleService.userPreferencesArticles(userId);
+	}
+	
+	// ------------------------------------
 	
 	@ApiOperation(value = "retrieve user's following articles")
 	@GetMapping("/followingarticles/user/{user-id}")
 	public List<Article> FollowingArticles(@PathVariable("user-id") Long userId) {
 		return articleService.FollowingArticles(userId);
+	}
+	
+	@PutMapping("/viewinc")
+	public Article viewIncrement(@RequestBody Article article) {
+		return articleService.viewIncrement(article);
 	}
 }

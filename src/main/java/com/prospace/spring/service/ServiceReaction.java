@@ -59,28 +59,38 @@ public class ServiceReaction implements IServiceReaction{
 		
 		return reactions;
 	}
+	
+	@Override
+	public Reaction retrieveUserReaction(Long articleId,Long userId) {
+		Article article = articleRepository.findById(articleId).orElse(null);
+		User user = userRepository.findById(userId).orElse(null);
+		Reaction reaction =  reactionRepository.findByArticleAndUser(article,user);
+		
+		return reaction;
+	}
+	
 
 	// Avec List
 	@Override
-	public List<User> retrieveArticleReactors(Long articleId) {
+	public List<Long> retrieveArticleReactors(Long articleId) {
 		Article article = articleRepository.findById(articleId).orElse(null);
 		List<Reaction> reactions =  reactionRepository.findByArticle(article);
-		List<User> users = new ArrayList<>();
+		List<Long> users = new ArrayList<>();
 		
 		for(Reaction react : reactions ) {
-			users.add(react.getUser());
+			users.add(react.getUser().getIdUser());
 		}	
 		return users;
 	}
 	
 	// avec HashMap -- 
 	@Override
-	public HashMap<User, ReactionType> retrieveUsersReactions(Long articleId) {
+	public HashMap<Long, ReactionType> retrieveUsersReactions(Long articleId) {
 		Article article = articleRepository.findById(articleId).orElse(null);
 		List<Reaction> reactions =  reactionRepository.findByArticle(article);
-		HashMap<User,ReactionType> user_reaction = new HashMap<User,ReactionType>();
+		HashMap<Long,ReactionType> user_reaction = new HashMap<Long,ReactionType>();
 		for(Reaction react : reactions ) {
-			user_reaction.put(react.getUser(), react.getType());
+			user_reaction.put(react.getUser().getIdUser(), react.getType());
 		}
 		return user_reaction;
 	}

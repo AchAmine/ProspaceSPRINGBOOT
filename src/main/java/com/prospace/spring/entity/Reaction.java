@@ -41,7 +41,6 @@ public class Reaction implements Serializable{
 	private ReactionType type;
 
 	  
-	@JsonIgnore
 	@ManyToOne
 	private User user;
 	

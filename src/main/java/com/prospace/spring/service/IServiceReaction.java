@@ -14,7 +14,8 @@ public interface IServiceReaction {
 	Reaction updateReaction(Reaction react);
 	
 	List<Reaction> retrieveArticleReactions(Long articleId);
-	List<User> retrieveArticleReactors(Long articleId);
-	HashMap<User,ReactionType> retrieveUsersReactions(Long articleId);
+	List<Long> retrieveArticleReactors(Long articleId);
+	HashMap<Long,ReactionType> retrieveUsersReactions(Long articleId);
 	List<User> retrieveArticleReactorsByType(Long articleId,ReactionType reactionType);
+	Reaction retrieveUserReaction(Long articleId, Long userId);
 }

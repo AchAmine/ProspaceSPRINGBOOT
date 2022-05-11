@@ -6,6 +6,8 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -67,7 +69,10 @@ public class Article implements Serializable{
 	
 	private boolean enableComments;
 	
-	
+	@NonNull
+	@Enumerated(EnumType.STRING)
+	private ArticleType type;
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;
 	

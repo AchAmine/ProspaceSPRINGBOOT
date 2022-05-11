@@ -24,7 +24,7 @@ import lombok.ToString;
 @Setter 
 @NoArgsConstructor 
 @AllArgsConstructor
-@RequiredArgsConstructor 
+
 @ToString
 public class Skill implements Serializable{
 	/**
@@ -35,7 +35,7 @@ public class Skill implements Serializable{
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long idSkill;
 	
-	@NonNull
+	
 	private String type;
 	
 	@OneToMany

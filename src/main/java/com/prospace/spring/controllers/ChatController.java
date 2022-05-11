@@ -30,30 +30,28 @@ public class ChatController {
     @Autowired private com.prospace.spring.service.ChatMessageService chatMessageService;
     @Autowired private com.prospace.spring.service.ChatRoomService chatRoomService;
 
-    @MessageMapping("/{username}/msgs")
-    public void processMessages(@Payload com.prospace.spring.entity.ChatMessage chatMessage,@DestinationVariable String username)
-    {
-    	
-    	log.info("----------------in chat ");
-    	log.info("-------------------chat message : "+chatMessage);
-    	log.info("-------------USERNAME------------------"+username);
-        var chatId = chatRoomService
-                .getChatId(chatMessage.getSenderId(), chatMessage.getRecipientId(), true);
-        chatMessage.setChatId(chatId);
-        log.info("CHAT ID IN CONTROLLER"+chatId); 
-        // HISTORIQUE CONVERSATION 
-        List<ChatMessage> chatmsgs = chatMessageService.findChatMessages(chatMessage.getSenderId(), chatMessage.getRecipientId());
-        
-        for (int i = 0 ; i<chatmsgs.size() ; i++) {
-        	log.info("size : "+chatmsgs.size());
-        	ChatMessage ch = chatmsgs.get(i);
-        	messagingTemplate.convertAndSendToUser(
-                    username,"/queue/messages",
-                    ch);
-        	log.info("in loop : "+i);
-        }
-      
-    }
+	/*
+	 * @MessageMapping("/{username}/msgs") public void processMessages(@Payload
+	 * com.prospace.spring.entity.ChatMessage chatMessage,@DestinationVariable
+	 * String username) {
+	 * 
+	 * log.info("----------------in chat ");
+	 * log.info("-------------------chat message : "+chatMessage);
+	 * log.info("-------------USERNAME------------------"+username); var chatId =
+	 * chatRoomService .getChatId(chatMessage.getSenderId(),
+	 * chatMessage.getRecipientId(), true); chatMessage.setChatId(chatId);
+	 * log.info("CHAT ID IN CONTROLLER"+chatId); // HISTORIQUE CONVERSATION
+	 * List<ChatMessage> chatmsgs =
+	 * chatMessageService.findChatMessages(chatMessage.getSenderId(),
+	 * chatMessage.getRecipientId());
+	 * 
+	 * for (int i = 0 ; i<chatmsgs.size() ; i++) {
+	 * log.info("size : "+chatmsgs.size()); ChatMessage ch = chatmsgs.get(i);
+	 * messagingTemplate.convertAndSendToUser( username,"/queue/messages", ch);
+	 * log.info("in loop : "+i); }
+	 * 
+	 * }
+	 */
     
     @MessageMapping("/chat")
     public void processMessage(@Payload com.prospace.spring.entity.ChatMessage chatMessage) {
@@ -61,15 +59,35 @@ public class ChatController {
                 .getChatId(chatMessage.getSenderId(), chatMessage.getRecipientId(), true);
         chatMessage.setChatId(chatId);
         com.prospace.spring.entity.ChatMessage saved = chatMessageService.save(chatMessage);
+        log.info("Chat ID => "+chatId);
+        log.info("message to send : "+saved.getContent());
+        messagingTemplate.convertAndSendToUser(
+                chatId,"/queue/message",
+                saved);
         
-       
-        	messagingTemplate.convertAndSendToUser(
-                    chatMessage.getRecipientId(),"/queue/message",
-                    saved);
-        	messagingTemplate.convertAndSendToUser(
-                    chatMessage.getSenderId(),"/queue/message",
-                    saved);
+        
+		/*
+		 * messagingTemplate.convertAndSendToUser(
+		 * chatMessage.getRecipientId(),"/queue/message", saved);
+		 * messagingTemplate.convertAndSendToUser(
+		 * chatMessage.getSenderId(),"/queue/message", saved);
+		 */
         	
+    }
+    @GetMapping("/chatId/{username}/{recipientId}")
+    public String getChatId(
+            @PathVariable("username") String username,
+            @PathVariable("recipientId") String recipientId) {
+    	log.info("username"+username);
+    	log.info("recipientId"+recipientId);
+    	if (username.equalsIgnoreCase("undefined") || recipientId.equalsIgnoreCase("undefined")) {
+    		return null;
+    	}
+    	var chatId = chatRoomService
+                .getChatId(username, recipientId, true);
+    	log.info("---------get Chat ID--------------"+chatId);
+        return chatRoomService
+                .getChatId(username, recipientId, true);
     }
 
     @GetMapping("/messages/{senderId}/{recipientId}/count")

@@ -1,0 +1,212 @@
+2022-05-11 15:44:46.587  WARN 1340 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 15:44:46.615  INFO 1340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-05-11 15:44:46.618  INFO 1340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-05-11 15:44:46.659  INFO 1340 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 15:44:46.665  INFO 1340 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-05-11 15:44:48.012  INFO 1340 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 15:44:48.013  INFO 1340 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 15:44:49.018  INFO 1340 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fff695, org.springframework.security.web.context.SecurityContextPersistenceFilter@50c1cba4, org.springframework.security.web.header.HeaderWriterFilter@45043db, org.springframework.web.filter.CorsFilter@5efcbb25, org.springframework.security.web.authentication.logout.LogoutFilter@5a0a509e, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@1370a442, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@557f182c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53b7d7c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73adce2a, org.springframework.security.web.session.SessionManagementFilter@1af9ba2f, org.springframework.security.web.access.ExceptionTranslationFilter@66ac62e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d5cfae0]
+2022-05-11 15:44:49.088  INFO 1340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-11 15:44:49.125  WARN 1340 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-05-11 15:44:49.126  INFO 1340 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-05-11 15:44:49.126  INFO 1340 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-05-11 15:44:49.293  INFO 1340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-05-11 15:44:50.006  INFO 1340 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-05-11 15:44:50.007  INFO 1340 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7e0c15b7]]
+2022-05-11 15:44:50.007  INFO 1340 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-05-11 15:44:50.011  INFO 1340 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.255 seconds (JVM running for 58455.044)
+2022-05-11 15:44:50.012  INFO 1340 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-05-11 15:44:50.033  INFO 1340 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-05-11 15:44:50.037  INFO 1340 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-05-11 15:44:50.039  INFO 1340 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 3ms
+2022-05-11 15:44:50.040  INFO 1340 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-11 15:44:52.372  INFO 1340 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 15:44:52.374  INFO 1340 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 15:44:52.376  INFO 1340 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-11 15:44:52.378  WARN 1340 --- [http-nio-8089-exec-1] o.s.w.s.s.t.h.DefaultSockJsService       : Origin header value 'http://localhost' not allowed.
+2022-05-11 15:44:59.172  INFO 1340 --- [Thread-45] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-05-11 15:44:59.172  INFO 1340 --- [Thread-45] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7e0c15b7]]
+2022-05-11 15:44:59.172  INFO 1340 --- [Thread-45] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-05-11 15:44:59.449  INFO 1340 --- [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 15:44:59.450  INFO 1340 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-05-11 15:44:59.455  INFO 1340 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-05-11 15:44:59.726  INFO 1340 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_60 on DESKTOP-5QKD15D with PID 1340 (C:\Work\workspace-sts\prospace-project\target\classes started by 21699 in C:\Work\workspace-sts\prospace-project)
+2022-05-11 15:44:59.726  INFO 1340 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-05-11 15:45:00.148  INFO 1340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 15:45:00.255  INFO 1340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 33 JPA repository interfaces.
+2022-05-11 15:45:00.476  INFO 1340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-05-11 15:45:00.477  INFO 1340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 15:45:00.477  INFO 1340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-11 15:45:00.490  INFO 1340 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-05-11 15:45:00.490  INFO 1340 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 762 ms
+2022-05-11 15:45:00.524  WARN 1340 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 15:45:00.543  INFO 1340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-05-11 15:45:00.546  INFO 1340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-05-11 15:45:00.584  INFO 1340 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 15:45:00.589  INFO 1340 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-05-11 15:45:02.029  INFO 1340 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 15:45:02.029  INFO 1340 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 15:45:02.989  INFO 1340 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14bbe8d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@16464ff8, org.springframework.security.web.header.HeaderWriterFilter@85b6363, org.springframework.web.filter.CorsFilter@6529dfe2, org.springframework.security.web.authentication.logout.LogoutFilter@a50fb77, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@b6d3b17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19e6f214, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a75ca30, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21fc9b59, org.springframework.security.web.session.SessionManagementFilter@7ae3c7f0, org.springframework.security.web.access.ExceptionTranslationFilter@7a2eb034, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28ca70c]
+2022-05-11 15:45:03.069  INFO 1340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-11 15:45:03.101  WARN 1340 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-05-11 15:45:03.101  INFO 1340 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-05-11 15:45:03.101  INFO 1340 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-05-11 15:45:03.241  INFO 1340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-05-11 15:45:04.028  INFO 1340 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-05-11 15:45:04.028  INFO 1340 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@728aee88]]
+2022-05-11 15:45:04.029  INFO 1340 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-05-11 15:45:04.032  INFO 1340 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 4.334 seconds (JVM running for 58469.066)
+2022-05-11 15:45:04.033  INFO 1340 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-05-11 15:45:04.057  INFO 1340 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-05-11 15:45:04.062  INFO 1340 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-05-11 15:45:04.065  INFO 1340 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 4ms
+2022-05-11 15:45:04.066  INFO 1340 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-11 15:45:22.493  INFO 1340 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 15:45:22.493  INFO 1340 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 15:45:22.496  INFO 1340 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-11 15:45:30.414  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.controllers.ChatController    : usernamenesrine
+2022-05-11 15:45:30.415  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.controllers.ChatController    : recipientIdamine02
+2022-05-11 15:45:30.415  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:30.478  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@1ccf5eb4
+2022-05-11 15:45:30.479  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:30.479  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:30.479  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@b2afa30
+2022-05-11 15:45:30.486  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:30.490  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.controllers.ChatController    : ---------get Chat ID--------------nesrine_amine02
+2022-05-11 15:45:30.490  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:30.490  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@1ccf5eb4
+2022-05-11 15:45:30.490  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:30.490  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:30.491  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@b2afa30
+2022-05-11 15:45:30.492  INFO 1340 --- [http-nio-8089-exec-8] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:30.550  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-11 15:45:30.550  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:30.646  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@49eaa6a4
+2022-05-11 15:45:30.646  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:30.646  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:30.647  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@1b22efc3
+2022-05-11 15:45:30.648  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:30.655  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------nesrine_amine02
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------6
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 3
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 29
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 105
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 106
+2022-05-11 15:45:30.656  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:30.657  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 107
+2022-05-11 15:45:30.657  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:30.657  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 108
+2022-05-11 15:45:30.657  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:34.131  INFO 1340 --- [clientInboundChannel-4] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:34.180  INFO 1340 --- [clientInboundChannel-4] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@78416737
+2022-05-11 15:45:34.180  INFO 1340 --- [clientInboundChannel-4] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:34.180  INFO 1340 --- [clientInboundChannel-4] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:34.239  INFO 1340 --- [clientInboundChannel-4] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@5322ead4
+2022-05-11 15:45:34.239  INFO 1340 --- [clientInboundChannel-4] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:34.271  INFO 1340 --- [clientInboundChannel-4] c.p.spring.controllers.ChatController    : Chat ID => nesrine_amine02
+2022-05-11 15:45:34.271  INFO 1340 --- [clientInboundChannel-4] c.p.spring.controllers.ChatController    : message to send : r
+2022-05-11 15:45:48.837  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.controllers.ChatController    : usernamenesrine
+2022-05-11 15:45:48.837  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.controllers.ChatController    : recipientIdamine02
+2022-05-11 15:45:48.837  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:48.905  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@5368ba12
+2022-05-11 15:45:48.905  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:48.905  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:48.906  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@896fc68
+2022-05-11 15:45:48.906  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:48.912  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.controllers.ChatController    : ---------get Chat ID--------------nesrine_amine02
+2022-05-11 15:45:48.912  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:48.913  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@5368ba12
+2022-05-11 15:45:48.913  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:48.913  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:48.913  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@896fc68
+2022-05-11 15:45:48.914  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:48.980  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-11 15:45:48.981  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:49.035  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@3369c17d
+2022-05-11 15:45:49.035  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:49.035  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : recipient username : amine02
+2022-05-11 15:45:49.036  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@eee547c
+2022-05-11 15:45:49.037  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 2
+2022-05-11 15:45:49.045  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------nesrine_amine02
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------7
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 3
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 29
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 105
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 106
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 107
+2022-05-11 15:45:49.046  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:49.047  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 108
+2022-05-11 15:45:49.047  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:49.047  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : MESSAGE ID: 109
+2022-05-11 15:45:49.047  INFO 1340 --- [http-nio-8089-exec-1] c.p.spring.service.ChatMessageService    : message chatId nesrine_amine02
+2022-05-11 15:45:53.104  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.controllers.ChatController    : usernamenesrine
+2022-05-11 15:45:53.104  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.controllers.ChatController    : recipientIdmarwene
+2022-05-11 15:45:53.104  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:53.144  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@37027076
+2022-05-11 15:45:53.145  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:53.145  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient username : marwene
+2022-05-11 15:45:53.146  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@1256889a
+2022-05-11 15:45:53.146  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 3
+2022-05-11 15:45:53.153  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.controllers.ChatController    : ---------get Chat ID--------------nesrine_marwene
+2022-05-11 15:45:53.153  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:53.154  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@37027076
+2022-05-11 15:45:53.154  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:53.154  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient username : marwene
+2022-05-11 15:45:53.155  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@1256889a
+2022-05-11 15:45:53.156  INFO 1340 --- [http-nio-8089-exec-9] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 3
+2022-05-11 15:45:53.233  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : --------------IN FINDCHATMESSAGES FUNCTION------------------------
+2022-05-11 15:45:53.233  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:53.276  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@7f83b0c2
+2022-05-11 15:45:53.276  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:53.276  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : recipient username : marwene
+2022-05-11 15:45:53.277  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@1d5efc30
+2022-05-11 15:45:53.278  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 3
+2022-05-11 15:45:53.283  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : ----------------CHAT ID ? ---------nesrine_marwene
+2022-05-11 15:45:53.284  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : ----------------------- MESSAGES -------------------------2
+2022-05-11 15:45:53.284  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 5
+2022-05-11 15:45:53.285  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId nesrine_marwene
+2022-05-11 15:45:53.285  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : MESSAGE ID: 7
+2022-05-11 15:45:53.285  INFO 1340 --- [http-nio-8089-exec-4] c.p.spring.service.ChatMessageService    : message chatId nesrine_marwene
+2022-05-11 15:45:55.080  INFO 1340 --- [clientInboundChannel-3] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 15:45:55.121  INFO 1340 --- [clientInboundChannel-3] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@2683f3fc
+2022-05-11 15:45:55.121  INFO 1340 --- [clientInboundChannel-3] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 15:45:55.121  INFO 1340 --- [clientInboundChannel-3] c.p.spring.service.ChatRoomService       : recipient username : marwene
+2022-05-11 15:45:55.129  INFO 1340 --- [clientInboundChannel-3] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@2312d24d
+2022-05-11 15:45:55.130  INFO 1340 --- [clientInboundChannel-3] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 3
+2022-05-11 15:45:55.158  INFO 1340 --- [clientInboundChannel-3] c.p.spring.controllers.ChatController    : Chat ID => nesrine_marwene
+2022-05-11 15:45:55.158  INFO 1340 --- [clientInboundChannel-3] c.p.spring.controllers.ChatController    : message to send : ee
+2022-05-11 15:46:03.015  INFO 1340 --- [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 10]
+2022-05-11 16:16:03.025  INFO 1340 --- [MessageBroker-5] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 443]
+2022-05-11 16:46:03.029  INFO 1340 --- [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 876]
+2022-05-11 17:16:03.039  INFO 1340 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 1309]
+2022-05-11 17:46:03.055  INFO 1340 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 1742]
+2022-05-11 18:16:03.062  INFO 1340 --- [MessageBroker-7] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 2175]
+2022-05-11 18:46:03.078  INFO 1340 --- [MessageBroker-4] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 2608]
+2022-05-11 18:52:53.946  INFO 1340 --- [clientInboundChannel-17] c.p.spring.service.ChatRoomService       : sender username nesrine
+2022-05-11 18:52:54.002  INFO 1340 --- [clientInboundChannel-17] c.p.spring.service.ChatRoomService       : sender : com.prospace.spring.entity.User@182bb3bc
+2022-05-11 18:52:54.003  INFO 1340 --- [clientInboundChannel-17] c.p.spring.service.ChatRoomService       : -------------- 
+
+2022-05-11 18:52:54.003  INFO 1340 --- [clientInboundChannel-17] c.p.spring.service.ChatRoomService       : recipient username : marwene
+2022-05-11 18:52:54.011  INFO 1340 --- [clientInboundChannel-17] c.p.spring.service.ChatRoomService       : recipient : com.prospace.spring.entity.User@14cf52d0
+2022-05-11 18:52:54.015  INFO 1340 --- [clientInboundChannel-17] c.p.spring.service.ChatRoomService       :  --------- ID CHAT ROOM 3
+2022-05-11 18:52:54.065  INFO 1340 --- [clientInboundChannel-17] c.p.spring.controllers.ChatController    : Chat ID => nesrine_marwene
+2022-05-11 18:52:54.065  INFO 1340 --- [clientInboundChannel-17] c.p.spring.controllers.ChatController    : message to send : h
+2022-05-11 19:16:03.083  INFO 1340 --- [MessageBroker-3] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 3041]

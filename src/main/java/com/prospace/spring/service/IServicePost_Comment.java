@@ -5,7 +5,7 @@ import java.util.List;
 import com.prospace.spring.entity.Post_Comment;
 
 public interface IServicePost_Comment {
-	Post_Comment addComment(Long userId, Long postId, Post_Comment comment);
+	Post_Comment addComment(Post_Comment comment,Long userId, Long postId);
 
 	void deleteComment(Long id);
 
@@ -22,5 +22,6 @@ public interface IServicePost_Comment {
 	Post_Comment addCommentReply(Long commentId, Long userId, Post_Comment comment);
 
 	List<Post_Comment> retrievePostCommentReplies(Long commentId);
+	Post_Comment updateCommentReply(Post_Comment comment);
 
 } 

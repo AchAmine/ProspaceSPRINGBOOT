@@ -27,14 +27,15 @@ public class PostCommentRestController {
 	IServicePost_Comment post_commentService;
 	
 
+	
 	@ApiOperation(value = "Add comment  ")
-	@PostMapping("/add-comment/{post-id}/{user-id}")
-	public Post_Comment addComment(@RequestBody Post_Comment comment, @PathVariable("post-id") Long postId,
-			@PathVariable("user-id") Long userId) {
+	@PostMapping("/add-comment/{user-id}/{post-id}")
+	public Post_Comment addComment(@RequestBody Post_Comment comment,@PathVariable("user-id") Long userId, @PathVariable("post-id") Long postId
+			) {
 		String str = post_commentService.GetCensoredText(comment.getContent());
 
 		comment.setContent(str);
-		return post_commentService.addComment(userId, postId, comment);
+		return post_commentService.addComment( comment,userId, postId);
 	}
 
 	@ApiOperation(value = "Delete comment")
@@ -75,6 +76,11 @@ public class PostCommentRestController {
 	public List<Post_Comment> retrievePostCommentReplies(@PathVariable("comment-id") Long postId) {
 
 		return post_commentService.retrievePostCommentReplies(postId);
+	}
+	@ApiOperation(value = "Update comment reply")
+	@PutMapping("/modify-comment-reply")
+	public Post_Comment modifyCommentReply(@RequestBody Post_Comment comment) {
+		return post_commentService.updateCommentReply(comment);
 	}
 	
 	

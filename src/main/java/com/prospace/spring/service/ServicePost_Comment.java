@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import com.prospace.spring.entity.Post;
 import com.prospace.spring.entity.Post_Comment;
+import com.prospace.spring.entity.Topic;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.PostRepository;
 import com.prospace.spring.repository.Post_CommentRepository;
@@ -45,7 +46,7 @@ public class ServicePost_Comment implements IServicePost_Comment {
 		comment.setPost(post_comment.getPost());
 		comment.setUser(post_comment.getUser());
 		Date date = new Date(System.currentTimeMillis());
-		comment.setUpdatedAt(date);
+		comment.setPostedAt(date);
 		return post_commentRepository.save(comment);
 
 	}
@@ -166,22 +167,36 @@ public class ServicePost_Comment implements IServicePost_Comment {
 		}
 	} // end loadBadWords
 
+//	@Override
+//	public Post_Comment addComment(Post_Comment comment,Long userId, Long postId) {
+//		// TODO Auto-generated method stub
+//		Post post = postRepository.findById(postId).orElse(null);
+//		User user = userRepository.findById(userId).orElse(null);
+//		comment.setUser(user);
+//		comment.setPost(post);
+//		String str = GetCensoredText(comment.getContent());
+//		/*
+//		 * String str= comment.getContent(); str=GetCensoredText(str);
+//		 */
+//		comment.setContent(str);
+//		Date date = new Date(System.currentTimeMillis());
+//		comment.setPostedAt(date);
+//
+//		return post_commentRepository.save(comment); 
+//	}
+	
 	@Override
-	public Post_Comment addComment(Long userId, Long postId, Post_Comment comment) {
-		// TODO Auto-generated method stub
-		Post post = postRepository.findById(postId).orElse(null);
-		User user = userRepository.findById(userId).orElse(null);
-		comment.setUser(user);
-		comment.setPost(post);
-		String str = GetCensoredText(comment.getContent());
-		/*
-		 * String str= comment.getContent(); str=GetCensoredText(str);
-		 */
-		comment.setContent(str);
+	public Post_Comment addComment(Post_Comment postcomment, Long idUser,Long postid) {
+		User user = userRepository.findById(idUser).orElse(null);
+		Post post = postRepository.findById(postid).orElse(null);
+		postcomment.setPost(post);
+		postcomment.setUser(user);
+		String str = GetCensoredText(postcomment.getContent());
+		postcomment.setContent(str);
 		Date date = new Date(System.currentTimeMillis());
-		comment.setPostedAt(date);
-
-		return post_commentRepository.save(comment); 
+		postcomment.setPostedAt(date);
+		
+		return post_commentRepository.save(postcomment);
 	}
 
 	/****** comment reply ****/
@@ -203,6 +218,21 @@ public class ServicePost_Comment implements IServicePost_Comment {
 		return comments;
 	}
 
+	
+
+	@Override
+	public Post_Comment updateCommentReply(Post_Comment comment) {
+		Post_Comment post_comment = post_commentRepository.findById(comment.getIdComment()).orElse(null);
+		// TODO Auto-generated method stub
+		comment.setPComment(post_comment.getPComment());
+		comment.setUser(post_comment.getUser());
+		Date date = new Date(System.currentTimeMillis());
+		comment.setPostedAt(date);
+
+		comment.setUpdatedAt(date);
+		return post_commentRepository.save(comment);
+
+	}
 	/****************************************/
 
 }

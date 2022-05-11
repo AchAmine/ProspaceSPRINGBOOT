@@ -73,7 +73,6 @@ public class ServiceArticle implements IServiceArticle{
 		imageService.save(file);
 				//EndImage
 				
-				
 		return articleRepository.save(A);
 	}
 

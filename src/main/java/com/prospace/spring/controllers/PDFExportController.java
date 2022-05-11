@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.prospace.spring.entity.QRCodeGenerator;
+import com.prospace.spring.entity.User;
+import com.prospace.spring.repository.UserRepository;
 import com.prospace.spring.service.IServiceResultQuizz;
 import com.prospace.spring.service.PDFGeneratorService;
 
@@ -23,14 +25,19 @@ public class PDFExportController {
     private final PDFGeneratorService pdfGeneratorService;
     @Autowired
     IServiceResultQuizz resultQuizzServie;
+    @Autowired
+	UserRepository userRepository;
+	private static final String QR_CODE_IMAGE_PATH = "./src/main/resources/";
 
     public PDFExportController(PDFGeneratorService pdfGeneratorService) {
         this.pdfGeneratorService = pdfGeneratorService;
     }
 
     @GetMapping("/pdf/generate/{Quizz-id}/{User-id}")
-    public void generatePDF(HttpServletResponse response,@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId) throws IOException {
-        response.setContentType("application/pdf");
+    public void generatePDF(HttpServletResponse response,@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId) throws Exception {
+    	User u= userRepository.findById(userId).orElse(null);
+    	QRCodeGenerator.generateQRCodeImage(u.getUserName(), QR_CODE_IMAGE_PATH+u.getUserName()+".png");
+    	response.setContentType("application/pdf");
         DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd:hh:mm:ss");
         String currentDateTime = dateFormatter.format(new Date());
 

@@ -19,4 +19,7 @@ List<Response> findByUserresponse(User userresponse);
 		@Query("SELECT r from Response r WHERE r.userresponse.idUser = :userId AND r.quizz.idQuizz = :quizzId")
 		List<Response> userResponses(@Param("quizzId") Long quizzId ,
 				@Param("userId") Long userId);
+	@Query(value = "SELECT userresponse_id_user FROM response" ,
+				nativeQuery = true)
+		List<Long> iduserresponses();
 }

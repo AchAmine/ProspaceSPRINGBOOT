@@ -26,7 +26,7 @@ import lombok.ToString;
 @Setter 
 @NoArgsConstructor 
 @AllArgsConstructor
-@RequiredArgsConstructor
+
 @ToString
 public class ResultQuizz implements Serializable{
 	/**
@@ -36,19 +36,19 @@ public class ResultQuizz implements Serializable{
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long idResultQuizz;
-	@NonNull
+	
 	private float score;
-	@NonNull
+	
 	private int correctAnswers;
-	@NonNull
+	
 	private int falseAnswers;
-	@NonNull
+	
 	private int nbreQuestions;
-	@NonNull
+	
 	@ManyToOne 
 	private User user; 
 	@JsonIgnore
-	@NonNull
+	
 	@ManyToOne  
 	private Quizz quizz;
 	

@@ -12,11 +12,13 @@ import com.prospace.spring.entity.Answer;
 import com.prospace.spring.entity.Question;
 import com.prospace.spring.entity.Quizz;
 import com.prospace.spring.entity.Response;
+import com.prospace.spring.entity.ResultQuizz;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.repository.AnswerRepository;
 import com.prospace.spring.repository.QuestionRepository;
 import com.prospace.spring.repository.QuizzRepository;
 import com.prospace.spring.repository.ResponseRepository;
+import com.prospace.spring.repository.ResultQuizzRepository;
 import com.prospace.spring.repository.UserRepository;
 
 @Service
@@ -32,15 +34,20 @@ public class ServiceResponse implements IServiceResponse {
 	UserRepository userRepository;
 	@Autowired
 	QuizzRepository quizzRepository;
+	@Autowired
+	ResultQuizzRepository resultQuizzRepository;
 
 	@Override
 	@Transactional
 	// public Response addResponse(Long idQuestion,Long idAnswer,Long idUser)
-	public Response addResponse(Response response ,Long idUser,Long idQuizz) {
+	public  Response addResponse(Response response ,Long idUser,Long idQuizz) {
 	//	Question question = questionRepository.findById(idQuestion).orElse(null);
 	//	Answer answer = answerRepository.findById(idAnswer).orElse(null);
+		
 		User user = userRepository.findById(idUser).orElse(null);
 		Quizz quizz= quizzRepository.findById(idQuizz).orElse(null);
+			if(!responseRepository.iduserresponses().contains(idUser)){
+		
 		//Response r = new Response();
 	//	r.setQuestion(question);
 		
@@ -54,6 +61,10 @@ public class ServiceResponse implements IServiceResponse {
 		response.setQuizz(quizz);
 		//answerRepository.saveAll(response.getSelectedAnswers());
 		return responseRepository.save(response);
-	}
-
-}
+		 }
+	
+	return null;
+	 
+	}}
+	
+	

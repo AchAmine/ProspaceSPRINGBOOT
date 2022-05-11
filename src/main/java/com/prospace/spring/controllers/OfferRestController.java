@@ -10,9 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.prospace.spring.entity.Offer;
+import com.prospace.spring.entity.OfferState;
 import com.prospace.spring.entity.Partner;
 import com.prospace.spring.entity.User;
 import com.prospace.spring.service.IServiceOffer;
@@ -41,8 +47,14 @@ public class OfferRestController {
 
 		@ApiOperation(value = "Add offer")
 		@PostMapping("/add-offer/{Partner-id}")
-		public Offer addOffer(@RequestBody Offer o,@PathVariable("Partner-id") Long id) {
-		return offerService.addOffer(o,id);
+		public Offer addOffer(@RequestParam ("offer") String offer,@PathVariable("Partner-id") Long id,
+				@RequestParam("file") MultipartFile file) 
+						throws JsonMappingException, JsonProcessingException 
+		{
+			Offer o = new ObjectMapper().readValue(offer, Offer.class);
+			o.setState(OfferState.Waiting);
+
+			return offerService.addOffer(o,id,file);
 		}
 		
 		// http://localhost:8089/SpringMVC/Offer/remove-Offer/{Offer-id}
@@ -81,4 +93,10 @@ public class OfferRestController {
 		return partnerService.AddAndRetrievePartners();
 		
 		}
+		
+		@PostMapping("/upload-file")
+		public void uploadFile(MultipartFile file){
+			offerService.uploadFile(file);
+		}
+		
 }

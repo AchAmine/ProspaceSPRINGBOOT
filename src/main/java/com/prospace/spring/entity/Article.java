@@ -72,8 +72,7 @@ public class Article implements Serializable{
 	@NonNull
 	@Enumerated(EnumType.STRING)
 	private ArticleType type;
-	
-	
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;
 	

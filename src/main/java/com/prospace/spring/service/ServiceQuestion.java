@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.prospace.spring.entity.Answer;
 import com.prospace.spring.entity.Question;
 import com.prospace.spring.entity.Quizz;
 import com.prospace.spring.repository.QuestionRepository;
@@ -61,6 +62,7 @@ public class ServiceQuestion implements IServiceQuestion {
 	public Question updateQuestion(Question q, Long QuizzId) {
 		Quizz quizz= quizzRepository.findById(QuizzId).orElse(null);
 		//quizz.getQuestions().add(q);
+		
 		q.setQuiz(quizz);
 		return questionRepository.save(q);
 	}
@@ -72,7 +74,10 @@ public class ServiceQuestion implements IServiceQuestion {
 	}*/
 
 	
-	
+	@Override
+	public Question retrieveQuestion(Long id) {
+		return questionRepository.findById(id).orElse(null);
+	}
 
 	
 

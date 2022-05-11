@@ -49,21 +49,23 @@ public class Offer implements Serializable{
 	
 	@NonNull
 	private String title; 
+	@NonNull
+	private String Type; 
 	
 	@NonNull
 	private String description;
 	
-	@NonNull
 	@Temporal(TemporalType.DATE)
 	private Date startsAt;
 	
-	@NonNull
 	@Temporal(TemporalType.DATE)
 	private Date endsAt;
 
-	@NonNull
 	@Enumerated(EnumType.STRING)
 	private OfferState state;
+	
+	private float moyRatings;
+	
 	
 	//@ManyToOne
 	//private User handledBy;
@@ -78,6 +80,7 @@ public class Offer implements Serializable{
 
 	@OneToMany(mappedBy="offer")
 	private List<Rating> Ratings;
+	
 	
 
 	

@@ -42,20 +42,17 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 
 	@Override
 	public ResultQuizz calculScore(Long quizzId,Long userId) {
-		float score=0;
+		float score=0; // score = nbre total de points
+		
 		int nbFalseAnswers=0,nbTrueAnswers =0;
 		Quizz quizz = quizzRepository.findById(quizzId).orElse(null);
 		User user= userRepository.findById(userId).orElse(null);
-
-			
+		//---------------------------------------------------
 			for(Response r : responseRepository.userResponses(quizzId,userId))
 						{	
 					for(Answer a : r.getSelectedAnswers()){
-
 					
 				if(a.getIsCorrect()==true){
-					
-				
 				score+=(a.getNbreptsanswer());	
 					nbTrueAnswers++;
 				}else if(a.getIsCorrect()==false){
@@ -63,18 +60,40 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 					nbFalseAnswers++;
 				}
 					}	
-			
-			//
-		
+	
 			// score=(noteIndiv/responseRepository.NbResponsesQuizz())*100;
-		
-
-		
+					
+			}
+			//---------------------------------------------------
+			
+			float scoreFinal =0 ; // score final du quizz en % 
+			float totalPts = totalPts(quizz);
+			scoreFinal = (score/totalPts)*100;
+			ResultQuizz result= new ResultQuizz();
+			
+			result.setScore(scoreFinal);
+			result.setCorrectAnswers(nbTrueAnswers);
+			result.setFalseAnswers(nbFalseAnswers);
+			result.setNbreQuestions(questionRepository.NbQuestions(quizz));
+			result.setUser(user);
+			result.setQuizz(quizz);
+			return resultQuizzRepository.save(result);
+			
 	}
-			float scoreFinal = (score/(answerRepository.NbPtsQuizz(quizzId)))*100;
-			ResultQuizz result= new ResultQuizz(scoreFinal,nbTrueAnswers,nbFalseAnswers,
-			questionRepository.NbQuestions(quizz),user,quizz);
-			return resultQuizzRepository.save(result);}
+	
+	// fonction calcul nombre total des points de correctAnswer
+	public float totalPts(Quizz quiz) {
+		float total = 0;
+		for(Question question : quiz.getQuestions()){
+			for (Answer answer : question.getAnswers()){
+				if (answer.getIsCorrect()==true) {
+					total = total + answer.getNbreptsanswer();
+				}
+			}
+		}
+		return total;
+	}
+	
 	
 	@Override
 	public List<ResultQuizz> retrieveAllResults() {
@@ -97,7 +116,28 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 		//return resultQuizzRepository.TOP3Result();
 		return resulthMap;
 	}
-	
+	@Override
+	public ResultQuizz userResult(Long idquizz , Long idUser)
+	{
+		Quizz quizz = quizzRepository.findById(idquizz).orElse(null);
+		User user = userRepository.findById(idUser).orElse(null);
+		if(resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser)!=null){
+		return resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser);
+			
+		}
+		return null;
+	}
+	@Override
+	public boolean userResultExits(Long idquizz , Long idUser)
+	{
+		Quizz quizz = quizzRepository.findById(idquizz).orElse(null);
+		User user = userRepository.findById(idUser).orElse(null);
+		if(resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser)!=null){
+		return true;
+			
+		}
+		return false;
+	}
 	
 
 }

@@ -1,11 +1,9 @@
 package com.prospace.spring.entity;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -13,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -23,8 +23,6 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-
 @Entity
 @Getter
 @Setter 
@@ -32,35 +30,36 @@ import lombok.ToString;
 @AllArgsConstructor
 @RequiredArgsConstructor 
 @ToString
-public class Quizz implements Serializable{
+public class OfferComment implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Long idQuizz;
-
-	@NonNull
-	private String title;
+	private Long idOfferComment;
 	
 	@NonNull
-	private String categorie;
+	private String content;
 	
 	@NonNull
-	private Integer nbQuestions;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date postedAt;
 	
-	@NonNull
-	@Column(length=5000)
-	private String description;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date updatedAt;
 	
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	private User user;
+	
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Offer offer;
+	/*@OneToMany
+	private Set<OfferComment> offerCommentReplies;
 	@ManyToOne
-	private User partner;
+	private OfferComment offerComment;*/
 	
-	//@JsonIgnore
-	@OneToMany(mappedBy="quiz",cascade =CascadeType.ALL)
-	private List<Question> Questions;
-	//@OneToMany(mappedBy ="quizz")
-	//private List<ResultQuizz> Result;
-	
+
 }

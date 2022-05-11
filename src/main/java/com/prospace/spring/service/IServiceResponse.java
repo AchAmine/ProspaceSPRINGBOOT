@@ -1,5 +1,7 @@
 package com.prospace.spring.service;
 
+import java.util.List;
+
 import com.prospace.spring.entity.Response;
 
 public interface IServiceResponse {

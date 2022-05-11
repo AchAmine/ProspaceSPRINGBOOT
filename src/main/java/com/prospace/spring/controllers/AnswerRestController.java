@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,11 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.prospace.spring.entity.Answer;
 import com.prospace.spring.entity.Offer;
+import com.prospace.spring.entity.Quizz;
 import com.prospace.spring.service.IServiceAnswer;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @Api(tags = "Answer management")
 @RequestMapping("/Quizz/Question/Answers")
@@ -54,8 +56,13 @@ public class AnswerRestController {
 			public List<Answer> findAnswersByQuestion(@PathVariable("Question-id") Long idQuestion) {
 			return serviceAnswer.findAnswersByQuestion(idQuestion);
 			}
+			// http://localhost:8089/SpringMVC/Answer/retrieve-answer/8
+			@ApiOperation(value = "Get one answer")
+			@GetMapping("/retrieve-answer/{answer-id}")
+			public Answer retrieveOneAnswer(@PathVariable("answer-id") Long answerId) {
+			return serviceAnswer.retrieveAnswer(answerId);
 		
 
 			
 
-}
+}}

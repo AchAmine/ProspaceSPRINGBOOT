@@ -139,14 +139,15 @@ public class User implements Serializable{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
 	private Set<Offer> Offers;
 	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "partner", fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="partner",fetch = FetchType.LAZY)
+
 	private Set<Quizz> Quizz;
-	@JsonIgnore
+	/*@JsonIgnore
 	@OneToMany(mappedBy="user",fetch = FetchType.EAGER)
-	private Set<ResultQuizz> resultQuizz;
+	private Set<ResultQuizz> resultQuizz;*/
 
 	@JsonIgnore
-	@OneToOne(mappedBy="userresponse",fetch = FetchType.EAGER)
+	@OneToOne
 	private Response Response;
 
 	

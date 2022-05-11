@@ -10,5 +10,6 @@ public interface IServiceOfferComment {
 	OfferComment updateOfferComment(OfferComment comment);
 	
 	List<OfferComment> retrieveOfferComments(Long offerId);
+	public OfferComment addOfferCommentReply(Long commentId, Long userId, OfferComment comment);
 
 }

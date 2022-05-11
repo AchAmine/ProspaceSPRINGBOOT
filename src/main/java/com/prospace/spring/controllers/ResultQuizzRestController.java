@@ -41,8 +41,14 @@ public class ResultQuizzRestController {
 	
 	@ApiOperation(value = "user Score Quizz")
 	@GetMapping("/user-result/{Quizz-id}/{User-id}")
-	public boolean userResult(@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId){
+	public ResultQuizz userResult(@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId){
 		return serviceResultQuizz.userResult(userId,quizzId);
+
+}
+	@ApiOperation(value = "user Score Quizz")
+	@GetMapping("/user-result-Exists/{Quizz-id}/{User-id}")
+	public boolean userResultExists(@PathVariable("Quizz-id")Long quizzId,@PathVariable("User-id")Long userId){
+		return serviceResultQuizz.userResultExits(userId,quizzId);
 
 }
 	

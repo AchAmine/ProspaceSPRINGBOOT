@@ -72,8 +72,10 @@ public class ServiceOffer implements IServiceOffer{
 	 			ratingRepository.saveAll(ratings);
 	 			for (Rating rating : ratings) {
 	 				rating.setOffer(o);;
+	 				
 	 				ratingRepository.save(rating);
 	 			}
+	 			o.setMoyRatings(0);
 		return offerRepository.save(o);
 	}
 

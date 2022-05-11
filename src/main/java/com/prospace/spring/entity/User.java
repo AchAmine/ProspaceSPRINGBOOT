@@ -151,7 +151,7 @@ public class User implements Serializable{
 	private Set<ResultQuizz> resultQuizz;*/
 	
 	@JsonIgnore
-	@OneToOne(mappedBy="userresponse",fetch = FetchType.LAZY)
+	@OneToOne
 	private Response Response;
 
 	

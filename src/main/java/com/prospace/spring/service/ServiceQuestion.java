@@ -62,6 +62,7 @@ public class ServiceQuestion implements IServiceQuestion {
 	public Question updateQuestion(Question q, Long QuizzId) {
 		Quizz quizz= quizzRepository.findById(QuizzId).orElse(null);
 		//quizz.getQuestions().add(q);
+		
 		q.setQuiz(quizz);
 		return questionRepository.save(q);
 	}

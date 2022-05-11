@@ -25,10 +25,15 @@ public class ServiceRating implements IServiceRating {
 	public Rating addRating(Long userId, Long offerId, Rating rating) {
 		User user = userRepository.findById(userId).orElse(null);
 		Offer offer = offerRepository.findById(offerId).orElse(null);
+		//float moy=ratingRepository.AVGOffer(offerId);
 		rating.setUser(user);
 		rating.setOffer(offer);
-		
-		return ratingRepository.save(rating);
+
+		Rating r = ratingRepository.save(rating);
+		offer.setMoyRatings(ratingRepository.AVGOffer(offerId));
+	 offerRepository.save(offer);
+
+		return r;
 	}
 
 	@Override
@@ -42,7 +47,11 @@ public class ServiceRating implements IServiceRating {
 		Rating oldRating = ratingRepository.findById(rating.getIdRating()).orElse(null);
 		rating.setOffer(oldRating.getOffer());
 		rating.setUser(oldRating.getUser());
-		return ratingRepository.save(rating);
+		Rating r=ratingRepository.save(rating);
+						Offer offer= rating.getOffer();
+		offer.setMoyRatings(ratingRepository.AVGOffer(offer.getIdOffer()));
+		 offerRepository.save(offer);
+		 return r;
 	}
 	
 	@Override

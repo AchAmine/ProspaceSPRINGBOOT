@@ -59,10 +59,20 @@ public class ServiceOfferComment implements IServiceOfferComment{
 	public List<OfferComment> retrieveOfferComments(Long offerId) {
 		Offer offer = offerRepository.findById(offerId).orElse(null);
 		List<OfferComment> Offercomments =  offerCommentRepository.findByOffer(offer);
-		for(int i = 0 ; i<Offercomments.size();i++) {
-			Offercomments.get(i).setContent(Offercomments.get(i).getContent());
-		}
+		
 		return Offercomments;
 	}
+	
+	
+	@Override
+	public OfferComment addOfferCommentReply(Long commentId, Long userId, OfferComment comment) {
+		User user = userRepository.findById(userId).orElse(null);
+		OfferComment OfferComment = offerCommentRepository.findById(commentId).orElse(null);
+		//comment.setOfferComment(OfferComment);
+		comment.setUser(user);
+		return offerCommentRepository.save(comment);
+	}
+	
+	
 
 }

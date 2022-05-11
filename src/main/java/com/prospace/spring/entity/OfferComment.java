@@ -2,6 +2,7 @@ package com.prospace.spring.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -54,6 +56,10 @@ public class OfferComment implements Serializable{
 	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Offer offer;
+	/*@OneToMany
+	private Set<OfferComment> offerCommentReplies;
+	@ManyToOne
+	private OfferComment offerComment;*/
 	
 
 }

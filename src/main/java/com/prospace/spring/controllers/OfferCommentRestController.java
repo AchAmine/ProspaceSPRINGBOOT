@@ -56,4 +56,15 @@ public class OfferCommentRestController {
 		
 		return offeCommentService.retrieveOfferComments(offerId);
 	}
+	
+	@ApiOperation(value = "Add Offer comment reply ")
+	@PostMapping("/add-offer-comment-reply/{offer-comment-id}/{user-id}")
+	public OfferComment addCommentReply(@RequestBody OfferComment offercomment, @PathVariable("offer-comment-id") Long offercommentId,
+			@PathVariable("user-id") Long userId) {
+
+		return offeCommentService.addOfferCommentReply( offercommentId,userId , offercomment);
+	}
+
+
+	
 }

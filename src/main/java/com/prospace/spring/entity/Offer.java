@@ -64,6 +64,9 @@ public class Offer implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private OfferState state;
 	
+	private float moyRatings;
+	
+	
 	//@ManyToOne
 	//private User handledBy;
 	@ManyToOne

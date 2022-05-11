@@ -117,14 +117,26 @@ public class ServiceResultQuizz implements IServiceResultQuizz {
 		return resulthMap;
 	}
 	@Override
-	public boolean userResult(Long idquizz , Long idUser)
+	public ResultQuizz userResult(Long idquizz , Long idUser)
 	{
 		Quizz quizz = quizzRepository.findById(idquizz).orElse(null);
 		User user = userRepository.findById(idUser).orElse(null);
-		if( resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser)!=null)
-			{
-			return true;
-			} else return false;
+		if(resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser)!=null){
+		return resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser);
+			
+		}
+		return null;
+	}
+	@Override
+	public boolean userResultExits(Long idquizz , Long idUser)
+	{
+		Quizz quizz = quizzRepository.findById(idquizz).orElse(null);
+		User user = userRepository.findById(idUser).orElse(null);
+		if(resultQuizzRepository.getResultbyquizzanduser(idquizz, idUser)!=null){
+		return true;
+			
+		}
+		return false;
 	}
 	
 

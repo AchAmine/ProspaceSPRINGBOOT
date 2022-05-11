@@ -1,0 +1,126 @@
+2022-05-11 19:28:16.441  INFO 33308 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 33308 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
+2022-05-11 19:28:16.446  INFO 33308 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-05-11 19:28:16.603  INFO 33308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-11 19:28:16.604  INFO 33308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-11 19:28:19.565  INFO 33308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 19:28:20.104  INFO 33308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 518 ms. Found 34 JPA repository interfaces.
+2022-05-11 19:28:22.618  INFO 33308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-05-11 19:28:22.644  INFO 33308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 19:28:22.645  INFO 33308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-11 19:28:25.388  INFO 33308 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-05-11 19:28:25.389  INFO 33308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8783 ms
+2022-05-11 19:28:25.703  WARN 33308 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 19:28:25.902  INFO 33308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-11 19:28:26.475  INFO 33308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-11 19:28:26.914  INFO 33308 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 19:28:27.120  INFO 33308 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-11 19:28:27.636  INFO 33308 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-11 19:28:28.005  INFO 33308 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-05-11 19:28:35.288  INFO 33308 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 19:28:35.323  INFO 33308 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 19:28:42.479  INFO 33308 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bb81f9, org.springframework.security.web.context.SecurityContextPersistenceFilter@72b4f5fe, org.springframework.security.web.header.HeaderWriterFilter@4431c9ee, org.springframework.web.filter.CorsFilter@449310f0, org.springframework.security.web.authentication.logout.LogoutFilter@1aec10d5, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@1e804e53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f806462, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ac7f380, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@443a6c83, org.springframework.security.web.session.SessionManagementFilter@17386bd7, org.springframework.security.web.access.ExceptionTranslationFilter@5423c0e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e80cd82]
+2022-05-11 19:28:43.207  INFO 33308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-11 19:28:43.519  WARN 33308 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-05-11 19:28:43.556  INFO 33308 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-05-11 19:28:43.650  INFO 33308 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-05-11 19:28:44.623  INFO 33308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-05-11 19:28:55.755  INFO 33308 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-05-11 19:28:55.758  INFO 33308 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2612c515]]
+2022-05-11 19:28:55.760  INFO 33308 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-05-11 19:28:55.826  INFO 33308 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 40.347 seconds (JVM running for 74.957)
+2022-05-11 19:28:55.840  INFO 33308 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-05-11 19:29:01.516  INFO 33308 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-05-11 19:29:01.655  INFO 33308 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=4, name=processingStep, status=COMPLETED, exitStatus=COMPLETED, readCount=6, filterCount=0, writeCount=6 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=2, rollbackCount=0, exitDescription=
+2022-05-11 19:29:01.687  INFO 33308 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 54ms
+2022-05-11 19:29:09.720  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-11 19:29:09.720  INFO 33308 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-11 19:29:09.730  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-05-11 19:29:09.731  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2612c515]]
+2022-05-11 19:29:09.732  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-05-11 19:29:10.551  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 19:29:10.578  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-11 19:29:10.742  INFO 33308 --- [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-11 19:29:40.785  INFO 60392 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Starting ProspaceProjectApplication using Java 1.8.0_271 on LAPTOP-1M0GOS8T with PID 60392 (C:\Work\workspace-sts\prospace-project\target\classes started by essia in C:\Work\workspace-sts\prospace-project)
+2022-05-11 19:29:40.789  INFO 60392 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : No active profile set, falling back to default profiles: default
+2022-05-11 19:29:40.959  INFO 60392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-11 19:29:40.959  INFO 60392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-11 19:29:43.765  INFO 60392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 19:29:44.289  INFO 60392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 501 ms. Found 34 JPA repository interfaces.
+2022-05-11 19:29:46.441  INFO 60392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2022-05-11 19:29:46.465  INFO 60392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 19:29:46.466  INFO 60392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-11 19:29:46.747  INFO 60392 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2022-05-11 19:29:46.748  INFO 60392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5787 ms
+2022-05-11 19:29:47.171  WARN 60392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 19:29:47.372  INFO 60392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-11 19:29:47.779  INFO 60392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-11 19:29:48.256  INFO 60392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 19:29:48.445  INFO 60392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-11 19:29:49.048  INFO 60392 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-11 19:29:49.410  INFO 60392 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-05-11 19:29:55.705  INFO 60392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 19:29:55.724  INFO 60392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 19:30:00.655  INFO 60392 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@593bb1ba, org.springframework.security.web.context.SecurityContextPersistenceFilter@d35e714, org.springframework.security.web.header.HeaderWriterFilter@5cccc228, org.springframework.web.filter.CorsFilter@7bba0aa2, org.springframework.security.web.authentication.logout.LogoutFilter@21133e73, com.prospace.spring.JwtAndAuthConf.AuthTokenFilter@74e7718, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fff8adc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f24ca41, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cbda3e3, org.springframework.security.web.session.SessionManagementFilter@4dfa246e, org.springframework.security.web.access.ExceptionTranslationFilter@3729f66e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d476d65]
+2022-05-11 19:30:01.130  INFO 60392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-11 19:30:01.387  WARN 60392 --- [restartedMain] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2022-05-11 19:30:01.403  INFO 60392 --- [restartedMain] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2022-05-11 19:30:01.461  INFO 60392 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2022-05-11 19:30:02.310  INFO 60392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2022-05-11 19:30:06.275  INFO 60392 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-05-11 19:30:06.276  INFO 60392 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7aea09a3]]
+2022-05-11 19:30:06.278  INFO 60392 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-05-11 19:30:06.306  INFO 60392 --- [restartedMain] c.p.spring.ProspaceProjectApplication    : Started ProspaceProjectApplication in 26.48 seconds (JVM running for 28.441)
+2022-05-11 19:30:06.311  INFO 60392 --- [restartedMain] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2022-05-11 19:30:06.454  INFO 60392 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] launched with the following parameters: [{}]
+2022-05-11 19:30:06.535  INFO 60392 --- [restartedMain] o.s.batch.core.job.SimpleStepHandler     : Executing step: [processingStep]
+2022-05-11 19:30:06.664  INFO 60392 --- [restartedMain] c.prospace.spring.service.ServiceOffer   : -------------------------OFFERSun Dec 12 00:00:00 WAT 2021
+2022-05-11 19:30:06.668  INFO 60392 --- [restartedMain] c.prospace.spring.service.ServiceOffer   : -------------------------OFFERSat Feb 12 00:00:00 WAT 2022
+2022-05-11 19:30:06.672  INFO 60392 --- [restartedMain] c.prospace.spring.service.ServiceOffer   : -------------------------OFFERSun Jan 10 00:00:00 WAT 2021
+2022-05-11 19:30:06.677  INFO 60392 --- [restartedMain] c.prospace.spring.service.ServiceOffer   : -------------------------OFFERFri Jan 10 00:00:00 WAT 2020
+2022-05-11 19:30:06.682  INFO 60392 --- [restartedMain] c.prospace.spring.service.ServiceOffer   : -------------------------OFFERThu Jan 10 00:00:00 WAT 2019
+2022-05-11 19:30:06.816  INFO 60392 --- [restartedMain] c.prospace.spring.service.ServiceOffer   : -------------------------OFFERMon Jan 10 00:00:00 WAT 2022
+2022-05-11 19:30:06.834  INFO 60392 --- [restartedMain] o.s.batch.core.step.AbstractStep         : Step: [processingStep] executed in 298ms
+2022-05-11 19:30:06.857  INFO 60392 --- [restartedMain] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=listOffersJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 357ms
+2022-05-11 19:31:00.879  INFO 60392 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2022-05-11 19:31:47.243  INFO 60392 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 19:31:47.243  INFO 60392 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 19:31:47.245  INFO 60392 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-11 19:31:47.511  INFO 60392 --- [http-nio-8089-exec-2] com.prospace.spring.service.ServiceUser  : in method addUser
+2022-05-11 19:31:47.525  INFO 60392 --- [http-nio-8089-exec-2] com.prospace.spring.service.ServiceUser  : userName dont exist
+2022-05-11 19:31:50.018 ERROR 60392 --- [http-nio-8089-exec-2] com.prospace.spring.service.ServiceUser  : error in method addUserorg.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2022-05-11 19:36:22.254  INFO 60392 --- [http-nio-8089-exec-8] com.prospace.spring.service.ServiceUser  : in method addUser
+2022-05-11 19:36:22.259  INFO 60392 --- [http-nio-8089-exec-8] com.prospace.spring.service.ServiceUser  : userName dont exist
+2022-05-11 19:36:23.448 ERROR 60392 --- [http-nio-8089-exec-8] com.prospace.spring.service.ServiceUser  : error in method addUserorg.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2022-05-11 19:37:45.489  INFO 60392 --- [http-nio-8089-exec-4] c.p.spring.service.FollowersService      : ------User  : 1
+2022-05-11 19:37:45.493  INFO 60392 --- [http-nio-8089-exec-4] c.p.spring.service.FollowersService      : ------Follower : 2
+2022-05-11 19:37:45.496  INFO 60392 --- [http-nio-8089-exec-4] c.p.spring.service.FollowersService      : ---------List size 1
+2022-05-11 19:37:53.877  INFO 60392 --- [http-nio-8089-exec-5] c.p.spring.service.FollowersService      : ------User  : 2
+2022-05-11 19:37:53.878  INFO 60392 --- [http-nio-8089-exec-5] c.p.spring.service.FollowersService      : ------Follower : 1
+2022-05-11 19:37:53.879  INFO 60392 --- [http-nio-8089-exec-5] c.p.spring.service.FollowersService      : ---------List size 1
+2022-05-11 19:38:07.051  WARN 60392 --- [http-nio-8089-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /SpringMVC/chatId/amine/undefined
+2022-05-11 19:41:59.811  WARN 60392 --- [http-nio-8089-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /SpringMVC/chatId/amine/undefined
+2022-05-11 19:42:34.088  WARN 60392 --- [http-nio-8089-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /SpringMVC/chatId/amine/undefined
+2022-05-11 19:42:39.987  WARN 60392 --- [http-nio-8089-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /SpringMVC/chatId/amine/undefined
+2022-05-11 19:42:55.574  WARN 60392 --- [http-nio-8089-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /SpringMVC/chatId/amine/essia
+2022-05-11 19:42:59.531  WARN 60392 --- [http-nio-8089-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /SpringMVC/chatId/amine/essia
+2022-05-11 19:47:04.085  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-11 19:47:04.240  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-05-11 19:47:04.242  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7aea09a3]]
+2022-05-11 19:47:04.243  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-05-11 19:47:04.642  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 19:47:04.707  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-11 19:47:04.763  INFO 60392 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

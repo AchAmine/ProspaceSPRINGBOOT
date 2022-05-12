@@ -43,6 +43,17 @@ public class ServicePost_Reaction implements IServicePost_reaction {
 
 		reaction.setPost(post);
 		reaction.setUser(user);
+		reaction.setType(postReactionType.Like);;
+		return postReactionRepository.save(reaction);
+	}
+	@Override
+	public Post_Reaction addPost_ReactionDislike(Long userId, Long postId, Post_Reaction reaction) {
+		Post post = postRepository.findById(postId).orElse(null);
+		User user = userRepository.findById(userId).orElse(null);
+
+		reaction.setPost(post);
+		reaction.setUser(user);
+		reaction.setType(postReactionType.Dislike);
 		return postReactionRepository.save(reaction);
 	}
 

@@ -30,11 +30,19 @@ public class PostReactionRestController {
 	IServicePost_reaction postReactionService;
 
 	@ApiOperation(value = "Add post reaction")
-	@PostMapping("/add-reaction/{post-id}/{user-id}")
+	@PostMapping("/add-reaction/{user-id}/{post-id}")
 	public Post_Reaction addPost_Reaction(@RequestBody Post_Reaction reaction, @PathVariable("post-id") Long postId,
 			@PathVariable("user-id") Long userId) {
 
 		return postReactionService.addPost_Reaction(postId, userId, reaction);
+	}
+
+	@ApiOperation(value = "Add post reaction dislike")
+	@PostMapping("/add-reaction-dislike/{user-id}/{post-id}")
+	public Post_Reaction addPost_ReactionDislike(@RequestBody Post_Reaction reaction, @PathVariable("post-id") Long postId,
+			@PathVariable("user-id") Long userId) {
+
+		return postReactionService.addPost_ReactionDislike(postId, userId, reaction);
 	}
 
 	@ApiOperation(value = "Delete post reaction")

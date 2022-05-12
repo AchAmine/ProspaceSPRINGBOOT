@@ -36,6 +36,8 @@ public interface IServicePost_reaction {
 
 	List<User> retrievePostReactorsByType(Long postId, postReactionType reactionType);
 
+	Post_Reaction addPost_ReactionDislike(Long userId, Long postId, Post_Reaction reaction);
+
 	/*******************************************************************/
 	
 	/******************************************************************/

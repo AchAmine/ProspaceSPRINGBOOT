@@ -29,14 +29,18 @@ public class ServiceSection implements IServiceSection {
 	String message;
 
 	public void send() {
+		List<User> userList=userRepository.findAll();
+		for(User u :userList) {
+		
 		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 		Message msg = Message
-				.creator(new com.twilio.type.PhoneNumber("+21653307471"),
+				
+				.creator(new com.twilio.type.PhoneNumber("+216"+u.getPhoneNumber()),
 						new com.twilio.type.PhoneNumber("+19856148402"), "un nouveau sujet est ouvert !!")
 				.create();
 		// System.out.println("un nouveau commentaire a été ajouté");
 		System.out.println(msg.getSid());
-	}
+	}}
 
 	@Override
 	public List<Section> retrieveAllSections() {
@@ -62,7 +66,7 @@ public class ServiceSection implements IServiceSection {
 		s.setDescription(str);
 		s.setName(str1);
 		s.setUser(user);
-		//send();
+		send();
 		return sectionRepository.save(s);
 	}
 

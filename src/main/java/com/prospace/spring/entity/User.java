@@ -92,6 +92,8 @@ public class User implements Serializable{
 	@JsonFormat(pattern = "yyyy-MM-dd@HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date deletedAt;
+	@NonNull 	
+	private Integer phoneNumber;
 	
 	@OneToOne
 	private Image image;

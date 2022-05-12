@@ -127,7 +127,7 @@ public class ServicePost_Comment implements IServicePost_Comment {
 	public void loadBadWords() {
 		int readCounter = 0;
 		try {
-			FileReader fr = new FileReader("C:\\badwords.txt");
+			FileReader fr = new FileReader("D:\\badwords.txt");
 			BufferedReader reader = new BufferedReader(fr);
 			String currentLine = "";
 			while ((currentLine = reader.readLine()) != null) {
@@ -141,7 +141,7 @@ public class ServicePost_Comment implements IServicePost_Comment {
 					content = currentLine.split(",");
 					if (content.length == 0) {
 						continue;
-					}
+					} 
 
 					final String word = content[0];
 
